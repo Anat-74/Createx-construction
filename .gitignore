@@ -1,5 +1,5 @@
 phpmailer/
-
+package-lock.json
 node_modules/
 flsStartTemplate/
 .gitignore
