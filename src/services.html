@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Services"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header-2.htm',{})
+      <main class="page">
+         <section class="page__hero-services hero-services" style="background-image: url('@img/main/hero-services/bg-image.png')">
+            <div class="hero-services__container">
+               <ul class="hero-services__list bredcrumbs">
+                  <li class="bredcrumbs__item">
+                     <a href="#" class="bredcrumbs__link">Homepage</a>
+                  </li>
+                  <li class="bredcrumbs__item">
+                     <a class="bredcrumbs__link">Services</a>
+                  </li>
+               </ul>
+               <h1 class="hero-services__title top-title top-title--margin">services</h1>
+               <p class="hero-services__deskr top-deskr">If&nbsp;you are looking for a&nbsp;full-service construction company, look to&nbsp;Createx Construction Bureau. We&nbsp;are doing our best to&nbsp;be&nbsp;a&nbsp;partner for all of&nbsp;your construction needs.</p>
+            </div>
+         </section>
+         <section class="page__services-content services-content">
+            <div class="services-content__container">
+               <h2 class="visually-hidden">services-content</h2>
+               <div class="services-content__image-ibg">
+               <img src="@img/main/services/image-1.jpg" alt="Cover">
+            </div>
+               <div class="services-content__items">
+               <h2 class="services-content__title">Construction</h2>
+               <p class="services-content__descr">Sapien, feugiat faucibus orci arcu, vulputate. Tristique varius consectetur vulputate arcu, scelerisque nisi, nibh. Enim semper id&nbsp;sodales ultricies sed ut&nbsp;ut&nbsp;augue. Mattis habitant venenatis, gravida posuere massa ac&nbsp;interdum. Eget aliquam dignissim ut&nbsp;vestibulum.</p>
+               <a href="#" class="services-content__btn btn-stroke-orange" type="submit">learn more</a>
+            </div>
+            <div class="services-content__items">
+               <h2 class="services-content__title">Project Development</h2>
+               <p class="services-content__descr">Volutpat tellus mauris sit sit. Posuere ut&nbsp;sit vestibulum amet viverra&nbsp;in. Est <br> nulla lectus purus tincidunt massa tortor. Hendrerit vulputate elementum blandit massa vitae amet felis eget.</p>
+               <a href="#" class="services-content__btn btn-stroke-orange" type="submit">learn more</a>
+            </div>
+            <div class="services-content__image-ibg">
+               <img src="@img/main/services/image-2.jpg" alt="Cover">
+            </div>
+            <div class="services-content__image-ibg">
+               <img src="@img/main/services/image-3.jpg" alt="Cover">
+            </div>
+            <div class="services-content__items">
+               <h2 class="services-content__title">Interior Design</h2>
+               <p class="services-content__descr">Eleifend orci massa et&nbsp;facilisis orci feugiat&nbsp;ac. Congue in&nbsp;ut&nbsp;lacus, turpis accumsan gravida. Aliquet mattis dignissim massa sociis&nbsp;a, id&nbsp;bibendum. Egestas lorem eros, mi&nbsp;cras amet, vel eget molestie. Turpis enim arcu, amet donec massa pellentesque nulla duis. Arcu dictum metus sed purus senectus faucibus eget elementum pretium.</p>
+               <a href="#" class="services-content__btn btn-stroke-orange" type="submit">learn more</a>
+            </div>
+            <div class="services-content__items">
+               <h2 class="services-content__title">Repairs</h2>
+               <p class="services-content__descr">Facilisis cursus feugiat sit pulvinar amet. Ac&nbsp;facilisi dictum commodo, tortor gravida pretium, orci. Nunc sit sollicitudin id&nbsp;egestas mattis. Turpis viverra nec urna ultrices urna.</p>
+               <a href="#" class="services-content__btn btn-stroke-orange" type="submit">learn more</a>
+            </div>
+            <div class="services-content__image-ibg">
+               <img src="@img/main/services/image-4.jpg" alt="Cover">
+            </div>
+            </div>
+         </section>
+
+         <section class="page__bg-form bg-form" style="background-image: url('@img/main/bg-form/bg-image.jpg')">
+            <div class="bg-form__container">
+               <h2 class="visually-hidden">Form</h2>
+               <form action="#" class="form">
+                  <h3 class="form__title title-form">A&nbsp;quick way to&nbsp;discuss details</h3>
+                  <label class="form__label form-field__caption" for="name">Name*</label>
+                  <input  class="form__input form-field__input" autocomplete="off" type="text" name="name" id="name" data-error="Ошибка" placeholder="Your name">
+                  <label class="form__label form-field__caption" for="name">Phone*</label>
+                  <input  class="form__input form-field__input" autocomplete="off" type="tel" name="phone" id="phone" data-error="Ошибка" placeholder="Your phone number">
+                  <label class="form__label form-field__caption" for="name">Email</label>
+                  <input  class="form__input form-field__input" autocomplete="off" type="email" name="email" id="email" data-error="Ошибка" placeholder="Your working email">
+                  <label class="form__label form-field__caption" for="message">Message*</label>
+                  <textarea class="form__input form-field__input" name="message" id="message" placeholder="Your message"></textarea>
+                  <label class="form__checkbox">
+                  <input class="checkbox__input" autocomplete="off" type="checkbox">
+                  <span class="checkbox__descr">I&nbsp;agree to&nbsp;receive communications from Createx Construction Bureau.</span>
+               </label>
+               <div class="form__button">
+                  <button type="submit" class="form__btn btn btn--fill">send request</button></div>
+               </form>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

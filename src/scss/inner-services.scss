@@ -1,0 +1,334 @@
+.page {
+   &__hero-inner-services {
+      @include adaptiveValue("padding-top",153 , 70);
+      @include adaptiveValue("padding-bottom",115 , 70);
+      background-position: top right -8px;
+      background-repeat: no-repeat;
+      background-color: $bg-inputColor;
+   }
+
+   &__offer {
+      @include adaptiveValue("padding-top",120 , 70);
+      @include adaptiveValue("padding-bottom",180 , 70);
+      background-color: $whiteColor;
+   }
+
+   &__how-we-do {
+      @include adaptiveValue("padding-bottom",120 , 70);
+      background-color: $whiteColor;
+   }
+
+   &__benefits {
+      @include adaptiveValue("padding-top",80 , 40);
+      @include adaptiveValue("padding-bottom",45 , 50);
+      background-color: $darkColor;
+   }
+
+   &__related-projects {
+      @include adaptiveValue("padding-top",180 , 70);
+      @include adaptiveValue("padding-bottom",98 , 50);
+      background-color: $whiteColor;
+   }
+
+   &__pricing {
+      background-color: $bg-inputColor;
+      @include adaptiveValue("padding-top",80 , 30);
+      @include adaptiveValue("padding-bottom",122 , 30);
+   }
+}
+//================================================================
+
+.offer {
+
+   &__container {
+      @include adaptiveValue("column-gap",149 , 30);
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+   }
+
+   &__image {
+      max-width: rem(705);
+      max-height: rem(440);
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__items {
+   }
+
+   &__title {
+      font-family: Lato;
+      font-weight: 900;
+      font-size: rem(46);
+      line-height: math.div(60 , 46);
+      color: $darkColor;
+      margin-top: rem(3);
+      margin-left: rem(-42);
+      margin-bottom: rem(57);
+   }
+}
+
+.spollers {
+
+   &__item {
+      max-width: rem(376);
+   }
+
+   &__title {
+      position: relative;
+      cursor: pointer;
+      padding-left:rem(60);
+      margin-left: rem(-60);
+      &:not(:last-child) {
+         margin-bottom: rem(12);
+      }
+      &::before,
+      &::after{
+         content:'';
+         position: absolute;
+         top: rem(20);
+         left: rem(17);
+         width: rem(24);
+         height: rem(2);
+         border-radius: rem(2);
+         background-color: $primaryColor;
+      }
+      &::after{
+         transform: rotate(90deg);
+   }
+
+   &._spoller-active {
+      &::after{
+         opacity: 0;
+         }
+      }
+   }
+
+   &__deskr {
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      margin-bottom: rem(24);
+
+   }
+}
+//==============================================================
+
+.how-we-do {
+
+   &__container {
+   }
+
+   &__title {
+      &:not(:last-child) {
+         margin-bottom: rem(60);
+      }
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: rem(30);
+      counter-reset: section;
+   }
+
+   &__item {
+      position: relative;
+      &::before{
+         content:'';
+         counter-increment: section;
+         content: "0"counter(section);
+         font-size: rem(46);
+         line-height: math.div(60 , 46);
+         font-weight: 700;
+         color: $border-inputColor;
+      }
+      &:not(:last-child) {
+         &::after{
+            content:'';
+            position: absolute;
+            top: rem(30);
+            left: rem(37);
+            width: 100%;
+            height: rem(1);
+            background: url('@img/main/how-we-do/line.svg') 50% no-repeat;
+         }
+         
+      }
+   }
+
+   &__subtitle {
+      padding-top: rem(16);
+      &:not(:last-child) {
+         margin-bottom: rem(8);
+      }
+   }
+
+   &__deskr {
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+   }
+}
+//================================================================
+
+.benefits {
+
+   &__container {
+   }
+
+   &__title {
+      color: $whiteColor;
+   }
+
+   &__text {
+      color: rgba(255, 255, 255, 0.6);
+   }
+
+   &__icons-box {
+   }
+
+   &__subtitle {
+      color: $whiteColor;
+   }
+
+   &__btn {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__button {
+      position: relative;
+      top: rem(72);
+      padding: rem(0) rem(112);
+   }
+}
+//============================================================
+
+.pricing {
+   position: relative;
+   &::before{
+      content:'';
+      position: absolute;
+      top: rem(-222);
+      left: rem(-8);
+      width: 100%;
+      height: 100%;
+      background: url('@img/main/pricing/bg-image.png') left no-repeat;
+   }
+
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__deskr {
+      text-align: center;
+      margin-bottom: rem(60);
+   }
+
+   &__table {
+   }
+
+   &__logo {
+      @include adaptiveValue("padding-top",120 , 60);
+   }
+}
+.table {
+      position: relative;
+      z-index: 9;
+      width: 100%;
+      border-radius: rem(4);
+      border-collapse: collapse;
+      border: 1px solid $border-color;
+      background-color: $whiteColor;
+      box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+   &__header {
+   }
+
+   &__row {
+   }
+
+   &__th {
+      padding: rem(30) rem(0);
+      padding-bottom: rem(0);
+      &:first-child {
+         font-size: rem(18);
+         line-height: math.div(27 , 18);
+         font-weight: 700;
+         color: $darkColor;
+         padding: rem(0) rem(24);
+         padding-bottom: rem(24);
+         text-align: left;
+         vertical-align: bottom;
+      }
+   }
+
+   &__heading {
+      text-transform: uppercase;
+      font-size: rem(24);
+      line-height: math.div(36 , 24);
+      font-weight: 700;
+      color: $darkColor;
+      margin-bottom: rem(2);
+   }
+
+   &__per {
+      font-size: rem(18);
+      line-height: math.div(27 , 18);
+      font-weight: 700;
+      margin-bottom: rem(24);
+   }
+
+   &__body {
+      .table__row {
+         &:nth-child(odd) {
+            background-color: $bg-inputColor;
+         }
+      }
+   }
+
+   &__col {
+      padding: rem(16) rem(24);
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      text-align: center;
+      color: $secondaryColor;
+      &:first-child {
+         display: block;
+         margin-right: 66px;
+         text-align: left;
+      }
+   }
+
+   &__check {
+      display: block;
+      font-size: rem(0);
+      margin-bottom: rem(2);
+      &::before{
+         @extend %ic;
+         @extend .--icon-check;
+         font-size: rem(16);
+         color: $primaryColor;
+      }
+   }
+
+   &__text {
+   }
+
+   &__btn {
+      display: inline-block;
+      margin-top: rem(16);
+      margin-bottom: rem(14);
+      font-size: rem(12);
+      line-height: math.div(36 , 12);
+      padding: rem(0) rem(24);
+   }
+}
+
+
+
+
+

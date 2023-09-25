@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Home"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+            <section class="page__hero hero" style="background-image: url('@img/main/page-hero/bg-image.jpg')">
+               <div class="hero__container">
+                  <div class="hero__content">
+                     <h1 class="hero__title top-title top-title--margin">create<span>x</span> construction</h1>
+                     <p class="hero__deskr top-deskr top-deskr--main">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.</p>
+                     <div class="hero__btns">
+                        <button type="submit" class="btn btn--stroke btn--stroke-white">Learn more about us</button>
+                        <button type="submit" class="btn btn--fill">Submit Request</button>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <section class="page__bureau bureau">
+               <div class="bureau__container">
+               <h2 class="bureau__title main-title main-title--center">We&nbsp;are Createx Construction Bureau</h2>
+               <p class="bureau__text main-text main-text--center">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the best construction company in&nbsp;the USA.</p>
+               <div class="bureau__block-video video-block">
+                  <button class="video-block__btn-play --icon-play" aria-label="Play video" type="submit"></button>
+                  <button class="video-block__btn-muted --icon-muted" aria-label="Muted-video" type="submit"></button>
+                  <video class="video-block__video" loop muted preload="metadata">
+                  <source src="img/videos/bureau-video.webm" type="video/webm">
+                  <source src="img/videos/bureau-video.mp4" type="video/mp4">
+               </video>
+            </div>
+         </div>
+      </section>
+
+            <section class="page__values values">
+               <div class="values__container">
+                  <h2 class="values__title main-title main-title--center">Our core values</h2>
+                  <p class="values__text main-text main-text--center">Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.</p>
+                  <div class="values__icons-box icons-box">
+                     <div class="icons-box__items">
+                        <div class="icons-box__icon --icon-quality"></div>
+                        <h3 class="icons-box__subtitle subtitle">Quality</h3>
+                        <p class="icons-box__text">Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+                     </div>
+                     <div class="icons-box__items">
+                        <div class="icons-box__icon --icon-safety"></div>
+                        <h3 class="icons-box__subtitle subtitle">Safety</h3>
+                        <p class="icons-box__text">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est&nbsp;ea.</p>
+                     </div>
+                     <div class="icons-box__items">
+                        <div class="icons-box__icon --icon-comfort"></div>
+                        <h3 class="icons-box__subtitle subtitle">Comfort</h3>
+                        <p class="icons-box__text">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea&nbsp;ad.</p>
+                     </div>
+                  </div>
+                  <form action="#" class="values__know-form know-form">
+                     <h2 class="know-form__title title-form">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h2>
+                     <div class="know-form__content">
+                     <label class="know-form__field form-field">
+                        <span class="form-field__caption">Name</span>
+                        <input data-required="email" autocomplete="off" type="text" name="form[]" placeholder="Your name" class="form-field__input">
+                     </label>
+                     <label class="know-form__field form-field">
+                        <span class="form-field__caption">Phone</span>
+                        <input data-required="email" autocomplete="off" type="tel" name="form[]" class="form-field__input" placeholder="Your phone">
+                     </label>
+                     <label class="know-form__field form-field form-field--big">
+                        <span class="form-field__caption">Message</span>
+                        <input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="form-field__input" placeholder="Your message">
+                     </label>
+                     <button type="submit" class="know-form__btn">Send</button>
+                   </div>
+                  </form>
+               </div>
+            </section>
+
+            <section class="page__services services">
+               <div class="services__container">
+               <h2 class="services__title main-title main-title--center">Our services</h2>
+               <p class="services__text main-text main-text--center">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
+            <div href="#" class="services__body body-services">
+               <a href="#" class="body-services__items-link">
+                  <svg class="body-services__icon ">
+                     <use xlink:href="@img/icons/icons.svg#construction"></use>
+                  </svg>
+                  <h3 class="body-services__subtitle subtitle">Construction</h3>
+                  </a>
+               <a href="#" class="body-services__items-link">
+                  <svg class="body-services__icon ">
+                     <use xlink:href="@img/icons/icons.svg#Project_Development"></use>
+                  </svg>
+                  <h3 class="body-services__subtitle subtitle">Project Development</h3>
+               </a>
+               <a href="#" class="body-services__items-link">
+                  <svg class="body-services__icon ">
+                     <use xlink:href="@img/icons/icons.svg#Interior_Design"></use>
+                  </svg>
+                  <h3 class="body-services__subtitle subtitle">Interior Design</h3>
+               </a>
+               <a href="#" class="body-services__items-link">
+                  <svg class="body-services__icon ">
+                     <use xlink:href="@img/icons/icons.svg#Repairs"></use>
+                  </svg>
+                  <h3 class="body-services__subtitle subtitle">Repairs</h3>
+               </a>
+            </div>
+            <div class="services__view view-btn">
+               <div class="services__descr-more title-form">Learn more about our services</div>
+               <a href="#" class="services__btn btn btn--fill" type="submit">View services</a>
+            </div>
+         </div>
+            </section>
+
+            <section class="page__projects projects">
+               <div class="projects__container">
+                  <div class="projects__top">
+                  <h2 class="projects__title main-title">Browse our selected projects 
+                     and learn more about our work</h2>
+                        <div class="projects__btn-slider btn-slider">
+                           <button type="submit" class="btn-slider__arrow btn-slider__arrow--left swiper-button-prev --icon-Left">
+                           </button>
+                           <button type="submit" class="btn-slider__arrow btn-slider__arrow--right swiper-button-next --icon-Right">
+                           </button>
+                     </div>
+                  </div>
+                  <div class="projects__slider swiper">
+                     <div class="projects__wrapper swiper-wrapper">
+                        <div class="projects__slide swiper-slide">
+                           <a href="#" class="portfolio-slide__link-items">
+                              <div class="portfolio-slide__image-ibg">
+                           <img src="@img/main/projects/projects 1.jpg" alt="Cover">
+                        </div>
+                           <div class="portfolio-slide__content">
+                              <h3 class="portfolio-slide__title subtitle">Red Finger Building</h3>
+                              <span class="portfolio-slide__descr">Business Centers</span>
+                              <div class="portfolio-slide__btn btn-stroke-orange">View Project</div>
+                           </div>
+                        </a>
+                        </div>
+                        <div class="projects__slide swiper-slide">
+                           <a href="#" class="portfolio-slide__link-items">
+                              <div class="portfolio-slide__image-ibg">
+                           <img src="@img/main/projects/projects 2.jpg" alt="Cover">
+                        </div>
+                           <div class="portfolio-slide__content">
+                              <h3 class="portfolio-slide__title subtitle">Cubes Building</h3>
+                              <span class="portfolio-slide__descr">Business Centers</span>
+                              <div class="portfolio-slide__btn btn-stroke-orange">View Project</div>
+                           </div>
+                        </a>
+                        </div>
+                        <div class="projects__slide swiper-slide">
+                           <a href="#" class="portfolio-slide__link-items">
+                              <div class="portfolio-slide__image-ibg">
+                           <img src="@img/main/projects/projects 3.jpg" alt="Cover">
+                        </div>
+                           <div class="portfolio-slide__content">
+                              <h3 class="portfolio-slide__title subtitle">The Pencil Building</h3>
+                              <span class="portfolio-slide__descr">Stores &amp;&nbsp;Malls</span>
+                              <div class="portfolio-slide__btn btn-stroke-orange">View Project</div>
+                           </div>
+                        </a>
+                        </div>
+
+                        <div class="projects__slide swiper-slide">
+                           <a href="#" class="portfolio-slide__link-items">
+                              <div class="portfolio-slide__image-ibg">
+                           <img src="@img/main/projects/projects 1.jpg" alt="Cover">
+                        </div>
+                           <div class="portfolio-slide__content">
+                              <h3 class="portfolio-slide__title subtitle">Red Finger Building</h3>
+                              <span class="portfolio-slide__descr">Business Centers</span>
+                              <div class="portfolio-slide__btn btn-stroke-orange">View Project</div>
+                           </div>
+                        </a>
+                        </div>
+                        <div class="projects__slide swiper-slide">
+                           <a href="#" class="portfolio-slide__link-items">
+                              <div class="portfolio-slide__image-ibg">
+                           <img src="@img/main/projects/projects 2.jpg" alt="Cover">
+                        </div>
+                           <div class="portfolio-slide__content">
+                              <h3 class="portfolio-slide__title subtitle">Cubes Building</h3>
+                              <span class="portfolio-slide__descr">Business Centers</span>
+                              <div class="portfolio-slide__btn btn-stroke-orange">View Project</div>
+                           </div>
+                        </a>
+                        </div>
+                        <div class="projects__slide swiper-slide">
+                           <a href="#" class="portfolio-slide__link-items">
+                              <div class="portfolio-slide__image-ibg">
+                           <img src="@img/main/projects/projects 3.jpg" alt="Cover">
+                        </div>
+                           <div class="portfolio-slide__content">
+                              <h3 class="portfolio-slide__title subtitle">The Pencil Building</h3>
+                              <span class="portfolio-slide__descr">Stores &amp;&nbsp;Malls</span>
+                              <div class="portfolio-slide__btn btn-stroke-orange">View Project</div>
+                           </div>
+                        </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="projects__view view-btn">
+                     <div class="projects__descr-more title-form">Explore all our works</div>
+                     <a href="#" class="projects__btn btn btn--fill" type="submit">View portfolio</a>
+                  </div>
+               </div>
+            </section>
+
+            <section class="page__partners partners">
+               <div class="partners__container">
+                  <div class="partners__logo logo-partners">
+                     <h2 class="logo-partners__title main-title">Supported by 12+ partners</h2>
+                     <ul class="logo-partners__list">
+                        <li class="logo-partners__item">
+                        <a href="#" class="logo-partners__link">
+                        <img class="logo-partners__image" src="@img/main/partners/logo/InDepth Consulting Logo 1.png" alt="cover">
+                           </a>
+                        </li>
+                        <li class="logo-partners__item">
+                           <a href="#" class="logo-partners__link">
+                           <img class="logo-partners__image" src="@img/main/partners/logo/Higher Fit Logo 2.png" alt="cover">
+                              </a>
+                           </li>
+                           <li class="logo-partners__item">
+                              <a href="#" class="logo-partners__link">
+                              <img class="logo-partners__image" src="@img/main/partners/logo/Sentinal Consulting Logo 3.png" alt="cover">
+                                 </a>
+                              </li>
+                              <li class="logo-partners__item">
+                                 <a href="#" class="logo-partners__link">
+                                 <img class="logo-partners__image" src="@img/main/partners/logo/Happy Home Logo 4.png" alt="cover">
+                                    </a>
+                                 </li>
+                                 <li class="logo-partners__item">
+                                    <a href="#" class="logo-partners__link">
+                                    <img class="logo-partners__image" src="@img/main/partners/logo/For Sale Logo 5.png" alt="cover">
+                                       </a>
+                                    </li>
+                                    <li class="logo-partners__item">
+                                       <a href="#" class="logo-partners__link">
+                                       <img class="logo-partners__image" src="@img/main/partners/logo/Sunset Realty Logo 6.png" alt="cover">
+                                          </a>
+                                       </li>
+                     </ul>
+                  </div>
+
+                  <div class="partners__content clients">
+                     <div class="clients__reviews">
+                     <h2 class="clients__title main-title">What our clients are saying</h2>
+                     <div class="clients__slider swiper">
+                        <div class="clients__wrapper swiper-wrapper">
+                           <div class="clients__slide swiper-slide">
+                              <img class="clients__human-image" src="@img/main/partners/profile-image.png" alt="cover">
+                              <p class="clients__text">Ipsum aute sunt aliquip aute et&nbsp;occaecat. Anim minim do&nbsp;cillum eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident exercitation ullamco.</p>
+                              <span class="clients__name">Shawn Edwards</span>
+                              <span class="clients__descr">Position, Company name</span>
+                           </div>
+
+                           <div class="clients__slide swiper-slide">
+                              <img class="clients__human-image" src="@img/main/partners/profile-image.png" alt="cover">
+                              <p class="clients__text">Ipsum aute sunt aliquip aute et&nbsp;occaecat. Anim minim do&nbsp;cillum eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident exercitation ullamco.</p>
+                              <span class="clients__name">Shawn Edwards</span>
+                              <span class="clients__descr">Position, Company name</span>
+                           </div>
+                        </div>
+                        <div class="clients__items-btn">
+                           <button type="submit" class="clients__btn btn-slider__arrow--left clients-button-prev --icon-Left"></button>
+                           <button type="submit" class="clients__btn btn-slider__arrow--right clients-button-next --icon-Right"></button>
+                        </div>
+                     </div>
+                     </div>
+                     <div class="clients__image">
+                        <img class="clients__img" src="@img/main/partners/clients-image.jpg" alt="cover">
+                     </div>
+                     </div>
+               </div>
+            </section>
+
+            <section class="page__facts facts">
+               <div class="facts__container">
+                  <h2 class="facts__title main-title">Some facts and figures</h2>
+                     <ul class="facts__list list">
+                        <li class="list__item">
+                           <div class="list__element">
+                              <div class="list__circle list__circle--one-color" data-percent="98">
+                                 <svg class="anim" viewBox="-10 -10 320 320">
+                                    <circle class="progress-bg" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                    <circle class="progress" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                  </svg>
+                                  <small class="list__value">98%</small>
+                                 </div>
+                                 <span class="list__descr">Totally satisfied clients</span>
+                           </div>
+                        </li>
+                           <li class="list__item">
+                              <div class="list__element">
+                                 <div class="list__circle list__circle--two-color" data-percentage="true" data-full="50" data-value="20">
+                                    <svg class="anim" viewBox="-10 -10 320 320">
+                                      <circle class="progress-bg" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                       <circle class="progress" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                     </svg>
+                                     <small class="list__value">20</small>
+                                    </div>
+                                    <span class="list__descr">Years of&nbsp;experience</span>
+                              </div>
+                           </li>
+                              <li class="list__item">
+                                 <div class="list__element">
+                                    <div class="list__circle list__circle--three-color" data-percentage="true" data-full="10000" data-value="9452">
+                                       <svg class="anim" viewBox="-10 -10 320 320">
+                                          <circle class="progress-bg" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                          <circle class="progress" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                        </svg>
+                                        <small class="list__value">9452</small>
+                                       </div>
+                                       <span class="list__descr">Working hours spent</span>
+                                 </div>
+                              </li>
+                                 <li class="list__item">
+                                    <div class="list__element">
+                                       <div class="list__circle list__circle--four-color" data-percent="100">
+                                          <svg class="anim" viewBox="-10 -10 320 320">
+                                             <circle class="progress-bg" cx="150" cy="150" r="150" stroke-width="14" fill="none"/>
+                                             <circle class="progress" cx="150" cy="150" r="150" stroke-width="14" fill="none" />
+                                           </svg>
+                                           <small class="list__value">100%</small>
+                                          </div>
+                                          <span class="list__descr">Succeeded projects</span>
+                                    </div>
+                                 </li>
+                  </ul>
+               </div>
+            </section>
+
+            <section class="page__recent-news recent-news">
+               <div class="recent-news__container">
+                  <h2 class="recent-news__title main-title">Recent news</h2>
+                  <div class="recent-news__body">
+                     <article class="article-big">
+                        <div class="article-big__image-ibg">
+                        <img src="@img/main/recent-news/image-big.jpg" alt="cover">
+                     </div>
+                        <div class="article-big__content">
+                        <h3 class="article-big__subtitle subtitle">
+                           <a href="#" class="article-big__link">How to&nbsp;Build Climate Change-Resilient Infrastructure</a>
+                        </h3>
+                        <div class="article-big__meta-row meta-row">
+                           <a href="#" class="meta-row__news">Industry News</a>
+                           <time class="meta-row__date" datetime="2020-06-24 19:00">June 24, 2020</time>
+                           <div class="meta-row__icon">
+                           <a href="#" class="meta-row__comments">4 comments</a>
+                        </div>
+                        </div>
+                        <p class="meta-row__descr">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...</p>
+                     </div>
+                     </article>
+
+                     <div class="recent-news__column">
+                     <article class="article">
+                        <div class="article__image-ibg">
+                        <img src="@img/main/recent-news/image 1.jpg" alt="cover">
+                     </div>
+                        <div class="article__content">
+                        <h3 class="article__subtitle subtitle">
+                           <a href="#" class="article__link">How Construction Can Help Itself</a>
+                        </h3>
+                        <div class="article__meta-row meta-row">
+                           <a href="#" class="meta-row__news">Innovation</a>
+                           <time class="meta-row__date" datetime="2020-06-12 17:00">June 12, 2020</time>
+                           <div class="meta-row__icon">
+                           <a href="#" class="meta-row__comments">No comments</a>
+                        </div>
+                        </div>
+                     </div>
+                     </article>
+                     <article class="article">
+                        <div class="article__image-ibg">
+                        <img src="@img/main/recent-news/image 2.jpg" alt="cover">
+                     </div>
+                        <div class="article__content">
+                        <h3 class="article__subtitle subtitle">
+                           <a href="#" class="article__link">Types of&nbsp;Flooring Materials</a>
+                        </h3>
+                        <div class="article__meta-row meta-row">
+                           <a href="#" class="meta-row__news">Company News</a>
+                           <time class="meta-row__date" datetime="2019-12-1 14:00">December 1, 2019</time>
+                           <div class="meta-row__icon">
+                           <a href="#" class="meta-row__comments">No comments</a>
+                        </div>
+                        </div>
+                     </div>
+                     </article>
+                  </div>
+                  </div>
+                  <div class="recent-news__view view-btn">
+                     <div class="recent-news__descr-more title-form">Explore all our news posts</div>
+                     <a href="#" class="recent-news__btn btn btn--fill" type="submit">View all news</a>
+                  </div>
+               </div>
+            </section>
+
+            <section class="page__bg-form bg-form" style="background-image: url('@img/main/bg-form/bg-image.jpg')">
+               <div class="bg-form__container">
+                  <h2 class="visually-hidden">Form</h2>
+                  <form action="#" class="form">
+                     <h3 class="form__title title-form">A&nbsp;quick way to&nbsp;discuss details</h3>
+                     <label class="form__label form-field__caption" for="name">Name*</label>
+                     <input  class="form__input form-field__input" autocomplete="off" type="text" name="name" id="name" data-error="Ошибка" placeholder="Your name">
+                     <label class="form__label form-field__caption" for="name">Phone*</label>
+                     <input  class="form__input form-field__input" autocomplete="off" type="tel" name="phone" id="phone" data-error="Ошибка" placeholder="Your phone number">
+                     <label class="form__label form-field__caption" for="name">Email</label>
+                     <input  class="form__input form-field__input" autocomplete="off" type="email" name="email" id="email" data-error="Ошибка" placeholder="Your working email">
+                     <label class="form__label form-field__caption" for="message">Message*</label>
+                     <textarea class="form__input form-field__input" name="message" id="message" placeholder="Your message"></textarea>
+                     <label class="form__checkbox">
+                     <input class="checkbox__input" autocomplete="off" type="checkbox">
+                     <span class="checkbox__descr">I&nbsp;agree to&nbsp;receive communications from Createx Construction Bureau.</span>
+                  </label>
+                  <div class="form__button">
+                     <button type="submit" class="form__btn btn btn--fill">send request</button></div>
+                  </form>
+               </div>
+            </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

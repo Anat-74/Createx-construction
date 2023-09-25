@@ -1,0 +1,118 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="--icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+.--icon-Chat:before {
+   content: "\e900";
+ }
+ .--icon-check:before {
+   content: "\e901";
+ }
+ .--icon-check2:before {
+   content: "\e902";
+ }
+ .--icon-comfort:before {
+   content: "\e903";
+ }
+ .--icon-construction:before {
+   content: "\e904";
+ }
+ .--icon-Convert:before {
+   content: "\e905";
+ }
+ .--icon-cursor:before {
+   content: "\e906";
+ }
+ .--icon-Facebook:before {
+   content: "\e907";
+ }
+ .--icon-Heart:before {
+   content: "\e908";
+ }
+ .--icon-ic-brain:before {
+   content: "\e909";
+ }
+ .--icon-ic-budget:before {
+   content: "\e90a";
+ }
+ .--icon-ic-camera:before {
+   content: "\e90b";
+ }
+ .--icon-ic-contract:before {
+   content: "\e90c";
+ }
+ .--icon-ic-helmet:before {
+   content: "\e90d";
+ }
+ .--icon-ic-house:before {
+   content: "\e90e";
+ }
+ .--icon-icons:before {
+   content: "\e90f";
+ }
+ .--icon-ic-success:before {
+   content: "\e910";
+ }
+ .--icon-Interior-Design:before {
+   content: "\e911";
+ }
+ .--icon-Left:before {
+   content: "\e912";
+ }
+ .--icon-Line-Stroke:before {
+   content: "\e913";
+ }
+ .--icon-Linked-In:before {
+   content: "\e914";
+ }
+ .--icon-Messanger:before {
+   content: "\e915";
+ }
+ .--icon-muted:before {
+   content: "\e916";
+ }
+ .--icon-play:before {
+   content: "\e917";
+ }
+ .--icon-Project-Development:before {
+   content: "\e918";
+ }
+ .--icon-quality:before {
+   content: "\e919";
+ }
+ .--icon-Repairs:before {
+   content: "\e91a";
+ }
+ .--icon-Right:before {
+   content: "\e91b";
+ }
+ .--icon-safety:before {
+   content: "\e91c";
+ }
+ .--icon-share-arrow:before {
+   content: "\e91d";
+ }
+ .--icon-Twitter:before {
+   content: "\e91e";
+ }
+ .--icon-Whatsapp:before {
+   content: "\e91f";
+ }
+ .--icon-YouTube:before {
+   content: "\e920";
+ }
+ 
+ 
