@@ -2,7 +2,7 @@ phpmailer/
 package-lock.json
 node_modules/
 flsStartTemplate/
-
+.gitignore
 snnipets.txt
 version.json
 undefined
