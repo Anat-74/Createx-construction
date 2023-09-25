@@ -1,0 +1,12 @@
+phpmailer/
+package-lock.json
+node_modules/
+flsStartTemplate/
+
+snnipets.txt
+version.json
+undefined
+Source/
+**/*.zip
+dist/
+**/*.rar
