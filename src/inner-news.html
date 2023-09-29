@@ -113,10 +113,26 @@
                      <p class="article-comment__deskr descr-post">Ullamcorper nibh sed ac&nbsp;ipsum nunc imperdiet rhoncus. Quam donec habitant nibh sit consequat erat libero, tincidunt. Eros ut&nbsp;aliquam proin et&nbsp;duis. Mauris, egestas congue nibh dui a&nbsp;nulla.</p>
                         <span class="article-comment__reply">Reply</span>
                   </div>
-               </article>
-            </div>
-
-            
+                  </article>
+               </div>
+               <form class="post__form form-post content-post">
+                  <h2 class="form-post__title main-title">Leave your comment</h2>
+                  <div class="form-post__inputs">
+                  <label class="form-post__labels">
+                     <span class="form-post__caption">Name*</span>
+                  <input class="form-post__input" autocomplete="off" type="text" name="name" id=""
+                     data-error="Ошибка" placeholder="Your name"></label>
+                     <label class="form-post__labels">
+                        <span class="form-post__caption">Email*</span>
+                     <input class="form-post__input" autocomplete="off" type="email" name="email" id=""
+                        data-error="Ошибка" placeholder="Your working email"></label>
+                     </div>
+                        <label class="form-post__labels" for="comment">
+                        <span class="form-post__caption">Your comment*</span>
+                        <textarea class="form-post__input form-post__input--big" name="Your comment*" id=""
+                           placeholder="Type comment here"></textarea></label>
+                           <button type="submit" class="form-post__btn btn btn--fill">Post comment</button>
+               </form>
             </div>
          </section>
 
@@ -128,10 +144,10 @@
                   <label class="form__label form-field__caption" for="name">Name*</label>
                   <input class="form__input form-field__input" autocomplete="off" type="text" name="name" id="name"
                      data-error="Ошибка" placeholder="Your name">
-                  <label class="form__label form-field__caption" for="name">Phone*</label>
+                  <label class="form__label form-field__caption" for="phone">Phone*</label>
                   <input class="form__input form-field__input" autocomplete="off" type="tel" name="phone" id="phone"
                      data-error="Ошибка" placeholder="Your phone number">
-                  <label class="form__label form-field__caption" for="name">Email</label>
+                  <label class="form__label form-field__caption" for="email">Email</label>
                   <input class="form__input form-field__input" autocomplete="off" type="email" name="email" id="email"
                      data-error="Ошибка" placeholder="Your working email">
                   <label class="form__label form-field__caption" for="message">Message*</label>

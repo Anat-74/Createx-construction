@@ -1,12 +1,12 @@
 .page {
    &__hero-inner-news {
-      @include adaptiveValue("padding-top",152 , 40);
-      @include adaptiveValue("padding-bottom",159 , 40);
+      @include adaptiveValue("padding-top",152 , 20);
+      @include adaptiveValue("padding-bottom",159 , 20);
       background-color: $bg-inputColor;
    }
 
    &__post {
-      @include adaptiveValue("padding-bottom",180 , 40);
+      @include adaptiveValue("padding-bottom",192 , 40);
       background-color: $whiteColor;
    }
 
@@ -23,7 +23,7 @@
    }
 
    &__title {
-      font-size: rem(64);
+      @include adaptiveValue("font-size",64 , 32);
       line-height: math.div(77 , 64);
       font-weight: 700;
       letter-spacing: rem(1);
@@ -34,11 +34,18 @@
    }
 
    &__bottom {
+      @include adaptiveValue("padding-bottom",35 , 105);
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap-reverse;
+      row-gap: rem(15);
    }
 
    &__meta-row-big {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: rem(8);
+      align-items: center;
       line-height: math.div(26 , 16);
       font-weight: 700;
    }
@@ -62,10 +69,11 @@
       &::before{
          content:'';
          position: absolute;
-         top: rem(0);
+         top: 50%;
          right: rem(0);
          width: rem(1);
          height: rem(16);
+         transform: translate(0, -50%);
          background-color: $mainColor;
       }
 
@@ -83,41 +91,45 @@
       &::before{
          content:'';
          position: absolute;
-         top: rem(0);
+         top: 50%;
          left: rem(0);
          width: rem(20);
          height: rem(20);
+         transform: translate(0, -50%);
          background: url('@img/icons/Clock.svg') left top no-repeat;
       }
 
       &::after{
          content:'';
          position: absolute;
-         top: rem(0);
+         top: 50%;
          right: rem(0);
          width: rem(1);
          height: rem(16);
+         transform: translate(0, -50%);
          background-color: $mainColor;
       }
    }
 
    &__comments {
+      white-space: nowrap;
       position: relative;
       padding-left: rem(24);
+      padding-right: rem(25);
       &::before{
          content:'';
          position: absolute;
-         top: rem(0);
+         top: 50%;
          left: rem(0);
          width: rem(20);
          height: rem(20);
+         transform: translate(0, -50%);
          background: url('@img/icons/Chat.svg') left top no-repeat;
       }
    }
 }
 
 .social {
-
    &__link {
    }
 
@@ -138,6 +150,10 @@
 
    &__comments {
       @include adaptiveValue("padding-top",80 , 30);
+      @include adaptiveValue("padding-bottom",120 , 30);
+   }
+
+   &__form {
    }
 }
 
@@ -145,14 +161,14 @@
 
    &__image {
       display: inline-block;
-      margin-top: rem(-79);
+      margin-top: rem(-114);
       width: 100%;
       object-fit: cover;
    }
 
    &__content-post {
-      @include adaptiveValue("padding-top",80 , 30);
-      @include adaptiveValue("padding-bottom",58 , 30);
+      @include adaptiveValue("padding-top",80 , 20);
+      @include adaptiveValue("padding-bottom",58 , 20);
   
    h3 {
       font-size: rem(20);
@@ -174,8 +190,8 @@
    }
 
    blockquote {
+      @include adaptiveValue("padding-top",22 , 5);
       position: relative;
-      padding-top: rem(22);
       padding-left: rem(58);
       font-size: rem(20);
       line-height: math.div(30 , 20);
@@ -191,7 +207,7 @@
          background: url('@img/main/ceo/braces.svg') left top / 28px 20px no-repeat;
       }
       &:not(:last-child) {
-         margin-bottom: rem(48);
+         @include adaptiveValue("margin-bottom",48 , 30);
       }
    }
 
@@ -253,14 +269,19 @@
    &__title {
       text-align: center;
       &:not(:last-child) {
-         margin-bottom: rem(60);
+         @include adaptiveValue("margin-bottom",60 , 20);
       }
    }
 
    &__article-comment {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: rem(30);
       &:not(:last-child) {
-         margin-bottom: rem(60);
+         @include adaptiveValue("margin-bottom",60 , 25);
+      }
+      @media (max-width:$mobile){
+          grid-template-columns: 1fr;
       }
    }
 }
@@ -268,8 +289,10 @@
 .article-comment {
 
    &__left {
-      width: calc(100% - rem(630));
-      padding-right: rem(30);
+      max-width: rem(150);
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
    }
 
    &__author {
@@ -318,4 +341,57 @@
 }
 
 //---------------------------------------------------------
+
+.form-post {
+   display: grid;
+
+   &__title {
+      text-align: center;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom",54 , 20);
+      }
+   }
+
+   &__inputs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(30);
+      @media (max-width:$mobile){
+          grid-template-columns: 1fr;
+      }
+   }
+
+   &__labels {
+
+   }
+
+   &__caption {
+      display: inline-block;
+      margin-bottom: rem(14);
+   }
+
+   &__input {
+      @include adaptiveValue("margin-bottom",28 , 15);
+      width: 100%;
+      display: block;
+      padding: rem(14) rem(16);
+      border-radius: rem(4);
+      border: 1px solid $border-inputColor;
+      background-color: $bg-inputColor;
+      &::placeholder{
+         line-height: math.div(26 , 16);
+         font-weight: 400;
+         color: $grayColor;
+      }
+      &--big {
+         @include adaptiveValue("padding-bottom",50 , 20);
+         @include adaptiveValue("margin-bottom",45 , 20);
+      }
+   }
+
+   &__btn {
+      max-width: rem(215);
+      justify-self: center;
+   }
+}
 
