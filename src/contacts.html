@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Contacts"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header-2.htm',{})
+      <main class="page">
+         <section class="page__hero-contacts" style="background-image: linear-gradient(90deg, #f4f5f6 0%, rgba(244, 245, 246, 0.00) 41.15%), url('@img/main/contacts/bg-image.png')">
+         <div class="hero-news__container">
+            <ul class="hero-news__list bredcrumbs">
+               <li class="bredcrumbs__item">
+                  <a href="#" class="bredcrumbs__link">Homepage</a>
+               </li>
+               <li class="bredcrumbs__item">
+                  <a class="bredcrumbs__link">Contacts</a>
+               </li>
+            </ul>
+            <h1 class="hero-contacts__title top-title top-title--margin">Contacts</h1>
+            <p class="hero-contacts__deskr top-descr">Contact&nbsp;us for all your construction needs. We&nbsp;always welcome any questions and comments.</p>
+         </div>
+      </section>
+
+      <section class="page__contacts-us contacts-us">
+         <div class="contacts-us__container">
+            <h2 class="contacts-us__title main-title main-title--center">Contact us</h2>
+            <p class="contacts-us__descr main-text main-text--center">Please complete the form. Detailed information will help&nbsp;us to&nbsp;make a&nbsp;tuned offer.</p>
+            <div class="contacts-us__image">
+               <img src="@img/main/contacts-us/image.jpg" alt="cover" aria-hidden="true">
+            </div>
+            <form action="#" class="contacts-us__form form-contacts-us">
+               <label class="form-contacts-us__labels">
+                  <span class="form-contacts-us__caption">Name*</span>
+               <input class="form-contacts-us__input" autocomplete="off" type="text" name="name" id=""
+                  data-error="Ошибка" placeholder="Your name"></label>
+                  <label class="form-contacts-us__labels">
+                     <span class="form-contacts-us__caption">I am interested in</span>
+                     <select name="form[]" data-class-modif="form">
+                        <option value="1">Interior Design</option>
+                        <option value="2">Пункт №2</option>
+                        <option value="3">Пункт №3</option>
+                     </select></label>
+                     <label class="form-contacts-us__labels">
+                        <span class="form-contacts-us__caption">Phone*</span>
+                     <input class="form-contacts-us__input" autocomplete="off" type="tel" name="phone" id=""
+                        data-error="Ошибка" placeholder="Your phone number"></label>
+                        <label class="form-contacts-us__labels">
+                           <span class="form-contacts-us__caption">Location*</span>
+                           <select name="form[]" data-class-modif="form">
+                              <option value="1">New York</option>
+                              <option value="2">Пункт №2</option>
+                              <option value="3">Пункт №3</option>
+                           </select></label>
+                           <label class="form-contacts-us__labels">
+                              <span class="form-contacts-us__caption">Email</span>
+                           <input class="form-contacts-us__input" autocomplete="off" type="email" name="phone" id=""
+                              data-error="Ошибка" placeholder="Your working email"></label>
+                              <fieldset class="form-contacts-us__fields">
+                                 <legend class="form-contacts-us__caption">Preferred contact method</legend>
+                                 <div class="form-contacts-us__items-radio">
+                                 <label class="form-contacts-us__radio">
+                                    <input class="form-contacts-us__input-radio" name="contacts_method" value="Phone" autocomplete="off" type="radio">
+                                    <span class="form-contacts-us__caption">Phone</span>
+                                 </label>
+                                 <label class="form-contacts-us__radio">
+                                    <input class="form-contacts-us__input-radio" name="contacts_method" value="Email" autocomplete="off" type="radio">
+                                    <span class="form-contacts-us__caption">Email</span>
+                                 </label>
+                                 <label class="form-contacts-us__radio">
+                                    <input class="form-contacts-us__input-radio" name="contacts_method" value="Viber" autocomplete="off" type="radio">
+                                    <span class="form-contacts-us__caption">Viber</span>
+                                 </label>
+                              </div>
+                              </fieldset>
+                                 <label class="form-contacts-us__labels">
+                                 <span class="form-contacts-us__caption">Message*</span>
+                                 <textarea class="form-contacts-us__input form-post__input--big" name="Your message" id=""
+                                    placeholder="Your message"></textarea></label>
+                                    <div class="form-contacts-us__bottom">
+                                       <label class="form-contacts-us__checkbox form__checkbox">
+                                          <input class="form-contacts-us__input-check checkbox__input" autocomplete="off" type="checkbox">
+                                          <span class="form-contacts-us__caption checkbox__descr">I&nbsp;agree to&nbsp;receive communications from Createx Construction
+                                             Bureau.</span>
+                                       </label>
+                                       <button type="submit" class="form-contacts-us__btn btn btn--fill">Post comment</button>
+                                    </div>
+            </form>
+         </div>
+      </section>
+      
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

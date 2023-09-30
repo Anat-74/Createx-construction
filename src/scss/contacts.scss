@@ -1,0 +1,95 @@
+.page {
+   &__hero-contacts {
+      @include adaptiveValue("padding-top",152 , 40);
+      @include adaptiveValue("padding-bottom",209 , 40);
+      background-repeat: no-repeat;
+      background-position: right rem(-9) top;
+      background-size: auto auto;
+      background-color: $bg-inputColor;
+   }
+
+   &__contacts-us {
+      @include adaptiveValue("padding-top",121 , 40);
+      @include adaptiveValue("padding-bottom",122 , 40);
+      background-color: $whiteColor;
+   }
+}
+
+//==================================================================
+
+
+.contacts-us {
+
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__descr {
+   }
+
+   &__image {
+   }
+
+   &__form {
+   }
+}
+
+.form-contacts-us {
+
+   &__labels {
+   }
+
+   &__caption {
+   }
+
+   &__input {
+   }
+
+   &__fields {
+   }
+
+   &__items-radio {
+   }
+
+   &__radio {
+   }
+
+   &__input-radio {
+   }
+
+   &__bottom {
+   }
+
+   &__checkbox {
+   }
+
+   &__input-check {
+   }
+
+   &__btn {
+   }
+}
+
+.form-post {
+
+   &__input--big {
+   }
+}
+
+.form {
+
+   &__checkbox {
+   }
+}
+
+.checkbox {
+
+   &__input {
+   }
+
+   &__descr {
+   }
+}
+
