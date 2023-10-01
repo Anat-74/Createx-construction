@@ -64,9 +64,17 @@
       min-height: rem(92);
       display: flex;
       align-items: center;
+      @media (max-width:$mobile){
+         min-height: rem(62);
+      }
+   }
+
+   &__tablet {
+      overflow: auto;
    }
 
    &__logo {
+      @include adaptiveValue("padding-right",62 , 35, 0, $containerWidth, 991);
       position: relative;
       z-index: 3;
       @media (max-width:$tablet){
@@ -76,7 +84,6 @@
    }
 
    &__menu {
-      @include adaptiveValue("padding-left",62 , 35, 0, $containerWidth, 991);
       display: flex;
       flex: 1 1 auto;
       @media (max-width:$tablet){
@@ -85,6 +92,7 @@
    }
 
    &__icon {
+      margin-left: rem(15);
    }
 
    &__nav {
@@ -95,6 +103,8 @@
    }
 
    &--main {
+      width: 100%;
+      position: fixed;
       background-color: $whiteColor;
    }
 
@@ -110,17 +120,21 @@
    &__list {
       @include adaptiveValue("column-gap",40 , 25, 0, $containerWidth, 991);
       display: flex;
+      flex-wrap: wrap;
       @media (max-width:$tablet){
-         .nav__link {
-            color: $whiteColor;
-         }
          flex: 1 1 auto;
          flex-direction: column;
          justify-content: center;
-         row-gap: rem(28);
+         row-gap: rem(24);
          align-items: center;
-         font-size: rem(32);
-
+         font-size: rem(36);
+         .nav__link {
+            color: $whiteColor;
+         }
+      }
+      @media (max-width:$mobileSmall){
+         row-gap: rem(18);
+         font-size: rem(30);
       }
    }
 
@@ -157,33 +171,33 @@
       &::before{
          content:'';
          position: fixed;
-         z-index: 2;
+         z-index: 4;
          width: 100%;
          height: rem(92);
          top: 0;
          left: 100%;
          background-color: $whiteColor;
          transition: left 0.4s;
-         @media (max-width:em(512)){
-        height: rem(152);
-         }
+      @media (max-width:$mobile){
+         height: rem(62);
+      }
       }
       .menu-open & {
          left: 0;
          &::before{
             left: 0;
             
+            }
          }
       }
-   }
-   @media (max-width:em(512)){
-      padding: rem(200) rem(15) rem(25) rem(15);
-   }
+      @media (max-width:$mobile){
+         padding: rem(80) rem(15) rem(30) rem(15);
+      }
    }
 
 .contacts-header {
    position: relative;
-   z-index: 3;
+   z-index: 5;
    &__items-link {
       display: flex;
       flex-direction: column;
@@ -212,6 +226,7 @@
       }
    
       &__connection-link {
+         white-space: nowrap;
          color: $darkColor;
          transition: color 0.4s ease;
          @media (any-hover: hover){
@@ -221,19 +236,17 @@
          }
       }
       @media (max-width:$tablet){
-         padding: rem(10) rem(0);
+         padding: rem(5) rem(0);
          justify-content: center;
-         flex-wrap: wrap;
          column-gap: rem(5);
          row-gap: rem(12);
 
          .contacts-header__items-link {
             background-size: rem(30) rem(30);
-
             padding-left: rem(35);
          }
          .contacts-header__call-link {
-            font-size: rem(20);
+            font-size: rem(18);
          }
          .contacts-header__connection-link {
             font-size: rem(20);
