@@ -1,39 +1,39 @@
 .page {
    &__hero-inner-services {
-      @include adaptiveValue("padding-top",153 , 70);
-      @include adaptiveValue("padding-bottom",115 , 70);
+      @include adaptiveValue("padding-top",153 , 75);
+      @include adaptiveValue("padding-bottom",115 , 20);
       background-position: top right -8px;
       background-repeat: no-repeat;
       background-color: $bg-inputColor;
    }
 
    &__offer {
-      @include adaptiveValue("padding-top",120 , 70);
-      @include adaptiveValue("padding-bottom",180 , 70);
+      @include adaptiveValue("padding-top",120 , 30);
+      @include adaptiveValue("padding-bottom",180 , 30);
       background-color: $whiteColor;
    }
 
    &__how-we-do {
-      @include adaptiveValue("padding-bottom",120 , 70);
+      @include adaptiveValue("padding-bottom",120 , 20);
       background-color: $whiteColor;
    }
 
    &__benefits {
-      @include adaptiveValue("padding-top",80 , 40);
-      @include adaptiveValue("padding-bottom",45 , 50);
+      @include adaptiveValue("padding-top",80 , 30);
+      @include adaptiveValue("padding-bottom",45 , 30);
       background-color: $darkColor;
    }
 
    &__related-projects {
       @include adaptiveValue("padding-top",180 , 70);
-      @include adaptiveValue("padding-bottom",98 , 50);
+      @include adaptiveValue("padding-bottom",98 , 20);
       background-color: $whiteColor;
    }
 
    &__pricing {
       background-color: $bg-inputColor;
       @include adaptiveValue("padding-top",80 , 30);
-      @include adaptiveValue("padding-bottom",122 , 30);
+      @include adaptiveValue("padding-bottom",122 , 20);
    }
 }
 //================================================================
@@ -41,9 +41,44 @@
 .offer {
 
    &__container {
-      @include adaptiveValue("column-gap",149 , 30);
+      @include adaptiveValue("column-gap",149 , 20);
       display: grid;
       grid-template-columns: repeat(2, auto);
+      row-gap: rem(15);
+      @media (max-width:$mobile){
+          grid-template-columns: 1fr; 
+          justify-items: start;
+          .offer__title {
+            margin: 0;
+          }
+          .spollers__item {
+            max-width: 100%; 
+          }
+          .spollers__title {
+            padding-left: rem(60);
+            &::before,
+            &::after{
+            left: 0;
+         }
+          }
+          .spollers__descr {
+            padding-left: rem(60);
+          }
+      }
+          @media (max-width:$mobileSmall){
+            justify-items: end;
+            .spollers__title {
+            padding-right: rem(120);
+            padding-left: rem(2);
+               &::before,
+               &::after{
+               left: 91%;
+            }
+         }
+         .spollers__descr {
+            padding-left: rem(0);
+          }
+      }
    }
 
    &__image {
@@ -60,6 +95,7 @@
    }
 
    &__title {
+      @include adaptiveValue("margin-bottom", 57, 15);
       font-family: Lato;
       font-weight: 900;
       font-size: rem(46);
@@ -67,7 +103,6 @@
       color: $darkColor;
       margin-top: rem(3);
       margin-left: rem(-42);
-      margin-bottom: rem(57);
    }
 }
 
@@ -80,8 +115,6 @@
    &__title {
       position: relative;
       cursor: pointer;
-      padding-left:rem(60);
-      margin-left: rem(-60);
       &:not(:last-child) {
          margin-bottom: rem(12);
       }
@@ -89,8 +122,8 @@
       &::after{
          content:'';
          position: absolute;
-         top: rem(20);
-         left: rem(17);
+         top: rem(21);
+         left: rem(-43);
          width: rem(24);
          height: rem(2);
          border-radius: rem(2);
@@ -107,7 +140,7 @@
       }
    }
 
-   &__deskr {
+   &__descr {
       line-height: math.div(26 , 16);
       font-weight: 400;
       margin-bottom: rem(24);
@@ -123,15 +156,19 @@
 
    &__title {
       &:not(:last-child) {
-         margin-bottom: rem(60);
+         @include adaptiveValue("margin-bottom", 60, 10);
       }
    }
 
    &__list {
+      @include adaptiveValue("column-gap", 30, 15);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      column-gap: rem(30);
+      row-gap: rem(10);
       counter-reset: section;
+      @media (max-width:$mobile){
+         grid-template-columns: repeat(2, 1fr);
+      }
    }
 
    &__item {
@@ -154,19 +191,21 @@
             width: 100%;
             height: rem(1);
             background: url('@img/main/how-we-do/line.svg') 50% no-repeat;
+         @media (max-width:$mobileSmall){
+             background: none; 
          }
-         
+         }
       }
    }
 
    &__subtitle {
-      padding-top: rem(16);
+      @include adaptiveValue("padding-top", 16, 8);
       &:not(:last-child) {
          margin-bottom: rem(8);
       }
    }
 
-   &__deskr {
+   &__descr {
       line-height: math.div(26 , 16);
       font-weight: 400;
    }
@@ -199,9 +238,13 @@
    }
 
    &__button {
-      position: relative;
-      top: rem(72);
+      white-space: nowrap;
       padding: rem(0) rem(112);
+      transform: translateY(rem(74));
+      @media (max-width:$mobile){
+          padding: rem(0) rem(15); 
+          transform: translateY(rem(12));
+      }
    }
 }
 //============================================================
@@ -224,9 +267,9 @@
    &__title {
    }
 
-   &__deskr {
+   &__descr {
+      @include adaptiveValue("margin-bottom", 60, 15);
       text-align: center;
-      margin-bottom: rem(60);
    }
 
    &__table {
@@ -236,7 +279,7 @@
       @include adaptiveValue("padding-top",120 , 60);
    }
 }
-.table {
+.table { 
       position: relative;
       z-index: 9;
       width: 100%;
@@ -245,14 +288,15 @@
       border: 1px solid $border-color;
       background-color: $whiteColor;
       box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
-   &__header {
+
+      &__header {
    }
 
    &__row {
    }
 
    &__th {
-      padding: rem(30) rem(0);
+      @include adaptiveValue("padding-top", 30, 10);
       padding-bottom: rem(0);
       &:first-child {
          font-size: rem(18);
@@ -267,8 +311,8 @@
    }
 
    &__heading {
+      @include adaptiveValue("font-size", 24, 16);
       text-transform: uppercase;
-      font-size: rem(24);
       line-height: math.div(36 , 24);
       font-weight: 700;
       color: $darkColor;
@@ -276,10 +320,10 @@
    }
 
    &__per {
-      font-size: rem(18);
+      @include adaptiveValue("margin-bottom", 24, 10);
+      @include adaptiveValue("font-size", 18, 15);
       line-height: math.div(27 , 18);
       font-weight: 700;
-      margin-bottom: rem(24);
    }
 
    &__body {
@@ -291,20 +335,22 @@
    }
 
    &__col {
-      padding: rem(16) rem(24);
+      @include adaptiveValue("padding-right", 24, 5);
+      @include adaptiveValue("padding-left", 24, 5);
+      padding: rem(16) rem(0);
       line-height: math.div(26 , 16);
       font-weight: 400;
       text-align: center;
       color: $secondaryColor;
       &:first-child {
+         @include adaptiveValue("margin-right", 66, 10);
          display: block;
-         margin-right: 66px;
          text-align: left;
       }
    }
 
    &__check {
-      display: block;
+      display: inline-block;
       font-size: rem(0);
       margin-bottom: rem(2);
       &::before{
@@ -320,6 +366,7 @@
 
    &__btn {
       display: inline-block;
+      white-space: nowrap;
       margin-top: rem(16);
       margin-bottom: rem(14);
       font-size: rem(12);
