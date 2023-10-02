@@ -1,7 +1,7 @@
 .page {
    &__hero {
-      @include adaptiveValue("padding-top", 224, 180);
-      @include adaptiveValue("padding-bottom", 233, 20);
+      @include adaptiveValue("padding-top", 314, 80);
+      @include adaptiveValue("padding-bottom", 350, 10);
       background-position: 50%;
       background-repeat: no-repeat;
       background-color: $mainColor; 
@@ -136,11 +136,10 @@
    }
 
    &__btn-play {
-
       &::before{
+         @include adaptiveValue("font-size", 26, 10);
          color: $whiteColor;
          position: absolute;
-         font-size: rem(26);
          top: 50.2%;
          left: 50.3%;
          transform: translate(-50.3%, -50.2%);
@@ -148,15 +147,15 @@
          transition: all 0.2s ease-in 0s;
       }
 
-      &::after{
+      &::after {
          content:'';
+         @include adaptiveValue("width", 80, 45);
+         @include adaptiveValue("height", 80, 45);
          position: absolute;
          z-index: 2;
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
-         width: rem(80);
-         height: rem(80);
          border-radius: 50%;
          background-color: $primaryColor;
       }
@@ -167,26 +166,35 @@
 
    &__btn-muted {
       &::before{
+         @include adaptiveValue("font-size", 20, 12);
          color: $whiteColor;
          position: absolute;
          z-index: 3;
-         font-size: rem(20);
-         bottom: rem(42);
          left: rem(42);
+         bottom: rem(42);
          transition: all 0.3s ease-in 0s;
+         @media (max-width:$mobileSmall){
+            left: rem(22);
+            bottom: rem(22);
+         }
       }
 
       &::after{
          content:'';
+         @include adaptiveValue("width", 40, 32);
+         @include adaptiveValue("height", 40, 32);
          position: absolute;
          z-index: 2;
-         bottom: rem(32);
          left: rem(32);
-         width: rem(40);
-         height: rem(40);
+         bottom: rem(32);
          border-radius: 50%;
          background-color:$whiteColor;
          opacity: 0.12;
+         transition: all 0.3s ease-in 0s;
+         @media (max-width:$mobileSmall){
+            left: rem(12);
+            bottom: rem(12);
+         }
       }
       &:hover::before {
          transform: scale(1.6);
@@ -197,25 +205,6 @@
    }
 }
 //===================================================================
-
-.values {
-
-   &__container {
-   }
-
-   &__title {
-   }
-
-   &__text {
-   }
-
-   &__icons-box {
-
-   }
-
-   &__know-form {
-   }
-}
 
 .icons-box {
    $values-gap: rem(94);
