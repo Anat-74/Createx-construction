@@ -120,11 +120,11 @@
       flex-direction: column;
 
    &__caption {
+      @include adaptiveValue("margin-bottom", 9, 5);
       font-size: rem(14);
       line-height: math.div(21 , 14);
       font-weight: 400;
       color: $secondaryColor;
-      margin-bottom: rem(9);
    }
 
    &__input {
