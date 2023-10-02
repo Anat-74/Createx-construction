@@ -217,7 +217,7 @@
 
 
 .bredcrumbs {
-   @include adaptiveValue("margin-bottom",40 , 25);
+   @include adaptiveValue("margin-bottom",40 , 15);
    display: flex;
    text-align: center;
 
@@ -232,6 +232,10 @@
             top: rem(2);
             right: rem(-15);
             color: #9a9ca5;
+            @media (max-width:$mobile){
+               top: rem(6);
+               color: $darkColor;
+            }
          }
       }
    }
@@ -243,7 +247,11 @@
       color: $secondaryColor;
 
       &:not([href]) {
-         color: #9a9ca5;
+         color: $grayColor;
+      }
+      @media (max-width:$mobile){
+         font-size: rem(18);
+          font-weight: 700; 
       }
    }
 }

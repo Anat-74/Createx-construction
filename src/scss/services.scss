@@ -1,15 +1,15 @@
 .page {
    &__hero-services {
-      @include adaptiveValue("padding-top",153 , 70);
-      @include adaptiveValue("padding-bottom",179 , 70);
+      @include adaptiveValue("padding-top",153 , 75);
+      @include adaptiveValue("padding-bottom",179 , 20);
       background-position: top right -8px;
       background-repeat: no-repeat;
       background-color: $bg-inputColor;
    }
 
    &__services-content {
-      @include adaptiveValue("padding-top",120 , 70);
-      @include adaptiveValue("padding-bottom",180 , 70);
+      @include adaptiveValue("padding-top",120 , 30);
+      @include adaptiveValue("padding-bottom",180 , 20);
       background-color: $whiteColor;
    }
 }
@@ -37,14 +37,27 @@
    }
 
    &__container {
+      @include adaptiveValue("column-gap", 80, 15);
+      @include adaptiveValue("row-gap", 120, 15);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-      column-gap: rem(80);
-      row-gap: rem(120);
 
-      @media (max-width:$tablet){
+      @media (max-width:$mobile){
          grid-template-columns: 1fr;
+         div:nth-child(4) {
+            grid-row: 4 / 5;
+         }
+         div:nth-child(9) {
+            grid-row: 7 / 8;
+         }
+         .services-content__items {
+            justify-self: center;
+            text-align: center;
+         }
+         .services-content__descr {
+            text-align: start;
+         }
       }
    }
 
@@ -61,7 +74,7 @@
       font-weight: 700;
       color: $darkColor;
       &:not(:last-child) {
-         margin-bottom: rem(24);
+         @include adaptiveValue("margin-bottom", 24, 5);
       }
    }
 
@@ -70,7 +83,7 @@
       line-height: math.div(26 , 16);
       font-weight: 400;
       &:not(:last-child) {
-         margin-bottom: rem(46);
+         @include adaptiveValue("margin-bottom", 46, 15);
       }
    }
 

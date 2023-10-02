@@ -1,15 +1,18 @@
-<header class="header header--secondary none">
-   <div class="header__container">
-      <a href="#" class="header__logo">
+<header class="header header--secondary ">
+	<div class="header__container">
+      <div class="header__tablet"></div>
+      <div data-da=".header__nav, 991.98" class="header__logo">
          <img src="@img/logo.svg" alt="Createx logo">
-      </a>
+      </div>
+      <div class="header__menu">
+         <button type="button" class="header__icon icon-menu"><span></span></button>
       <nav class="header__nav nav">
          <ul class="nav__list">
             <li class="nav__item">
                <a href="#" class="nav__link">About Us</a>
             </li>
             <li class="nav__item">
-               <a class="nav__link nav__link--current">Services</a>
+               <a  href="#" class="nav__link">Services</a>
             </li>
             <li class="nav__item">
                <a href="#" class="nav__link">Work</a>
@@ -21,16 +24,17 @@
                <a href="#" class="nav__link">Contacts</a>
             </li>
          </ul>
-      </nav>
-      <div class="header__contacts contacts-header">
-         <a href="tel:4055550128" class="contacts-header__items-link contacts-header__items-link--icon-phone">
-            <span class="contacts-header__call-link">Call us</span>
-            <span class="contacts-header__connection-link">(405) 555-0128</span>
-         </a>
-         <a href="mailto:hello@createx.com" class="contacts-header__items-link contacts-header__items-link--icon-mail">
-            <span class="contacts-header__call-link">Talk to us</span>
-            <span class="contacts-header__connection-link">hello@createx.com</span>
-         </a>
+         </nav>
       </div>
-   </div>
+         <div data-da=".header__tablet, 991.98" class="header__contacts contacts-header">
+            <a href="tel:4055550128" class="contacts-header__items-link contacts-header__items-link--icon-phone">
+            <span class="contacts-header__call-link">Call us</span> 
+            <span class="contacts-header__connection-link main-text">(405) 555-0128</span>
+            </a>
+            <a href="mailto:hello@createx.com" class="contacts-header__items-link contacts-header__items-link--icon-mail">
+               <span class="contacts-header__call-link">Talk to us</span>
+               <span class="contacts-header__connection-link main-text">hello@createx.com</span>
+            </a>
+         </div>
+	</div>
 </header>
