@@ -1,8 +1,8 @@
 .page {
    &__hero-about-us {
       position: relative;
-      @include adaptiveValue("padding-top",152 , 40);
-      @include adaptiveValue("padding-bottom",179 , 40);
+      @include adaptiveValue("padding-top",152 , 75);
+      @include adaptiveValue("padding-bottom",179 , 20);
       background-repeat: no-repeat;
       background-position: 100%, 0;
       background-size: auto auto, cover;
@@ -20,8 +20,8 @@
    }
 
    &__build {
-      @include adaptiveValue("padding-top",121 , 40);
-      @include adaptiveValue("padding-bottom",240 , 40);
+      @include adaptiveValue("padding-top",121 , 30);
+      @include adaptiveValue("padding-bottom",240 , 30);
       background-color: $whiteColor;
    }
 
@@ -41,7 +41,7 @@
    }
 
       &__values-two {
-         @include adaptiveValue("padding-top",80 , 40);
+         @include adaptiveValue("padding-top",80 , 20);
          @include adaptiveValue("padding-bottom",154 , 80);
          background-color: $bg-inputColor;
       }
@@ -64,13 +64,13 @@
       }
 
       &__our-partners {
-         @include adaptiveValue("padding-top",120 , 40);
-         @include adaptiveValue("padding-bottom",180 , 40);
+         @include adaptiveValue("padding-top",120 , 20);
+         @include adaptiveValue("padding-bottom",180 , 30);
          background-color: $whiteColor;
       }
 
       &__our-team {
-         @include adaptiveValue("padding-bottom",120 , 40);
+         @include adaptiveValue("padding-bottom",120 , 20);
          background-color: $whiteColor;
       }
 
@@ -81,6 +81,17 @@
 }
 
 //===================================================================
+
+.hero-about-us {
+
+   &__title {
+      &:not(:last-child) {
+         margin-bottom: rem(12);
+      }
+   }
+}
+
+//=================================================================
 
 .build {
    &__container {

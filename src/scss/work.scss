@@ -2,9 +2,12 @@
    &__hero-work {
       @include adaptiveValue("padding-top",153 , 70);
       @include adaptiveValue("padding-bottom",180 , 70);
-      background-position: top right -8px;
+      background-position: top right rem(-8);
       background-repeat: no-repeat;
       background-color: $bg-inputColor;
+      @media (max-width:em(1140)){
+         background-color: rgba(229, 229, 230);
+      }
    }
 
    &__portfolio {
@@ -13,13 +16,13 @@
    }
 
    &__partners-two {
-      @include adaptiveValue("padding-top",80 , 40);
+      @include adaptiveValue("padding-top",80 , 20);
       background-color: $bg-inputColor;
    }
 
    &__our-clients {
-      @include adaptiveValue("padding-top",180 , 70);
-      @include adaptiveValue("padding-bottom",124 , 60);
+      @include adaptiveValue("padding-top",180 , 20);
+      @include adaptiveValue("padding-bottom",124 , 20);
    }
 }
 
@@ -37,9 +40,16 @@
       &:not(:last-child) {
          margin-bottom: rem(11);
       }
+      @media (max-width:em(1140)){
+         color: $whiteColor;
+      }
    }
 
-   &__deskr {
+   &__descr {
+      @media (max-width:em(1140)){
+         font-weight: 700;
+         color: $whiteColor;
+      }
    }
 }
 

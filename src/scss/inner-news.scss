@@ -1,6 +1,6 @@
 .page {
    &__hero-inner-news {
-      @include adaptiveValue("padding-top",152 , 20);
+      @include adaptiveValue("padding-top",152 , 75);
       @include adaptiveValue("padding-bottom",159 , 20);
       background-color: $bg-inputColor;
    }
@@ -191,8 +191,8 @@
 
    blockquote {
       @include adaptiveValue("padding-top",22 , 5);
+      @include adaptiveValue("padding-left", 58, 28);
       position: relative;
-      padding-left: rem(58);
       font-size: rem(20);
       line-height: math.div(30 , 20);
       font-weight: 700;
@@ -205,6 +205,10 @@
          height: 100%;
          transform: translate(rem(-58), 0);
          background: url('@img/main/ceo/braces.svg') left top / 28px 20px no-repeat;
+         @media (max-width:$mobile){
+            transform: translate(rem(-27), 0);
+            background-size: rem(20) rem(14);
+         }
       }
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom",48 , 30);

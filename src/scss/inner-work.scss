@@ -1,22 +1,22 @@
 .page {
    &__hero-inner-work {
-      @include adaptiveValue("padding-top",153 , 85);
-      @include adaptiveValue("padding-bottom",116 , 25);
+      @include adaptiveValue("padding-top",153 , 75);
+      @include adaptiveValue("padding-bottom",116 , 20);
    }
 
    &__project-goal {
-      @include adaptiveValue("padding-bottom",120 , 35);
+      @include adaptiveValue("padding-bottom",120 , 20);
       background-color: $whiteColor;
    }
 
    &__constructive {
-      @include adaptiveValue("padding-top",80 , 35);
+      @include adaptiveValue("padding-top",80 , 20);
       background-color: $bg-inputColor;
    }
 
    &__similar-projects {
-      @include adaptiveValue("padding-top",180 , 45);
-      @include adaptiveValue("padding-bottom",118 , 45);
+      @include adaptiveValue("padding-top",180 , 20);
+      @include adaptiveValue("padding-bottom",118 , 20);
    }
 }
 

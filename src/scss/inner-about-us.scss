@@ -1,7 +1,7 @@
 .page {
    &__hero-inner-about-us {
-   @include adaptiveValue("padding-top",152 , 40);
-   @include adaptiveValue("padding-bottom",145 , 40);
+   @include adaptiveValue("padding-top",152 , 75);
+   @include adaptiveValue("padding-bottom",145 , 20);
    background-repeat: no-repeat;
    background-position: right rem(-9) bottom;
    background-size: auto auto, cover;
@@ -9,13 +9,13 @@
    }
 
    &__info-items {
-   @include adaptiveValue("padding-top",120 , 40);
-   @include adaptiveValue("padding-bottom",180 , 40);
+   @include adaptiveValue("padding-top",120 , 20);
+   @include adaptiveValue("padding-bottom",180 , 30);
    background-color: $whiteColor;
    }
 
    &__employee {
-      @include adaptiveValue("padding-bottom",155 , 40);
+      @include adaptiveValue("padding-bottom",155 , 20);
       background-color: $whiteColor;
    }
 }

@@ -952,8 +952,8 @@
 
 .bg-form {
    &__container {
-      @include adaptiveValue("padding-top",80 , 40);
-      @include adaptiveValue("padding-bottom",80 , 40);
+      @include adaptiveValue("padding-top",80 , 20);
+      @include adaptiveValue("padding-bottom",80 , 20);
       display: grid;
       justify-content: end;
    }
