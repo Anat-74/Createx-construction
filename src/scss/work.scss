@@ -8,7 +8,7 @@
    }
 
    &__portfolio {
-      @include adaptiveValue("padding-bottom",100 , 70);
+      @include adaptiveValue("padding-bottom",100 , 20);
       background-color: $whiteColor;
    }
 
@@ -75,11 +75,16 @@
 }
 
 .row-icons {
+   @include adaptiveValue("column-gap", 20, 15);
    position: relative;
    top: rem(-60);
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   column-gap: rem(20);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   row-gap: rem(15);
+   @media (max-width:$mobileSmall){
+      top: rem(-40);
+   }
 
 &__items-btn {
    display: grid;
@@ -133,11 +138,11 @@
 }
 
 .columns-image {
-   @include adaptiveValue("padding-top",58 , 30);
-   @include adaptiveValue("padding-bottom",60 , 30);
+   @include adaptiveValue("padding-top",58 , 5);
+   @include adaptiveValue("padding-bottom",60 , 20);
+   @include adaptiveValue("gap", 30, 15);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: rem(30);
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 
    &__link-items {
       overflow: hidden;

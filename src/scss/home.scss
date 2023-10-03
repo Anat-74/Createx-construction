@@ -340,17 +340,17 @@
       @include adaptiveValue("padding-top", 94, 15);
       @include adaptiveValue("padding-bottom", 90, 15);
       text-align: center;
-     position: relative;
-     display: grid;
-     justify-items: center;
-     align-items: center;
-     padding: rem(0) rem(10);
-     max-width: rem(285);
-     background-color: $whiteColor;
-     border-radius: rem(4);
-     border: 1px solid $border-color;
-     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
-     transition: all 0.4s ease-in;
+      position: relative;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      padding: rem(0) rem(10);
+      max-width: rem(285);
+      background-color: $whiteColor;
+      border-radius: rem(4);
+      border: 1px solid $border-color;
+      box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+      transition: all 0.4s ease-in;
 
       &::before{
         content:'';

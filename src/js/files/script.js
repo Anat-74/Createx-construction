@@ -40,8 +40,9 @@ rowIcons.addEventListener('click', (e) => {
      if(target.classList.contains('row-icons__items-btn')); {
 
       rowIconsItemsBtn.forEach(el => {
-      el.classList.remove('row-icons__items-btn--active')});
-      
+      el.classList.remove('row-icons__items-btn--active')
+   });
+
       target.classList.add('row-icons__items-btn--active');
       rowIcons.classList.remove('row-icons__items-btn--active');
    }

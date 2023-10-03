@@ -6,6 +6,7 @@
 
 <body>
    <div class="wrapper">
+      @@include('html/_popup.htm',{})
       @@include('html/_header-2.htm',{})
       <main class="page">
          <section class="page__hero-work hero-work" style="background-image: url('@img/main/work/bg-image.png')">
@@ -19,38 +20,38 @@
                   </li>
                </ul>
                <h1 class="hero-work__title top-title">our work</h1>
-               <p class="hero-work__deskr top-deskr">Our portfolio represents 20&nbsp;years of&nbsp;construction experience backed by&nbsp;a&nbsp;passion for perfect client service, quality and innovations in&nbsp;consctuction industry.</p>
+               <p class="hero-work__deskr top-descr">Our portfolio represents 20&nbsp;years of&nbsp;construction experience backed by&nbsp;a&nbsp;passion for perfect client service, quality and innovations in&nbsp;consctuction industry.</p>
             </div>
          </section>
          <section class="page__portfolio portfolio">
             <div class="portfolio__container">
                <h2 class="visually-hidden">Portfolio</h2>
                   <div class="portfolio__list-row row-icons">
-                     <button type="submit" class="row-icons__items-btn row-icons__items-btn--active">
+                     <button type="submit" data-popup="#popup" class="row-icons__items-btn row-icons__items-btn--active">
                         <svg class="row-icons__icon ">
                            <use xlink:href="@img/icons/icons.svg#ic-house"></use>
                         </svg>
                         <h3 class="row-icons__subtitle subtitle">All Projects</h3>
                         </button>
-                  <button type="submit" class="row-icons__items-btn">
+                  <button type="submit" data-popup="#popup-2" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#construction"></use>
                      </svg>
                      <h3 class="row-icons__subtitle subtitle">Construction</h3>
                      </button>
-                  <button type="submit"class="row-icons__items-btn">
+                  <button type="submit" data-popup="#popup-3" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#Project_Development"></use>
                      </svg>
                      <h3 class="row-icons__subtitle subtitle">Project Development</h3>
                   </button>
-                  <button type="submit" class="row-icons__items-btn">
+                  <button type="submit" data-popup="#popup-4" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#Interior_Design"></use>
                      </svg>
                      <h3 class="row-icons__subtitle subtitle">Interior Design</h3>
                   </button>
-                  <button type="submit" class="row-icons__items-btn">
+                  <button type="submit" data-popup="#popup-5" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#Repairs"></use>
                      </svg>
