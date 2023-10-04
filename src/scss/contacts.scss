@@ -30,14 +30,30 @@
    }
 
    &__image{
+      max-width: rem(495);
+      img {
+         display: block;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between
    }
 
    &__form {
+      @include adaptiveValue("column-gap", 30, 10);
+      @include adaptiveValue("row-gap", 25, 10);
+      width: rem(600);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
    }
 }
 
 .form-contacts-us {
-
    &__labels {
    }
 
@@ -45,30 +61,79 @@
    }
 
    &__input {
+      margin-top: rem(11);
+      margin-bottom: rem(0);
+   }
+
+   &__sel {
+      margin-top: rem(11);
+      margin-bottom: rem(0);
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      color: $secondaryColor
    }
 
    &__fields {
    }
 
+   &__caption-radio {
+
+   }
+
    &__items-radio {
+      @include adaptiveValue("padding-top", 22, 10);
+      display: flex;
+      align-items: center;
+      column-gap: rem(28);
    }
 
    &__radio {
    }
 
    &__input-radio {
+      margin-right: rem(10);
+   }
+
+   &__labels-area {
+      grid-column: 2 span;
+   }
+
+   &__input-area {
+      @include adaptiveValue("padding-bottom",72 , 20);
+      margin-bottom: 0;
+      padding-top: rem(8);
    }
 
    &__bottom {
+      display: grid;
+      grid-column: 2 span;
    }
 
    &__checkbox {
+      align-items: center;
+      grid-column: 1/ 2;
    }
 
    &__input-check {
    }
 
+   &__descr {
+      &::before{
+         top: rem(4);
+      }
+      max-width: rem(314);
+      margin: 0;
+      font-size: rem(16);
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      color: $secondaryColor
+   }
+
    &__btn {
+      align-self: end;
+      justify-self: end;
+      grid-column: 2/ 3;
    }
 }
 
