@@ -38,7 +38,7 @@
                   data-error="Ошибка" placeholder="Your name"></label>
                   <label class="form-contacts-us__labels">
                      <span class="form-contacts-us__caption form__label form-post__caption">I am interested in</span>
-                     <select name="form[]" data-class-modif="form" class="form-contacts-us__sel form-post__input">
+                     <select name="form[]" data-class-modif="form" class="form-contacts-us__sel">
                         <option value="1">Interior Design</option>
                         <option value="2">Пункт №2</option>
                         <option value="3">Пункт №3</option>
@@ -49,7 +49,7 @@
                         data-error="Ошибка" placeholder="Your phone number"></label>
                         <label class="form-contacts-us__labels">
                            <span class="form-contacts-us__caption form__label form-post__caption">Location*</span>
-                           <select name="form[]" data-class-modif="form" class="form-contacts-us__sel form-post__input">
+                           <select name="form[]" data-class-modif="form" class="form-contacts-us__sel">
                               <option value="1">New York</option>
                               <option value="2">Пункт №2</option>
                               <option value="3">Пункт №3</option>
@@ -63,15 +63,15 @@
                                  <div class="form-contacts-us__items-radio">
                                  <label class="form-contacts-us__radio">
                                     <input class="form-contacts-us__input-radio" name="contacts_method" value="Phone" autocomplete="off" type="radio">
-                                    <span class="form-contacts-us__caption form-post__caption">Phone</span>
+                                    <span class="form-contacts-us__caption-radio">Phone</span>
                                  </label>
                                  <label class="form-contacts-us__radio">
                                     <input class="form-contacts-us__input-radio" name="contacts_method" value="Email" autocomplete="off" type="radio">
-                                    <span class="form-contacts-us__caption form-post__caption">Email</span>
+                                    <span class="form-contacts-us__caption-radio">Email</span>
                                  </label>
                                  <label class="form-contacts-us__radio">
                                     <input class="form-contacts-us__input-radio" name="contacts_method" value="Viber" autocomplete="off" type="radio">
-                                    <span class="form-contacts-us__caption form-post__caption">Viber</span>
+                                    <span class="form-contacts-us__caption-radio">Viber</span>
                                  </label>
                               </div>
                               </fieldset>
@@ -92,6 +92,33 @@
          </div>
       </section>
 
+      <section class="page__employee">
+         <div class="values__container">
+            <h2 class="values__title main-title main-title--center">Employee benefits</h2>
+            <p class="values__text main-text main-text--center">There&rsquo;s always room for talent.</p>
+            <div class="values__icons-box icons-box">
+               <div class="icons-box__items">
+                  <div class="icons-box__icon --icon-ic-brain"></div>
+                  <h3 class="icons-box__subtitle subtitle">Training</h3>
+                  <p class="icons-box__text">Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam
+                     velit nostrud aliquip sunt.</p>
+               </div>
+               <div class="icons-box__items">
+                  <div class="icons-box__icon --icon-ic-success"></div>
+                  <h3 class="icons-box__subtitle subtitle">Professional Growth</h3>
+                  <p class="icons-box__text">Anim reprehenderit sint voluptate exercitation adipisicing laborum
+                     adipisicing. Minim empor est&nbsp;ea.</p>
+               </div>
+               <div class="icons-box__items">
+                  <div class="icons-box__icon --icon-ic-budget"></div>
+                  <h3 class="icons-box__subtitle subtitle">Growing Salary</h3>
+                  <p class="icons-box__text">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit
+                     voluptate ullamco proident ea&nbsp;ad.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      
       </main>
       @@include('html/_footer.htm',{})
    </div>

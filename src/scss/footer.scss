@@ -1,5 +1,5 @@
 .footer {
-@include adaptiveValue("padding-top",78 , 40);
+@include adaptiveValue("padding-top",78 , 30);
 @include adaptiveValue("padding-bottom",78 , 20);
 background-color: $darkColor;
 color: rgba(255, 255, 255, 0.6);
@@ -21,6 +21,18 @@ color: rgba(255, 255, 255, 0.6);
          "c c c c c"
          "e e .. f f"
          ;
+         .top-left__list {
+            @include adaptiveValue("column-gap", 150, 22);
+            margin-top: rem(-8);
+            .social__link {
+               svg {
+                  width: rem(40);
+                  height: rem(40);
+                  fill: $whiteColor;
+               }
+            }
+         }
+
          .top-right__items {
             flex-direction: row-reverse;
          }
@@ -63,7 +75,7 @@ color: rgba(255, 255, 255, 0.6);
          .go-to-top__btn {
             width: rem(44);
             height: rem(44);
-            border-radius: rem(25) rem(25);
+            border-radius: 50%;
          }
       }
    }
@@ -94,21 +106,16 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 .top-left {
-
    &__logo {
       &:not(:last-child) {
-         margin-right: rem(56);
-      }
-      @media (max-width:em(415)){
-         display: inline-block;
-           margin-bottom: rem(20);
+         @include adaptiveValue("margin-right", 56, 40);
       }
    }
 
    &__list {
    }
 
-   &__deskr {
+   &__descr {
       font-size: rem(14);
       font-weight: 400;
       line-height: math.div(21 , 14);
@@ -122,14 +129,18 @@ color: rgba(255, 255, 255, 0.6);
       @include adaptiveValue("margin-bottom",24 , 15);
    }
 
-   &__item {
-   }
+   @media (max-width:$mobile){
+      padding-top: rem(30);
+      display: flex;
+      justify-content: space-between;
+     }
 
-   &__link {
-   }
-
-   &__icon {
-      font-size: rem(24);
+     &__link {
+      svg {
+         width: rem(24);
+         height: rem(24);
+         fill: $whiteColor;
+      }
    }
 }
 
@@ -219,9 +230,6 @@ color: rgba(255, 255, 255, 0.6);
       margin-bottom: rem(2);
          }
       }
-      @media (max-width:$mobileSmall){
-          padding: rem(0) rem(10); 
-      }
    }
 
 .nav-footer {
@@ -255,10 +263,6 @@ color: rgba(255, 255, 255, 0.6);
          line-height: math.div(28 , 16);
          font-weight: 400;
          color: rgba(255, 255, 255, 0.6);
-      }
-
-      @media (max-width:$mobileSmall){
-         padding: rem(0) rem(10); 
       }
    }
 

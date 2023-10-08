@@ -10,18 +10,18 @@
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
+      border: 1px solid $border-inputColor;
+      background-color: $bg-inputColor;
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
-	}
+   }
 	// .select__value
 	&__value {
 		display: flex;
 		align-items: center;
-		height: rem(30);
-		padding: 0 rem(15);
+		//height: rem(30);
+		padding: rem(10) rem(16);
 		gap: rem(10);
 		> * {
 			flex: 1 1 auto;
@@ -29,11 +29,12 @@
 		&:after {
 			content: "";
 			align-self: stretch;
-			flex: 0 0 10px;
+			flex: 0 0 20px;
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+         background: url('@img/icons/Down-chevron.svg') 0 50% no-repeat;
 			._select-open & {
 				transform: rotate(-180deg);
 			}
@@ -45,6 +46,12 @@
 			}
 		}
 	}
+
+   &__content {
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      color: $secondaryColor;
+   }
 	// .select__text
 	&__text {
 		flex: 1 1 auto;
@@ -58,11 +65,11 @@
 	&__options {
 		color: #000;
 		position: absolute;
-		top: 29px;
+		top: 30px;
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
+      background-color: $bg-inputColor;
 		border-top: 0;
 		border: 1px solid #d9d9d9;
 		border-top: 0;

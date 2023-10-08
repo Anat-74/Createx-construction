@@ -26,7 +26,7 @@
    color: $darkColor;
    &--margin {
       &:not(:last-child) {
-         margin-bottom: rem(23);
+         @include adaptiveValue("margin-bottom", 23, 10);
       }
    }
 }

@@ -1,7 +1,7 @@
 .page {
    &__hero-contacts {
-      @include adaptiveValue("padding-top",152 , 40);
-      @include adaptiveValue("padding-bottom",209 , 40);
+      @include adaptiveValue("padding-top",152 , 75);
+      @include adaptiveValue("padding-bottom",209 , 20);
       background-repeat: no-repeat;
       background-position: right rem(-9) top;
       background-size: auto auto;
@@ -9,14 +9,25 @@
    }
 
    &__contacts-us {
-      @include adaptiveValue("padding-top",121 , 40);
-      @include adaptiveValue("padding-bottom",122 , 40);
+      @include adaptiveValue("padding-top",121 , 20);
+      @include adaptiveValue("padding-bottom",122 , 20);
       background-color: $whiteColor;
    }
 }
 
 //==================================================================
 
+.hero-contacts {
+
+   &__title {
+   }
+
+   &__descr {
+      color: $mainColor;
+   }
+}
+
+//===========================================================
 
 .contacts-us {
 
@@ -39,39 +50,91 @@
    }
 
    &__body {
+      @include adaptiveValue("column-gap", 35, 20, 0, $containerWidth, 991);
+      @include adaptiveValue("row-gap", 30, 20);
       display: grid;
-      grid-template-columns: repeat(2, auto);
-      justify-content: space-between
+      grid-template-columns: repeat(2, 1fr);
+      @media (max-width:$tablet){
+         grid-template-columns: 1fr;
+         justify-items: center;
+         .contacts-us__form {
+            width: 100%;
+         }
+         .form-contacts-us__input {
+            min-width: 100%
+         }
+      }
    }
 
    &__form {
-      @include adaptiveValue("column-gap", 30, 10);
-      @include adaptiveValue("row-gap", 25, 10);
-      width: rem(600);
+      @include adaptiveValue("column-gap", 30, 12);
+      @include adaptiveValue("row-gap", 25, 18);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width:$mobileSmall){
+         grid-template-columns: 1fr;
+         column-gap: 0;
+         label:nth-child(1) {
+            grid-row: 4 / 5;
+         }
+         label:nth-child(2) {
+            grid-row: 1 / 2;
+         }
+         label:nth-child(3) {
+             grid-row: 5 / 6;
+         }
+         label:nth-child(4) {
+            grid-row: 2 / 3;
+         }
+         label:nth-child(5) {
+            grid-row: 6/ 7;
+         }
+         fieldset {
+            grid-row: 3 / 4;
+         }
+         .form-contacts-us__fields {
+            text-align: center;
+            display: grid;
+            justify-items: center;
+         }
+   
+         .form-contacts-us__items-radio {
+            padding-top: rem(4);
+            column-gap: rem(24);
+            font-size: rem(18);
+         }
+   
+         .form-contacts-us__bottom {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          row-gap: rem(15);
+         }
+
+         .form-contacts-us__descr  {
+            max-width: 100%;
+            margin-top: rem(-15);
+         }
+      }
    }
 }
 
 .form-contacts-us {
+
    &__labels {
    }
 
    &__caption {
+      margin-bottom: rem(11);
    }
 
    &__input {
-      margin-top: rem(11);
+      min-width: rem(250);
       margin-bottom: rem(0);
    }
 
    &__sel {
-      margin-top: rem(11);
-      margin-bottom: rem(0);
-      font-size: rem(16);
-      line-height: math.div(26 , 16);
-      font-weight: 400;
-      color: $secondaryColor
    }
 
    &__fields {
@@ -82,10 +145,11 @@
    }
 
    &__items-radio {
-      @include adaptiveValue("padding-top", 22, 10);
+      @include adaptiveValue("padding-top", 6, 16);
+      @include adaptiveValue("column-gap", 28, 10);
+      white-space: nowrap;
       display: flex;
       align-items: center;
-      column-gap: rem(28);
    }
 
    &__radio {
@@ -93,6 +157,12 @@
 
    &__input-radio {
       margin-right: rem(10);
+   }
+
+   &__caption-radio {
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      color: $secondaryColor;
    }
 
    &__labels-area {
@@ -108,11 +178,12 @@
    &__bottom {
       display: grid;
       grid-column: 2 span;
+      column-gap: rem(10);
    }
 
    &__checkbox {
       align-items: center;
-      grid-column: 1/ 2;
+      grid-column: 1 / 2;
    }
 
    &__input-check {
@@ -120,20 +191,25 @@
 
    &__descr {
       &::before{
-         top: rem(4);
+         top: rem(5);
+      }
+      &::after{
+         top: rem(5);
       }
       max-width: rem(314);
       margin: 0;
       font-size: rem(16);
       line-height: math.div(26 , 16);
       font-weight: 400;
-      color: $secondaryColor
+      color: $secondaryColor;
+
    }
 
    &__btn {
+      white-space: nowrap;
       align-self: end;
       justify-self: end;
-      grid-column: 2/ 3;
+      grid-column: 2 / 3;
    }
 }
 
