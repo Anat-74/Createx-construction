@@ -292,7 +292,7 @@
       svg {
          @include adaptiveValue("width", 32, 40);
          @include adaptiveValue("height", 32, 40);
-         transition: all 0.3s ease-in;
+         transition: fill 0.3s ease-in, transform 0.3s ease-in;
          @media (any-hover: hover){
             &:hover{
                fill: $primaryColor;
