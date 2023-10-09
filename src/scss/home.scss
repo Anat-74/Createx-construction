@@ -207,13 +207,12 @@
 //===================================================================
 
 .icons-box {
+   @include adaptiveValue("margin-bottom", 27, 10);
    $values-gap: rem(94);
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    column-gap: calc(($values-gap) * 2);
    row-gap: rem(30);
-   @include adaptiveValue("margin-bottom", 27, 10);
-
 
    &__items {
       position: relative;
@@ -250,6 +249,7 @@
       line-height: math.div(26 , 16);
       font-weight: 400;
    }
+   
    @media (max-width:$tablet){
        grid-template-columns: 1fr; 
    }
@@ -279,6 +279,7 @@
       display: flex;
       align-items: flex-end;
       row-gap: rem(15);
+
       @media (max-width:em(1066)){
          display: grid;
          grid-template-columns: 1fr;

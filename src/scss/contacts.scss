@@ -10,8 +10,14 @@
 
    &__contacts-us {
       @include adaptiveValue("padding-top",121 , 20);
-      @include adaptiveValue("padding-bottom",122 , 20);
+      @include adaptiveValue("padding-bottom",122 , 35);
       background-color: $whiteColor;
+   }
+
+   &__our-offices {
+      @include adaptiveValue("padding-top",80 , 20);
+      @include adaptiveValue("padding-bottom",120 , 30);
+      background-color: $bg-inputColor;
    }
 }
 
@@ -34,12 +40,6 @@
    &__container {
    }
 
-   &__title {
-   }
-
-   &__descr {
-   }
-
    &__image{
       max-width: rem(495);
       img {
@@ -54,6 +54,7 @@
       @include adaptiveValue("row-gap", 30, 20);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      //* media $tablet ------------------------------------------------------------------
       @media (max-width:$tablet){
          grid-template-columns: 1fr;
          justify-items: center;
@@ -61,20 +62,22 @@
             width: 100%;
          }
          .form-contacts-us__input {
-            min-width: 100%
+         min-width: 100%
          }
       }
+      //*------------------------------------------------------------------
    }
 
    &__form {
-      @include adaptiveValue("column-gap", 30, 12);
+      @include adaptiveValue("column-gap", 30, 12, 0, $containerWidth, 479);
       @include adaptiveValue("row-gap", 25, 18);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
+//* media $mobileSmall -----------------------------------------------------------------
       @media (max-width:$mobileSmall){
          grid-template-columns: 1fr;
          column-gap: 0;
+
          label:nth-child(1) {
             grid-row: 4 / 5;
          }
@@ -88,21 +91,21 @@
             grid-row: 2 / 3;
          }
          label:nth-child(5) {
-            grid-row: 6/ 7;
+            grid-row: 6 / 7;
          }
          fieldset {
             grid-row: 3 / 4;
          }
-         .form-contacts-us__fields {
+
+         .form-contacts-us__caption-radio {
             text-align: center;
-            display: grid;
-            justify-items: center;
+            font-size: rem(18);
          }
    
          .form-contacts-us__items-radio {
             padding-top: rem(4);
-            column-gap: rem(24);
-            font-size: rem(18);
+            justify-content: space-between;
+            font-size: rem(20);
          }
    
          .form-contacts-us__bottom {
@@ -117,13 +120,11 @@
             margin-top: rem(-15);
          }
       }
+      //*------------------------------------------------------------------
    }
 }
 
 .form-contacts-us {
-
-   &__labels {
-   }
 
    &__caption {
       margin-bottom: rem(11);
@@ -134,25 +135,12 @@
       margin-bottom: rem(0);
    }
 
-   &__sel {
-   }
-
-   &__fields {
-   }
-
-   &__caption-radio {
-
-   }
-
    &__items-radio {
       @include adaptiveValue("padding-top", 6, 16);
       @include adaptiveValue("column-gap", 28, 10);
       white-space: nowrap;
       display: flex;
       align-items: center;
-   }
-
-   &__radio {
    }
 
    &__input-radio {
@@ -186,9 +174,6 @@
       grid-column: 1 / 2;
    }
 
-   &__input-check {
-   }
-
    &__descr {
       &::before{
          top: rem(5);
@@ -210,6 +195,111 @@
       align-self: end;
       justify-self: end;
       grid-column: 2 / 3;
+   }
+}
+
+//===============================================================
+
+.our-offices {
+
+   &__container {
+   }
+
+   &__title-bottom {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 40, 15);
+      }
+   }
+}
+
+.list-offices {
+   @include adaptiveValue("padding-bottom", 120, 20);
+   @include adaptiveValue("row-gap", 30, 20);
+   @include adaptiveValue("column-gap", 240, 30, 0, $containerWidth, 991);
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+   @media (max-width:$tablet){
+      grid-template-columns: 1fr;
+      .list-offices__subtitle {
+         font-size: rem(22);
+      }
+      
+      .list-offices__items {
+         display: grid;
+         justify-items: center;
+         font-size: rem(18);
+         &::after{
+            display: none;
+         }
+      }
+  }
+
+   &__items {
+      position: relative;
+      line-height: math.div(26 , 16);
+      font-weight: 400;
+      color: $darkColor;
+
+      &:not(:last-child) {
+         &::after{
+            content:'';
+            @include adaptiveValue("right", -120, 0, 0, $containerWidth, 991);
+            position: absolute;
+            top: 0;
+            width: rem(1);
+            height: 100%;
+            background: linear-gradient(315deg, rgba(218, 219, 221, 0.00) 0%, rgba(218, 219, 221, 0.50) 12.33%, #dadbdd 51.91%, rgba(218, 219, 221, 0.50) 87.85%, rgba(218, 219, 221, 0.00) 100%);
+         }
+      }
+   }
+
+   &__subtitle {
+      margin-bottom: rem(10);
+   }
+
+   &__address {
+      font-style: normal;
+      margin-bottom: rem(6);
+   }
+
+   &__link {
+      text-decoration-line: underline;
+      color: $primaryColor;
+   }
+
+   &__bottom {
+      padding-top: rem(20);
+   }
+
+   &__contacts {
+      small {
+         color: $mainColor;
+         font-size: rem(16);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(4);
+      }
+   }
+}
+
+.list-social {
+   @include adaptiveValue("column-gap", 24, 22);
+   display: flex;
+   justify-content: center;
+
+   &__link {
+      svg {
+         @include adaptiveValue("width", 32, 40);
+         @include adaptiveValue("height", 32, 40);
+         transition: all 0.3s ease-in;
+         @media (any-hover: hover){
+            &:hover{
+               fill: $primaryColor;
+               transform: scale(1.4);
+            }
+         }
+      }
    }
 }
 

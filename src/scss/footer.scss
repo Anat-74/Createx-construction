@@ -13,6 +13,7 @@ color: rgba(255, 255, 255, 0.6);
       "c c d d .."
       "e e ..  .. f"
       ;
+      //* media $tablet ---------------------------------------------------------------------
       @media (max-width:$tablet){
          grid-template-areas: 
          "a a a a a "
@@ -21,9 +22,11 @@ color: rgba(255, 255, 255, 0.6);
          "c c c c c"
          "e e .. f f"
          ;
-         .top-left__list {
-            @include adaptiveValue("column-gap", 150, 22);
-            margin-top: rem(-8);
+         .top-left {
+            &__list {
+               @include adaptiveValue("column-gap", 150, 22);
+               margin-top: rem(-8);
+            }
             .social__link {
                svg {
                   width: rem(40);
@@ -31,24 +34,40 @@ color: rgba(255, 255, 255, 0.6);
                   fill: $whiteColor;
                }
             }
+
+         &__descr {
+            font-size: rem(16);
+         }   
+      }
+
+         .top-right{
+            &__items {
+               flex-direction: row-reverse;
+            }
+            &__input {
+               border-radius: rem(0) rem(4) rem(4) rem(0);
+            }
+            &__btn {
+               border-radius: rem(4) rem(0) rem(0) rem(4);
+            }
+            &__subscribe {
+               font-size: rem(16);
+            }
          }
 
-         .top-right__items {
-            flex-direction: row-reverse;
+         .address__item {
+            font-size: rem(20)
          }
-
-         .top-right__input {
-            border-radius: rem(0) rem(4) rem(4) rem(0);
-         }
-
-         .top-right__btn {
-            border-radius: rem(4) rem(0) rem(0) rem(4);
-         }
-
          .nav-footer {
             margin-left: rem(0);
+
+            &__item {
+               white-space: nowrap;
+               font-size: rem(20);
+            }
          }
       }
+//* media $mobileSmall ------------------------------------------------------------------------
       @media (max-width:$mobileSmall){
          grid-template-areas: 
          "a a a a a "
@@ -68,6 +87,11 @@ color: rgba(255, 255, 255, 0.6);
             font-size: rem(12);
          }
 
+         .nav-footer {
+            display: grid;
+            row-gap: rem(25);
+         }
+
          .go-to-top {
             margin-bottom: rem(15);
          }
@@ -78,6 +102,7 @@ color: rgba(255, 255, 255, 0.6);
             border-radius: 50%;
          }
       }
+      //*----------------------------------------------------------------------
    }
 
    &__top-left {
@@ -140,6 +165,12 @@ color: rgba(255, 255, 255, 0.6);
          width: rem(24);
          height: rem(24);
          fill: $whiteColor;
+         transition: all 0.3s ease-in;
+         @media (any-hover: hover){
+            &:hover{
+               transform: scale(1.4);
+            }
+         }
       }
    }
 }
@@ -207,8 +238,9 @@ color: rgba(255, 255, 255, 0.6);
 
 .address {
       font-style: normal;
+
       @media (min-width:$tablet){
-         padding-right: 60px;
+         padding-right: rem(60);
       }
       
    &__title {
@@ -217,7 +249,7 @@ color: rgba(255, 255, 255, 0.6);
       letter-spacing: rem(1);
       text-transform: uppercase;
       color: $whiteColor;
-      margin-bottom: rem(13);
+      @include adaptiveValue("margin-bottom", 13, 5);
       }
 
    &__item {
@@ -227,14 +259,14 @@ color: rgba(255, 255, 255, 0.6);
          color: $whiteColor;
       }
    &:not(:last-child) {
-      margin-bottom: rem(2);
+      @include adaptiveValue("margin-bottom", 2, 12);
          }
       }
    }
 
 .nav-footer {
       display: flex;
-      @include adaptiveValue("column-gap",125 , 90);
+      @include adaptiveValue("column-gap",125 , 145);
       margin-left: rem(-18);
 
       &__column {
@@ -246,7 +278,7 @@ color: rgba(255, 255, 255, 0.6);
       letter-spacing: rem(1);
       text-transform: uppercase;
       color: $whiteColor;
-      margin-bottom: rem(13);
+      @include adaptiveValue("margin-bottom", 13, 5);
       }
 
       &__list {
@@ -255,7 +287,7 @@ color: rgba(255, 255, 255, 0.6);
 
       &__item {
          &:not(:last-child) {
-         margin-bottom: rem(2);
+            @include adaptiveValue("margin-bottom", 2, 12);
          }
       }
 
