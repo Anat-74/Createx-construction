@@ -51,7 +51,7 @@
 
    &__body {
       @include adaptiveValue("column-gap", 35, 20, 0, $containerWidth, 991);
-      @include adaptiveValue("row-gap", 30, 20);
+      @include adaptiveValue("row-gap", 30, 20,);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       //* media $tablet ------------------------------------------------------------------

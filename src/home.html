@@ -39,23 +39,29 @@
                <div class="values__container">
                   <h2 class="values__title main-title main-title--center">Our core values</h2>
                   <p class="values__text main-text main-text--center">Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.</p>
-                  <div class="values__icons-box icons-box">
-                     <div class="icons-box__items">
-                        <div class="icons-box__icon --icon-quality"></div>
+                  <ul class="values__icons-box icons-box">
+                     <li class="icons-box__items">
+                        <svg>
+                           <use xlink:href="@img/icons/icons.svg#quality"></use>
+                        </svg>
                         <h3 class="icons-box__subtitle subtitle">Quality</h3>
                         <p class="icons-box__text">Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
-                     </div>
-                     <div class="icons-box__items">
-                        <div class="icons-box__icon --icon-safety"></div>
+                     </li>
+                     <li class="icons-box__items">
+                        <svg>
+                           <use xlink:href="@img/icons/icons.svg#safety"></use>
+                        </svg>
                         <h3 class="icons-box__subtitle subtitle">Safety</h3>
                         <p class="icons-box__text">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est&nbsp;ea.</p>
-                     </div>
-                     <div class="icons-box__items">
-                        <div class="icons-box__icon --icon-comfort"></div>
+                     </li>
+                     <li class="icons-box__items">
+                       <svg>
+                        <use xlink:href="@img/icons/icons.svg#comfort"></use>
+                       </svg>
                         <h3 class="icons-box__subtitle subtitle">Comfort</h3>
                         <p class="icons-box__text">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea&nbsp;ad.</p>
-                     </div>
-                  </div>
+                     </li>
+                  </ul>
 
                   <form action="#" class="values__know-form know-form">
                      <h2 class="know-form__title title-form">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h2>
@@ -82,32 +88,40 @@
                <div class="services__container">
                <h2 class="services__title main-title main-title--center">Our services</h2>
                <p class="services__text main-text main-text--center">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
-            <div href="#" class="services__body body-services">
+               <ul href="#" class="services__body body-services">
+                  <li class="body-services__item">
                <a href="#" class="body-services__items-link">
                   <svg class="body-services__icon ">
                      <use xlink:href="@img/icons/icons.svg#construction"></use>
                   </svg>
                   <h3 class="body-services__subtitle subtitle">Construction</h3>
                   </a>
+               </li>
+               <li class="body-services__item">
                <a href="#" class="body-services__items-link">
                   <svg class="body-services__icon ">
                      <use xlink:href="@img/icons/icons.svg#Project_Development"></use>
                   </svg>
                   <h3 class="body-services__subtitle subtitle">Project Development</h3>
                </a>
+            </li>
+            <li class="body-services__item">
                <a href="#" class="body-services__items-link">
                   <svg class="body-services__icon ">
                      <use xlink:href="@img/icons/icons.svg#Interior_Design"></use>
                   </svg>
                   <h3 class="body-services__subtitle subtitle">Interior Design</h3>
                </a>
+            </li>
+               <li class="body-services__item">
                <a href="#" class="body-services__items-link">
                   <svg class="body-services__icon ">
                      <use xlink:href="@img/icons/icons.svg#Repairs"></use>
                   </svg>
                   <h3 class="body-services__subtitle subtitle">Repairs</h3>
                </a>
-            </div>
+            </li>
+            </ul>
             <div class="services__view view-btn">
                <div class="services__descr-more title-form">Learn more about our services</div>
                <a href="#" class="services__btn btn btn--fill" type="submit">View services</a>
@@ -340,31 +354,22 @@
             <section class="page__recent-news recent-news">
                <div class="recent-news__container">
                   <h2 class="recent-news__title main-title">Recent news</h2>
-                  <div class="recent-news__body">
                      <article class="article-big">
-                        <div class="article-big__image-ibg">
-                        <img src="@img/main/recent-news/image-big.jpg" alt="cover">
-                     </div>
+                        <img src="@img/main/recent-news/image-big.jpg" class="article-big__image" alt="cover">
                         <div class="article-big__content">
-                        <h3 class="article-big__subtitle subtitle">
-                           <a href="#" class="article-big__link">How to&nbsp;Build Climate Change-Resilient Infrastructure</a>
-                        </h3>
-                        <div class="article-big__meta-row meta-row">
-                           <a href="#" class="meta-row__news">Industry News</a>
-                           <time class="meta-row__date" datetime="2020-06-24 19:00">June 24, 2020</time>
-                           <div class="meta-row__icon">
-                           <a href="#" class="meta-row__comments">4 comments</a>
+                           <h3 class="article-big__subtitle subtitle">
+                              <a href="#" class="article-big__link">How to&nbsp;Build Climate Change-Resilient Infrastructure</a>
+                           </h3>
+                           <div class="article-big__meta-row meta-row">
+                              <a href="#" class="meta-row__news">Industry News</a>
+                              <time class="meta-row__date" datetime="2020-06-24 19:00">June 24, 2020</time>
+                              <a href="#" class="meta-row__comments">4 comments</a>
+                           </div>
+                           <p class="meta-row__descr">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...</p>
                         </div>
-                        </div>
-                        <p class="meta-row__descr">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...</p>
-                     </div>
                      </article>
-
-                     <div class="recent-news__column">
-                     <article class="article">
-                        <div class="article__image">
-                        <img src="@img/main/recent-news/image 1.jpg" alt="cover">
-                     </div>
+                     <article class="article article--art">
+                        <img src="@img/main/recent-news/image 1.jpg" class="article__image" alt="cover">
                         <div class="article__content">
                         <h3 class="article__subtitle subtitle">
                            <a href="#" class="article__link">How Construction Can Help Itself</a>
@@ -372,16 +377,12 @@
                         <div class="article__meta-row meta-row">
                            <a href="#" class="meta-row__news">Innovation</a>
                            <time class="meta-row__date" datetime="2020-06-12 17:00">June 12, 2020</time>
-                           <div class="meta-row__icon">
                            <a href="#" class="meta-row__comments">No comments</a>
-                        </div>
                         </div>
                      </div>
                      </article>
                      <article class="article">
-                        <div class="article__image">
-                        <img src="@img/main/recent-news/image 2.jpg" alt="cover">
-                     </div>
+                        <img src="@img/main/recent-news/image 2.jpg" class="article__image" alt="cover">
                         <div class="article__content">
                         <h3 class="article__subtitle subtitle">
                            <a href="#" class="article__link">Types of&nbsp;Flooring Materials</a>
@@ -389,14 +390,10 @@
                         <div class="article__meta-row meta-row">
                            <a href="#" class="meta-row__news">Company News</a>
                            <time class="meta-row__date" datetime="2019-12-1 14:00">December 1, 2019</time>
-                           <div class="meta-row__icon">
                            <a href="#" class="meta-row__comments">No comments</a>
-                        </div>
                         </div>
                      </div>
                      </article>
-                  </div>
-                  </div>
                   <div class="recent-news__view view-btn">
                      <div class="recent-news__descr-more title-form">Explore all our news posts</div>
                      <a href="#" class="recent-news__btn btn btn--fill" type="submit">View all news</a>

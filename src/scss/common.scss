@@ -102,7 +102,7 @@
 }
 
 .subtitle {
-   @include adaptiveValue("font-size",20 , 16);
+   @include adaptiveValue("font-size",20 , 18);
    line-height: math.div(30 , 20);
    font-weight: 700;
    color: $darkColor;

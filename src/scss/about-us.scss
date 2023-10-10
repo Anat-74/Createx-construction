@@ -106,12 +106,13 @@
    }
 
    &__items {
-   }
-
-   &__icon {
-      font-size: rem(48);
-      &:not(:last-child) {
-         margin-bottom: rem(20);
+      svg {
+         width: rem(48);
+         height: rem(48);
+         fill: $grayColor;
+         &:not(:last-child) {
+            margin-bottom: rem(20);
+         }
       }
    }
 

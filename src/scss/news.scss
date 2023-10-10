@@ -18,7 +18,6 @@
 
 //=============================================================
 
-
 .categories {
 
    &__container {
@@ -52,6 +51,30 @@
       }
    }
 
+   .article-categories {
+
+      &__image-ibg {
+         padding-bottom: percent(306, 600);
+      }
+   
+      &__content {
+         padding: rem(24) rem(24);
+         
+         @media (max-width:$tablet){
+            padding: rem(10) rem(5);
+      }
+      }
+   
+      &__subtitle {
+      }
+   
+      &__link {
+      }
+   
+      &__meta-row {
+      }
+   }
+
    &__pag-list {
       display: flex;
       justify-content: center;
@@ -69,7 +92,6 @@
    &__btn {
       white-space: nowrap;
       width: rem(205);
-      //width: 100%;
       text-align: center;
       padding: rem(10) rem(0);
       line-height: math.div(26 , 16);
@@ -87,8 +109,6 @@
 }
 
 .pag-list {
-
-
    &__item {
    }
 
