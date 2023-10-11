@@ -48,7 +48,7 @@
 
       &__history {
          position: relative;
-         @include adaptiveValue("padding-bottom",100 , 10);
+         @include adaptiveValue("padding-bottom",100 , 5);
          background-color: $bg-inputColor;
          @media (max-width:$mobileSmall){
              &::before{
@@ -245,15 +245,31 @@
       "present present slide slide slide slide"
       "present present slide slide slide slide"
       ;
-
+//*max-width:$mobile ------------------------------------------------------------------------
       @media (max-width:$mobile){
          grid-template-areas: 
          "slide slide slide slide       title      title"
          " slide slide slide slide present present"
          "slide slide slide slide present present"
          ;
-      }
+         .present {
+            transform: translate(rem(20), 0); 
+         }
 
+         .history__slider {
+         transform: translate(rem(0), rem(-25));
+         }
+
+         .history__btn-slider {
+         justify-content: flex-start;
+         transform: translate(rem(18), rem(20));
+         }
+
+         .history__wrapper {
+         transform: translate(rem(10), rem(-2));
+         }
+      }
+//* max-width:em(682)------------------------------------------------------------------------------
       @media (max-width:em(682)){
          grid-template-areas: 
          "slide slide slide slide slide slide"
@@ -278,7 +294,6 @@
             top: -27%;
             right: 0;
             justify-content: center;
-            column-gap: rem(20);
             padding: rem(0);
          }
 
@@ -317,6 +332,29 @@
             transform: translate(17%, -12%);
          }
       }
+      //*max-width:$mobileSmall ---------------------------------------------------------------------
+   @media (max-width:$mobileSmall){
+      .history__arrow-left {
+         font-size: rem(24);
+         color: $whiteColor;
+         width: rem(50);
+         height: rem(50);
+         background-color: rgba(255, 90, 48, 0.3);
+      }
+
+      .history__arrow-right {
+         font-size: rem(24);
+         color: $whiteColor;
+         width: rem(50);
+         height: rem(50);
+         background-color: rgba(255, 90, 48, 0.3);
+      }
+
+      .present {
+         transform: translate(2%, -12%);
+      }
+   }
+   //*---------------------------------------------------------------------------------
    }
 
    &__title {
@@ -332,30 +370,10 @@
       display: flex;
       justify-content: flex-end;
       padding: rem(10) rem(12) rem(62) rem(0);
-
-      @media (max-width:$tablet){
-         column-gap: rem(24);
-      }
-
-      @media (max-width:$mobile){
-         justify-content: flex-start;
-         transform: translate(0, rem(20));
-      }
    }
 
    &__slider {
       grid-area: slide;
-      @media (max-width:$mobile){
-         transform: translate(rem(0), rem(-25));
-      }
-   }
-
-   &__wrapper {
-      @media (min-width:$mobile){
-         transform: translate(rem(10), rem(-2));
-      }
-   }
-   &__slide {
    }
 
    &__image {
@@ -376,7 +394,6 @@
       font-weight: 400;
       color: $secondaryColor;
    }
-
 }
 
 .present {
@@ -432,9 +449,6 @@
       &--active {
          color: $primaryColor;
       }
-   }
-   @media (max-width:$mobile){
-       transform: translate(rem(20), 0); 
    }
 }
 

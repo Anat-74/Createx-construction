@@ -78,6 +78,7 @@
 //*----------------------------------------------------------------
 .main-title {
    @include adaptiveValue("font-size",46 , 28);
+   padding-right: rem(25);
    line-height: math.div(60 , 46);
    font-weight: 700;
    color: $darkColor;
@@ -163,7 +164,20 @@
 .btn-slider {
    white-space: nowrap;
    transform: translate(rem(12), rem(14));
-
+   @media (max-width:$tablet){
+      transform: translate(rem(-8), rem(5));
+      .btn-slider__arrow {
+         &--left  {
+            transform: translate(rem(-12), rem(0));
+            background-color: $primaryColor;
+            color: $whiteColor;
+         }
+         &--right {
+            background-color: $primaryColor;
+            color: $whiteColor;
+         }
+      }
+   }
    &__arrow {
       &--left {
          position: relative;
@@ -196,10 +210,10 @@
                   color: $whiteColor;
                }
             }
-      }
+         }
    }
 }
-
+//*------------------------------------------------------------------------------
 .btn-stroke-orange {
    text-transform: uppercase;
    font-size: rem(14);
@@ -214,8 +228,7 @@
    padding: rem(0) rem(32);
    color: $primaryColor;
 }
-
-
+//*------------------------------------------------------------------------------
 .bredcrumbs {
    @include adaptiveValue("margin-bottom",40 , 15);
    display: flex;
@@ -267,4 +280,21 @@
    line-height: math.div(26 , 16);
    font-weight: 400;
    color: $secondaryColor;
+}
+
+.clients-btn {
+   position: relative;
+   top: rem(-36);
+   display: flex;
+   justify-content: flex-end;
+
+   @media (max-width:$tablet){
+      top: rem(-40);
+      justify-content: flex-end;
+      column-gap: rem(18);
+      .clients__btn {
+         background-color: $primaryColor;
+         color: $whiteColor;
+      }
+   }
 }

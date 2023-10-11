@@ -29,12 +29,6 @@
 
 .hero-work{
 
-   &__container {
-   }
-
-   &__list {
-   }
-
    &__title {
       padding-top: rem(12);
       &:not(:last-child) {
@@ -56,15 +50,6 @@
 //=================================================
 
 .portfolio {
-
-   &__container {
-   }
-
-   &__row-icons {
-   }
-
-   &__columns-image {
-   }
 
    &__load {
       text-align: center;
@@ -97,12 +82,12 @@
    }
 
 &__items-btn {
+   width: 100%;
+   max-width: rem(230);
    display: grid;
    justify-items: center;
    align-items: center;
-   width: 100%;
    padding: rem(32) rem(10);
-   max-width: rem(230);
    background-color: $whiteColor;
    border-radius: rem(4);
    border: 1px solid $border-color;
