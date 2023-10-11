@@ -734,6 +734,7 @@
       "big art1"
       "btn btn"
       ;
+
       //* max-width:$tablet---------------------------------------------------------------------
       @media (max-width:$tablet){
          grid-template: repeat(5, auto)
@@ -947,6 +948,7 @@
       padding: rem(0) rem(30);
       font-size: rem(14);
       line-height: math.div(44 , 14);
+
    }
 }
 .checkbox {

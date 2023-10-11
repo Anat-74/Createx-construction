@@ -79,7 +79,7 @@
          }
       }
 
-      @media (max-width:$mobileSmall){
+      @media (max-width:em(495)){
          display: grid;
          grid-template-columns: 1fr; 
          justify-items: center;
@@ -100,9 +100,9 @@
    }
 
    &__meta {
+      @include adaptiveValue("font-size", 14, 16);
       display: flex;
       column-gap: rem(24);
-      font-size: rem(14);
       line-height: math.div(21 , 14);
       font-weight: 400;
    }
@@ -184,7 +184,7 @@
    }
 
    &__descr {
-         @include adaptiveValue("font-size",18 , 14);
+         @include adaptiveValue("font-size",18 , 16);
          &:not(:last-child) {
             @include adaptiveValue("margin-bottom",49 , 15);
          }
