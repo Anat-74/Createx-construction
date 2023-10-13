@@ -309,11 +309,13 @@
       align-items: flex-end;
       row-gap: rem(15);
 
-      @media (max-width:em(1066)){
+      @media (max-width:$tablet){
          display: grid;
          grid-template-columns: 1fr;
          .form-field__input {
-            width: 100%;
+            &--big {
+               width: 100%;
+            }
          }
          .know-form__btn {
             width: rem(104);
@@ -341,6 +343,37 @@
       text-transform: uppercase;
    }
 }
+
+.form-field {
+   display: flex;
+   flex-direction: column;
+
+&__caption {
+   @include adaptiveValue("margin-bottom", 9, 5);
+   font-size: rem(14);
+   line-height: math.div(21 , 14);
+   font-weight: 400;
+   color: $secondaryColor;
+}
+
+&__input {
+   width: 100%;
+   border-radius: rem(4);
+   border: 1px solid $border-inputColor;
+   background-color: $bg-inputColor;
+   padding: rem(12) rem(16);
+   &::placeholder{
+      font-size: rem(14);
+      line-height: math.div(21 , 14);
+      font-weight: 400;
+      color: $grayColor;
+   }
+   &--big {
+      @include adaptiveValue("width", 414, 287, 0, $containerWidth, 991);
+      }
+   }
+}
+
 .form__error {
      position: absolute;
       top: 100%;
