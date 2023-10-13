@@ -34,6 +34,17 @@
       background-color: $bg-inputColor;
       @include adaptiveValue("padding-top",80 , 30);
       @include adaptiveValue("padding-bottom",122 , 20);
+
+      position: relative;
+      &::before{
+         content:'';
+         position: absolute;
+         top: rem(-222);
+         left: rem(-8);
+         width: 100%;
+         height: 100%;
+         background: url('@img/main/pricing/bg-image.png') left no-repeat;
+      }
    }
 }
 //================================================================
@@ -250,16 +261,6 @@
 //============================================================
 
 .pricing {
-   position: relative;
-   &::before{
-      content:'';
-      position: absolute;
-      top: rem(-222);
-      left: rem(-8);
-      width: 100%;
-      height: 100%;
-      background: url('@img/main/pricing/bg-image.png') left no-repeat;
-   }
 
    &__container {
    }
@@ -332,6 +333,9 @@
             background-color: $bg-inputColor;
          }
       }
+      
+     //@media (max-width:em(670)){
+     //}
    }
 
    &__col {
@@ -343,7 +347,7 @@
       text-align: center;
       color: $secondaryColor;
       &:first-child {
-         @include adaptiveValue("margin-right", 66, 10);
+         @include adaptiveValue("margin-right", 66, 0, 0, $containerWidth, 700);
          display: block;
          text-align: left;
       }

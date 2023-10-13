@@ -145,11 +145,21 @@
       font-weight: 700;
       color: $secondaryColor;
       transition: color 0.4s ease;
-      @media (any-hover: hover){
-         &:hover{
-            color: $primaryColor;
-         }
-      }
+      
+@media (any-hover: hover){
+   &:focus {
+      outline: rem(2) solid $primaryColor;
+      outline-offset: rem(2);
+      border-radius: rem(2);
+   }
+   &:hover{
+      color: $primaryColor;
+   }
+   &:active {
+      color: $color-active;
+   }
+}
+
      &--current {
       color: $primaryColor;
      }
@@ -203,12 +213,6 @@
       flex-direction: column;
       align-items: flex-start;
       line-height: math.div(24 , 16);
-      &--icon-phone {
-         background-image: url("../img/header/Phone.svg");
-      }
-      &--icon-mail {
-         background-image: url("../img/header/Mail.svg");
-      }
       background-position: left center;
       background-size: rem(40) rem(40);
       background-repeat: no-repeat;
@@ -216,6 +220,16 @@
       &:not(:last-child) {
          @include adaptiveValue("margin-right",36, 10);
       }
+
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+
+         &:active {
+            color: $color-active;
+         }
    }
       &__call-link {
          font-size: rem(14);

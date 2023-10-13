@@ -1,12 +1,27 @@
 
-@mixin button($color: #880000, $w: rem(207), $h: rem(52)) {
+@mixin button($color:0, $w: rem(0), $h: rem(0)) {
    background-color: $color;
    width: $w;
    height: $h;
-   color: #fff;
-   text-align: center;
-}
+   //color: #fff;
+   //text-align: center;
 
+
+$alerts: ("error" : red,
+"neutral" : blue,
+"good" : green,
+"warning" : yellow
+);
+
+@each $name, $color in $alerts {
+    .alert-#{$name} {
+            background: $color;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+      }
+   }
+}
 
 .none {
    display: none;
@@ -23,8 +38,6 @@
    clip: rect(0 0 0 0);
  }
 
-
-//*============================================================================
 
 .top-title {
    @include adaptiveValue("font-size", 72, 36);
@@ -66,7 +79,8 @@
    border-color: transparent;
    padding: rem(0) rem(39);
    color: $whiteColor;
- 
+   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+
    &--stroke {
       @media (max-width:$mobile){
          padding: rem(0) rem(12);
@@ -74,10 +88,36 @@
       &-white {
          border: 1px solid $whiteColor;
          }
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+            }
+            &:hover{
+               border-color: $primaryColor;
+               background-color: $primaryColor;
+            }
+            &:active {
+               border-color: $primaryColor;
+               background-color: $primaryColor;
+            }
+         }
    }
 
    &--fill {
       background-color: $primaryColor;
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $color-active;
+            outline-offset: rem(2);
+         }
+         &:hover{
+            background-color: $color-active;
+         }
+         &:active {
+            background-color: $color-active;
+         }
+      }
    }
    @media (max-width:$mobileSmall){
       padding: rem(0) rem(16);
@@ -86,6 +126,7 @@
    }
 }
 //*----------------------------------------------------------------
+
 .main-title {
    @include adaptiveValue("font-size",46 , 28);
    padding-right: rem(25);
@@ -118,6 +159,7 @@
    font-weight: 700;
    color: $darkColor;
 }
+
 //*------------------------------------------------------------------
 .title-form {
    @include adaptiveValue("font-size",28 , 18);
@@ -159,6 +201,7 @@
       }
    }
 }
+
 //*-----------------------------------------------------------------------------
 .view-btn {
    display: flex;
@@ -170,6 +213,7 @@
        row-gap: rem(15);
    }
 }
+
 //*------------------------------------------------------------------------------
 .btn-slider {
    white-space: nowrap;
@@ -223,6 +267,7 @@
          }
    }
 }
+
 //*------------------------------------------------------------------------------
 .btn-stroke-orange {
    text-transform: uppercase;
@@ -238,6 +283,7 @@
    padding: rem(0) rem(32);
    color: $primaryColor;
 }
+
 //*------------------------------------------------------------------------------
 .bredcrumbs {
    @include adaptiveValue("margin-bottom",40 , 15);
@@ -278,6 +324,7 @@
       }
    }
 }
+
 //*-------------------------------------------------------------
 
 .content-post {

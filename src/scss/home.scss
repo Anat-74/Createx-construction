@@ -158,13 +158,29 @@
          transform: translate(-50%, -50%);
          border-radius: 50%;
          background-color: $primaryColor;
+         transition: background-color 0.2s ease-in 0s;
       }
-      &:hover::before {
-         transform: translate(-50.3%, -50.4%) scale(1.4);
+
+      @media (any-hover: hover){
+         &:focus::after {
+            outline: rem(2) solid $color-active;
+            outline-offset: rem(2);
+         }
+         &:hover::before {
+            transform: translate(-50.3%, -50.4%) scale(1.4);
+         }
+         &:hover::after {
+            background-color: $color-active;
+         }
+         &:active::after {
+            background-color: $color-active;
+         }
       }
+
    }
 
    &__btn-muted {
+
       &::before{
          @include adaptiveValue("font-size", 20, 12);
          color: $whiteColor;
@@ -188,16 +204,30 @@
          left: rem(32);
          bottom: rem(32);
          border-radius: 50%;
-         background-color:$whiteColor;
-         opacity: 0.12;
+         background-color: rgba(#fff, 0.12);
          transition: all 0.3s ease-in 0s;
+         transition: background-color 0.2s ease-in 0s;
+
          @media (max-width:$mobileSmall){
             left: rem(12);
             bottom: rem(12);
          }
       }
-      &:hover::before {
-         transform: scale(1.6);
+
+      @media (any-hover: hover){
+         &:focus::after {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+         }
+         &:hover::before {
+            transform: scale(1.6);
+         }
+         &:hover::after{
+            background-color: rgba(#fff, 0.4);
+         }
+         &:active::after {
+            background-color: rgba(#fff, 0.6);
+         }
       }
    }
 
