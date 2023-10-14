@@ -129,7 +129,6 @@ $alerts: ("error" : red,
 
 .main-title {
    @include adaptiveValue("font-size",46 , 28);
-   padding-right: rem(25);
    line-height: math.div(60 , 46);
    font-weight: 700;
    color: $darkColor;
@@ -184,6 +183,7 @@ $alerts: ("error" : red,
 .btn-slider {
    white-space: nowrap;
    transform: translate(rem(12), rem(14));
+
    @media (max-width:$tablet){
       transform: translate(rem(-8), rem(5));
       .btn-slider__arrow {
@@ -198,6 +198,11 @@ $alerts: ("error" : red,
          }
       }
    }
+
+   @media (max-width:$mobileSmall){
+       padding-left: rem(30); 
+   }
+
    &__arrow {
       &--left {
          position: relative;
