@@ -213,13 +213,22 @@ $alerts: ("error" : red,
          font-size: rem(24);
          color: $secondaryColor;
          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+         
          @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+            }
             &:hover{
                   background-color: $primaryColor;
                   color: $whiteColor;
             }
+            &:active {
+               color: $primaryColor;
+            }
          }
       }
+
       &--right {
          position: relative;
          z-index: 50;
@@ -229,10 +238,18 @@ $alerts: ("error" : red,
          font-size: rem(24);
          color: $secondaryColor;
          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+         
          @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+            }
             &:hover{
                   background-color: $primaryColor;
                   color: $whiteColor;
+               }
+               &:active {
+                  color: $primaryColor;
                }
             }
          }
