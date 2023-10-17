@@ -1,15 +1,10 @@
 .page {
+
    &__hero {
-      @include adaptiveValue("padding-top", 314, 80);
-      @include adaptiveValue("padding-bottom", 350, 10);
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-color: $mainColor; 
-      background-size: cover
    }
 
    &__bureau {
-      @include adaptiveValue("padding-top", 120, 40);
+      @include adaptiveValue("padding-top", 78, 30);
       @include adaptiveValue("padding-bottom", 180, 40);
       background-color: $whiteColor;
    }
@@ -66,9 +61,21 @@
    &__container {
    }
 
-   &__content {
-      max-width: rem(595);
-      color: $whiteColor;
+   &__slider-home {
+      width: 100%;
+      overflow: hidden;
+   }
+
+   &__swiper {
+   }
+
+   &__slide {
+      @include adaptiveValue("padding-top", 314, 80);
+      @include adaptiveValue("padding-bottom", 350, 20);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-color: $mainColor; 
+      background-size: cover;
    }
 
    &__title {
@@ -79,14 +86,13 @@
    }
 
    &__descr {
+      max-width: rem(595);
       font-weight: 400;
       color: $whiteColor;
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 61, 25);
-      }
    }
 
    &__btns {
+      @include adaptiveValue("padding-top", 61, 25);
       display: flex;
       column-gap: rem(24);
       row-gap: rem(25);
@@ -99,8 +105,101 @@
    &__btn {
       @media (max-width:em(502)){
          width: 100%;
-    }
+      }
    }
+
+   &__pag {
+      @include adaptiveValue("bottom", 164, 40, 0, $containerWidth, 479);
+      @include adaptiveValue("column-gap", 4, 20);
+      width: rem(1230);
+      position: relative;
+      display: flex;
+      counter-reset: pag;
+      left: calc((100% - rem(1230)) / 2);
+
+//*max-width: ---------------------------------------------------------------------------------
+      @media (max-width:em(1300)){
+         justify-content: center;
+      }
+      @media (max-width:$mobileSmall){
+         display: none;
+      }
+//*---------------------------------------------------------------------------------
+      .swiper-pagination-bullet {
+         @include adaptiveValue("width", 178, 96, 0, $containerWidth, 767);
+         display: flex;
+         flex-direction: column;
+         opacity: 1;
+         width: rem(178);
+         height: auto;
+         cursor: pointer;
+         background-color: transparent;
+
+         &::before{
+            @include adaptiveValue("font-size", 28, 18, 0, $containerWidth, 479);
+            content: "0" counter(pag);
+            counter-increment: pag;
+            transform: translateY(rem(-10));
+            line-height: math.div(42 , 28);
+            font-weight: 700;
+            color: rgba(#fff, 0.3);
+            transition: color 0.5s ease-in-out;
+         }
+      }
+   }
+
+   &__bar {
+      position: relative;
+      width: 100%;
+      height: rem(2);
+      overflow: hidden;
+      border-radius: rem(100);
+      background-color: rgba(#fff, 0.3);
+
+      &::after{
+         content:'';
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $whiteColor;
+         transform-origin: left;
+         transform: scaleX(0);
+      }
+   }
+
+   .swiper-pagination-bullet-active {
+      &::before{
+         color: $whiteColor;
+      }
+
+      .hero__bar {
+         &::after{
+            transform: scaleX(1);
+            transition: transform var(--hero-slider-speed) ease-in-out;
+         }
+      }
+   }
+
+   .slider-home__left{
+      top: 64%;
+      left: rem(26);
+      transform: translateY(-64%);
+      
+      @media (max-width:$tablet){
+         top: 42%;
+      }
+   }
+   .slider-home__right {
+      top: 64%;
+      right: rem(26);
+      transform: translateY(-64%);
+
+      @media (max-width:$tablet){
+         top: 42%;
+      }
+      }
 }
 
 //!=========================================================================

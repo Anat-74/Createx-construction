@@ -20,6 +20,8 @@
    }
 }
 
+//!============================================================================= 
+
 .hero-inner-work {
    position: relative;
    &::after{
@@ -65,6 +67,15 @@
       left: rem(32);
       transform: translateY(-48%);
       background: rgba($whiteColor, 0.5);
+      transition: background-color 0.3s ease-in-out;
+      @media (any-hover: hover){
+         &:hover{
+          background-color: $whiteColor;
+          color: $darkColor;
+         }
+      }
+      @extend %ic;
+      @extend .--icon-Left;
    }
 
    &__next{
@@ -74,6 +85,15 @@
       right: rem(32);
       transform: translateY(-48%);
       background: rgba($whiteColor, 0.5);
+      transition: background-color 0.3s ease-in-out;
+      @media (any-hover: hover){
+         &:hover{
+          background-color: $whiteColor;
+          color: $darkColor;
+         }
+      }
+      @extend %ic;
+      @extend .--icon-Right;
    }
 
    &__wrapper {
@@ -114,6 +134,7 @@
          }
       }
    }
+
 //=================================================================
 
 .project-goal {

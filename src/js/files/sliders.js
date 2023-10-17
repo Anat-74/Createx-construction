@@ -7,7 +7,7 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation, Thumbs } from 'swiper';
+import Swiper, { Navigation, Thumbs, Pagination } from 'swiper';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -110,7 +110,7 @@ function initSliders() {
 			}
 		});
 	}
-//=============================================================================
+//!=============================================================================
    if (document.querySelector('.clients__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.clients__slider', { // Вказуємо склас потрібного слайдера
@@ -203,6 +203,7 @@ function initSliders() {
 
 		});
 	
+//!=========================================================================
 
    if (document.querySelector('.hero-slider__slider',)) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
@@ -262,11 +263,52 @@ function initSliders() {
                historySlider.slideTo(index);
             });
          });
-
       };
 
+      
+      if ('.hero__slider-home') { // Вказуємо склас потрібного слайдера
+         const heroSliderSpeed = 800;
+         const bodyStyles = window.getComputedStyle(document.body);
+         const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed'); //get
+               
+         document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');//set
+
+         // Створюємо слайдер
+         const heroSliderNav = new Swiper('.hero__slider-home', { // Вказуємо склас потрібного слайдера
+            // Підключаємо модулі слайдера
+            // для конкретного випадку
+            modules: [Navigation, Pagination],
+            slidesPerView: 1,
+            loop: true,
+
+            speed: heroSliderSpeed,
+
+            autoplay: {
+               delay: 1000,
+            },
+            navigation: {
+               nextEl: ".slider-home__right",
+               prevEl: ".slider-home__left",
+             },
+
+             pagination: {
+               el: '.hero__pag',
+               type: 'bullets',
+               clickable: true,
+             },
+
+             on: {
+               init: function () {
+                  const paginationBullets = document.querySelectorAll('.hero__pag .swiper-pagination-bullet');
+                  paginationBullets.forEach(el => {
+                     el.innerHTML = `<span class="hero__bar"></span>`
+                  });
+               }
+             }
+         });
    };
 
+   }
 //=============================================================================
 //const heroSlider = document.querySelector('.hero-slider__slider');
 //const heroSliderNav = document.querySelector('.hero-slider-nav__slider');

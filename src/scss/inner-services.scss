@@ -185,7 +185,6 @@
    &__item {
       position: relative;
       &::before{
-         content:'';
          counter-increment: section;
          content: "0"counter(section);
          font-size: rem(46);
