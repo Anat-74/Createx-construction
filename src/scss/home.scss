@@ -21,8 +21,8 @@
    }
 
    &__projects {
-      @include adaptiveValue("padding-top", 120, 30);
-      @include adaptiveValue("padding-bottom", 118, 20);
+      @include adaptiveValue("padding-top", 116, 30);
+      @include adaptiveValue("padding-bottom", 122, 20);
       background-color: $whiteColor;
    }
 
@@ -58,15 +58,9 @@
 
 .hero {
 
-   &__container {
-   }
-
    &__slider-home {
       width: 100%;
       overflow: hidden;
-   }
-
-   &__swiper {
    }
 
    &__slide {
@@ -97,6 +91,7 @@
       column-gap: rem(24);
       row-gap: rem(25);
       align-items: center;
+
       @media (max-width:em(502)){
            flex-wrap: wrap;
       }
@@ -111,7 +106,6 @@
    &__pag {
       @include adaptiveValue("bottom", 164, 40, 0, $containerWidth, 479);
       @include adaptiveValue("column-gap", 4, 20);
-      width: rem(1230);
       position: relative;
       display: flex;
       counter-reset: pag;
@@ -130,15 +124,14 @@
          display: flex;
          flex-direction: column;
          opacity: 1;
-         width: rem(178);
          height: auto;
          cursor: pointer;
          background-color: transparent;
 
          &::before{
             @include adaptiveValue("font-size", 28, 18, 0, $containerWidth, 479);
-            content: "0" counter(pag);
             counter-increment: pag;
+            content: "0" counter(pag);
             transform: translateY(rem(-10));
             line-height: math.div(42 , 28);
             font-weight: 700;
@@ -182,7 +175,7 @@
       }
    }
 
-   .slider-home__left{
+   .btn-home__left{
       top: 64%;
       left: rem(26);
       transform: translateY(-64%);
@@ -191,7 +184,7 @@
          top: 42%;
       }
    }
-   .slider-home__right {
+   .btn-home__right {
       top: 64%;
       right: rem(26);
       transform: translateY(-64%);
@@ -203,21 +196,6 @@
 }
 
 //!=========================================================================
-
-.bureau {
-
-   &__container {
-   }
-
-   &__title {
-   }
-
-   &__text {
-   }
-
-   &__block-video {
-   }
-}
 
 .video-block {
    @extend %responsiveVideo;
@@ -231,8 +209,15 @@
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0.6;
-      background-color: $darkColor;
+      background-color: rgba(#1e212c, 0.6);
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+   }
+
+   &--played {
+      &::before{
+         opacity: 0;
+         visibility: hidden;
+      }
    }
 
    &__btn-play {
@@ -258,7 +243,12 @@
          transform: translate(-50%, -50%);
          border-radius: 50%;
          background-color: $primaryColor;
-         transition: background-color 0.2s ease-in 0s;
+         transition: background-color 0.2s ease-in 0s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      }
+
+      &--played {
+         opacity: 0;
+         visibility: hidden;
       }
 
       @media (any-hover: hover){
@@ -276,62 +266,6 @@
             background-color: $color-active;
          }
       }
-
-   }
-
-   &__btn-muted {
-
-      &::before{
-         @include adaptiveValue("font-size", 20, 12);
-         color: $whiteColor;
-         position: absolute;
-         z-index: 3;
-         left: rem(42);
-         bottom: rem(42);
-         transition: all 0.3s ease-in 0s;
-         @media (max-width:$mobileSmall){
-            left: rem(22);
-            bottom: rem(22);
-         }
-      }
-
-      &::after{
-         content:'';
-         @include adaptiveValue("width", 40, 32);
-         @include adaptiveValue("height", 40, 32);
-         position: absolute;
-         z-index: 2;
-         left: rem(32);
-         bottom: rem(32);
-         border-radius: 50%;
-         background-color: rgba(#fff, 0.12);
-         transition: all 0.3s ease-in 0s;
-         transition: background-color 0.2s ease-in 0s;
-
-         @media (max-width:$mobileSmall){
-            left: rem(12);
-            bottom: rem(12);
-         }
-      }
-
-      @media (any-hover: hover){
-         &:focus::after {
-            outline: rem(2) solid $primaryColor;
-            outline-offset: rem(2);
-         }
-         &:hover::before {
-            transform: scale(1.6);
-         }
-         &:hover::after{
-            background-color: rgba(#fff, 0.4);
-         }
-         &:active::after {
-            background-color: rgba(#fff, 0.6);
-         }
-      }
-   }
-
-   &__video {
    }
 }
 
@@ -635,12 +569,11 @@
    }
 
    &__view {
-      @include adaptiveValue("padding-top",76 , 20);
+      @include adaptiveValue("padding-top",78 , 20);
    }
 }
 
 .portfolio-slide {
-
    display: flex;
    flex-direction: column;
    background-color:$whiteColor;
@@ -655,7 +588,17 @@
          outline-offset: rem(2);
       }
       &:hover{
-         transform: translateY(rem(9));
+         .portfolio-slide__content {
+            position: relative;
+            z-index: 50;
+            padding-top: rem(16);
+            padding-bottom: rem(24);
+            margin-top: rem(-84);
+            background-color: $whiteColor;
+         }
+         .portfolio-slide__btn {
+            display: block;
+         }
       }
    }
 
@@ -670,7 +613,7 @@
          display: flex;
          flex-direction: column;
          align-items: center;
-         padding-bottom: rem(24);
+         transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, margin-top 0.3s ease-in-out;
 		}
 
 		&__title {
@@ -680,24 +623,23 @@
 		}
 
 		&__descr {
+         display: inline-block;
          font-size: rem(14);
          line-height: math.div(21 , 14);
          font-weight: 400;
+         &:not(:last-child) {
+            margin-bottom: rem(24);
+         }
 		}
 
 		&__btn {
-      display: none;
-      margin-top: rem(24);
+         display: none;
    }
 
    //*max-width --------------------------------------------------------------------------------------------
-   @media (max-width:em(438)){
-      height: 100%;
-      text-align: center;
- }
-
- @media (max-width:em(360)){
-    @include adaptiveValue("height", 370, 260);
+ @media (max-width:em(370)){
+    @include adaptiveValue("height", 370, 240);
+    text-align: center;
     }
 }
 
@@ -714,7 +656,7 @@
    &__title {
       text-align: center;
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 56, 15);
+         @include adaptiveValue("margin-bottom", 60, 15);
       }
    }
 
@@ -724,6 +666,7 @@
       align-items: center;
       column-gap: rem(10);
 
+      //*max-width:$tablet & $mobileSmall --------------------------------------------------------------------------------------------
       @media (max-width:$tablet){
          display: grid;
          grid-template-columns: repeat(3, 1fr);
@@ -734,6 +677,14 @@
       @media (max-width:$mobileSmall){
          grid-template-columns: repeat(2, 1fr);
       }
+      //*-------------------------------------------------------------------------------------------------------
+   }
+   &__link {
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+         border-radius: rem(2);
+      }
    }
 }
 
@@ -741,16 +692,25 @@
    display: flex;
    justify-content: space-between;
    column-gap: rem(20);
+
+//*max-width:$tablet -----------------------------------------------------------------------------------------------
    @media (max-width:$tablet){
       flex-wrap: wrap;
       justify-content: center;
+
+      &__reviews {
+      width: 100%;
+      }
+
+      .clients__image {
+         margin-bottom: rem(0);
+         transform: translateY(rem(-15));
+      }
    }
+   //*-----------------------------------------------------------------------------------------------------
 
    &__reviews {
       max-width: rem(610);
-      @media (max-width:$tablet){
-         width: 100%;
-      }
    }
 
    &__title {
@@ -808,10 +768,6 @@
          width: 100%;
          height: 100%;
          object-fit: cover;
-      }
-      @media (max-width:$tablet){
-         margin-bottom: rem(0);
-         transform: translateY(rem(-15));
       }
    }
 }
@@ -947,8 +903,22 @@
          ;
          .article-big {
             min-width: 100%;
+
             &__content {
                padding: rem(10) rem(5);
+            }
+         }
+
+         .meta-row {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: rem(18);
+            &__date {
+               &::before,
+               &::after {
+                  display: none;
+               }
+               font-size: rem(16);
             }
          }
 
@@ -994,10 +964,21 @@
       &:not(:last-child) {
          margin-bottom: rem(12);
       }
+   }
+
+   &__link {
       transition: color 0.3s ease;
       @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
          &:hover{
             color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
          }
       }
    }
@@ -1014,18 +995,23 @@
       &:not(:last-child) {
          margin-bottom: rem(16);
       }
-      @media (max-width:$tablet){
-         flex-wrap: wrap;
-         justify-content: space-between;
-         font-size: rem(18);
-         &__date {
-            &::before,
-            &::after {
-               display: none;
-            }
-            font-size: rem(16);
+
+   &__news {
+      transition: color 0.3s ease;
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
          }
       }
+   }
 
    &__date {
       position: relative;
@@ -1052,11 +1038,26 @@
    }
 
       &__comments {
+         transition: color 0.3s ease;
          &::before{
             @extend %ic;
             @extend .--icon-Chat;
             font-size: rem(16);
             margin-right: rem(10);
+         }
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $primaryColor;
+            }
+            &:active {
+               color: $color-active;
+            }
          }
       }
 
@@ -1090,10 +1091,21 @@
       &:not(:last-child) {
          margin-bottom: rem(8);
       }
+   }
+
+   &__link {
       transition: color 0.3s ease;
       @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
          &:hover{
             color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
          }
       }
    }
@@ -1203,7 +1215,7 @@
       opacity: 1;
    }
    &__input:focus + &__descr {
-      outline: 3px solid #000;
+      outline: rem(2) solid $primaryColor;
       border-radius: rem(3);
    }
 }

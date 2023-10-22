@@ -3,6 +3,25 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js"  ;
 
+const videoBlock = document.querySelector('.video-block');
+const video = document.querySelector('video');
+const btnPlay = document.querySelector('.video-block__btn-play');
+
+btnPlay.addEventListener('click', () => {
+   videoBlock.classList.add('video-block--played');
+   video.play();
+   video.controls = true;
+   btnPlay.classList.add('video-block__btn-play--played');
+});
+
+video.onpause = function() {
+   videoBlock.classList.remove('video-block--played');
+   video.controls = false;
+   btnPlay.classList.remove('video-block__btn-play--played');
+};
+
+//!==================================================================================================
+
 const circles = document.querySelectorAll('.list__circle');
 circles.forEach(el => {
   if (el.dataset.percentage == 'true') {
@@ -29,8 +48,8 @@ circles.forEach(el => {
   }
 });
 
-//==================================================================================================
-  
+//!=================================================================================================
+
 const rowIcons = document.querySelector('.row-icons');
 const rowIconsItemsBtn = document.querySelectorAll('.row-icons__items-btn');
 if(rowIcons) {
