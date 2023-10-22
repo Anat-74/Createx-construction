@@ -64,6 +64,7 @@
       min-height: rem(92);
       display: flex;
       align-items: center;
+
       @media (max-width:$mobile){
          min-height: rem(62);
       }
@@ -74,9 +75,15 @@
    }
 
    &__logo {
-      @include adaptiveValue("padding-right",62 , 35, 0, $containerWidth, 991);
       position: relative;
       z-index: 3;
+
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+         border-radius: rem(2);
+      }
+
       @media (max-width:$tablet){
          display: flex;
          justify-content: flex-end;
@@ -86,6 +93,7 @@
    &__menu {
       display: flex;
       flex: 1 1 auto;
+
       @media (max-width:$tablet){
          justify-content: flex-end;
       }
@@ -117,24 +125,65 @@
 }
 
 .nav {
-   &__list {
-      @include adaptiveValue("column-gap",40 , 25, 0, $containerWidth, 991);
+   @include adaptiveValue("padding-left",62 , 35, 0, $containerWidth, 991);
+
+   //*max-width:$tablet & $mobile---------------------------------------------------------------------------------------------
+   @media (max-width:$tablet){
+      padding: rem(120) rem(15) rem(30) rem(15);
       display: flex;
-      flex-wrap: wrap;
-      @media (max-width:$tablet){
-         flex: 1 1 auto;
-         flex-direction: column;
-         row-gap: rem(24);
-         align-items: center;
-         font-size: rem(36);
-         .nav__link {
-            color: $whiteColor;
+      flex-direction: column;
+      row-gap: rem(35);
+      overflow: auto;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 100%;
+      background-color: $grayColor;
+      transition: left 0.4s;
+      &::before{
+         content:'';
+         position: fixed;
+         z-index: 4;
+         width: 100%;
+         height: rem(92);
+         top: 0;
+         left: 100%;
+         background-color: $whiteColor;
+         transition: left 0.4s;
+      @media (max-width:$mobile){
+         height: rem(62);
+      }
+   }
+      .menu-open & {
+         left: 0;
+         &::before{
+            left: 0;
+            
+            }
+         }
+
+      &__list {
+         @include adaptiveValue("font-size", 36, 30);
+         @include adaptiveValue("row-gap", 24, 18);
+            flex: 1 1 auto;
+            flex-direction: column;
+            align-items: center;
+            .nav__link {
+               color: $whiteColor;
          }
       }
-      @media (max-width:$mobileSmall){
-         row-gap: rem(18);
-         font-size: rem(30);
-      }
+   }
+
+   @media (max-width:$mobile){
+      padding: rem(100) rem(15) rem(30) rem(15);
+   }
+//*-------------------------------------------------------------------------------------------------------------------------
+
+   &__list {
+      @include adaptiveValue("column-gap",40 , 20, 0, $containerWidth, 991);
+      display: flex;
+      flex-wrap: wrap;
    }
 
    &__item {
@@ -162,51 +211,38 @@
 
      &--current {
       color: $primaryColor;
-     }
-   }
-   @media (max-width:$tablet){
-      padding: rem(120) rem(15) rem(30) rem(15);
-      display: flex;
-      flex-direction: column;
-      row-gap: rem(35);
-      overflow: auto;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 100%;
-      background-color: $grayColor;
-      transition: left 0.4s;
-      &::before{
-         content:'';
-         position: fixed;
-         z-index: 4;
-         width: 100%;
-         height: rem(92);
-         top: 0;
-         left: 100%;
-         background-color: $whiteColor;
-         transition: left 0.4s;
-      @media (max-width:$mobile){
-         height: rem(62);
-      }
-      }
-      .menu-open & {
-         left: 0;
-         &::before{
-            left: 0;
-            
-            }
          }
-      }
-      @media (max-width:$mobile){
-         padding: rem(100) rem(15) rem(30) rem(15);
       }
    }
 
 .contacts-header {
    position: relative;
    z-index: 5;
+
+   //*max-width:$tablet & max-width:em(512) ---------------------------------------------------------------------------------------------
+   @media (max-width:$tablet){
+      padding: rem(5) rem(0);
+      justify-content: center;
+      column-gap: rem(5);
+      row-gap: rem(12);
+
+      .contacts-header__items-link {
+         background-size: rem(30) rem(30);
+         padding-left: rem(35);
+      }
+      .contacts-header__call-link {
+         font-size: rem(18);
+      }
+      .contacts-header__connection-link {
+         font-size: rem(20);
+      }
+}
+
+@media (max-width:em(512)){
+     display: flex;
+     justify-content: start;
+}
+//*---------------------------------------------------------------------------------------------------------------
 
    &__items-link {
       display: flex;
@@ -242,31 +278,11 @@
          white-space: nowrap;
          color: $darkColor;
          transition: color 0.4s ease;
+         
          @media (any-hover: hover){
             &:hover{
                color: $primaryColor;
             }
          }
       }
-      @media (max-width:$tablet){
-         padding: rem(5) rem(0);
-         justify-content: center;
-         column-gap: rem(5);
-         row-gap: rem(12);
-
-         .contacts-header__items-link {
-            background-size: rem(30) rem(30);
-            padding-left: rem(35);
-         }
-         .contacts-header__call-link {
-            font-size: rem(18);
-         }
-         .contacts-header__connection-link {
-            font-size: rem(20);
-         }
    }
-   @media (max-width:em(512)){
-        display: flex;
-        justify-content: start;
-   }
-}

@@ -113,6 +113,7 @@
 
 //*max-width: ---------------------------------------------------------------------------------
       @media (max-width:em(1300)){
+         width: rem(1230);
          justify-content: center;
       }
       @media (max-width:$mobileSmall){
@@ -130,8 +131,8 @@
 
          &::before{
             @include adaptiveValue("font-size", 28, 18, 0, $containerWidth, 479);
-            counter-increment: pag;
             content: "0" counter(pag);
+            counter-increment: pag;
             transform: translateY(rem(-10));
             line-height: math.div(42 , 28);
             font-weight: 700;
@@ -1122,6 +1123,7 @@
    }
 }
 .form {
+   position: relative;
    max-width: rem(495);
    padding: rem(48) rem(40);
    background-color: $whiteColor;
@@ -1161,7 +1163,16 @@
       line-height: math.div(44 , 14);
 
    }
+   .form__error {
+      position: absolute;
+      top: 98%;
+      left: 50%;
+      transform: translate(-50%, -98%);
+      font-size: rem(14);
+      color: red;
+   }
 }
+
 .checkbox {
 
    &__input {

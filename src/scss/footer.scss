@@ -135,6 +135,11 @@ color: rgba(255, 255, 255, 0.6);
       &:not(:last-child) {
          @include adaptiveValue("margin-right", 56, 40);
       }
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+         border-radius: rem(2);
+      }
    }
 
    &__list {
@@ -166,17 +171,26 @@ color: rgba(255, 255, 255, 0.6);
          height: rem(24);
          fill: $whiteColor;
          transition: all 0.3s ease-in;
+
          @media (any-hover: hover){
             &:hover{
                transform: scale(1.4);
             }
+            &:active {
+               fill: $color-active;
+            }
          }
+      }
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+         border-radius: rem(2);
       }
    }
 }
 
 .top-right{
-
+position: relative;
    &__title {
       font-size: rem(24);
       line-height: math.div(36 , 24);
@@ -198,14 +212,42 @@ color: rgba(255, 255, 255, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.20);
       border-radius: rem(4) rem(0) rem(0) rem(4);
       background: rgba(255, 255, 255, 0.12);
+      color: $whiteColor;
       &:not(:last-child) {
          margin-bottom: rem(14);
       }
+      transition: background-color 0.3s ease-in-out;
+
       &::placeholder{
          @include adaptiveValue("font-size",14 , 12);
          line-height: math.div(21 , 14);
          font-weight: 400;
+         transition: color 0.3s ease-in-out;
       }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+         }
+         &:hover{
+            background-color: $grayColor;
+            &::placeholder {
+               color: $darkColor;
+         }
+      }
+         &:active {
+            background-color: $color-active;
+         }
+      }
+   }
+
+   .form__error {
+      position: absolute;
+      top: 15%;
+      left: 80%;
+      font-size: rem(14);
+      color: red;
    }
 
    &__btn {
@@ -221,6 +263,19 @@ color: rgba(255, 255, 255, 0.6);
       padding: rem(0) rem(24);
       color: $whiteColor;
       background-color: $primaryColor;
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+         }
+         &:hover{
+            background-color: $color-active;
+      }
+         &:active {
+            background-color: $color-active;
+         }
+      }
    }
 
    &__subscribe {
@@ -234,7 +289,7 @@ color: rgba(255, 255, 255, 0.6);
             padding-bottom: 0;
          }
       }
-}
+   }
 
 .address {
       font-style: normal;
@@ -260,6 +315,22 @@ color: rgba(255, 255, 255, 0.6);
       }
    &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 2, 12);
+         }
+         a {
+            transition: color 0.3s ease-in-out;
+            @media (any-hover: hover){
+               &:focus {
+                  outline: rem(2) solid $primaryColor;
+                  outline-offset: rem(2);
+                  border-radius: rem(2);
+               }
+               &:hover{
+                  color: $primaryColor;
+               }
+               &:active {
+                  color: $color-active;
+               }
+            }
          }
       }
    }
@@ -295,6 +366,21 @@ color: rgba(255, 255, 255, 0.6);
          line-height: math.div(28 , 16);
          font-weight: 400;
          color: rgba(255, 255, 255, 0.6);
+         transition: color 0.3s ease-in-out;
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $primaryColor;
+            }
+            &:active {
+               color: $color-active;
+            }
+         }
       }
    }
 
@@ -336,5 +422,19 @@ color: rgba(255, 255, 255, 0.6);
       border-radius: rem(4);
       border-width: rem(1);
       background-color: $primaryColor;
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            background-color: $color-active;
+         }
+         &:active {
+            background-color: $color-active;
+         }
+      }
       }
    }
