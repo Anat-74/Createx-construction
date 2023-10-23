@@ -21,24 +21,7 @@ rowIcons.addEventListener('click', (e) => {
    });
 }
 
-//!=================================================================================================
 
-const videoBlock = document.querySelector('.video-block');
-const video = document.querySelector('video');
-const btnPlay = document.querySelector('.video-block__btn-play');
-
-btnPlay.addEventListener('click', () => {
-   videoBlock.classList.add('video-block--played');
-   video.play();
-   video.controls = true;
-   btnPlay.classList.add('video-block__btn-play--played');
-});
-
-video.onpause = function() {
-   videoBlock.classList.remove('video-block--played');
-   video.controls = false;
-   btnPlay.classList.remove('video-block__btn-play--played');
-};
 
 //!==================================================================================================
 
@@ -68,5 +51,24 @@ circles.forEach(el => {
   }
 });
 
+//!=================================================================================================
+
+const videoBlock = document.querySelector('.video-block');
+const video = document.querySelector('video');
+const btnPlay = document.querySelector('.video-block__btn-play');
+
+if(btnPlay ) {
+btnPlay.addEventListener('click', () => {
+   videoBlock.classList.add('video-block--played');
+   video.play();
+   video.controls = true;
+   btnPlay.classList.add('video-block__btn-play--played');
+});
 
 
+video.onpause = function() {
+   videoBlock.classList.remove('video-block--played');
+   video.controls = false;
+   btnPlay.classList.remove('video-block__btn-play--played');
+   };
+};

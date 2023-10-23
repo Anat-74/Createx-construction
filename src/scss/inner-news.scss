@@ -42,22 +42,27 @@
          }
          .meta-row-big {
          @include adaptiveValue("column-gap", 120, 15, 0, 767.98, 479);
+
             &__news {
                padding-right: rem(0);
                margin-right: rem(0);
+
                &::before{
                   display: none;
                }
             }
+
             &__date {
                padding-right: rem(0);
                margin-right: rem(0);
                font-size: rem(16);
+
                &::after{
                   display: none;
                }
             }
          }
+
          .social-news {
             @include adaptiveValue("column-gap", 220, 100, 0, 767.98, 479);
             &__icon {
@@ -181,7 +186,7 @@
    column-gap: rem(12);
 
    &__link {
-      transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
       @media (any-hover: hover){
          &:focus {
@@ -190,10 +195,8 @@
             border-radius: rem(2);
          }
          &:hover{
-            color: $primaryColor;
-         }
-         &:active {
             color: $color-active;
+            transform: scale(1.4);
          }
       }
    }
@@ -326,12 +329,16 @@
  }
 
  &__link {
-   transition: color 0.3s ease-in-out;
+   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
       &:focus {
          outline: rem(2) solid $primaryColor;
          outline-offset: rem(2);
          border-radius: rem(2);
+      }
+      &:hover{
+         color: $primaryColor;
+         transform: scale(1.4);
       }
  }
 
@@ -342,7 +349,7 @@
 
          @media (any-hover: hover){
          &:hover{
-         color: $primaryColor;
+         color: $color-active;
       }
       &:active {
          color: $color-active;
@@ -412,9 +419,10 @@
    }
 
    &__link {
+      display: inline-block;
       font-weight: 700;
       color: $primaryColor;
-      transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, padding-right 0.3s ease-in-out;
 
       @media (any-hover: hover){
          &:focus {
@@ -424,6 +432,8 @@
          }
          &:hover{
             color: $color-active;
+            transform: scale(1.1);
+            padding-right: rem(3);
          }
          &:active {
             color: $color-active;

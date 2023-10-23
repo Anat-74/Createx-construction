@@ -177,8 +177,8 @@
    }
 
    .btn-home__left{
-      top: 64%;
-      left: rem(26);
+      top: 65%;
+      left: rem(22);
       transform: translateY(-64%);
       
       @media (max-width:$tablet){
@@ -186,8 +186,8 @@
       }
    }
    .btn-home__right {
-      top: 64%;
-      right: rem(26);
+      top: 65%;
+      right: rem(22);
       transform: translateY(-64%);
 
       @media (max-width:$tablet){
