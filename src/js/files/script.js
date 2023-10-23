@@ -3,6 +3,26 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js"  ;
 
+const rowIcons = document.querySelector('.row-icons');
+const rowIconsItemsBtn = document.querySelectorAll('.row-icons__items-btn');
+if(rowIcons) {
+rowIcons.addEventListener('click', (e) => {
+   const target = e.target;
+
+     if(target.classList.contains('row-icons__items-btn')); {
+
+      rowIconsItemsBtn.forEach(el => {
+      el.classList.remove('row-icons__items-btn--active')
+   });
+
+      target.classList.add('row-icons__items-btn--active');
+      rowIcons.classList.remove('row-icons__items-btn--active');
+   }
+   });
+}
+
+//!=================================================================================================
+
 const videoBlock = document.querySelector('.video-block');
 const video = document.querySelector('video');
 const btnPlay = document.querySelector('.video-block__btn-play');
@@ -48,23 +68,5 @@ circles.forEach(el => {
   }
 });
 
-//!=================================================================================================
 
-const rowIcons = document.querySelector('.row-icons');
-const rowIconsItemsBtn = document.querySelectorAll('.row-icons__items-btn');
-if(rowIcons) {
-rowIcons.addEventListener('click', (e) => {
-   const target = e.target;
-
-     if(target.classList.contains('row-icons__items-btn')); {
-
-      rowIconsItemsBtn.forEach(el => {
-      el.classList.remove('row-icons__items-btn--active')
-   });
-
-      target.classList.add('row-icons__items-btn--active');
-      rowIcons.classList.remove('row-icons__items-btn--active');
-   }
-   });
-}
 

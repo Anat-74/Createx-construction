@@ -82,9 +82,10 @@ $alerts: ("error" : red,
    border-color: transparent;
    padding: rem(0) rem(39);
    color: $whiteColor;
-   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
-
+   transition: background-color 0.9s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+  
    &--stroke {
+
       @media (max-width:$mobile){
          padding: rem(0) rem(12);
       }
@@ -177,6 +178,7 @@ $alerts: ("error" : red,
    justify-content: center;
    align-items: center;
    column-gap: rem(40);
+
    @media (max-width:$mobile){
        flex-wrap: wrap; 
        row-gap: rem(15);
@@ -190,6 +192,7 @@ $alerts: ("error" : red,
 
    @media (max-width:$tablet){
       transform: translate(rem(-8), rem(5));
+
       .btn-slider__arrow {
          &--left  {
             transform: translate(rem(-12), rem(0));
@@ -274,6 +277,13 @@ $alerts: ("error" : red,
    border-color: $primaryColor;
    padding: rem(0) rem(32);
    color: $primaryColor;
+   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+      
+   @media (any-hover: hover){
+      &:hover{
+         color: $whiteColor;
+      }
+   }
 }
 
 //*------------------------------------------------------------------------------
@@ -306,10 +316,29 @@ $alerts: ("error" : red,
       line-height: math.div(21 , 14);
       font-weight: 400;
       color: $secondaryColor;
+      transition: color 0.3s ease-in-out;
 
       &:not([href]) {
          color: $grayColor;
+         &:hover{
+            color: $grayColor;
+         }
       }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
+         }
+      }
+
       @media (max-width:$mobile){
          font-size: rem(18);
           font-weight: 700; 
@@ -342,7 +371,7 @@ $alerts: ("error" : red,
       top: rem(-40);
       justify-content: flex-end;
       column-gap: rem(18);
-      
+
       .clients__btn {
          background-color: $primaryColor;
          color: $whiteColor;

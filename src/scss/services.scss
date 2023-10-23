@@ -11,30 +11,31 @@
       @include adaptiveValue("padding-top",120 , 30);
       @include adaptiveValue("padding-bottom",180 , 5);
       background-color: $whiteColor;
+      position: relative;
+
+      &::before{
+         content:'';
+         position: absolute;
+         top: rem(-136);
+         right: rem(-8);
+         width: 100%;
+         height: 100%;
+         background: url('@img/main/services/bg-image-1.png') right no-repeat;
+      }
+      &::after{
+         content:'';
+         position: absolute;
+         left: rem(-8);
+         bottom: rem(-246);
+         width: 100%;
+         height: 100%;
+         background: url('@img/main/services/bg-image-2.png') bottom left no-repeat;
+      }
    }
 }
 //==============================================================
 
 .services-content {
-   position: relative;
-   &::before{
-      content:'';
-      position: absolute;
-      top: rem(-136);
-      right: rem(-8);
-      width: 100%;
-      height: 100%;
-      background: url('@img/main/services/bg-image-1.png') right no-repeat;
-   }
-   &::after{
-      content:'';
-      position: absolute;
-      left: rem(-8);
-      bottom: rem(-246);
-      width: 100%;
-      height: 100%;
-      background: url('@img/main/services/bg-image-2.png') bottom left no-repeat;
-   }
 
    &__container {
       @include adaptiveValue("column-gap", 80, 15);
@@ -43,6 +44,7 @@
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
 
+      //*max-width:$mobile---------------------------------------------------------------------------------
       @media (max-width:$mobile){
          grid-template-columns: 1fr;
          div:nth-child(4) {
@@ -59,6 +61,7 @@
             text-align: start;
          }
       }
+//*----------------------------------------------------------------------------------------------------
    }
 
    &__image-ibg {
@@ -66,6 +69,7 @@
    }
 
    &__items {
+
       @media (max-width:$mobileSmall){
          &:not(:last-child) {
            padding-bottom: rem(20);
@@ -93,7 +97,10 @@
    }
 
    &__btn {
+      position: relative;
+      z-index: 2;
       padding: rem(13) rem(31);
+
    }
 }
 
