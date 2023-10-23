@@ -103,7 +103,7 @@ $alerts: ("error" : red,
             }
             &:active {
                border-color: $primaryColor;
-               background-color: $primaryColor;
+               background-color: $color-active;
             }
          }
    }
