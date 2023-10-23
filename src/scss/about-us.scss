@@ -69,7 +69,7 @@
       }
 }
 
-//===================================================================
+//!===================================================================
 
 .hero-about-us {
 
@@ -80,7 +80,7 @@
    }
 }
 
-//=================================================================
+//!=================================================================
 
 .build {
    &__container {
@@ -121,7 +121,7 @@
    }
 }
 
-//===========================================================
+//!===========================================================
 
 .ceo {
    &__container {
@@ -222,7 +222,7 @@
    }
 }
 
-//========================================================
+//!========================================================
 
 .history {
 
@@ -339,7 +339,7 @@
    &__btn-slider {
       display: flex;
       justify-content: flex-end;
-      padding: rem(10) rem(12) rem(62) rem(0);
+      padding: rem(10) rem(16) rem(62) rem(0);
    }
 
    &__slider {
@@ -419,10 +419,24 @@
       &--active {
          color: $primaryColor;
       }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $darkColor;
+         }
+         &:active {
+            color: $color-active;
+         }
+      }
    }
 }
 
-//===================================================================
+//!===================================================================
 
 .our-partners {
    &__container {
@@ -437,23 +451,33 @@
       @include adaptiveValue("row-gap",40 , 30);
       @include adaptiveValue("column-gap",102 , 30);
    }
+
+   &__item {
+      transition: background-color 0.3s ease-in-out;
+
+      @media (any-hover: hover){
+         &:hover{
+            background-color: rgba(#fc3300, 0.8);
+            border-radius: rem(4);
+         }
+         &:active {
+            background-color: $color-active;
+         }
+      }
+   }
+
+   &__link {
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+   }
 }
 
-//=================================================================
+//!=================================================================
 
 .our-team {
-
-   &__container {
-   }
-
-   &__title {
-   }
-
-   &__descr {
-   }
-
-   &__list {
-   }
 
    &__bottom {
       display: flex;
@@ -470,10 +494,25 @@
    &__link {
       text-decoration-line: underline;
       color: $primaryColor;
+      transition: color 0.3s ease-in-out;
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $color-active;
+         }
+         &:active {
+            color: $color-active;
+         }
+      }
    }
 }
 
-.list-team {
+.list-team { 
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
    column-gap: rem(30);

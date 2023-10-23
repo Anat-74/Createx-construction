@@ -680,6 +680,20 @@
       }
       //*-------------------------------------------------------------------------------------------------------
    }
+
+   &__item {
+      transition: background-color 0.3s ease-in-out;
+      @media (any-hover: hover){
+         &:hover{
+            background-color: rgba(#fc3300, 0.8);
+            border-radius: rem(4);
+         }
+         &:active {
+            background-color: $color-active;
+         }
+      }
+   }
+
    &__link {
       &:focus {
          outline: rem(2) solid $primaryColor;

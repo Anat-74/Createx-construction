@@ -16,7 +16,7 @@
 
 }
 
-//=============================================================
+//!=============================================================
 
 .categories {
 
@@ -66,6 +66,23 @@
             margin-bottom: rem(12);
          }
       }
+
+      &__link {
+         transition: color 0.3s ease-in-out;
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $primaryColor;
+            }
+            &:active {
+               color: $color-active;
+            }
+         }
+      }
    }
 
    &__pag-list {
@@ -89,11 +106,24 @@
       color: $grayColor;
       border: 1px solid transparent;
       border-radius: rem(4);
-      transition: color 0.4s ease-in-out;
+      transition: color 0.3s ease-in-out;
 
       &--active {
          border-color: currentColor;
          color: $primaryColor;
+      }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+         }
+         &:hover{
+            color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
+         }
       }
    }
 }
@@ -104,10 +134,24 @@
       line-height: math.div(26 , 16);
       font-weight: 700;
       color: $darkColor;
-      transition: color 0.4s ease-in-out;
+      transition: color 0.3s ease-in-out;
 
       &--active {
          color: $primaryColor;
+      }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
+         }
       }
    }
 
