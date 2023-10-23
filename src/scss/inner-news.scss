@@ -81,6 +81,7 @@
       position: relative;
       padding-right: rem(14);
       margin-right: rem(10);
+      transition: color 0.3s ease-in-out;
 
       &::before{
          content:'';
@@ -95,6 +96,20 @@
 
       &--active {
          color: $primaryColor;
+      }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
+         }
       }
    }
 
@@ -132,6 +147,8 @@
       position: relative;
       padding-left: rem(24);
       padding-right: rem(25);
+      transition: color 0.3s ease-in-out;
+
       &::before{
          content:'';
          position: absolute;
@@ -142,12 +159,44 @@
          transform: translate(0, -50%);
          background: url('@img/icons/Chat.svg') left top no-repeat;
       }
+
+      @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $primaryColor;
+            }
+            &:active {
+               color: $color-active;
+         }
+      }
    }
 }
 
 .social-news {
    display: flex;
    column-gap: rem(12);
+
+   &__link {
+      transition: color 0.3s ease-in-out;
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $primaryColor;
+         }
+         &:active {
+            color: $color-active;
+         }
+      }
+   }
 
    &__icon {
       font-size: rem(24);
@@ -276,9 +325,29 @@
       }
  }
 
+ &__link {
+   transition: color 0.3s ease-in-out;
+
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+         border-radius: rem(2);
+      }
+ }
+
 		&__icon {
          font-size: rem(24);
          color: $mainColor;
+         transition: color 0.3s ease-in-out;
+
+         @media (any-hover: hover){
+         &:hover{
+         color: $primaryColor;
+      }
+      &:active {
+         color: $color-active;
+      }
+   }
 		}
   }
 }
@@ -345,6 +414,21 @@
    &__link {
       font-weight: 700;
       color: $primaryColor;
+      transition: color 0.3s ease-in-out;
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+         }
+         &:hover{
+            color: $color-active;
+         }
+         &:active {
+            color: $color-active;
+         }
+      }
    }
 
    &__reply {
@@ -414,6 +498,22 @@
       &--big {
          @include adaptiveValue("padding-bottom",50 , 20);
          @include adaptiveValue("margin-bottom",45 , 20);
+      }
+
+      @media (any-hover: hover){
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+         }
+         &:hover{
+            background-color: $border-color;
+            &::placeholder {
+               color: $darkColor;
+         }
+      }
+         &:active {
+            background-color: $whiteColor;
+         }
       }
    }
 
