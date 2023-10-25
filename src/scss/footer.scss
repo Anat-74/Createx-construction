@@ -7,13 +7,13 @@ color: rgba(255, 255, 255, 0.6);
    &__container {
       @include adaptiveValue("row-gap",37 , 20);
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template: auto / repeat(5, 1fr);
       grid-template-areas: 
       "a a .. b b"
       "c c d d .."
       "e e ..  .. f"
       ;
-      //* media $tablet ---------------------------------------------------------------------
+      //*max-width:$tablet ---------------------------------------------------------------------
       @media (max-width:$tablet){
          grid-template-areas: 
          "a a a a a "
@@ -67,7 +67,8 @@ color: rgba(255, 255, 255, 0.6);
             }
          }
       }
-//* media $mobileSmall ------------------------------------------------------------------------
+
+//*max-width:$mobileSmall ------------------------------------------------------------------------
       @media (max-width:$mobileSmall){
          grid-template-areas: 
          "a a a a a "
@@ -126,7 +127,7 @@ color: rgba(255, 255, 255, 0.6);
    }
 
    &__go-to-top {
-      grid-area: f;
+      //grid-area: f;
    }
 }
 
@@ -401,6 +402,7 @@ position: relative;
       }
    }
 
+   /*
 .go-to-top {
       display: inline-flex;
       align-items: flex-end;
@@ -422,6 +424,7 @@ position: relative;
       border-radius: rem(4);
       border-width: rem(1);
       background-color: $primaryColor;
+      transition: background-color 0.3s ease-in-out;
 
       @media (any-hover: hover){
          &:focus {
@@ -436,5 +439,10 @@ position: relative;
             background-color: $color-active;
          }
       }
-      }
    }
+}
+*/
+
+//         <div class="footer__go-to-top go-to-top"><span>go to top</span>
+//<button type="submit" class="go-to-top__btn"></button>
+//</div>
