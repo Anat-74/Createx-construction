@@ -11,7 +11,7 @@ color: rgba(255, 255, 255, 0.6);
       grid-template-areas: 
       "a a .. b b"
       "c c d d .."
-      "e e ..  .. f"
+      "e e ..  .. .."
       ;
       //*max-width:$tablet ---------------------------------------------------------------------
       @media (max-width:$tablet){
@@ -20,7 +20,7 @@ color: rgba(255, 255, 255, 0.6);
          "b b b b b "
          "d d d d d"
          "c c c c c"
-         "e e .. f f"
+         "e e .. .. .."
          ;
          .top-left {
             &__list {
@@ -75,7 +75,7 @@ color: rgba(255, 255, 255, 0.6);
          "b b b b b "
          "d d d d d"
          "c c c c c"
-         ".. .. f f f"
+         ".. .. .. .. .."
          "e e e e e"
          ;
          .top-right__input {

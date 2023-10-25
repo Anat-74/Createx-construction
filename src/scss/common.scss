@@ -31,6 +31,9 @@ $alerts: ("error" : red,
    bottom: rem(78);
    display: flex;
    align-items: flex-end;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
    &__text {
       text-transform: uppercase;
@@ -38,6 +41,7 @@ $alerts: ("error" : red,
       line-height: math.div(21 , 14);
       font-weight: 400;
       color: $whiteColor;
+      text-shadow: 3px 3px 11px rgba(150, 150, 150, 1);
    }
 
    &__btn {
@@ -66,6 +70,10 @@ $alerts: ("error" : red,
             background-color: $color-active;
          }
       }
+   }
+   &--visible {
+      opacity: 1;
+      visibility: visible;
    }
 }
 

@@ -5,6 +5,7 @@ import { flsModules } from "./modules.js"  ;
 
 const rowIcons = document.querySelector('.row-icons');
 const rowIconsItemsBtn = document.querySelectorAll('.row-icons__items-btn');
+
 if(rowIcons) {
 rowIcons.addEventListener('click', (e) => {
    const target = e.target;
@@ -20,8 +21,6 @@ rowIcons.addEventListener('click', (e) => {
    }
    });
 }
-
-
 
 //!==================================================================================================
 
@@ -72,3 +71,23 @@ video.onpause = function() {
    btnPlay.classList.remove('video-block__btn-play--played');
    };
 };
+
+//!================================================================================================
+
+const toTop = document.querySelector('.to-top');
+const heroHeight = document.querySelector('.hero').offsetHeight;
+
+const isVisibleToTop = (y = 0) => {
+   if(y >= heroHeight) {
+      toTop.classList.add('to-top--visible');
+   } else {
+      toTop.classList.remove('to-top--visible');
+   }
+}
+
+isVisibleToTop(window.scrollY);
+
+window.addEventListener('scroll', () => {
+let y = window.scrollY;
+isVisibleToTop(y);
+});
