@@ -445,9 +445,9 @@
 
 .logo-our-partners {
    &__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      justify-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       @include adaptiveValue("row-gap",40 , 30);
       @include adaptiveValue("column-gap",102 , 30);
    }
@@ -573,12 +573,27 @@
    }
 
    &__link {
+      &:focus {
+         outline: rem(2) solid $color-active;
+         outline-offset: rem(2);
+         border-radius: rem(2);
+      }
    }
 
    &__icon {
       width: rem(20);
       height: rem(20);
       fill: $whiteColor;
+      transition: transform 0.3s ease-in-out;
+
+      @media (any-hover: hover){
+         &:hover{
+         transform: scale(1.4);
+         }
+         &:active {
+            color: $color-active;
+         }
+      }
    }
 
    &__name {

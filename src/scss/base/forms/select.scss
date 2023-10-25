@@ -15,12 +15,23 @@
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+
+   @media (any-hover: hover){
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+         border-radius: rem(2);
+      }
+      &:hover{
+         background-color: $border-color;
+      }
    }
+}
 	// .select__value
 	&__value {
 		display: flex;
 		align-items: center;
-		//height: rem(30);
 		padding: rem(10) rem(16);
 		gap: rem(10);
 		> * {
@@ -39,6 +50,7 @@
 				transform: rotate(-180deg);
 			}
 		}
+      
 		&._select-pseudo-label {
 			&::before {
 				content: attr(data-pseudo-label);
@@ -65,7 +77,7 @@
 	&__options {
 		color: #000;
 		position: absolute;
-		top: 30px;
+		top: 35px;
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
@@ -105,7 +117,6 @@
 		}
 	}
 
-	// Конструкція додаткових даних
 	&__row {
 		display: inline-flex;
 		align-items: center;

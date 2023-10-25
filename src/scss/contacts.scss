@@ -21,7 +21,7 @@
    }
 }
 
-//==================================================================
+//!==================================================================
 
 .hero-contacts {
 
@@ -33,12 +33,9 @@
    }
 }
 
-//===========================================================
+//!===========================================================
 
 .contacts-us {
-
-   &__container {
-   }
 
    &__image{
       max-width: rem(495);
@@ -54,6 +51,7 @@
       @include adaptiveValue("row-gap", 30, 20,);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
       //* media $tablet ------------------------------------------------------------------
       @media (max-width:$tablet){
          grid-template-columns: 1fr;
@@ -73,6 +71,7 @@
       @include adaptiveValue("row-gap", 25, 18);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
 //* media $mobileSmall -----------------------------------------------------------------
       @media (max-width:$mobileSmall){
          grid-template-columns: 1fr;
@@ -133,6 +132,7 @@
    &__input {
       min-width: rem(250);
       margin-bottom: rem(0);
+      transition: background-color 0.3s ease-in-out;
    }
 
    &__items-radio {
@@ -145,6 +145,12 @@
 
    &__input-radio {
       margin-right: rem(10);
+      cursor: pointer;
+
+      &:focus {
+         outline: rem(2) solid $primaryColor;
+         outline-offset: rem(2);
+      }
    }
 
    &__caption-radio {
@@ -175,6 +181,7 @@
    }
 
    &__descr {
+
       &::before{
          top: rem(5);
       }
@@ -198,7 +205,7 @@
    }
 }
 
-//===============================================================
+//!===============================================================
 
 .our-offices {
 
@@ -219,6 +226,7 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
 
+   //*max-width:$tablet -----------------------------------------------------------------------------------------------
    @media (max-width:$tablet){
       grid-template-columns: 1fr;
       .list-offices__subtitle {
@@ -234,6 +242,7 @@
          }
       }
   }
+//*--------------------------------------------------------------------------------------------------------
 
    &__items {
       position: relative;
@@ -264,8 +273,25 @@
    }
 
    &__link {
+      display: inline-block;
       text-decoration-line: underline;
       color: $primaryColor;
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $color-active;
+               transform: scale(1.1);
+            }
+            &:active {
+               color: $color-active;
+         }
+      }
    }
 
    &__bottom {
@@ -277,9 +303,31 @@
          color: $mainColor;
          font-size: rem(16);
       }
+
+      a {
+         transition: color 0.3s ease-in-out;
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $primaryColor;
+            }
+            &:active {
+               color: $color-active;
+            }
+         }
+      }
+
       &:not(:last-child) {
          margin-bottom: rem(4);
       }
+   }
+
+   &__value {
    }
 }
 
@@ -293,13 +341,20 @@
          @include adaptiveValue("width", 32, 40);
          @include adaptiveValue("height", 32, 40);
          transition: fill 0.3s ease-in, transform 0.3s ease-in;
+     
          @media (any-hover: hover){
-            &:hover{
-               fill: $primaryColor;
-               transform: scale(1.4);
-            }
+         &:hover{
+            fill: $color-active;
+            transform: scale(1.4);
          }
       }
+   }
+
+         &:focus {
+            outline: rem(2) solid $primaryColor;
+            outline-offset: rem(2);
+            border-radius: rem(2);
+        }
    }
 }
 
