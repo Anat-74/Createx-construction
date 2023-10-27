@@ -1,3 +1,4 @@
+<!--Work----------------------------------------------------------------------------------------------------------->
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
@@ -10,7 +11,7 @@
             <div class="columns-image__content">
                <h3 class="columns-image__title subtitle">Luxury Beach House</h3>
                <span class="columns-image__descr">Private houses</span>
-               <div class="columns-image__btn btn-stroke-orange">View Project</div>
+               <div class="columns-image__btn btn--stroke btn-stroke-orange">View Project</div>
             </div>
          </a>
 		</div>
@@ -30,7 +31,7 @@
             <div class="columns-image__content">
                <h3 class="columns-image__title subtitle">Red Finger Building</h3>
                <span class="columns-image__descr">Business Centers</span>
-               <div class="columns-image__btn btn-stroke-orange">View Project</div>
+               <div class="columns-image__btn btn--stroke btn-stroke-orange">View Project</div>
             </div>
          </a>
 		</div>
@@ -50,7 +51,7 @@
             <div class="columns-image__content">
                <h3 class="columns-image__title subtitle">Brown and Gray Painted House</h3>
                <span class="columns-image__descr">Private houses</span>
-               <div class="columns-image__btn btn-stroke-orange">View Project</div>
+               <div class="columns-image__btn btn--stroke btn-stroke-orange">View Project</div>
             </div>
          </a>
 		</div>
@@ -70,7 +71,7 @@
             <div class="columns-image__content">
                <h3 class="columns-image__title subtitle">Scandinavian Style Interior</h3>
                <span class="columns-image__descr">Private houses</span>
-               <div class="columns-image__btn btn-stroke-orange">View Project</div>
+               <div class="columns-image__btn btn--stroke btn-stroke-orange">View Project</div>
             </div>
          </a>
 		</div>
@@ -90,10 +91,60 @@
             <div class="columns-image__content">
                <h3 class="columns-image__title subtitle">Kids Bedroom With Decorations</h3>
                <span class="columns-image__descr">Apartments &amp;&nbsp;flats</span>
-               <div class="columns-image__btn btn-stroke-orange">View Project</div>
+               <div class="columns-image__btn btn--stroke btn-stroke-orange">View Project</div>
             </div>
          </a>
 		</div>
 	</div>
 </div>
 </div>
+
+<!--Inner About Us----------------------------------------------------------------------------------------------------------->
+<div id="subscribe-btn" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content--small">
+         <button data-close type="button" class="popup__close"></button>
+            <form action="#" class="modal__form">
+               <h3 class="modal__title title-form">Subscribe to our newsletter</h3>
+               <label class="modal__label form-field__caption" for="name">Name*</label>
+               <input class="modal__input form__input form-field__input"data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your working email" id="name">
+                  <label class="modal__label form-field__caption" for="email">Email*</label>
+                  <input class="modal__input form__input form-field__input" data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your working email" id="email">
+                  <button type="submit" class="modal__btn btn btn--fill">send</button>
+            </form>
+	   </div>
+   </div>
+</div>
+
+<div id="send-btn" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content--small  popup__content--small-height">
+         <button data-close type="button" class="popup__close"></button>
+            <form action="#" class="modal__form">
+               <h3 class="modal__title title-form">Send your CV</h3>
+               <label class="modal__caption form-field__caption" for="name">Name*</label>
+               <input class="modal__input form__input form-field__input"data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your name" id="name">
+               <label class="modal__labels form__input">
+                  <span class="modal__caption form-field__caption">Location*</span>
+                  <select name="form[]" data-class-modif="form" class="modal__sel">
+                     <option value="1">Choose your location</option>
+                     <option value="2">Пункт №2</option>
+                     <option value="3">Пункт №3</option>
+                  </select></label>
+                  <label class="modal__caption form-field__caption" for="phonel">Phone*</label>
+                  <input class="modal__input form__input form-field__input" data-required="phone" autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Your phone number" id="phone">
+                  <label class="modal__caption form-field__caption" for="email">Email*</label>
+                  <input class="modal__input form__input form-field__input" data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your working email" id="email">
+                  <label class="modal__caption form__label form-field__caption" for="message">Сovering letter</label>
+                  <textarea class=" modal__input-area form__input form-field__input"data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your covering letter" id="message"></textarea>
+                  <label class="castom-file">
+                  <input class="castom-file__input-file" type="file">
+                  <span class="castom-file__caption-file form-field__caption">Attach your CV*</span>
+               </label>
+                  <button type="submit" class="modal__btn btn btn--fill">send</button>
+            </form>
+	   </div>
+   </div>
+</div>
+
+

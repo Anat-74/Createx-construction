@@ -1,6 +1,6 @@
 body::after {
 	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(#1e212c, 0.75);
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -47,15 +47,144 @@ body::after {
 	align-items: center;
 }
 .popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
-	.lock & {
-		visibility: visible;
-	}
+	   visibility: hidden;
+	   transform: scale(0);
+	   transition: transform 0.3s ease 0s;
+	   background-color: #eee;
+	   padding: 24px;
+	   width: 100%;
+	   max-width: 900px;
+	   border-radius: 20px;
+	   .lock & {
+	   	visibility: visible;
+	   }
+
+   &--small{
+      width: 100%;
+      max-width: rem(486);
+      height: rem(412);
+      border-radius: rem(4);
+      border: 1px solid var(#e5e8ed);
+      background-color: $whiteColor;
+      box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 26px 24px -10px rgba(30, 33, 44, 0.10), 0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+   
+      &-height {
+      @include adaptiveValue("height", 781, 714);
+      }
+   }
 }
+
+.popup__close {
+   display: block;
+   position: relative;
+   top: 0;
+   left: 95%;
+   width: rem(24);
+   height: rem(24);
+   z-index: 5;
+   transition: transform 0.3s ease-in-out;
+
+   @media (any-hover: hover){
+      &:hover{
+         transform: scale(1.3);
+      }
+   }
+
+   &::before,
+   &::after {
+      content:'';
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: $mainColor;
+   }
+
+   &::before {
+      top: calc(50% - rem(1));
+      transform: rotate(-45deg);
+   }
+   &::after {
+      bottom: calc(50% - rem(1));
+      transform: rotate(45deg);
+   }
+}
+
+.modal {
+   &__form {
+      position: relative;
+      padding: rem(0) rem(24) rem(48) rem(24);
+
+   .form__error {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: red;
+      font-size: rem(14);
+       }
+   }
+
+   &__title {
+      text-align: center;
+      margin-bottom: rem(20);
+   }
+
+   &__btn {
+      width: 100%;
+      margin-top: rem(20);
+      font-size: rem(14);
+   }
+}
+
+//*-----------------------------------------------------------------------------------------------------
+
+.modal {
+
+   &__form {
+      position: relative;
+
+      .form__error {
+         position: absolute;
+         top: 95%;
+         left: 50%;
+         transform: translate(-50%, 0);
+         color: red;
+         font-size: rem(14);
+      }
+   }
+
+   &__title {
+   }
+
+   &__input-area {
+      height: rem(86);
+   }
+}
+
+.castom-file {
+   cursor: pointer;
+
+   &__input-file {
+      position: absolute;
+      visibility: hidden;
+   }
+
+   &__caption-file {
+      position: relative;
+      padding: rem(5) rem(0) rem(0) rem(36);
+      background: url('@img/main/inner-about-us/Attach.svg') left center/rem(24) rem(24) no-repeat;
+   }
+
+   &__input-file:focus + &__caption-file {
+      outline: rem(2) solid $primaryColor;
+      outline-offset: rem(2);
+      border-radius: rem(2);
+   }
+}
+
+
+
+
+
+

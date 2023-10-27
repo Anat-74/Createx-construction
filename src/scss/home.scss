@@ -1160,12 +1160,9 @@
       display: block;
       width: 100%;
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 19,  8);
+         @include adaptiveValue("margin-bottom", 19, 16);
       }
    }
-
-      &__checkbox {
-      }
 
       &__button {
          text-align: center;

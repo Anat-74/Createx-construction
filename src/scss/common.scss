@@ -22,7 +22,6 @@ $alerts: ("error" : red,
       }
    }
 }
-//      <span class="to-top__icon --icon-Line-Stroke"></span>
 
 .to-top {
    position: fixed;
@@ -41,7 +40,7 @@ $alerts: ("error" : red,
       line-height: math.div(21 , 14);
       font-weight: 400;
       color: $whiteColor;
-      text-shadow: 3px 3px 11px rgba(150, 150, 150, 1);
+      text-shadow: -3px 4px 18px rgba(0,0,0,1);
    }
 
    &__btn {
@@ -136,13 +135,14 @@ $alerts: ("error" : red,
    transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
   
    &--stroke {
-
       @media (max-width:$mobile){
          padding: rem(0) rem(12);
       }
+
       &-white {
          border: 1px solid $whiteColor;
          }
+
          @media (any-hover: hover){
             &:focus {
                outline: rem(2) solid $primaryColor;
@@ -155,8 +155,8 @@ $alerts: ("error" : red,
             &:active {
                border-color: $primaryColor;
                background-color: $color-active;
-            }
          }
+      }
    }
 
    &--fill {

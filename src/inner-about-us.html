@@ -6,6 +6,7 @@
 
 <body id="go-to-top">
    <div class="wrapper">
+      @@include('html/_popup.htm',{})
       @@include('html/_header-2.htm',{})
       <main class="page">
          <section class="page__hero-inner-about-us hero"
@@ -86,8 +87,8 @@
                <h2 class="right-items__title">Didn&rsquo;t find what you were looking for?</h2>
                <p class="right-items__descr main-text">Send your CV&nbsp;or subscribe to&nbsp;our newsletter to&nbsp;receive information about new vacancies.</p>
                <div class="right-items__btns">
-               <button type="submit" class="right-items__btn-left btn">subscribe</button>
-               <button type="submit" class="right-items__btn-right btn btn--fill ">send cv</button>
+               <button type="submit" data-popup="#subscribe-btn" class="right-items__btn-left btn">subscribe</button>
+               <button type="submit" data-popup="#send-btn" class="right-items__btn-right btn btn--fill ">send cv</button>
             </div>
             </div>
          </div>
@@ -137,11 +138,9 @@
                   <input class="form__input form-field__input" autocomplete="off" type="tel" name="phone" id="phone"
                      data-error="Ошибка" placeholder="Your phone number">
                   <label class="form__label form-field__caption" for="email">Email</label>
-                  <input class="form__input form-field__input" autocomplete="off" type="email" name="email" id="email"
-                     data-error="Ошибка" placeholder="Your working email">
+                  <input class="form__input form-field__input" data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your working email" id="email">
                   <label class="form__label form-field__caption" for="message">Message*</label>
-                  <textarea class="form__input form-field__input" name="message" id="message"
-                     placeholder="Your message"></textarea>
+                  <textarea class="form__input form-field__input" autocomplete="off"  name="message" id="message" placeholder="Your message"></textarea>
                   <label class="form__checkbox">
                      <input class="checkbox__input" autocomplete="off" type="checkbox">
                      <span class="checkbox__descr">I&nbsp;agree to&nbsp;receive communications from Createx Construction

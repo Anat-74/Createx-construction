@@ -75,7 +75,6 @@ color: rgba(255, 255, 255, 0.6);
          "b b b b b "
          "d d d d d"
          "c c c c c"
-         ".. .. .. .. .."
          "e e e e e"
          ;
          .top-right__input {
@@ -124,10 +123,6 @@ color: rgba(255, 255, 255, 0.6);
 
    &__copyright {
       grid-area: e;
-   }
-
-   &__go-to-top {
-      //grid-area: f;
    }
 }
 
@@ -401,48 +396,3 @@ position: relative;
          color: $primaryColor;
       }
    }
-
-   /*
-.go-to-top {
-      display: inline-flex;
-      align-items: flex-end;
-      justify-content: end;
-      text-transform: uppercase;
-      font-size: rem(14);
-      line-height: math.div(21 , 14);
-      font-weight: 400;
-      color: $whiteColor;
-
-   &__btn {
-      @extend %ic;
-      @extend .--icon-Line-Stroke;
-      font-size: rem(9);
-      color: $whiteColor;
-      margin-left: rem(16);
-      width: rem(40);
-      height: rem(40);
-      border-radius: rem(4);
-      border-width: rem(1);
-      background-color: $primaryColor;
-      transition: background-color 0.3s ease-in-out;
-
-      @media (any-hover: hover){
-         &:focus {
-            outline: rem(2) solid $primaryColor;
-            outline-offset: rem(2);
-            border-radius: rem(2);
-         }
-         &:hover{
-            background-color: $color-active;
-         }
-         &:active {
-            background-color: $color-active;
-         }
-      }
-   }
-}
-*/
-
-//         <div class="footer__go-to-top go-to-top"><span>go to top</span>
-//<button type="submit" class="go-to-top__btn"></button>
-//</div>
