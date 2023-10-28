@@ -59,8 +59,9 @@
          .contacts-us__form {
             width: 100%;
          }
+
          .form-contacts-us__input {
-         min-width: 100%
+            min-width: rem(218);
          }
       }
       //*------------------------------------------------------------------
@@ -96,15 +97,15 @@
             grid-row: 3 / 4;
          }
 
-         .form-contacts-us__caption-radio {
-            text-align: center;
-            font-size: rem(18);
-         }
-   
          .form-contacts-us__items-radio {
             padding-top: rem(4);
-            justify-content: space-between;
-            font-size: rem(20);
+            span {
+               font-weight: 600;
+            }
+         }
+
+         .form-contacts-us__title-radio {
+            text-align: center;
          }
    
          .form-contacts-us__bottom {
@@ -130,33 +131,72 @@
    }
 
    &__input {
-      min-width: rem(250);
       margin-bottom: rem(0);
       transition: background-color 0.3s ease-in-out;
    }
 
    &__items-radio {
       @include adaptiveValue("padding-top", 6, 16);
-      @include adaptiveValue("column-gap", 28, 10);
+      @include adaptiveValue("column-gap", 40, 24, 0, $containerWidth, 991);
       white-space: nowrap;
       display: flex;
       align-items: center;
+
+      @media (max-width:$tablet){
+         justify-content: space-between;
+         column-gap: rem(0);
+
+         .form-contacts-us__radio {
+            padding-right: rem(14);
+         }
+      }
    }
 
    &__input-radio {
-      margin-right: rem(10);
-      cursor: pointer;
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
 
-      &:focus {
+      &:focus + .form-contacts-us__caption-radio::before {
          outline: rem(2) solid $primaryColor;
-         outline-offset: rem(2);
-      }
+		}
+
+		&:checked + .form-contacts-us__caption-radio::after {
+			transform: scale(1);
+		}
    }
 
    &__caption-radio {
       line-height: math.div(26 , 16);
       font-weight: 400;
       color: $secondaryColor;
+      cursor: pointer;
+		display: inline-flex;
+		position: relative;
+		gap: rem(10);
+
+		&:before {
+			content: "";
+			align-self: center;
+			flex: 0 0 rem(16);
+			height: rem(16);
+			border: 1px solid $grayColor;
+         border-radius: 50%;
+		}
+
+      &::after{
+         content:'';
+         position: absolute;
+         width: rem(10);
+         height: rem(10);
+         top: rem(8);
+         left: rem(3);
+         transform: scale(0);
+         border: 1px solid $primaryColor;
+         border-radius: 50%;
+         background-color: $primaryColor;
+      }
    }
 
    &__labels-area {
