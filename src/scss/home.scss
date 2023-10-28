@@ -4,7 +4,7 @@
    }
 
    &__bureau {
-      @include adaptiveValue("padding-top", 78, 30);
+      @include adaptiveValue("padding-top", 78, 5);
       @include adaptiveValue("padding-bottom", 180, 40);
       background-color: $whiteColor;
    }
@@ -65,7 +65,7 @@
 
    &__slide {
       @include adaptiveValue("padding-top", 314, 80);
-      @include adaptiveValue("padding-bottom", 350, 20);
+      @include adaptiveValue("padding-bottom", 350, 75);
       background-position: 50%;
       background-repeat: no-repeat;
       background-color: $mainColor; 
@@ -104,8 +104,8 @@
    }
 
    &__pag {
-      @include adaptiveValue("bottom", 164, 40, 0, $containerWidth, 479);
-      @include adaptiveValue("column-gap", 4, 20);
+      @include adaptiveValue("bottom", 164, 50, 0, $containerWidth, 479);
+      @include adaptiveValue("column-gap", 4, 30);
       position: relative;
       display: flex;
       counter-reset: pag;
@@ -117,11 +117,12 @@
          justify-content: center;
       }
       @media (max-width:$mobileSmall){
-         display: none;
+         width: calc((100% - rem(36)));
+         left: rem(18);
       }
 //*---------------------------------------------------------------------------------
       .swiper-pagination-bullet {
-         @include adaptiveValue("width", 178, 96, 0, $containerWidth, 767);
+         @include adaptiveValue("width", 178, 96, 0, $containerWidth, 479);
          display: flex;
          flex-direction: column;
          opacity: 1;
@@ -180,20 +181,18 @@
       top: 65%;
       left: rem(22);
       transform: translateY(-64%);
-      
       @media (max-width:$tablet){
-         top: 42%;
+      display: none;
       }
    }
    .btn-home__right {
       top: 65%;
       right: rem(22);
       transform: translateY(-64%);
-
       @media (max-width:$tablet){
-         top: 42%;
-      }
-      }
+         display: none;
+         }
+   }
 }
 
 //!=========================================================================

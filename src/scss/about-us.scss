@@ -64,20 +64,9 @@
       }
 
       &__worldwide {
-         @include adaptiveValue("padding-top",80 , 40);
-         @include adaptiveValue("padding-bottom",120 , 40);
+         @include adaptiveValue("padding-top",80 , 5);
+         @include adaptiveValue("padding-bottom",120 , 5);
       }
-}
-
-//!===================================================================
-
-.hero-about-us {
-
-   &__title {
-      &:not(:last-child) {
-         margin-bottom: rem(12);
-      }
-   }
 }
 
 //!=================================================================
@@ -614,22 +603,22 @@
    }
 }
 
-//===================================================
+//!===================================================
 
 .worldwide {
-
-   &__container {
-   }
 
    &__title {
       text-align: center;
       &:not(:last-child) {
-         margin-bottom: rem(60);
+         @include adaptiveValue("margin-bottom", 60, 10);
       }
    }
 
    &__body {
-
+      svg {
+         width: 100%;
+         height: 100%;
+      }
    }
 }
 

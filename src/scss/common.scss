@@ -25,7 +25,7 @@ $alerts: ("error" : red,
 
 .to-top {
    position: fixed;
-   z-index: 999;
+   z-index: 148;
    right: calc((100% - rem(1230)) / 2);
    bottom: rem(78);
    display: flex;
@@ -33,6 +33,26 @@ $alerts: ("error" : red,
    opacity: 0;
    visibility: hidden;
    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+   //*max-width------------------------------------------------------------------------------------------------
+   @media (max-width:em(1255)){
+      right: rem(20);
+      bottom: rem(20);
+   }
+
+   @media (max-width:$mobile){
+      .to-top__btn {
+         opacity: 0.4;
+       }
+   }
+
+   @media (max-width:$mobileSmall){
+       bottom: rem(65); 
+       .to-top__btn {
+         border-radius: 50%;
+       }
+   }
+   //*------------------------------------------------------------------------------------------------
 
    &__text {
       text-transform: uppercase;
