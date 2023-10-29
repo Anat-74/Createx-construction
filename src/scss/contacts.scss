@@ -33,7 +33,7 @@
    }
 }
 
-//!===========================================================
+//!========================================================================
 
 .contacts-us {
 
@@ -52,7 +52,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      //* media $tablet ------------------------------------------------------------------
+      //*max-width:$tablet ------------------------------------------------------------------
       @media (max-width:$tablet){
          grid-template-columns: 1fr;
          justify-items: center;
@@ -64,7 +64,7 @@
             min-width: rem(218);
          }
       }
-      //*------------------------------------------------------------------
+      //*----------------------------------------------------------------------------------------
    }
 
    &__form {
@@ -73,7 +73,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-//* media $mobileSmall -----------------------------------------------------------------
+//* media $mobileSmall ----------------------------------------------------------------------
       @media (max-width:$mobileSmall){
          grid-template-columns: 1fr;
          column-gap: 0;
@@ -168,13 +168,13 @@
    }
 
    &__caption-radio {
+      position: relative;
+		display: inline-flex;
+		gap: rem(10);
+      cursor: pointer;
       line-height: math.div(26 , 16);
       font-weight: 400;
       color: $secondaryColor;
-      cursor: pointer;
-		display: inline-flex;
-		position: relative;
-		gap: rem(10);
 
 		&:before {
 			content: "";
@@ -221,7 +221,6 @@
    }
 
    &__descr {
-
       &::before{
          top: rem(5);
       }
@@ -234,7 +233,6 @@
       line-height: math.div(26 , 16);
       font-weight: 400;
       color: $secondaryColor;
-
    }
 
    &__btn {
@@ -245,12 +243,9 @@
    }
 }
 
-//!===============================================================
+//!=======================================================================================
 
 .our-offices {
-
-   &__container {
-   }
 
    &__title-bottom {
       &:not(:last-child) {

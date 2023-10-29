@@ -1,13 +1,46 @@
+//?@mixin------------------------------------------------------------------------------------------
+@mixin button( $w: rem(104), $h: rem(34), $color-btn: $whiteColor, $bg-color:$primaryColor, $bg-circleColor:$primaryColor, $circle:false) {
+  
+   @if $circle {
+      border-radius: 50%;
+      width: rem(48);
+      height: rem(48);
+      color: $secondaryColor;
+      background-color: $bg-circleColor;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-@mixin button($color:0, $w: rem(0), $h: rem(0)) {
-   background-color: $color;
-   width: $w;
-   height: $h;
-   //color: #fff;
-   //text-align: center;
+      @media (any-hover: hover){
+         &:hover{
+            color: $whiteColor;
+            background-color: $secondaryColor;
+         }
+      }
+   }
+
+   @else {
+      width: $w;
+      height: $h;
+      text-transform: uppercase;
+      font-size: rem(16);
+      line-height: math.div(52 , 16);
+      font-weight: 700;
+      letter-spacing: rem(0.5);
+      border-radius: rem(4);
+      border-width: rem(1);
+      border-style: solid;
+      border-color: transparent;
+      //padding: rem(0) rem(39);
+      color: $color-btn;
+      background-color: $bg-color;
+      //vertical-align: top;
+      //transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+   }
+}
 
 
-$alerts: ("error" : red,
+
+//?--------------------------------------------------------------------------------------------
+   $alerts: ("error" : red,
 "neutral" : blue,
 "good" : green,
 "warning" : yellow
@@ -21,8 +54,9 @@ $alerts: ("error" : red,
             text-align: center;
       }
    }
-}
+//?--------------------------------------------------------------------------------------------
 
+//*to-top===================================================================================================
 .to-top {
    position: fixed;
    z-index: 148;
@@ -95,6 +129,7 @@ $alerts: ("error" : red,
       visibility: visible;
    }
 }
+//*============================================================================================================
 
 .none {
    display: none;
