@@ -54,7 +54,7 @@
 	}
 }
 
-//=====================================================================
+//!=====================================================================
 
 .header {
    position: relative;
@@ -86,7 +86,7 @@
 
       @media (max-width:$tablet){
          display: flex;
-         justify-content: flex-end;
+         justify-content: flex-start;
       }
    }
 
@@ -141,6 +141,7 @@
       left: 100%;
       background-color: $grayColor;
       transition: left 0.4s;
+
       &::before{
          content:'';
          position: fixed;

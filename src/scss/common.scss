@@ -1,18 +1,25 @@
 //?@mixin------------------------------------------------------------------------------------------
-@mixin button( $w: rem(104), $h: rem(34), $color-btn: $whiteColor, $bg-color:$primaryColor, $bg-circleColor:$primaryColor, $circle:false) {
+@mixin button($w:inherit, $h:inherit, $bg-color:$primaryColor, $color-btn: $whiteColor, $bg-circleColor:transparent, $circleColor-btn:$secondaryColor, $circle:false) {
   
    @if $circle {
       border-radius: 50%;
       width: rem(48);
       height: rem(48);
-      color: $secondaryColor;
+      color: $circleColor-btn;
       background-color: $bg-circleColor;
       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-      @media (any-hover: hover){
-         &:hover{
-            color: $whiteColor;
-            background-color: $secondaryColor;
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+            }
+            &:hover{
+               color: $whiteColor;
+               background-color: $primaryColor;
+            }
+            &:active {
+               color: $primaryColor;
          }
       }
    }
@@ -29,11 +36,26 @@
       border-width: rem(1);
       border-style: solid;
       border-color: transparent;
-      //padding: rem(0) rem(39);
       color: $color-btn;
       background-color: $bg-color;
+      transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+      //text-align: center;
       //vertical-align: top;
-      //transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $whiteColor;
+               background-color: $color-active;
+            }
+            &:active {
+               background-color: $color-active;
+         }
+      }
    }
 }
 
@@ -110,20 +132,21 @@
       background-color: $primaryColor;
       transition: background-color 0.3s ease-in-out;
 
-      @media (any-hover: hover){
-         &:focus {
-            outline: rem(2) solid $primaryColor;
-            outline-offset: rem(2);
-            border-radius: rem(2);
-         }
-         &:hover{
-            background-color: $color-active;
-         }
-         &:active {
-            background-color: $color-active;
-         }
-      }
+ //     @media (any-hover: hover){
+ //        &:focus {
+ //           outline: rem(2) solid $primaryColor;
+ //           outline-offset: rem(2);
+ //           border-radius: rem(2);
+ //        }
+ //        &:hover{
+ //           background-color: $color-active;
+ //        }
+ //        &:active {
+ //           background-color: $color-active;
+ //        }
+ //     }
    }
+
    &--visible {
       opacity: 1;
       visibility: visible;
@@ -176,6 +199,7 @@
    }
 }
 //*-----------------------------------------------------------------------------
+/*
 .btn {
    text-transform: uppercase;
    line-height: math.div(52 , 16);
@@ -198,20 +222,20 @@
          border: 1px solid $whiteColor;
          }
 
-         @media (any-hover: hover){
-            &:focus {
-               outline: rem(2) solid $primaryColor;
-               outline-offset: rem(2);
-            }
-            &:hover{
-               border-color: $primaryColor;
-               background-color: $primaryColor;
-            }
-            &:active {
-               border-color: $primaryColor;
-               background-color: $color-active;
-         }
-      }
+  //       @media (any-hover: hover){
+  //          &:focus {
+  //             outline: rem(2) solid $primaryColor;
+  //             outline-offset: rem(2);
+  //          }
+  //          &:hover{
+  //             border-color: $primaryColor;
+  //             background-color: $primaryColor;
+  //          }
+  //          &:active {
+  //             border-color: $primaryColor;
+  //             background-color: $color-active;
+  //       }
+  //    }
    }
 
    &--fill {
@@ -236,6 +260,7 @@
       line-height: math.div(44, 14);
    }
 }
+*/
 //*----------------------------------------------------------------
 
 .main-title {
@@ -327,19 +352,19 @@
          color: $secondaryColor;
          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
          
-         @media (any-hover: hover){
-            &:focus {
-               outline: rem(2) solid $primaryColor;
-               outline-offset: rem(2);
-            }
-            &:hover{
-                  background-color: $primaryColor;
-                  color: $whiteColor;
-            }
-            &:active {
-               color: $primaryColor;
-            }
-         }
+       //  @media (any-hover: hover){
+       //     &:focus {
+       //        outline: rem(2) solid $primaryColor;
+       //        outline-offset: rem(2);
+       //     }
+       //     &:hover{
+       //           background-color: $primaryColor;
+       //           color: $whiteColor;
+       //     }
+       //     &:active {
+       //        color: $primaryColor;
+       //     }
+       //  }
       }
 
       &--right {
@@ -352,45 +377,45 @@
          color: $secondaryColor;
          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
          
-         @media (any-hover: hover){
-            &:focus {
-               outline: rem(2) solid $primaryColor;
-               outline-offset: rem(2);
-            }
-            &:hover{
-                  background-color: $primaryColor;
-                  color: $whiteColor;
-               }
-               &:active {
-                  color: $primaryColor;
-               }
-            }
+       //  @media (any-hover: hover){
+       //     &:focus {
+       //        outline: rem(2) solid $primaryColor;
+       //        outline-offset: rem(2);
+       //     }
+       //     &:hover{
+       //           background-color: $primaryColor;
+       //           color: $whiteColor;
+       //        }
+       //        &:active {
+       //           color: $primaryColor;
+       //        }
+       //     }
          }
    }
 }
 
 //*------------------------------------------------------------------------------
-.btn-stroke-orange {
-   text-transform: uppercase;
-   font-size: rem(14);
-   line-height: math.div(44 , 14);
-   font-weight: 700;
-   letter-spacing: rem(0.5);
-   border-radius: rem(4);
-   border-width: rem(1);
-   border-style: solid;
-   border-color: transparent;
-   border-color: $primaryColor;
-   padding: rem(0) rem(32);
-   color: $primaryColor;
-   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-      
-   @media (any-hover: hover){
-      &:hover{
-         color: $whiteColor;
-      }
-   }
-}
+//.btn-stroke-orange {
+//   text-transform: uppercase;
+//   font-size: rem(14);
+//   line-height: math.div(44 , 14);
+//   font-weight: 700;
+//   letter-spacing: rem(0.5);
+//   border-radius: rem(4);
+//   border-width: rem(1);
+//   border-style: solid;
+//   border-color: transparent;
+//   border-color: $primaryColor;
+//   padding: rem(0) rem(32);
+//   color: $primaryColor;
+//   transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+//      
+//   @media (any-hover: hover){
+//      &:hover{
+//         color: $whiteColor;
+//      }
+//   }
+//}
 
 //*------------------------------------------------------------------------------
 .bredcrumbs {
