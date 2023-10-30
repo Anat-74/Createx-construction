@@ -235,7 +235,7 @@
             justify-self: end;
          }
 
-         .history__btn-slider {
+         .history__buttons{
          justify-content: flex-start;
          transform: translate(rem(18), rem(20));
          }
@@ -255,30 +255,30 @@
             margin-bottom: rem(-40);
          }
 
-         .history__btn-slider {
+         .history__buttons {
             position: relative;
             z-index: 10;
-            top: -27%;
+            top: -15%;
             right: 0;
-            justify-content: center;
-            padding: rem(0);
+            padding: rem(0) rem(8) rem(0) rem(0);
+            justify-content: flex-end;
             transform: translate(0);
          }
 
-         .history__arrow-left {
-            font-size: rem(28);
+         .history__arrow-l {
+            @include adaptiveValue("width", 80, 36);
+            @include adaptiveValue("height", 80, 36);
+            @include adaptiveValue("font-size", 28, 16);
             color: $whiteColor;
-            width: rem(60);
-            height: rem(60);
-            background-color: rgba(255, 90, 48, 0.3);
+            background-color: rgba(255, 90, 48, 0.2);
          }
 
-         .history__arrow-right {
-            font-size: rem(28);
+         .history__arrow-r {
+            @include adaptiveValue("width", 80, 36);
+            @include adaptiveValue("height", 80, 36);
+            @include adaptiveValue("font-size", 28, 16);
             color: $whiteColor;
-            width: rem(60);
-            height: rem(60);
-            background-color: rgba(255, 90, 48, 0.3);
+            background-color: rgba(255, 90, 48, 0.2);
          }
 
          .history__slide {
@@ -294,25 +294,6 @@
             margin-bottom: rem(12);
          }
    }
-
-      //*max-width:$mobileSmall ---------------------------------------------------------------------
-   @media (max-width:$mobileSmall){
-      .history__arrow-left {
-         font-size: rem(24);
-         color: $whiteColor;
-         width: rem(50);
-         height: rem(50);
-         background-color: rgba(255, 90, 48, 0.3);
-      }
-
-      .history__arrow-right {
-         font-size: rem(24);
-         color: $whiteColor;
-         width: rem(50);
-         height: rem(50);
-         background-color: rgba(255, 90, 48, 0.3);
-      }
-   }
    //*---------------------------------------------------------------------------------
    }
 
@@ -325,7 +306,7 @@
       grid-area: present;
    }
 
-   &__btn-slider {
+   &__buttons {
       display: flex;
       justify-content: flex-end;
       padding: rem(10) rem(16) rem(62) rem(0);

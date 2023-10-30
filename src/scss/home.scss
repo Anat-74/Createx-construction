@@ -198,10 +198,12 @@
       left: rem(32);
       transform: translateY(-50%);
 
-      &:hover{
-         color: $secondaryColor;
-         background-color: $whiteColor;
-      }
+      @media (any-hover: hover){
+         &:hover{
+            color: $secondaryColor;
+            background-color: $whiteColor;
+      }       
+   }
 
       @media (max-width:$tablet){
       display: none;
@@ -217,10 +219,12 @@
       right: rem(32);
       transform: translateY(-50%);
 
-      &:hover{
-         color: $secondaryColor;
-         background-color: $whiteColor;
-      }
+      @media (any-hover: hover){
+         &:hover{
+            color: $secondaryColor;
+            background-color: $whiteColor;
+      }       
+   }
 
       @media (max-width:$tablet){
          display: none;

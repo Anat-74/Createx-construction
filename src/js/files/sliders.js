@@ -108,8 +108,8 @@ function initSliders() {
 			loop: true,
 
          navigation: {
-            nextEl: '.button-next',
-            prevEl: '.button-prev',
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
           },
 
 		});
@@ -138,8 +138,8 @@ function initSliders() {
          //loop: true,
 			spaceBetween: 20,
          navigation: {
-            nextEl: ".hero-slider__next",
-            prevEl: ".hero-slider__prev",
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
           },
 
           thumbs: {
@@ -161,8 +161,8 @@ function initSliders() {
             slidesPerView: 1,
             spaceBetween: 15,
             navigation: {
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
+               nextEl: ".button-next",
+               prevEl: ".button-prev",
             },
          });
 

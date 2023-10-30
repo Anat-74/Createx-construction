@@ -194,7 +194,7 @@
                background-color: $whiteColor;
             }
             .columns-image__btn {
-               display: block;
+               @include button(rem(172), rem(44), rem(14), 314%);
             }
          }
       }

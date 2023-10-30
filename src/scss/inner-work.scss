@@ -60,41 +60,37 @@
       position: relative;
    }
    
-   &__prev {
-      position: absolute;
-      z-index: 50;
-      top: 48%;
-      left: rem(32);
-      transform: translateY(-48%);
-      background: rgba($whiteColor, 0.5);
-      transition: background-color 0.3s ease-in-out;
-      @media (any-hover: hover){
-         &:hover{
-          background-color: $whiteColor;
-          color: $darkColor;
-         }
-      }
-      @extend %ic;
-      @extend .--icon-Left;
+   &__btn-l {
+      @media (max-width:$tablet){
+         display: block;
+         color: rgba(255, 255, 255, 0.6);
+         background-color: rgba(255, 255, 255, 0.2);
    }
 
-   &__next{
-      position: absolute;
-      z-index: 50;
-      top: 48%;
-      right: rem(32);
-      transform: translateY(-48%);
-      background: rgba($whiteColor, 0.5);
-      transition: background-color 0.3s ease-in-out;
-      @media (any-hover: hover){
-         &:hover{
-          background-color: $whiteColor;
-          color: $darkColor;
-         }
-      }
-      @extend %ic;
-      @extend .--icon-Right;
+   @media (max-width:$mobileSmall){
+      width: rem(36);
+      height: rem(36);
+      font-size: rem(18);
+      top: 70%;
+      left: 70%;  
+  }
+}
+   
+   &__btn-r{
+      @media (max-width:$tablet){
+         display: block;
+         color: rgba(255, 255, 255, 0.6);
+         background-color: rgba(255, 255, 255, 0.2);
    }
+
+   @media (max-width:$mobileSmall){
+      width: rem(36);
+      height: rem(36);
+      font-size: rem(18);
+      top: 70%; 
+      right: rem(10); 
+   }
+}
 
    &__wrapper {
       margin-bottom: rem(20);
@@ -135,7 +131,7 @@
       }
    }
 
-//=================================================================
+//!=================================================================
 
 .project-goal {
 
@@ -215,17 +211,21 @@
       }
    }
 }
-//============================================================
+//!============================================================
 
 .constructive {
-
    &__container {
       display: grid;
       grid-template-columns: repeat(2, auto);
       @include adaptiveValue("column-gap",131 , 60);
+
       @media (max-width:$tablet){
          grid-template-columns: 1fr;
          justify-items: center;
+
+         .constructive__title {
+            text-align: center;
+         }
       }
    }
 
@@ -286,7 +286,6 @@
      }
    }
 }
-//=========================================================
 
 
 
