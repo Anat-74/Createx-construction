@@ -481,9 +481,6 @@
       }
    }
 
-   &__labels {
-   }
-
    &__caption {
       @include adaptiveValue("margin-bottom", 14, 5);
       display: inline-block;
@@ -528,7 +525,7 @@
    }
 
    &__btn {
-      max-width: rem(215);
+      @include button(rem(215), rem(52));
       justify-self: center;
    }
 }

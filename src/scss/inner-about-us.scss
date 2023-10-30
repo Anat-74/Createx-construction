@@ -151,14 +151,7 @@
    }
 
    &__link {
-      white-space: nowrap;
-      text-align: center;
-      font-size: rem(14);
-      line-height: math.div(44 , 14);
-      border: 1px solid $primaryColor;
-      padding: rem(0) rem(32);
-      color: $primaryColor;
-      transition: color 0.3s ease-in, background-color 0.3s ease-in;;
+      @include button(rem(151), rem(44), rem(14), 314%, transparent, $primaryColor);
    }
 }
 
@@ -182,7 +175,7 @@
 
    }
 
-   &__btns {
+   &__buttons {
       @include adaptiveValue("column-gap",28 , 20);
       white-space: nowrap;
       display: flex;
@@ -190,40 +183,12 @@
       justify-content: center;
    }
 
-   &__btn-left {
-      @include adaptiveValue("padding-left",44 , 25);
-      @include adaptiveValue("padding-right",44 , 25);
-      border: 1px solid $primaryColor;
-      color: $primaryColor;
-      transition: box-shadow 0.3s ease-in-out;
-
-      @media (any-hover: hover){
-         &:focus {
-            outline: rem(2) solid $primaryColor;
-            outline-offset: rem(2);
-         }
-         &:hover{
-            box-shadow: 2px 8px 8px -2px rgba(30, 33, 44, 0.6);
-         }
-         &:active {
-            background-color: $color-active;
-         }
-      }
+   &__btn-l {
+      @include button(rem(180), rem(52), rem(14), $bg-color:transparent, $color-btn: $primaryColor);
    }
 
-   &__btn-right {
-      @include adaptiveValue("padding-left",52 , 33);
-      @include adaptiveValue("padding-right",52, 33);
-      transition: box-shadow 0.3s ease-in-out;
-
-      @media (any-hover: hover){
-         &:hover{
-            box-shadow: 2px 8px 8px -2px rgba(30, 33, 44, 0.6);
-         }
-         &:active {
-            background-color: $color-active;
-         }
-      }
+   &__btn-r {
+      @include button(rem(180), rem(52));
    }
 }
 

@@ -97,16 +97,9 @@
 .nav-list {
    
    &__btn {
-      white-space: nowrap;
-      width: rem(205);
-      text-align: center;
-      padding: rem(10) rem(0);
-      line-height: math.div(26 , 16);
-      font-weight: 700;
-      color: $grayColor;
-      border: 1px solid transparent;
-      border-radius: rem(4);
-      transition: color 0.3s ease-in-out;
+      @include button(rem(205), rem(46), $bg-color:transparent, $color-btn:$grayColor);
+      border-color: transparent;
+      text-transform: capitalize;
 
       &--active {
          border-color: currentColor;
@@ -114,15 +107,9 @@
       }
 
       @media (any-hover: hover){
-         &:focus {
-            outline: rem(2) solid $primaryColor;
-            outline-offset: rem(2);
-         }
          &:hover{
+            background-color: transparent;
             color: $primaryColor;
-         }
-         &:active {
-            color: $color-active;
          }
       }
    }

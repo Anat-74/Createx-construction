@@ -236,7 +236,7 @@
    }
 
    &__btn {
-      white-space: nowrap;
+      @include button(rem(210), rem(52));
       align-self: end;
       justify-self: end;
       grid-column: 2 / 3;
