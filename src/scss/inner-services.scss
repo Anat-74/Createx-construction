@@ -228,6 +228,7 @@
 .benefits {
 
    &__container {
+      display: grid;
    }
 
    &__title {
@@ -246,17 +247,13 @@
    }
 
    &__btn {
-      display: flex;
-      justify-content: center;
-   }
-
-   &__button {
-      white-space: nowrap;
-      padding: rem(0) rem(112);
+      @include button(rem(390), rem(52));
+      justify-self: center;
       transform: translateY(rem(74));
-      @media (max-width:$mobile){
-          padding: rem(0) rem(15); 
-          transform: translateY(rem(12));
+
+         @media (max-width:$mobile){
+         width: rem(250);
+         transform: translateY(rem(12));
       }
    }
 }
@@ -356,13 +353,16 @@
    }
 
    &__btn {
-      display: inline-block;
-      white-space: nowrap;
+      @include button(rem(143), rem(36), rem(12), 300%, transparent, $primaryColor);
       margin-top: rem(16);
       margin-bottom: rem(14);
-      font-size: rem(12);
-      line-height: math.div(36 , 12);
-      padding: rem(0) rem(24);
+
+      @media (max-width:$mobile){
+         width: rem(112);
+         height: rem(36);
+         font-size: rem(12);
+         line-height: math.div(36 , 12);
+      }
    }
 }
 

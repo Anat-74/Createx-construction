@@ -59,6 +59,7 @@
 .hero {
 
    &__slider-home {
+      position: relative;
       width: 100%;
       overflow: hidden;
    }
@@ -85,22 +86,33 @@
       color: $whiteColor;
    }
 
-   &__btns {
+   &__buttons {
       @include adaptiveValue("padding-top", 61, 25);
       display: flex;
       column-gap: rem(24);
       row-gap: rem(25);
       align-items: center;
 
-      @media (max-width:em(502)){
-           flex-wrap: wrap;
+      @media (max-width:$mobileSmall){
+         flex-wrap: wrap;
+         justify-content: center;
+           .hero__btn-l {
+            width: 100%;
+           }
+
+           .hero__btn-r {
+            width: 100%;
+           }
       }
    }
 
-   &__btn {
-      @media (max-width:em(502)){
-         width: 100%;
-      }
+   &__btn-l {
+      @include button(rem(278), rem(52), $bg-color:transparent);
+      border-color: $whiteColor;
+   }
+
+      &__btn-r {
+      @include button(rem(224), rem(52));
    }
 
    &__pag {
@@ -177,24 +189,44 @@
       }
    }
 
-   .btn-home__left{
-      top: 65%;
-      left: rem(22);
-      transform: translateY(-64%);
+   &__arrow-l{
+      @extend %ic;
+      @extend .--icon-Left;
+      @include button($circle:true, $bg-circleColor:rgba(255, 255, 255, 0.5));
+      position: absolute;
+      top: 50%;
+      left: rem(32);
+      transform: translateY(-50%);
+
+      &:hover{
+         color: $secondaryColor;
+         background-color: $whiteColor;
+      }
+
       @media (max-width:$tablet){
       display: none;
       }
    }
-   .btn-home__right {
-      top: 65%;
-      right: rem(22);
-      transform: translateY(-64%);
+
+   &__arrow-r{
+      @extend %ic;
+      @extend .--icon-Right;
+      @include button($circle:true, $bg-circleColor:rgba(255, 255, 255, 0.5));
+      position: absolute;
+      top: 50%;
+      right: rem(32);
+      transform: translateY(-50%);
+
+      &:hover{
+         color: $secondaryColor;
+         background-color: $whiteColor;
+      }
+
       @media (max-width:$tablet){
          display: none;
          }
    }
 }
-
 //!=========================================================================
 
 .video-block {
@@ -342,25 +374,25 @@
    }
 
    &__btn {
+      @include button(rem(104), rem(44), rem(14), 314%);
       align-self: end;
       justify-self: end;
-      padding: rem(0) rem(32);
-      font-size: rem(14);
-      line-height: math.div(44 , 14);
    }
 
     //*max-width:em(1060) --------------------------------------------------------------------------------
     @media (max-width:em(1060)){
        @include adaptiveValue("row-gap", 25, 16);
        grid-template: auto / 1fr;
+
        .know-form__title {
           grid-column: span 1;
        }
+
        .know-form__btn {
-          width: rem(104);
           margin-top: rem(10);
           justify-self: center;
        }
+
        .form-field__input {
           width: 100%;
        }
@@ -445,6 +477,7 @@
    @media (max-width:$tablet){
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
+
       .body-services__items-link {
       @include adaptiveValue("width", 285, 136);
       @include adaptiveValue("height", 285, 180);
@@ -512,11 +545,9 @@
          }
       }
 
-      @media (any-hover: hover){
          &:focus {
             outline: rem(2) solid $primaryColor;
             outline-offset: rem(2);
-         }
       }
   }
 
@@ -538,8 +569,13 @@
       z-index: 10;
       transition: color 0.4s ease-in-out;
    }
+}
 
-   &__image {
+.services {
+   &__btn {
+      @include button(rem(207), rem(52));
+      position: relative;
+      z-index: 2;
    }
 }
 
@@ -564,9 +600,6 @@
       padding: rem(95) rem(30) rem(95);
       margin: rem(-95) rem(-30) rem(-95);
 	}
-
-	&__slide {
-   }
 
    &__view {
       @include adaptiveValue("padding-top",78 , 20);
@@ -596,8 +629,9 @@
             margin-top: rem(-84);
             background-color: $whiteColor;
          }
+
          .portfolio-slide__btn {
-            display: block;
+            @include button(rem(172), rem(44), rem(14), 314%);
          }
       }
    }
@@ -773,6 +807,33 @@
       line-height: math.div(21 , 14);
       font-weight: 400;
       padding-right: rem(120);
+   }
+
+   &__buttons {
+      position: relative;
+      top: rem(-36);
+      right: rem(5);
+      display: flex;
+      justify-content: flex-end;
+   
+   
+      @media (max-width:$tablet){
+         top: rem(-40);
+         justify-content: flex-end;
+         column-gap: rem(18);
+      }
+   }
+
+   &__btn-l {
+      @extend %ic;
+      @extend .--icon-Left;
+      @include button($circle:true);
+   }
+
+   &__btn-r {
+      @extend %ic;
+      @extend .--icon-Right;
+      @include button($circle:true);
    }
 
    &__image {
@@ -1130,7 +1191,7 @@
 .bg-form {
    &__container {
       @include adaptiveValue("padding-top",80 , 20);
-      @include adaptiveValue("padding-bottom",80 , 20);
+      @include adaptiveValue("padding-bottom",84 , 20);
       display: grid;
       justify-content: end;
    }
@@ -1165,10 +1226,8 @@
    }
 
    &__btn {
-      @include button (rem(174), rem(44));
+      @include button (rem(174), rem(44), rem(14), 314%);
       justify-self: center;
-      font-size: rem(14);
-      line-height: math.div(44 , 14);
    }
 
    .form__error {

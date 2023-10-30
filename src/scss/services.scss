@@ -60,6 +60,9 @@
          .services-content__descr {
             text-align: start;
          }
+         .services-content__btn {
+            display: inline-flex;
+         }
       }
 //*----------------------------------------------------------------------------------------------------
    }
@@ -97,9 +100,9 @@
    }
 
    &__btn {
+      @include button(rem(160), rem(44), rem(14), 314%, transparent, $primaryColor);
       position: relative;
       z-index: 2;
-      padding: rem(13) rem(31);
    }
 }
 

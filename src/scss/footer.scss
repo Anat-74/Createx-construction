@@ -1,5 +1,5 @@
 .footer {
-@include adaptiveValue("padding-top",78 , 30);
+@include adaptiveValue("padding-top",80 , 30);
 @include adaptiveValue("padding-bottom",78 , 20);
 background-color: $darkColor;
 color: rgba(255, 255, 255, 0.6);
@@ -239,30 +239,12 @@ position: relative;
    }
 
    &__btn {
-      text-transform: uppercase;
-      font-size: rem(14);
-      line-height: math.div(42 , 14);
-      font-weight: 700;
-      letter-spacing: rem(0.5);
+      @include button(rem(180), rem(44), rem(14), 314%);
       border-radius: rem(0) rem(4) rem(4) rem(0);
-      border-width: rem(1);
-      border-style: solid;
-      border-color: transparent;
-      padding: rem(0) rem(24);
-      color: $whiteColor;
-      background-color: $primaryColor;
 
-      @media (any-hover: hover){
-         &:focus {
-            outline: rem(2) solid $primaryColor;
-            outline-offset: rem(2);
-         }
-         &:hover{
-            background-color: $color-active;
-      }
-         &:active {
-            background-color: $color-active;
-         }
+      @media (max-width:$mobile){
+         width: rem(150);
+         height: rem(44); 
       }
    }
 
@@ -373,8 +355,8 @@ position: relative;
    }
 
 .copyright {
+      padding-top: rem(20);
       display: inline-flex;
-      align-items: flex-end;
       white-space: nowrap;
       column-gap: rem(4);
       font-size: rem(12);

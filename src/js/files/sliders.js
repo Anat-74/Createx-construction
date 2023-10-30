@@ -25,8 +25,8 @@ function initSliders() {
         // },
 
          navigation: {
-            nextEl: ".btn-home__right",
-            prevEl: ".btn-home__left",
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
           },
 
           pagination: {
@@ -61,8 +61,8 @@ function initSliders() {
 			loop: true,
 
          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
           },
 		
 
@@ -108,8 +108,8 @@ function initSliders() {
 			loop: true,
 
          navigation: {
-            nextEl: '.clients-button-next',
-            prevEl: '.clients-button-prev',
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
           },
 
 		});
