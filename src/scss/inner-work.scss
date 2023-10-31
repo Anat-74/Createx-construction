@@ -70,9 +70,9 @@
    @media (max-width:$mobileSmall){
       width: rem(36);
       height: rem(36);
-      font-size: rem(18);
+      font-size: rem(16);
       top: 70%;
-      left: 70%;  
+      left: 72%; 
   }
 }
    
@@ -86,7 +86,7 @@
    @media (max-width:$mobileSmall){
       width: rem(36);
       height: rem(36);
-      font-size: rem(18);
+      font-size: rem(16);
       top: 70%; 
       right: rem(10); 
    }

@@ -315,6 +315,11 @@
    column-gap: calc(($values-gap) * 2);
    row-gap: rem(30);
 
+
+   @media (max-width:$tablet){
+      grid-template-columns: 1fr; 
+  }
+
    &__items {
       position: relative;
       text-align: center;
@@ -348,10 +353,6 @@
    &__text {
       line-height: math.div(26 , 16);
       font-weight: 400;
-   }
-
-   @media (max-width:$tablet){
-       grid-template-columns: 1fr; 
    }
 }
 
