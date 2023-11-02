@@ -1,81 +1,22 @@
-//?@mixin------------------------------------------------------------------------------------------
-@mixin button($w:inherit, $h:inherit, $fz:rem(16), $lh:325%, $bg-color:$primaryColor, $color-btn: $whiteColor, $bg-circleColor:transparent, $circleColor-btn:$secondaryColor, $circle:false) {
 
-   @if $circle {
-      color: $circleColor-btn;
-      background-color: $bg-circleColor;
-      position: relative;
-      z-index: 50;
-      border-radius: 50%;
-      width: rem(48);
-      height: rem(48);
-      font-size: rem(24);
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
-      @media (max-width:$tablet){
-         background-color: $primaryColor;
-         color: $whiteColor;
-      }
-
-         @media (any-hover: hover){
-            &:focus {
-               outline: rem(2) solid $primaryColor;
-               outline-offset: rem(2);
-            }
-            &:hover{
-               color: $whiteColor;
-               background-color: $primaryColor;
-            }
-            &:active {
-               color: $primaryColor;
-         }
-      }
-   }
-
-   @else {
-      width: $w;
-      height: $h;
-      color: $color-btn;
-      background-color: $bg-color;
-      font-size: $fz;
-      line-height: $lh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      white-space: nowrap;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: rem(0.5);
-      border-radius: rem(4);
-      border-width: rem(1);
-      border-style: solid;
-      border-color: $primaryColor;
-      transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-
-      @media (max-width:$mobileSmall){
-         height: rem(40);
-         font-size: rem(14);
-         line-height: math.div(44 , 14);
-      }
-
-         @media (any-hover: hover){
-            &:focus {
-               outline: rem(2) solid $primaryColor;
-               outline-offset: rem(2);
-               border-radius: rem(2);
-            }
-            &:hover{
-               color: $whiteColor;
-               background-color: $color-active;
-            }
-            &:active {
-               background-color: $color-active;
-         }
-      }
-   }
+.none {
+   display: none;
 }
 
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   border: 0;
+   clip: rect(0 0 0 0);
+ }
 
+ :root {
+   --hero-slider-speed: 500;
+}
 
 //?--------------------------------------------------------------------------------------------
 $alerts: ("error" : red,
@@ -149,22 +90,6 @@ $alerts: ("error" : red,
    }
 }
 //!============================================================================================================
-
-.none {
-   display: none;
-}
-
-.visually-hidden {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   padding: 0;
-   overflow: hidden;
-   border: 0;
-   clip: rect(0 0 0 0);
- }
-
 
 .top-title {
    @include adaptiveValue("font-size", 72, 36);
@@ -353,77 +278,3 @@ $alerts: ("error" : red,
    font-weight: 400;
    color: $secondaryColor;
 }
-
-//!modal====================================================================================================
-.modal {
-   &__form {
-      position: relative;
-      padding: rem(0) rem(24) rem(48) rem(24);
-
-   .form__error {
-      position: absolute;
-      top: 90%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      color: red;
-      font-size: rem(14);
-       }
-   }
-
-   &__title {
-      text-align: center;
-      margin-bottom: rem(20);
-   }
-
-   &__btn {
-      @include button(100%, rem(44), rem(14), 314%);
-      margin-top: rem(40);
-   }
-}
-
-//*-----------------------------------------------------------------------------------------------------
-
-.modal {
-
-   &__form {
-      position: relative;
-
-      .form__error {
-         position: absolute;
-         top: 95%;
-         left: 50%;
-         transform: translate(-50%, 0);
-         color: red;
-         font-size: rem(14);
-      }
-   }
-
-   &__title {
-   }
-
-   &__input-area {
-      height: rem(86);
-   }
-}
-
-.castom-file {
-   cursor: pointer;
-
-   &__input-file {
-      position: absolute;
-      visibility: hidden;
-   }
-
-   &__caption-file {
-      position: relative;
-      padding: rem(5) rem(0) rem(0) rem(36);
-      background: url('@img/main/inner-about-us/Attach.svg') left center/rem(24) rem(24) no-repeat;
-   }
-
-   &__input-file:focus + &__caption-file {
-      outline: rem(2) solid $primaryColor;
-      outline-offset: rem(2);
-      border-radius: rem(2);
-   }
-}
-//!===================================================================================================================

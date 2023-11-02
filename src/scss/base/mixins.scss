@@ -97,3 +97,79 @@
 		}
 	}
 }
+
+@mixin button($w:inherit, $h:inherit, $fz:rem(16), $lh:325%, $bg-color:$primaryColor, $color-btn: $whiteColor, $bg-circleColor:transparent, $circleColor-btn:$secondaryColor, $circle:false) {
+
+   @if $circle {
+      color: $circleColor-btn;
+      background-color: $bg-circleColor;
+      position: relative;
+      z-index: 50;
+      border-radius: 50%;
+      width: rem(48);
+      height: rem(48);
+      font-size: rem(24);
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      @media (max-width:$tablet){
+         background-color: $primaryColor;
+         color: $whiteColor;
+      }
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+            }
+            &:hover{
+               color: $whiteColor;
+               background-color: $primaryColor;
+            }
+            &:active {
+               color: $primaryColor;
+         }
+      }
+   }
+
+   @else {
+      width: $w;
+      height: $h;
+      color: $color-btn;
+      background-color: $bg-color;
+      font-size: $fz;
+      line-height: $lh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: rem(0.5);
+      border-radius: rem(4);
+      border-width: rem(1);
+      border-style: solid;
+      border-color: $primaryColor;
+      transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+
+      @media (max-width:$mobileSmall){
+         height: rem(40);
+         font-size: rem(14);
+         line-height: math.div(44 , 14);
+      }
+
+         @media (any-hover: hover){
+            &:focus {
+               outline: rem(2) solid $primaryColor;
+               outline-offset: rem(2);
+               border-radius: rem(2);
+            }
+            &:hover{
+               color: $whiteColor;
+               background-color: $color-active;
+            }
+            &:active {
+               background-color: $color-active;
+         }
+      }
+   }
+}

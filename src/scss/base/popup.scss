@@ -110,7 +110,74 @@ body::after {
    }
 }
 
+.modal {
+   &__form {
+      position: relative;
+      padding: rem(0) rem(24) rem(48) rem(24);
 
+   .form__error {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: red;
+      font-size: rem(14);
+       }
+   }
+
+   &__title {
+      text-align: center;
+      margin-bottom: rem(20);
+   }
+
+   &__btn {
+      @include button(100%, rem(44), rem(14), 314%);
+      margin-top: rem(40);
+   }
+
+   //*-----------------------------------------------------------------------------------------------------------------
+   
+   &__form {
+      position: relative;
+
+      .form__error {
+         position: absolute;
+         top: 95%;
+         left: 50%;
+         transform: translate(-50%, 0);
+         color: red;
+         font-size: rem(14);
+      }
+   }
+
+   &__title {
+   }
+
+   &__input-area {
+      height: rem(86);
+   }
+}
+
+.castom-file {
+   cursor: pointer;
+
+   &__input-file {
+      position: absolute;
+      visibility: hidden;
+   }
+
+   &__caption-file {
+      position: relative;
+      padding: rem(5) rem(0) rem(0) rem(36);
+      background: url('@img/main/inner-about-us/Attach.svg') left center/rem(24) rem(24) no-repeat;
+   }
+
+   &__input-file:focus + &__caption-file {
+      outline: rem(2) solid $primaryColor;
+      outline-offset: rem(2);
+      border-radius: rem(2);
+   }
+}
 
 
 
