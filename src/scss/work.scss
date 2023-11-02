@@ -47,7 +47,7 @@
    }
 }
 
-//=================================================
+//!======================================================================
 
 .portfolio {
 
@@ -85,25 +85,26 @@
 }
 
 .row-icons {
+   @include adaptiveValue("top", -60, -40);
    @include adaptiveValue("column-gap", 20, 15);
    position: relative;
-   top: rem(-60);
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
    row-gap: rem(15);
 
-   @media (max-width:$mobileSmall){
-      top: rem(-40);
+   @media (max-width:$mobile){
+      flex-wrap: wrap;
    }
 
 &__items-btn {
-   width: 100%;
-   max-width: rem(230);
+   @include adaptiveValue("width", 230, 190, 0, $containerWidth, 767);
+   @include adaptiveValue("padding-top", 32, 16, 0, $containerWidth, 767);
+   @include adaptiveValue("padding-bottom", 32, 16, 0, $containerWidth, 767);
+   padding-right: rem(10);
+   padding-left: rem(10);
    display: grid;
    justify-items: center;
    align-items: center;
-   padding: rem(32) rem(10);
    background-color: $whiteColor;
    border-radius: rem(4);
    border: 1px solid $border-color;
@@ -130,8 +131,6 @@
 
       &:hover{
          box-shadow: 3px 3px 21px -8px rgba(0,0,0,0.65);
-         -webkit-box-shadow: 3px 3px 21px -8px rgba(0,0,0,0.65);
-         -moz-box-shadow: 3px 3px 21px -8px rgba(0,0,0,0.65);
       }
 
       &:active {
@@ -171,7 +170,11 @@
    @include adaptiveValue("padding-bottom",60 , 20);
    @include adaptiveValue("gap", 30, 15);
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width:$mobile){
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      }
 
    &__link-items {
       overflow: hidden;
@@ -218,6 +221,7 @@
    }
 
    &__title {
+      text-align: center;
       margin-bottom: rem(4);
    }
 
