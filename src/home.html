@@ -66,10 +66,7 @@
                <p class="bureau__text main-text main-text--center">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the best construction company in&nbsp;the USA.</p>
                <div class="bureau__block-video video-block">
                   <button class="video-block__btn-play --icon-play" aria-label="Play video" type="submit"></button>
-                  <video class="video-block__video" loop muted preload="metadata">
-                     <source src="img/videos/bureau-video.webm" type="video/webm">
-                  <source src="img/videos/bureau-video.mp4" type="video/mp4">
-               </video>
+                  <video class="video-block__video" src="@img/videos/coverr-taking-photos-of-a-house-under-construction-2417-1080p.mp4" loop muted preload="metadata"></video>
             </div>
       </section>
 
@@ -448,9 +445,11 @@
                      <input class="form__input form-field__input" autocomplete="off" type="tel" name="phone" id="phone"
                         data-error="Ошибка" placeholder="Your phone number">
                      <label class="form__label form-field__caption" for="email">Email</label>
-                     <input class="form__input form-field__input" data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your working email" id="email">
+                     <input class="form__input form-field__input" autocomplete="off" type="email" name="email" id="email"
+                        data-error="Ошибка" placeholder="Your working email">
                      <label class="form__label form-field__caption" for="message">Message*</label>
-                     <textarea class="form__input form-field__input" autocomplete="off"  name="message" id="message" placeholder="Your message"></textarea>
+                     <textarea class="form__input form__input--t-area form-field__input" name="message" id="message"
+                        placeholder="Your message"></textarea>
                      <label class="form__checkbox">
                         <input class="checkbox__input" autocomplete="off" type="checkbox">
                         <span class="checkbox__descr">I&nbsp;agree to&nbsp;receive communications from Createx Construction

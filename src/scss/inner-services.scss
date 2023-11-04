@@ -318,6 +318,7 @@
    }
 
    &__body {
+
       .table__row {
          &:nth-child(odd) {
             background-color: $bg-inputColor;
@@ -338,6 +339,10 @@
          display: block;
          text-align: left;
       }
+
+      @media (max-width:$mobile){
+         padding: rem(6) rem(5); 
+      }
    }
 
    &__check {
@@ -349,6 +354,9 @@
          @extend .--icon-check;
          font-size: rem(16);
          color: $primaryColor;
+         @media (max-width:$mobile){
+             font-size: rem(14); 
+         }
       }
    }
 
@@ -358,7 +366,7 @@
       margin-bottom: rem(14);
 
       @media (max-width:$mobile){
-         width: rem(112);
+         width: rem(120);
          height: rem(36);
          font-size: rem(12);
          line-height: math.div(36 , 12);

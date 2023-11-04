@@ -9,15 +9,22 @@
 		padding: rem(10) rem(15);
 		border-radius: rem(5);
 		&._tab-active {
-			border: 1px solid #000;
+		border-color: currentColor;
+      color: $primaryColor;
 		}
 	}
 	// .tabs__content
 	&__content {
+      display: flex;
+      justify-content: center;
+      padding: rem(20) rem(15) rem(0) rem(15);
 		border: 1px solid #eee;
-		padding: rem(10) rem(15);
 	}
 	// .tabs__body
 	&__body {
+      padding-top: 20px;
+      img{
+         width: 36vw;
+      }
 	}
 }

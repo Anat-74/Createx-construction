@@ -98,10 +98,12 @@
          justify-content: center;
            .hero__btn-l {
             width: 100%;
+            height: rem(40);
            }
 
            .hero__btn-r {
             width: 100%;
+            height: rem(40);
            }
       }
    }
@@ -417,11 +419,12 @@
 }
 
 &__input {
+   @include adaptiveValue("height", 44, 40); 
    width: rem(260);
    border-radius: rem(4);
    border: 1px solid $border-inputColor;
    background-color: $bg-inputColor;
-   padding: rem(12) rem(16);
+   padding: rem(0) rem(16);
    transition: background-color 0.3s ease-in-out;
 
    &::placeholder{
@@ -720,11 +723,11 @@
    }
 
    &__item {
-      transition: background-color 0.3s ease-in-out;
+      transition: box-shadow 0.3s ease-in-out;
       @media (any-hover: hover){
          &:hover{
-            background-color: rgba(#fc3300, 0.8);
-            border-radius: rem(4);
+            box-shadow: 0px 0px 3px 2px rgba(30, 33, 44, 0.3), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+            border-radius: rem(8);
          }
          &:active {
             background-color: $color-active;
@@ -1196,7 +1199,7 @@
 .bg-form {
    &__container {
       @include adaptiveValue("padding-top",80 , 20);
-      @include adaptiveValue("padding-bottom",84 , 20);
+      @include adaptiveValue("padding-bottom",78 , 20);
       display: grid;
       justify-content: end;
    }
@@ -1210,8 +1213,9 @@
    border-radius: rem(4);
    border: 1px solid $border-color;
    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 26px 24px -10px rgba(30, 33, 44, 0.10), 0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+   
    @media (max-width:$mobileSmall){
-      padding: rem(30) rem(20);
+      padding: rem(20) rem(25);
    }
 
    &__title {
@@ -1223,10 +1227,13 @@
       display: block;
    }
    &__input {
-      display: block;
+      display: inline-block;
       width: 100%;
       &:not(:last-child) {
-         @include adaptiveValue("margin-bottom", 19, 16);
+         @include adaptiveValue("margin-bottom", 19, 12);
+      }
+      &--t-area {
+         height: rem(66);
       }
    }
 

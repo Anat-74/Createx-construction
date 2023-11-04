@@ -1,6 +1,6 @@
 .footer {
 @include adaptiveValue("padding-top",80 , 30);
-@include adaptiveValue("padding-bottom",78 , 20);
+@include adaptiveValue("padding-bottom",78 , 60);
 background-color: $darkColor;
 color: rgba(255, 255, 255, 0.6);
 
@@ -29,8 +29,8 @@ color: rgba(255, 255, 255, 0.6);
             }
             .social__link {
                svg {
-                  width: rem(40);
-                  height: rem(40);
+                  width: rem(36);
+                  height: rem(36);
                   fill: $whiteColor;
                }
             }
@@ -83,8 +83,8 @@ color: rgba(255, 255, 255, 0.6);
          }
 
          .top-right__btn {
+            height: rem(44);
             border-radius: rem(25) rem(0) rem(0) rem(25);
-            padding: rem(3) rem(12);
             font-size: rem(12);
          }
 
@@ -94,7 +94,7 @@ color: rgba(255, 255, 255, 0.6);
          }
 
          .copyright {
-            margin-top: rem(50);
+            padding-top: 0;
          }
       }
       //*----------------------------------------------------------------------
