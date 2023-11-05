@@ -481,30 +481,14 @@
       }
    }
 
-   &__caption {
-      @include adaptiveValue("margin-bottom", 14, 5);
-      display: inline-block;
-      line-height: math.div(26 , 16);
-      font-weight: 400;
-      color: $secondaryColor;
-   }
-
    &__input {
-      @include adaptiveValue("margin-bottom",28 , 15);
+      @include adaptiveValue("margin-bottom",30 , 15);
       width: 100%;
       display: inline-block;
-      padding: rem(14) rem(16);
-      border-radius: rem(4);
-      border: 1px solid $border-inputColor;
-      background-color: $bg-inputColor;
-      &::placeholder{
-         line-height: math.div(26 , 16);
-         font-weight: 400;
-         color: $grayColor;
-      }
+
       &--big {
-         @include adaptiveValue("padding-bottom",50 , 20);
-         @include adaptiveValue("margin-bottom",45 , 20);
+         @include adaptiveValue("height", 100, 66);
+         padding-top: rem(16);
       }
 
       @media (any-hover: hover){
@@ -525,6 +509,7 @@
    }
 
    &__btn {
+      @include adaptiveValue("margin-top",37 , 15);
       @include button(rem(215), rem(52));
       justify-self: center;
    }
