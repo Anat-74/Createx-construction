@@ -6,7 +6,7 @@
    }
 
    &__post {
-      @include adaptiveValue("padding-bottom",192 , 40);
+      @include adaptiveValue("padding-bottom",192 , 20);
       background-color: $whiteColor;
    }
 
@@ -460,31 +460,43 @@
    }
 }
 
-//---------------------------------------------------------
+//*--------------------------------------------------------------
 
 .form-post {
-   display: grid;
+   @include adaptiveValue("column-gap", 30, 0);
+   @include adaptiveValue("row-gap", 35, 16);
+      display: grid;
+      grid-template: auto / repeat(2, 1fr);
+//*max-width:$mobileSmall----------------------------------------------------------------------------------------------------------
+      @media (max-width:$mobileSmall){
+         grid-template: auto / 1fr;
+
+         .form-post__title {
+            grid-column: span 1;
+         }
+
+         .form-post__labels-big {
+            grid-column: span 1;
+         }
+
+         .form-post__btn {
+            grid-column: 1;
+         }
+      }
+//*----------------------------------------------------------------------------------------------------------
 
    &__title {
+      @include adaptiveValue("margin-bottom", 13, 5);
+      grid-column: span 2;
       text-align: center;
-      &:not(:last-child) {
-         @include adaptiveValue("margin-bottom",54 , 20);
-      }
    }
 
-   &__inputs {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: rem(30);
-      @media (max-width:$mobile){
-          grid-template-columns: 1fr;
-      }
+   &__labels-big {
+      grid-column: span 2;
    }
 
    &__input {
-      @include adaptiveValue("margin-bottom",30 , 15);
       width: 100%;
-      display: inline-block;
 
       &--big {
          @include adaptiveValue("height", 100, 66);
@@ -509,9 +521,15 @@
    }
 
    &__btn {
-      @include adaptiveValue("margin-top",37 , 15);
       @include button(rem(215), rem(52));
+      grid-column: span 2;
       justify-self: center;
+
+      @media (max-width:$mobile){
+          width: rem(170); 
+          height: rem(38);
+          font-size: rem(14);
+      }
    }
 }
 

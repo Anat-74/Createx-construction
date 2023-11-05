@@ -74,7 +74,7 @@
 //!============================================================================================================
 
 .top-title {
-   @include adaptiveValue("font-size", 72, 36);
+   @include adaptiveValue("font-size", 72, 32);
    max-width: rem(600);
    text-transform: uppercase;
    line-height: math.div(94 , 72);
@@ -105,7 +105,7 @@
 //*----------------------------------------------------------------
 
 .main-title {
-   @include adaptiveValue("font-size",46 , 28);
+   @include adaptiveValue("font-size",46 , 24);
    line-height: math.div(60 , 46);
    font-weight: 700;
    color: $darkColor;

@@ -10,13 +10,13 @@
 
    &__contacts-us {
       @include adaptiveValue("padding-top",121 , 20);
-      @include adaptiveValue("padding-bottom",122 , 35);
+      @include adaptiveValue("padding-bottom",122 , 25);
       background-color: $whiteColor;
    }
 
    &__our-offices {
       @include adaptiveValue("padding-top",80 , 20);
-      @include adaptiveValue("padding-bottom",120 , 30);
+      @include adaptiveValue("padding-bottom",116 , 20);
       background-color: $bg-inputColor;
    }
 }
@@ -56,12 +56,13 @@
       @media (max-width:$tablet){
          grid-template-columns: 1fr;
          justify-items: center;
+
          .contacts-us__form {
             width: 100%;
          }
 
          .form-contacts-us__input {
-            min-width: rem(218);
+            width: 100%;
          }
       }
       //*----------------------------------------------------------------------------------------
@@ -69,9 +70,10 @@
 
    &__form {
       @include adaptiveValue("column-gap", 30, 12, 0, $containerWidth, 479);
-      @include adaptiveValue("row-gap", 25, 18);
+       @include adaptiveValue("row-gap", 25, 18);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      align-items: end;
 
 //* media $mobileSmall ----------------------------------------------------------------------
       @media (max-width:$mobileSmall){
@@ -127,17 +129,24 @@
 .form-contacts-us {
 
    &__caption {
-      margin-bottom: rem(11);
+      @include adaptiveValue("font-size", 16, 14);
    }
 
    &__input {
       @include adaptiveValue("height", 48, 42);
-      margin-bottom: rem(0);
-      transition: background-color 0.3s ease-in-out;
+      @include adaptiveValue("width", 285, 224, 0, $containerWidth, 991);
+   }
+
+   &__fields {
+      align-self: start;
+   }
+
+   &__title-radio {
+      font-size: rem(16);
    }
 
    &__items-radio {
-      @include adaptiveValue("padding-top", 6, 16);
+      @include adaptiveValue("padding-top", 16, 6);
       @include adaptiveValue("column-gap", 40, 24, 0, $containerWidth, 991);
       white-space: nowrap;
       display: flex;
@@ -205,9 +214,9 @@
    }
 
    &__input-area {
-      @include adaptiveValue("padding-bottom",72 , 20);
-      margin-bottom: 0;
-      padding-top: rem(8);
+      @include adaptiveValue("height", 128, 66);
+      width: 100%;
+      padding-top: rem(10);
    }
 
    &__bottom {
@@ -300,7 +309,7 @@
    }
 
    &__subtitle {
-      margin-bottom: rem(10);
+      margin-bottom: rem(24);
    }
 
    &__address {
@@ -368,14 +377,14 @@
 }
 
 .list-social {
-   @include adaptiveValue("column-gap", 24, 22);
+   @include adaptiveValue("column-gap", 24, 30);
    display: flex;
    justify-content: center;
 
    &__link {
       svg {
-         @include adaptiveValue("width", 32, 40);
-         @include adaptiveValue("height", 32, 40);
+         width: rem(32);
+         height: rem(32);
          transition: fill 0.3s ease-in, transform 0.3s ease-in;
      
          @media (any-hover: hover){
