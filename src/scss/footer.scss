@@ -29,15 +29,11 @@ color: rgba(255, 255, 255, 0.6);
             }
             .social__link {
                svg {
-                  width: rem(36);
-                  height: rem(36);
+                  width: rem(34);
+                  height: rem(34);
                   fill: $whiteColor;
                }
-            }
-
-         &__descr {
-            font-size: rem(16);
-         }   
+            }  
       }
 
          .top-right{
@@ -50,20 +46,13 @@ color: rgba(255, 255, 255, 0.6);
             &__btn {
                border-radius: rem(4) rem(0) rem(0) rem(4);
             }
-            &__subscribe {
-               font-size: rem(16);
-            }
          }
 
-         .address__item {
-            font-size: rem(20)
-         }
          .nav-footer {
             margin-left: rem(0);
 
             &__item {
                white-space: nowrap;
-               font-size: rem(20);
             }
          }
       }
@@ -180,7 +169,7 @@ color: rgba(255, 255, 255, 0.6);
 .top-right{
 position: relative;
    &__title {
-      font-size: rem(24);
+      @include adaptiveValue("font-size", 24, 20);
       line-height: math.div(36 , 24);
       font-weight: 700;
       color: $whiteColor;
@@ -278,13 +267,14 @@ position: relative;
       }
 
    &__item {
+      @include adaptiveValue("font-size", 16, 18);
       line-height: math.div(28 , 16);
       font-weight: 400;
       span {
          color: $whiteColor;
       }
    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 2, 12);
+      @include adaptiveValue("margin-bottom", 2, 6);
          }
          a {
             transition: color 0.3s ease-in-out;
@@ -328,11 +318,12 @@ position: relative;
 
       &__item {
          &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 2, 12);
+            @include adaptiveValue("margin-bottom", 2, 6);
          }
       }
 
       &__link {
+         @include adaptiveValue("font-size", 16, 18);
          line-height: math.div(28 , 16);
          font-weight: 400;
          color: rgba(255, 255, 255, 0.6);
