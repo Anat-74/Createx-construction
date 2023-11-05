@@ -58,6 +58,12 @@
       @extend .--icon-Line-Stroke;
       margin-left: rem(16);
       font-size: rem(9);
+
+      @media (max-width:$mobileSmall){
+          width: rem(38);
+          height: rem(38); 
+          font-size: rem(8);
+      }
    }
 
    &--visible {

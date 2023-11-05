@@ -419,7 +419,7 @@
 }
 
 &__input {
-   @include adaptiveValue("height", 44, 40); 
+   @include adaptiveValue("height", 44, 38); 
    width: rem(260);
    border-radius: rem(4);
    border: 1px solid $border-inputColor;
@@ -1234,6 +1234,7 @@
       }
       &--t-area {
          height: rem(66);
+         padding-top: rem(10);
       }
    }
 

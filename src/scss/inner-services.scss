@@ -329,19 +329,22 @@
    &__col {
       @include adaptiveValue("padding-right", 24, 5);
       @include adaptiveValue("padding-left", 24, 5);
-      padding: rem(16) rem(0);
+      padding: rem(16) rem(0); 
       line-height: math.div(26 , 16);
       font-weight: 400;
       text-align: center;
       color: $secondaryColor;
       &:first-child {
-         @include adaptiveValue("margin-right", 66, 0, 0, $containerWidth, 700);
+         @include adaptiveValue("margin-right", 66, 0, 0, $containerWidth, 768);
          display: block;
          text-align: left;
       }
 
       @media (max-width:$mobile){
-         padding: rem(6) rem(5); 
+         @include adaptiveValue("padding-top", 16, 6);
+         @include adaptiveValue("padding-bottom", 16, 6);
+         padding: rem(0) rem(10); 
+         line-height: math.div(22 , 16);
       }
    }
 
@@ -366,10 +369,10 @@
       margin-bottom: rem(14);
 
       @media (max-width:$mobile){
-         width: rem(120);
-         height: rem(36);
+         width: rem(80);
+         height: rem(44);
          font-size: rem(12);
-         line-height: math.div(36 , 12);
+         line-height: math.div(18 , 12);
       }
    }
 }

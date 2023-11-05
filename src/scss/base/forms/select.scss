@@ -30,7 +30,7 @@
 }
 	// .select__value
 	&__value {
-      @include adaptiveValue("height", 48, 42);
+      @include adaptiveValue("height", 47, 42);
       padding: rem(0) rem(16);
 		display: flex;
 		align-items: center;
