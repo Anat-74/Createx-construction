@@ -57,8 +57,9 @@ function initSliders() {
 			slidesPerView: 3,
 			spaceBetween: 30,
 			speed: 400,
-
 			loop: true,
+
+//=============toach
 
          navigation: {
             nextEl: '.button-next',

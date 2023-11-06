@@ -623,6 +623,11 @@
    border-radius: rem(4);
    transition: transform 0.3s ease-in-out;
 
+   @media (max-width:em(370)){
+      @include adaptiveValue("height", 370, 240);
+      text-align: center;
+      }
+
    @media (any-hover: hover){
       &:focus {
          outline: rem(2) solid $primaryColor;
@@ -640,6 +645,12 @@
 
          .portfolio-slide__btn {
             @include button(rem(172), rem(44), rem(14), 314%);
+         
+            @media (max-width:$mobile){
+             @include adaptiveValue("width", 150, 110); 
+             @include adaptiveValue("height", 40, 30);
+             @include adaptiveValue("font-size", 14, 12);
+         }
          }
       }
    }
@@ -670,19 +681,13 @@
          line-height: math.div(21 , 14);
          font-weight: 400;
          &:not(:last-child) {
-            margin-bottom: rem(24);
+            @include adaptiveValue("margin-bottom", 24, 16);
          }
 		}
 
 		&__btn {
          display: none;
    }
-
-   //*max-width --------------------------------------------------------------------------------------------
- @media (max-width:em(370)){
-    @include adaptiveValue("height", 370, 240);
-    text-align: center;
-    }
 }
 
 //!=========================================================================

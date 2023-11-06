@@ -198,6 +198,12 @@
             }
             .columns-image__btn {
                @include button(rem(172), rem(44), rem(14), 314%);
+            
+               @media (max-width:$tablet){
+                  @include adaptiveValue("width", 170, 120); 
+                  @include adaptiveValue("height", 42, 32);
+                  @include adaptiveValue("font-size", 14, 12);
+              }
             }
          }
       }
@@ -230,7 +236,7 @@
       line-height: math.div(21 , 14);
       font-weight: 400;
       &:not(:last-child) {
-         margin-bottom: rem(24);
+         @include adaptiveValue("margin-bottom", 24, 16);
       }
    }
 

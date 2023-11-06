@@ -71,7 +71,7 @@
    }
 
    &__tablet {
-      overflow: auto;
+      overflow-x: auto;
    }
 
    &__logo {
@@ -221,12 +221,12 @@
    @media (max-width:$tablet){
       padding: rem(5) rem(0);
       justify-content: center;
-      column-gap: rem(5);
+      column-gap: rem(16);
       row-gap: rem(12);
 
       .contacts-header__items-link {
-         background-size: rem(30) rem(30);
-         padding-left: rem(35);
+         background-size: rem(0) rem(0);
+         padding-left: rem(0);
       }
       .contacts-header__call-link {
          font-size: rem(16);
@@ -252,7 +252,7 @@
       background-repeat: no-repeat;
       padding-left: rem(52);
       &:not(:last-child) {
-         @include adaptiveValue("margin-right",36, 10);
+         @include adaptiveValue("margin-right",36, 0);
       }
 
          &:focus {
