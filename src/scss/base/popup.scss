@@ -112,6 +112,7 @@ body::after {
 
 .modal {
    &__form {
+      display: grid;
       position: relative;
       padding: rem(0) rem(24) rem(48) rem(24);
 
@@ -133,6 +134,7 @@ body::after {
    &__btn {
       @include button(100%, rem(44), rem(14), 314%);
       margin-top: rem(40);
+      justify-self: center;
    }
 
    //*-----------------------------------------------------------------------------------------------------------------

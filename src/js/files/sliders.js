@@ -50,16 +50,17 @@ function initSliders() {
 
 	if (document.querySelector('.projects__slider')) {
 
-		new Swiper('.projects__slider', {
+	const projectSlider = new Swiper('.projects__slider', {
 
 			modules: [Navigation],
 
 			slidesPerView: 3,
 			spaceBetween: 30,
-			speed: 400,
+			speed: 800,
 			loop: true,
 
 //=============toach
+
 
          navigation: {
             nextEl: '.button-next',
@@ -105,7 +106,7 @@ function initSliders() {
 			slidesPerView: 1,
 			spaceBetween: 30,
 			//autoHeight: true,
-			speed: 200,
+			speed: 800,
 			loop: true,
 
          navigation: {

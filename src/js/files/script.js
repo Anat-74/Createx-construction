@@ -3,6 +3,7 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js"  ;
 
+/*
 const rowIcons = document.querySelector('.row-icons');
 const rowIconsItemsBtn = document.querySelectorAll('.row-icons__items-btn');
 
@@ -21,6 +22,20 @@ rowIcons.addEventListener('click', (e) => {
    }
    });
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //!==================================================================================================
 

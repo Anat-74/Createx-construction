@@ -153,6 +153,7 @@
       align-items: center;
 
       @media (max-width:$tablet){
+         flex-wrap: wrap;
          justify-content: space-between;
          column-gap: rem(0);
 

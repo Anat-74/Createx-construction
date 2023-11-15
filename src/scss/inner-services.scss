@@ -341,8 +341,8 @@
       }
 
       @media (max-width:$mobile){
-         @include adaptiveValue("padding-top", 16, 6);
-         @include adaptiveValue("padding-bottom", 16, 6);
+         @include adaptiveValue("padding-top", 16, 8);
+         @include adaptiveValue("padding-bottom", 16, 8);
          padding: rem(0) rem(10); 
          line-height: math.div(22 , 16);
       }
@@ -357,6 +357,7 @@
          @extend .--icon-check;
          font-size: rem(16);
          color: $primaryColor;
+
          @media (max-width:$mobile){
              font-size: rem(14); 
          }
@@ -369,11 +370,17 @@
       margin-bottom: rem(14);
 
       @media (max-width:$mobile){
+      width: rem(88);
+      height: rem(46);
+      font-size: rem(12);
+      line-height: math.div(20 , 12);
+      }
+      @media (max-width:em(490)){
          width: rem(80);
          height: rem(44);
          font-size: rem(12);
          line-height: math.div(18 , 12);
-      }
+         }
    }
 }
 

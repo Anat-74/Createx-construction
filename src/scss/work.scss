@@ -110,7 +110,7 @@
    border: 1px solid $border-color;
    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
    color: $primaryColor;
-   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
 &--active {
    color: $whiteColor;
@@ -161,7 +161,7 @@
    line-height: math.div(26 , 16);
    font-weight: 700;
    pointer-events: none;
-   transition: color 0.4s ease-in-out;
+   transition: color 0.3s ease-in-out;
    }
 }
 
@@ -182,32 +182,30 @@
       background-color: $whiteColor;
       box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 30px 24px -20px rgba(154, 156, 165, 0.10), 0px 80px 80px -50px rgba(154, 156, 165, 0.16);
    
-      @media (any-hover: hover){
          &:focus {
             outline: rem(2) solid $primaryColor;
             outline-offset: rem(2);
+
+      }
+      &:hover{
+         .columns-image__content {
+            position: relative;
+            z-index: 50;
+            padding-top: rem(16);
+            padding-bottom: rem(24);
+            margin-top: rem(-84);
+            background-color: $whiteColor;
          }
-         &:hover{
-            .columns-image__content {
-               position: relative;
-               z-index: 50;
-               padding-top: rem(16);
-               padding-bottom: rem(24);
-               margin-top: rem(-84);
-               background-color: $whiteColor;
-            }
-            .columns-image__btn {
-               @include button(rem(172), rem(44), rem(14), 314%);
-            
-               @media (max-width:$tablet){
-                  @include adaptiveValue("width", 170, 120); 
-                  @include adaptiveValue("height", 42, 32);
-                  @include adaptiveValue("font-size", 14, 12);
-              }
-            }
+         .columns-image__btn {
+            @include button(rem(172), rem(44), rem(14), 314%);
+         
+            @media (max-width:$mobile){
+               @include adaptiveValue("width", 170, 120); 
+               @include adaptiveValue("height", 42, 32);
+               @include adaptiveValue("font-size", 14, 12);
+           }
          }
       }
-   
    }
 
    &__image-ibg {
@@ -222,7 +220,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+      transition: margin-top 0.3s ease-in-out;
 
    }
 

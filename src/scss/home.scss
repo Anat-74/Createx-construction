@@ -15,7 +15,7 @@
 
    &__services {
       @include adaptiveValue("padding-top", 212, 50);
-      @include adaptiveValue("padding-bottom", 80, 20);
+      @include adaptiveValue("padding-bottom", 80, 10);
       background: url('@img/main/body-services/services-bg.jpg') 50%/cover no-repeat;
       background-color: $mainColor; 
    }
@@ -30,7 +30,7 @@
       position: relative;
       z-index: 5;
       background-color: $bg-inputColor;
-      @include adaptiveValue("padding-top", 78, 30);
+      @include adaptiveValue("padding-top", 78, 15);
    }
 
    &__facts {
@@ -605,12 +605,12 @@
    }
 
 	&__slider {
-      padding: rem(95) rem(30) rem(95);
-      margin: rem(-95) rem(-30) rem(-95);
+      //padding: rem(95) rem(30) rem(95);
+      //margin: rem(-95) rem(-30) rem(-95);
 	}
 
    &__view {
-      @include adaptiveValue("padding-top",78 , 20);
+      @include adaptiveValue("padding-top",78 , 10);
    }
 }
 
@@ -628,29 +628,29 @@
       text-align: center;
       }
 
-   @media (any-hover: hover){
+
       &:focus {
          outline: rem(2) solid $primaryColor;
          outline-offset: rem(2);
       }
-      &:hover{
-         .portfolio-slide__content {
-            position: relative;
-            z-index: 50;
-            padding-top: rem(16);
-            padding-bottom: rem(24);
-            margin-top: rem(-84);
-            background-color: $whiteColor;
-         }
 
-         .portfolio-slide__btn {
-            @include button(rem(172), rem(44), rem(14), 314%);
-         
-            @media (max-width:$mobile){
-             @include adaptiveValue("width", 150, 110); 
-             @include adaptiveValue("height", 40, 30);
-             @include adaptiveValue("font-size", 14, 12);
-         }
+   &:hover{
+      .portfolio-slide__content {
+         position: relative;
+         z-index: 20;
+         padding-top: rem(16);
+         padding-bottom: rem(24);
+         margin-top: rem(-84);
+         background-color: $whiteColor;
+      }
+
+      .portfolio-slide__btn {
+         @include button(rem(172), rem(44), rem(14), 314%);
+
+         @media (max-width:$mobile){
+            @include adaptiveValue("width", 150, 110); 
+            @include adaptiveValue("height", 40, 30);
+            @include adaptiveValue("font-size", 14, 10);
          }
       }
    }
@@ -666,7 +666,7 @@
          display: flex;
          flex-direction: column;
          align-items: center;
-         transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+         transition: margin-top 0.3s ease-in-out;
 		}
 
 		&__title {
