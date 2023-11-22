@@ -6,7 +6,6 @@
 
 <body id="go-to-top">
    <div class="wrapper">
-      @@include('html/_popup.htm',{})
       @@include('html/_header-2.htm',{})
       <main class="page">
          <section class="page__hero-work hero-work hero" style="background-image: url('@img/main/work/bg-image.png')">
@@ -27,31 +26,31 @@
             <div class="portfolio__container">
                <h2 class="visually-hidden">Portfolio</h2>
                   <div class="portfolio__list-row row-icons">
-                     <button type="submit" class="row-icons__items-btn row-icons__items-btn--active">
+                     <button data-tab="tab-1" id="active" type="submit" class="row-icons__items-btn row-icons__items-btn--active">
                         <svg class="row-icons__icon ">
                            <use xlink:href="@img/icons/icons.svg#ic-house"></use>
                         </svg>
                         <h3 class="row-icons__subtitle subtitle">All Projects</h3>
                         </button>
-                  <button data-popup="#popup" type="submit" class="row-icons__items-btn">
+                  <button data-tab="tab-2" type="submit" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#construction"></use>
                      </svg>
                      <h3 class="row-icons__subtitle subtitle">Construction</h3>
                      </button>
-                  <button data-popup="#popup-2" type="submit" class="row-icons__items-btn">
+                  <button data-tab="tab-3" type="submit" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#Project_Development"></use>
                      </svg>
                      <h3 class="row-icons__subtitle subtitle">Project Development</h3>
                   </button>
-                  <button data-popup="#popup-3" type="submit" class="row-icons__items-btn">
+                  <button data-tab="tab-4" type="submit" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#Interior_Design"></use>
                      </svg>
                      <h3 class="row-icons__subtitle subtitle">Interior Design</h3>
                   </button>
-                  <button data-popup="#popup-4" type="submit" class="row-icons__items-btn">
+                  <button data-tab="tab-5" type="submit" class="row-icons__items-btn">
                      <svg class="row-icons__icon ">
                         <use xlink:href="@img/icons/icons.svg#Repairs"></use>
                      </svg>
@@ -59,8 +58,8 @@
                   </button>
                   </div>
 
-                  <div class="portfolio__list-columns columns-image">
-                     <div class="columns-image__items">
+                  <div id="tab-1" class="portfolio__list-columns columns-image">
+                     <div id="tab-2" class="columns-image__items">
                         <div class="columns-image__image-ibg" >
                      <img src="@img/main/portfolio/Cubes Building.jpg" alt="Cover">
                   </div>
@@ -70,7 +69,7 @@
                         <button type="submit" class="columns-image__btn">View Project</button>
                      </div>
                   </div>
-                     <div class="columns-image__items">
+                     <div id="tab-4" class="columns-image__items">
                         <div class="columns-image__image-ibg">
                      <img src="@img/main/portfolio/Modern Cottage.jpg" alt="Cover">
                   </div>
@@ -100,7 +99,7 @@
                         <button type="submit" class="columns-image__btn">View Project</button>
                      </div>
                   </div>
-                     <div class="columns-image__items">
+                     <div id="tab-5" class="columns-image__items">
                         <div class="columns-image__image-ibg">
                      <img src="@img/main/portfolio/Kids Bedroom With Decorations.jpg" alt="Cover">
                   </div>
@@ -130,7 +129,7 @@
                         <button type="submit" class="columns-image__btn">View Project</button>
                      </div>
                   </div>
-                     <div class="columns-image__items">
+                     <div id="tab-3" class="columns-image__items">
                         <div class="columns-image__image-ibg">
                      <img src="@img/main/portfolio/Scandinavian Style Interior.jpg" alt="Cover">
                   </div>

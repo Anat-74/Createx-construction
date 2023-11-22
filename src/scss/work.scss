@@ -13,6 +13,15 @@
    &__portfolio {
       @include adaptiveValue("padding-bottom",100 , 20);
       background-color: $whiteColor;
+      .active {
+         color: $whiteColor;
+         background-color: $primaryColor;
+         //pointer-events: none;
+      
+         .row-icons__subtitle {
+            color: $whiteColor;
+            }
+         }
    }
 
    &__partners-two {
@@ -112,16 +121,6 @@
    color: $primaryColor;
    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-&--active {
-   color: $whiteColor;
-   background-color: $primaryColor;
-   pointer-events: none;
-
-   .row-icons__subtitle {
-      color: $whiteColor;
-      }
-   }
-
    @media (any-hover: hover){
       &:focus {
          outline: rem(2) solid $primaryColor;
@@ -137,6 +136,15 @@
          background-color: $color-active;
       }
    }
+   &--active {
+      color: $whiteColor;
+      background-color: $primaryColor;
+      //pointer-events: none;
+   
+      .row-icons__subtitle {
+         color: $whiteColor;
+         }
+      }
 }
 
 &__icon {
@@ -242,6 +250,4 @@
       display: none;
    }
 }
-
-
 
