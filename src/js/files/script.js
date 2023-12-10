@@ -4,121 +4,7 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js"  ;
 
 
-
-window.addEventListener("click", function(e){
-   const rowItemsBtn = document.querySelectorAll('.row-icons__items-btn')
-   const imageItems = document.querySelectorAll('.columns-image__items')
-   const load = document.querySelector('.portfolio__load')
-
-   if(e.target.classList.contains('row-icons__items-btn')) {
-
-      rowItemsBtn.forEach((el) => {
-         el.classList.remove('row-icons__items-btn--active')
-      })
-
-      e.target.classList.toggle('row-icons__items-btn--active')
-
-      if(e.target.dataset.tab==='tab-1') {
-         imageItems.forEach((el) => {
-            el.classList.remove('none')
-        })
-   
-      } else {
-         imageItems.forEach((el) => {
-            el.classList.add('none')
-        })
-       }
-      const contentTab = document.querySelector('#' + e.target.dataset.tab)
-      contentTab.classList.remove('none')
-   }
-
-   if(e.target.classList.contains('portfolio__btn')) {
-
-      imageItems.forEach((el) => {
-         el.classList.remove('none')
-     })
-
-     rowItemsBtn.forEach((el) => {
-      el.classList.remove('row-icons__items-btn--active')
-     })
-
-     const activeBtn = document.querySelector('#active')
-     activeBtn.classList.add('row-icons__items-btn--active')
-   }
-
-})
-
-/*
-const itemsBtn = document.querySelectorAll('[data-tab]')
-const imageItems = document.querySelectorAll('.columns-image__items')
-const load = document.querySelector('.portfolio__load')
-
-itemsBtn.forEach((item) => {
-   item.addEventListener('click', function() {
-      if(this.classList.contains('row-icons__items-btn')) {
-         itemsBtn.forEach((el) => {
-            el.classList.remove('row-icons__items-btn--active')
-         })
-         this.classList.toggle('row-icons__items-btn--active')
-      }
-
-
-     if(this.dataset.tab === 'tab-1') {
-      imageItems.forEach((el) => {
-         el.classList.remove('none')
-      })
-   }else {
-      imageItems.forEach((el) => {
-         el.classList.add('none')
-        })
-   }
-   
-   const contentTab = document.querySelector('#' + this.dataset.tab)
-   contentTab.classList.remove('none')
-
-   })
-})
-*/
-
-
-
-
-
-
-function removeClasses(elements, className) {
-   elements.forEach(el => {
-      el.classList.remove(className)
-   })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//!==================================================================================================
-
+//!Взаимодействие с home.html============================================================
 const circles = document.querySelectorAll('.list__circle');
 circles.forEach(el => {
   if (el.dataset.percentage == 'true') {
@@ -144,9 +30,7 @@ circles.forEach(el => {
     progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
   }
 });
-
-//!=================================================================================================
-
+//!----------------------------------------------------------------------------------------------------------------------------------------------------------
 const videoBlock = document.querySelector('.video-block');
 const video = document.querySelector('video');
 const btnPlay = document.querySelector('.video-block__btn-play');
@@ -167,8 +51,7 @@ video.onpause = function() {
    };
 };
 
-//!================================================================================================
-
+//! Взваимодействие с footer.html================================================================================================
 const toTop = document.querySelector('.to-top');
 const heroHeight = document.querySelector('.hero').offsetHeight;
 
@@ -186,3 +69,56 @@ window.addEventListener('scroll', () => {
 let y = window.scrollY;
 isVisibleToTop(y);
 });
+
+//!Взаимодействие с work.html============================================================
+window.addEventListener("click", function(e){
+   const rowItemsBtn = document.querySelectorAll('.row-icons__items-btn')
+   const imageItems = document.querySelectorAll('.columns-image__items')
+   const activeBtn = document.getElementById('active')
+
+   if(e.target.classList.contains('row-icons__items-btn')) {
+
+      removeClasses(rowItemsBtn, 'row-icons__items-btn--active') 
+
+      e.target.classList.toggle('row-icons__items-btn--active')
+
+      if(e.target.dataset.tab==='tab-1') {
+
+         removeClasses(imageItems, 'none') 
+
+      } else {
+         imageItems.forEach((el) => {
+            el.classList.add('none')
+        })
+       }
+       const contentTab = document.querySelector('#' + e.target.dataset.tab)
+       contentTab.classList.remove('none')
+   }
+
+
+   if(e.target.classList.contains('portfolio__btn')) {
+      removeClasses(imageItems, 'none') 
+      removeClasses(rowItemsBtn, 'row-icons__items-btn--active') 
+     activeBtn.classList.add('row-icons__items-btn--active')
+   }
+
+/*
+   function hide(e) {
+      e.currentTarget.style.visibility = "hidden"
+   }
+
+   const p = document.getElementsByClassName("row-icons__items-btn")
+
+   for(let i = 0; i < p.length; i++) {
+      p[i].addEventListener('click', hide, false)
+   }
+*/
+
+   function removeClasses(elements, className) {
+      elements.forEach(el => {
+         el.classList.remove(className)
+      })
+   }
+
+})
+

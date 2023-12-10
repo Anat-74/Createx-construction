@@ -139,8 +139,7 @@
    &--active {
       color: $whiteColor;
       background-color: $primaryColor;
-      //pointer-events: none;
-   
+      cursor: default;
       .row-icons__subtitle {
          color: $whiteColor;
          }
