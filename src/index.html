@@ -9,9 +9,9 @@
       <div class="wrapper-index">
 		<div class="rootpage">
          <div class="rootpage__left">
-			<h1>Верстка «Createx <br> construction»</h1>
-			<h2>Готовые страницы:</h2>
-			<ol class="rootpage__list">
+			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
+			<h2 class="rootpage__title-2">Готовые страницы:</h2>
+			<ul class="rootpage__list">
 				<li><a target="_blank" href="home.html">Home</a></li>
             <li><a target="_blank" href="services.html">Services</a></li>
             <li><a target="_blank" href="inner-services.html">Inner Services</a></li>
@@ -22,26 +22,30 @@
             <li><a target="_blank" href="news.html">News</a></li>
             <li><a target="_blank" href="inner-news.html">Inner News</a></li>
             <li><a target="_blank" href="contacts.html">Contacts</a></li>
-			</ol>
+			</ul>
       </div>
-      <div class="rootpage__right">
-         <ul class="rootpage__list-right">
-            <li data-tab="tab-1" class="rootpage__item rootpage__item--active"><span>Общее</span></li>
-            <li data-tab="tab-2" class="rootpage__item"><span>БЭМ</span></li>
-            <li data-tab="tab-3" class="rootpage__item"><span>Grid</span></li>
-            <li data-tab="tab-4" class="rootpage__item"><span>Flexbox</span></li>
-            <li data-tab="tab-5" class="rootpage__item"><span>SASS</span></li>
-            <li data-tab="tab-6" class="rootpage__item"><span>Семантика</span></li>
-            <li data-tab="tab-7" class="rootpage__item"><span>JS</span></li>
-            <li data-tab="tab-8" class="rootpage__item"><span>Контакты</span></li>
+      <nav class="rootpage__nav">
+         <ul class="rootpage__list-nav">
+            <li data-tab="tab-1" class="rootpage__item rootpage__item--active"><span>Верстка</span></li>
+            <li data-tab="tab-2" class="rootpage__item"><span>Общее</span></li>
+            <li data-tab="tab-3" class="rootpage__item"><span>БЭМ</span></li>
+            <li data-tab="tab-4" class="rootpage__item"><span>Grid</span></li>
+            <li data-tab="tab-5" class="rootpage__item"><span>Flexbox</span></li>
+            <li data-tab="tab-6" class="rootpage__item"><span>SASS</span></li>
+            <li data-tab="tab-7" class="rootpage__item"><span>Семантика</span></li>
+            <li data-tab="tab-8" class="rootpage__item"><span>JS</span></li>
+            <li data-tab="tab-9" class="rootpage__item"><span>Контакты</span></li>
          </ul>
-      </div>
-         <div class="rootpage__center">
-         <div data-tab-content id="tab-1" class="rootpage__content-tab">
-            <p class="rootpage__text"><span>ОСНОВНЫЕ МЕТОДЫ РЕАЛИЗАЦИИ:</span> БЭМ, Grid Layout, Flexbox, препроцессор SASS, Svg-sprite<br>
-              </p>
-              <p class="rootpage__text"><span>ИНСТРУМЕНТЫ:</span> Gulp+Webpack</p>
-              <h2 class="rootpage__title">Мое видение в<small>ё</small>рстки</h2>
+      </nav>
+
+         <div class="rootpage__content">
+            <div data-tab-content id="tab-1" class="rootpage__content-tab">
+               <p class="rootpage__text"><span>ОСНОВНЫЕ МЕТОДЫ РЕАЛИЗАЦИИ:</span> БЭМ, Grid Layout, Flexbox, препроцессор SASS, Svg-sprite<br>
+               </p>
+               <p class="rootpage__text"><span>ИНСТРУМЕНТЫ:</span> Gulp+Webpack</p>
+            </div>
+         <div data-tab-content id="tab-2" class="rootpage__content-tab hidden">
+              <h2 class="rootpage__title-content">Мое видение в<small>ё</small>рстки</h2>
               <p class="rootpage__text">&nbsp;Одним из&nbsp;ключевых действий в&nbsp;реализации качественной верстки является сперва-наперво очень тщательный <span>анализ макета</span> на&nbsp;предмет повторяющихся блоков, элементов будущей верстки.
                Резервирование отдельных классов (которые будут в&nbsp;дальнейшем переиспользоваться), модификаторов, миксинов. Отделение контентного изображения от&nbsp;декоративного. И&nbsp;прочие ньюансы, которые должны быть учтены с&nbsp;должным вниманием. На&nbsp;самом деле это <span>!!</span>очень важный момент перед тем как приступать к&nbsp;реализации проекта, что в&nbsp;итоге в&nbsp;дальнейшем может сказаться как на&nbsp;качестве, так и&nbsp;на&nbsp;скорости работы. Зачем например плодить кучу повторяющегося кода, если его можно просто банально переиспользовать с&nbsp;минимальным редактированием (если это необходимо)? Что нам и&nbsp;предоставляет БЭМ-методология (подробнее во&nbsp;вкладке &laquo;БЭМ&raquo;). <br>
             </p>
@@ -54,31 +58,31 @@
                Например нужно предусмотреть изменения размеров отступа между блоками, размеры шрифта (привет от <span>@mixins</span>), изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). Если например в&nbsp;том&nbsp;же <span>&laquo;footer&raquo;</span> имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;<span>spoiler</span>, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
             </p>
             </div>
-         <div data-tab-content id="tab-2" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Mobile First</h3>
-            <p class="rootpage__text">Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
-         </div>
          <div data-tab-content id="tab-3" class="rootpage__content-tab hidden">
+            <h3 class="rootpage__title-text">Mobile First</h3>
+            <p class="rootpage__text">Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis. Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendi</p>
+         </div>
+         <div data-tab-content id="tab-4" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab3</h3>
             <p class="rootpage__text">Lorem gfdgfd ipsum dolor sit amet gfdfgdfgdfgdffg consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-4" class="rootpage__content-tab hidden">
+         <div data-tab-content id="tab-5" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab4</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-5" class="rootpage__content-tab hidden">
+         <div data-tab-content id="tab-6" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab5</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-6" class="rootpage__content-tab hidden">
+         <div data-tab-content id="tab-7" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab6</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-7" class="rootpage__content-tab hidden">
+         <div data-tab-content id="tab-8" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab7</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-8" class="rootpage__content-tab hidden">
+         <div data-tab-content id="tab-9" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab8</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
             <div class="rootpage__contacts">
@@ -91,24 +95,33 @@
       </div>
 		</div>
    </div>
-      <script>
-         const tabHeaders = document.querySelectorAll('[data-tab]')
-         const contentTab = document.querySelectorAll('[data-tab-content]')
+   <script>
+      const tabHeaders = document.querySelectorAll('[data-tab]')
+      const contentTab = document.querySelectorAll('[data-tab-content]')
+      const image = document.querySelector(".rootpage__image")
+      const rootpageLeft = document.querySelector(".rootpage__left")
 
-        tabHeaders.forEach((item) => {
-         item.addEventListener('click', function() {
-            contentTab.forEach((el) => {
-            el.classList.add('hidden')
-           })
-           tabHeaders.forEach((el) => {
-            el.classList.remove("rootpage__item--active")
-           })
-           this.classList.toggle("rootpage__item--active")
-           const contentBox = document.querySelector('#' + this.dataset.tab)
-           contentBox.classList.remove('hidden')
-         })
+     tabHeaders.forEach((item) => {
+      item.addEventListener('click', function() {
+         contentTab.forEach((el) => {
+         el.classList.add('hidden')
         })
-      </script>
+        tabHeaders.forEach((el) => {
+         el.classList.remove("rootpage__item--active")
+        })
+
+        if(this.dataset.tab==='tab-1') {
+         rootpageLeft.classList.remove("hidden")
+        } else {
+         rootpageLeft.classList.add("hidden")
+        }
+
+        this.classList.toggle("rootpage__item--active")
+        const contentBox = document.querySelector('#' + this.dataset.tab)
+        contentBox.classList.remove('hidden')
+      })
+     })
+   </script>
 	</body>
 
 	<style>
@@ -136,13 +149,9 @@
 			font-size: 16px;
 		}
 		a {
-			text-decoration: underline;
-         font-weight: 600;
-			color: #DA770B;
 		}
 		a:visited {
 			text-decoration: underline;
-
 
 		}
 			a:hover {
@@ -154,18 +163,7 @@
 		img {
 			vertical-align: top;
 		}
-      .wrapper {
-         width: 100%;
-         min-height: 100%;
-         overflow: hidden;
-      }
       .wrapper-index {
-         padding: 40px 25px;
-      }
-      @media (max-width: 480px) {
-         .wrapper-index {
-            padding: 22px 15px;
-         }
       }
       .hidden {
          display: none;
@@ -173,22 +171,20 @@
 		.rootpage{
          display: grid;
          column-gap: 15px;
+         grid-template: auto / auto 1fr 1fr;
          grid-template-areas: 
-         "left right right"
-         "left center center"
-         ".. center center"
-         ".. center center"
+         "nav nav nav"
+         "left content content"
+         "left .. .."
          ;
-         padding: 30px 15px;
-         border: 12px double #fff;
-         border-radius: 25px;
+         padding: 35px 25px;
 		}
-      @media (max-width: 992px) {
+      @media (max-width: 991px) {
 			.rootpage{
             grid-template-areas: 
-         ".. left .."
-         "right right right"
-         "center center center"
+         "nav nav nav"
+         "left left left"
+         "content content content"
          ;
             padding: 30px 15px;
 			}
@@ -198,65 +194,103 @@
             padding: 22px 2px;
          }
       }
-		h1 {
+      .rootpage__left {
+         grid-area: left;
+         position: relative;
+         border-radius: 15px;
+         padding: 15px;
+         background: url('@img/main/about-us/bg-image.png') 50%/cover no-repeat;
+      }
+      @media (max-width: 991px) {
+         .rootpage__left {
+            border-radius: 4px;
+            background-color: #32b5a4;
+            background: url('@img/main/96f4a3337629fc5510573e566156d61d.gif') 37% 45%/cover no-repeat;
+         }
+      }
+      .rootpage__title {
+         position: absolute;
+         white-space: nowrap;
+         height: 100%;
+         left: 0;
+         top: -10px;
+         transform: rotate(-180deg);
+         writing-mode: vertical-rl;
 			color: #AAA308;
          font-size: 28px;
          line-height: 1.2;
          margin-bottom: 25px;
 		}
-		@media (max-width: 992px) {
-			h1 {
+      .rootpage__title small {
+         font-size: 36px;
+         color: #DA770B;
+      }
+		@media (max-width: 991px) {
+			.rootpage__title {
+            top: -48px;
 				font-size: 24px;
 			}
 		}
-		h2 {
+		.rootpage__title-2 {
 			color: #8E8806;
-			font-size: 1.25rem;
-         margin-bottom: 20px;
+			font-size: 22px;
+         margin-bottom: 0px;
 		}
 		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.115rem;
+			 .rootpage__title-2 {
+				font-size: 20px;
 			}
 		}
-      .rootpage__left {
-         grid-area: left;
-      }
 		.rootpage__list{
-         font-size: 22px;
-         margin: 0px 0px 35px 45px;
+         margin: 35px 0px 35px 40px;
 		}
 		.rootpage__list li:not(:last-child){
 			margin: 0px 0px 20px 0px;
 		}
-      @media (max-width: 767px) {
+      .rootpage__list li a {
+         font-weight: 600;
+         font-size: 22px;
+         text-decoration: underline;
+         color: #DA770B;
+		}
+      @media (max-width: 991px) {
          .rootpage__list {
-            letter-spacing: 1px;
+            margin: 25px 0px 35px 30px;
 			}
 		}
-      .rootpage__right {
-         grid-area: right;
+      @media (max-width: 776px) {
+         .rootpage__list li a {
+            font-weight: 700;
+			}
+		}
+      .rootpage__nav {
+         grid-area: nav;
          padding-bottom: 12px;
       }
 
-      .rootpage__list-right {
+      .rootpage__list-nav {
          display: flex;
-         column-gap: 5px;
          flex-wrap: wrap;
          justify-content: center;
+         align-items: center;
+         column-gap: 12px;
+         row-gap: 12px;
          border: 6px solid #32b5a4;
          border-radius: 12px;
-         padding: 9px;
+         padding: 12px;
       }
-      .rootpage__list-right :not(:last-child) {
-         margin-bottom: 24px;
-      }
+      @media (max-width: 991px) {
+         .rootpage__list-nav {
+            column-gap: 5px;
+            padding: 8px;
+			}
+		}
       .rootpage__item {
          position: relative;
          display: grid;
          justify-items: center;
          align-items: center;
-         width: 155px;
+         width: 150px;
          height: 40px;
          overflow: hidden;
          cursor: pointer;
@@ -306,6 +340,12 @@
       .rootpage__item span{
          z-index: 1;
       }
+      @media (max-width: 776px) {
+         .rootpage__item{
+            width: 140px;
+            font-size: 22px;
+			}
+		}
 
       @keyframes animate{
          0%{
@@ -315,22 +355,18 @@
             transform: rotate(360deg);
          }
       }
-      .rootpage__center {
-         grid-area: center;
-         border: 6px solid#fff;
-         border-radius: 25px;
-         padding: 15px;
+      .rootpage__content {
+         grid-area: content;
+         border: 12px double #fff;
+         border-radius: 15px;
+         padding: 16px;
       }
-      .rootpage__content-tab {
-
-         position: relative;
-      }
-      .rootpage__title {
+      .rootpage__title-content {
          font-size: 24px;
          color: #057F6E;
          margin-bottom: 10px;
       }
-      .rootpage__title small {
+      .rootpage__title-content small {
          font-size: 29px;
          color: #AAA308;
       }
@@ -355,7 +391,7 @@
 			padding: 20px 45px;
 			line-height: 1.5;
 		}
-		@media (max-width: 992px){
+		@media (max-width: 991px){
 		.rootpage__contacts {
 			border-radius:40px;
 			padding: 20px;
