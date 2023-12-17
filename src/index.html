@@ -5,12 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Верстка «NEW_PROJECT_NAME»</title>
 	</head>
-	<body>
+	<body class="light-theme">
+      <button class="theme" id="themeToggle">Переключить тему</button>
       <div class="wrapper-index">
 		<div class="rootpage">
          <div class="rootpage__left">
 			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
-			<h2 class="rootpage__title-2">Готовые страницы:</h2>
+			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
 			<ul class="rootpage__list">
 				<li><a target="_blank" href="home.html">Home</a></li>
             <li><a target="_blank" href="services.html">Services</a></li>
@@ -26,23 +27,42 @@
       </div>
       <nav class="rootpage__nav">
          <ul class="rootpage__list-nav">
-            <li data-tab="tab-1" class="rootpage__item rootpage__item--active"><span>Верстка</span></li>
-            <li data-tab="tab-2" class="rootpage__item"><span>Общее</span></li>
-            <li data-tab="tab-3" class="rootpage__item"><span>БЭМ</span></li>
-            <li data-tab="tab-4" class="rootpage__item"><span>Grid</span></li>
-            <li data-tab="tab-5" class="rootpage__item"><span>Flexbox</span></li>
-            <li data-tab="tab-6" class="rootpage__item"><span>SASS</span></li>
-            <li data-tab="tab-7" class="rootpage__item"><span>Семантика</span></li>
-            <li data-tab="tab-8" class="rootpage__item"><span>JS</span></li>
-            <li data-tab="tab-9" class="rootpage__item"><span>Контакты</span></li>
+            <li data-tab="tab-1" class="rootpage__item rootpage__item--active">Верстка</li>
+            <li data-tab="tab-2" class="rootpage__item">Общее</li>
+            <li data-tab="tab-3" class="rootpage__item">БЭМ</li>
+            <li data-tab="tab-4" class="rootpage__item">Grid</li>
+            <li data-tab="tab-5" class="rootpage__item">Flexbox</li>
+            <li data-tab="tab-6" class="rootpage__item">SASS</li>
+            <li data-tab="tab-7" class="rootpage__item">Семантика</li>
+            <li data-tab="tab-8" class="rootpage__item">JS</li>
+            <li data-tab="tab-9" class="rootpage__item">Контакты</li>
          </ul>
       </nav>
 
          <div class="rootpage__content">
             <div data-tab-content id="tab-1" class="rootpage__content-tab">
-               <p class="rootpage__text"><span>ОСНОВНЫЕ МЕТОДЫ РЕАЛИЗАЦИИ:</span> БЭМ, Grid Layout, Flexbox, препроцессор SASS, Svg-sprite<br>
-               </p>
-               <p class="rootpage__text"><span>ИНСТРУМЕНТЫ:</span> Gulp+Webpack</p>
+            <h2 class="rootpage__title-content">Основные методы реализации:</h2>
+            <ul class="rootpage__list-content">
+               <li class="rootpage__item-content">БЭМ</li>
+               <li class="rootpage__item-content">Grid Layout</li>
+               <li class="rootpage__item-content">Flexbox</li>
+               <li class="rootpage__item-content">SASS</li>
+               <li class="rootpage__item-content">Svg-sprite</li>
+               <li class="rootpage__item-content">JS</li>
+            </ul>
+               <h2 class="rootpage__title-content">Инструменты:</h2> 
+              <span> Gulp+Webpack</span>
+              <h3 class="rootpage__title-text">В JS реализованы:</h3>
+            <ul class="rootpage__list-js">
+               <li class="rootpage__item-js">Popup (модальное окно)</li>
+               <li class="rootpage__item-js">Табы</li>
+               <li class="rootpage__item-js">меню "Бургер"</li>
+               <li class="rootpage__item-js">Spoller (аккордеон)</li>
+               <li class="rootpage__item-js">кастомный "Select"</li>
+               <li class="rootpage__item-js">Прокрутка к нужному блоку (плавный скролл)</li>
+               <li class="rootpage__item-js">слайдер "Swiper" (Navigation Thumbs Pagination) </li>
+               <li class="rootpage__item-js">Работа с "form"</li>
+            </ul>
             </div>
          <div data-tab-content id="tab-2" class="rootpage__content-tab hidden">
               <h2 class="rootpage__title-content">Мое видение в<small>ё</small>рстки</h2>
@@ -82,9 +102,7 @@
             <h3 class="rootpage__title-text">Tab7</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-9" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab8</h3>
-            <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
+         <div data-tab-content id="tab-9" class="rootpage__content-contacts hidden">
             <div class="rootpage__contacts">
                <h2>Мои контакты:</h2>
                <p>Почта: <a href="mailto:web7anat@gmail.com">web7anat@gmail.com</a></p>
@@ -96,6 +114,18 @@
 		</div>
    </div>
    <script>
+document.getElementById('themeToggle').addEventListener('click', function() {
+   const titleTwo = document.querySelector(".rootpage__title-2")
+   const currentTheme = document.body.className;
+       if (currentTheme === 'light-theme') {
+           document.body.className = 'dark-theme';
+           titleTwo.classList.toggle("rootpage__title-two")
+       } else {
+           document.body.className = 'light-theme';
+           titleTwo.classList.remove("rootpage__title-two")
+       }
+   })
+
       const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
       const image = document.querySelector(".rootpage__image")
@@ -139,8 +169,7 @@
 			margin: 0;
 			padding: 0;
 			min-width: 320px;
-			color: #2d2d2d;
-         background-color: #f2f2f2;
+			color: #6E6B63;
       }
 		body {
 			font-family: Montserrat;
@@ -148,36 +177,55 @@
 			line-height: 1;
 			font-size: 16px;
 		}
-		a {
-		}
-		a:visited {
-			text-decoration: underline;
-
-		}
-			a:hover {
-			text-decoration: none;
-		}
+      body.light-theme {
+         background-color: #fff;
+         color: #000000;
+}
+      body.dark-theme {
+       background-color: #2A2A28;
+       color: #fff;
+   }
+   a {
+      text-decoration: none;
+   }
 		ul li {
 			list-style: none;
 		}
+      span {
+         display: inline-block;
+         font-size: 20px;
+         font-weight: 600;
+         margin-bottom: 15px;
+      }
 		img {
 			vertical-align: top;
 		}
       .wrapper-index {
+      }
+      .theme {
+         position: absolute;
+         top: 10px;
+         right: 2%;
+         width: 150px;
+         height: 25px;
+         cursor: pointer;
+         border-radius: 4px;
+         color: #fff;
+         background-color: #32b5a4;
+         transform: translateX(-3%);
       }
       .hidden {
          display: none;
       }
 		.rootpage{
          display: grid;
-         column-gap: 15px;
-         grid-template: auto / auto 1fr 1fr;
+         row-gap: 15px;
          grid-template-areas: 
          "nav nav nav"
          "left content content"
-         "left .. .."
+         "left content content"
          ;
-         padding: 35px 25px;
+         padding: 45px 25px;
 		}
       @media (max-width: 991px) {
 			.rootpage{
@@ -191,33 +239,35 @@
 		}
       @media (max-width: 450px) {
          .rootpage {
-            padding: 22px 2px;
+            padding: 25px 12px;
          }
       }
       .rootpage__left {
+         position: relative;
+         overflow: hidden;
          grid-area: left;
          position: relative;
-         border-radius: 15px;
-         padding: 15px;
-         background: url('@img/main/about-us/bg-image.png') 50%/cover no-repeat;
+         border-radius: 9px;
+         padding-top: 5px;
+         background: url('@img/main/light-bulb-2402087_640.webp') 40% 50%/cover no-repeat;
       }
       @media (max-width: 991px) {
          .rootpage__left {
+            padding-left: 3px;
             border-radius: 4px;
-            background-color: #32b5a4;
-            background: url('@img/main/96f4a3337629fc5510573e566156d61d.gif') 37% 45%/cover no-repeat;
+
          }
       }
       .rootpage__title {
          position: absolute;
          white-space: nowrap;
          height: 100%;
-         left: 0;
-         top: -10px;
+         left: -10px;
+         top: -18px;
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
 			color: #AAA308;
-         font-size: 28px;
+         font-size: 26px;
          line-height: 1.2;
          margin-bottom: 25px;
 		}
@@ -227,20 +277,64 @@
       }
 		@media (max-width: 991px) {
 			.rootpage__title {
-            top: -48px;
+            left: -8px;
+            top: -15px;
 				font-size: 24px;
 			}
 		}
 		.rootpage__title-2 {
+         overflow: hidden;
+         position: relative;
+         z-index: 1;
+         width: 228px;
+         border-radius: 15px;
 			color: #8E8806;
-			font-size: 22px;
+			font-size: 20px;
+         padding: 10px 12px;
+		}
+      .rootpage__title-2::before {
+         content: "";
+         position: absolute;
+         top: -95px;
+         left: 45%;
+         width: 22px;
+         height: 230px;
+         background: linear-gradient(#00ff00, #ff00dd);
+         animation: animate 4s linear infinite;
+      }
+      .rootpage__title-2::after {
+         content: "";
+         position: absolute;
+         inset: 3px;
+         border-radius: 15px;
+         background-color: #fff;
+      }
+      .rootpage__title-two::after {
+         content: "";
+         position: absolute;
+         inset: 3px;
+         border-radius: 15px;
+         background-color: #2A2A28;
+      }
+      .rootpage__title-2 span {
+         position: relative;
+         z-index: 2;
          margin-bottom: 0px;
 		}
+      
 		@media (max-width: 767px) {
 			 .rootpage__title-2 {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
+      @keyframes animate{
+         0%{
+            transform: rotate(0deg);
+         }
+         100%{
+            transform: rotate(360deg);
+         }
+      }
 		.rootpage__list{
          margin: 35px 0px 35px 40px;
 		}
@@ -248,14 +342,23 @@
 			margin: 0px 0px 20px 0px;
 		}
       .rootpage__list li a {
+         position: relative;
+         z-index: 2;
+         text-decoration: underline;
          font-weight: 600;
          font-size: 22px;
-         text-decoration: underline;
          color: #DA770B;
+         transition: color 0.4s ease-in;
 		}
+      .rootpage__list li a:hover {
+         color: red;
+      }
+      .rootpage__list li a:visited {
+         color: green;
+      }
       @media (max-width: 991px) {
          .rootpage__list {
-            margin: 25px 0px 35px 30px;
+            margin: 25px 0px 15px 30px;
 			}
 		}
       @media (max-width: 776px) {
@@ -265,115 +368,108 @@
 		}
       .rootpage__nav {
          grid-area: nav;
-         padding-bottom: 12px;
-      }
+         overflow-x: auto;
 
-      .rootpage__list-nav {
+      }
+         .rootpage__list-nav {
          display: flex;
          flex-wrap: wrap;
-         justify-content: center;
+         justify-content: space-between;
          align-items: center;
          column-gap: 12px;
-         row-gap: 12px;
-         border: 6px solid #32b5a4;
-         border-radius: 12px;
+         row-gap: 14px;
          padding: 12px;
+         background: url('@img/main') 50% 0 no-repeat;
       }
-      @media (max-width: 991px) {
+      @media (max-width: 496px) {
          .rootpage__list-nav {
-            column-gap: 5px;
-            padding: 8px;
+         display: inline-grid;
+         grid-template-columns: repeat(5, auto);
+         column-gap: 2px;
+         justify-items: center;
 			}
 		}
-      .rootpage__item {
-         position: relative;
-         display: grid;
-         justify-items: center;
-         align-items: center;
-         width: 150px;
-         height: 40px;
-         overflow: hidden;
+         .rootpage__item {
          cursor: pointer;
-         border-radius: 15px;
-         color: #32b5a4;
-         font-size: 24px;
-         font-weight: 700;
-         transition: all 0.5s;
+         color: #8D8D8B;
+         font-size: 20px;
+         font-weight: 600;
+         border: 2px solid #8D8D8B;
+         border-radius: 8px;
+         padding: 3px;
+         transition: all 0.3s ease-in-out;
       }
       .rootpage__item:hover {
-         box-shadow: 0px 0px 10px #00ff00,
-         0px 0px 30px #00ff00,
-         0px 0px 40px #ff00dd,
-         0px 0px 30px #5e5373;
-      }
-      .rootpage__item--active::before {
-         content: "";
-         position: absolute;
-         left: 45%;
-         width: 25px;
-         height: 250px;
-         background: linear-gradient(#00ff00, #ff00dd);
-         animation: animate 4s linear infinite;
+         color: #DA770B;
+         border: 2px solid #DA770B;
       }
       .rootpage__item--active {
          font-weight: 700;
          color: red;
+         border: 2px solid red;
       }
       .rootpage__item--active:hover{
          cursor: default;
          box-shadow: none;
       }
-      .rootpage__item:hover::before {
-         background: transparent;
-      }
-      .rootpage__item::after {
-         content: "";
-         position: absolute;
-         inset: 3px;
-         border-radius: 15px;
-         background-color: #f2f2f2;
-
-      }
-      .rootpage__item:hover::after {
-         background: transparent;
-      }
-      .rootpage__item span{
-         z-index: 1;
-      }
-      @media (max-width: 776px) {
-         .rootpage__item{
-            width: 140px;
-            font-size: 22px;
-			}
-		}
-
-      @keyframes animate{
-         0%{
-            transform: rotate(0deg);
-         }
-         100%{
-            transform: rotate(360deg);
-         }
-      }
       .rootpage__content {
          grid-area: content;
-         border: 12px double #fff;
+         border: 12px double #C8CEC0;
          border-radius: 15px;
-         padding: 16px;
+         padding: 12px;
       }
+
+      .rootpage__content-tab {
+         padding-top: 28px;
+         background: url('@img/main') 50% 0/cover no-repeat;
+      }
+
       .rootpage__title-content {
          font-size: 24px;
-         color: #057F6E;
+         color: #AAA308;
          margin-bottom: 10px;
       }
       .rootpage__title-content small {
-         font-size: 29px;
-         color: #AAA308;
+         font-size: 28px;
+         color: #32b5a4;
+      }
+      @media (max-width: 776px) {
+         .rootpage__title-content {
+            font-size: 22px;
+			}
+		}
+      .rootpage__list-content {
+         display: flex;
+         flex-wrap: wrap;
+         column-gap: 15px;
+         row-gap: 10px;
+         margin-bottom: 15px;
+      }
+      .rootpage__item-content {
+         font-style: normal;
+         font-size: 20px;
+         font-weight: 600;
       }
       .rootpage__title-text {
          color: #AAA308;
-         margin-bottom: 5px;
+         margin-bottom: 10px;
       }
+      .rootpage__item-js {
+         font-size: 18px;
+         font-weight: 600;
+      }
+      .rootpage__item-js::before {
+         content: "";
+         display: inline-block;
+         width: 8px;
+         height: 8px;
+         margin: 0px 5px 3px 0px;
+         border-radius: 50%;
+         background-color: #DA770B;
+      }
+		.rootpage__item-js:not(:last-child){
+         margin-bottom: 8px;
+		}
       .rootpage__text {
          font-size: 18px;
          line-height: 1.5;
@@ -382,28 +478,27 @@
       .rootpage__text span {
          font-weight: 600;
          color: #DA770B;
+         margin-bottom: 0;
       }
       .rootpage__text:not(:last-child) {
          margin-bottom: 15px;
       }
-      .rootpage__contacts {
-			border-radius: 200px;
-			padding: 20px 45px;
-			line-height: 1.5;
-		}
-		@media (max-width: 991px){
+      .rootpage__content-contacts {
+         height: 444px;
+         background: url('@img/main/free-png.ru-786.png') 50% 0/cover no-repeat;
+      }
+
 		.rootpage__contacts {
-			border-radius:40px;
-			padding: 20px;
 		}
+		.rootpage__contacts p {
+         font-size: 18px;
+         line-height: 1.5;
+         font-weight: 500;
+			color: #DA770B;
+         transform: rotate(-15deg);
+         margin-bottom: 15px;
 		}
-		.rootpage__contacts{
-			background: #32b5a4;
-         justify-self: start;
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
+
       /*
       .rootpage__close {
          cursor: pointer;

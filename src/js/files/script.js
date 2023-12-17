@@ -3,7 +3,6 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js"  ;
 
-
 //!Взаимодействие с home.html============================================================
 const circles = document.querySelectorAll('.list__circle');
 circles.forEach(el => {
