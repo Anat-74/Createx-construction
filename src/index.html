@@ -6,7 +6,10 @@
 		<title>Верстка «NEW_PROJECT_NAME»</title>
 	</head>
 	<body class="light-theme">
-      <button class="theme" id="themeToggle">Переключить тему</button>
+      <div class="theme">
+         <h3 class="theme__title">свет / темн</h3>
+      <button class="theme__btn" id="themeToggle"></button>
+   </div>
       <div class="wrapper-index">
 		<div class="rootpage">
          <div class="rootpage__left">
@@ -21,21 +24,20 @@
             <li><a target="_blank" href="about-us.html">About Us</a></li>
             <li><a target="_blank" href="inner-about-us.html">Inner About Us</a></li>
             <li><a target="_blank" href="news.html">News</a></li>
-            <li><a target="_blank" href="inner-news.html">Inner News</a></li>
             <li><a target="_blank" href="contacts.html">Contacts</a></li>
 			</ul>
       </div>
       <nav class="rootpage__nav">
          <ul class="rootpage__list-nav">
-            <li data-tab="tab-1" class="rootpage__item rootpage__item--active">Верстка</li>
-            <li data-tab="tab-2" class="rootpage__item">Общее</li>
+            <li data-tab="tab-1" class="rootpage__item rootpage__item--active">Главная</li>
+            <li data-tab="tab-2" class="rootpage__item">Вступление</li>
             <li data-tab="tab-3" class="rootpage__item">БЭМ</li>
             <li data-tab="tab-4" class="rootpage__item">Grid</li>
             <li data-tab="tab-5" class="rootpage__item">Flexbox</li>
             <li data-tab="tab-6" class="rootpage__item">SASS</li>
-            <li data-tab="tab-7" class="rootpage__item">Семантика</li>
-            <li data-tab="tab-8" class="rootpage__item">JS</li>
-            <li data-tab="tab-9" class="rootpage__item">Контакты</li>
+            <li data-tab="tab-7" class="rootpage__item">Доп</li>
+            <li data-tab="tab-8" class="rootpage__item">Семантика</li>
+            <li data-tab="tab-9" class="rootpage__item">JS</li>
          </ul>
       </nav>
 
@@ -54,12 +56,12 @@
               <span> Gulp+Webpack</span>
               <h3 class="rootpage__title-text">В JS реализованы:</h3>
             <ul class="rootpage__list-js">
-               <li class="rootpage__item-js">Popup (модальное окно)</li>
+               <li class="rootpage__item-js">Popup (модальные окна)</li>
                <li class="rootpage__item-js">Табы</li>
                <li class="rootpage__item-js">меню "Бургер"</li>
                <li class="rootpage__item-js">Spoller (аккордеон)</li>
                <li class="rootpage__item-js">кастомный "Select"</li>
-               <li class="rootpage__item-js">Прокрутка к нужному блоку (плавный скролл)</li>
+               <li class="rootpage__item-js">Scroll to top (плавный скролл)</li>
                <li class="rootpage__item-js">слайдер "Swiper" (Navigation Thumbs Pagination) </li>
                <li class="rootpage__item-js">Работа с "form"</li>
             </ul>
@@ -102,13 +104,17 @@
             <h3 class="rootpage__title-text">Tab7</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
-         <div data-tab-content id="tab-9" class="rootpage__content-contacts hidden">
-            <div class="rootpage__contacts">
-               <h2>Мои контакты:</h2>
-               <p>Почта: <a href="mailto:web7anat@gmail.com">web7anat@gmail.com</a></p>
-               <p>Соц. сети: <a href="https://t.me/Anat7777">Telegram</a></p>
-               <p>Skype: <a href="https://www.skype.com/ru/">live:santexsistem</a></p>
-            </div>
+         <div data-tab-content id="tab-9" class="rootpage__content-tab hidden">
+            <h3 class="rootpage__title-text">Tab7</h3>
+            <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
+         </div>
+      </div>
+      <div class="rootpage__content-contacts">
+         <div class="rootpage__contacts">
+            <h2>Мои контакты:</h2>
+            <p>Почта: <a href="mailto:web7anat@gmail.com"><br> web7anat@gmail.com</a></p>
+            <p>Соц. сети: <a href="https://t.me/Anat7777"><br> Telegram</a></p>
+            <p>Skype: <a href="https://www.skype.com/ru/"><br> live:santexsistem</a></p>
          </div>
       </div>
 		</div>
@@ -130,6 +136,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       const contentTab = document.querySelectorAll('[data-tab-content]')
       const image = document.querySelector(".rootpage__image")
       const rootpageLeft = document.querySelector(".rootpage__left")
+      const contacts= document.querySelector(".rootpage__content-contacts")
 
      tabHeaders.forEach((item) => {
       item.addEventListener('click', function() {
@@ -142,8 +149,10 @@ document.getElementById('themeToggle').addEventListener('click', function() {
 
         if(this.dataset.tab==='tab-1') {
          rootpageLeft.classList.remove("hidden")
+         contacts.classList.remove("rootpage__content-none")
         } else {
          rootpageLeft.classList.add("hidden")
+         contacts.classList.add("rootpage__content-none")
         }
 
         this.classList.toggle("rootpage__item--active")
@@ -180,7 +189,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       body.light-theme {
          background-color: #fff;
          color: #000000;
-}
+   }
       body.dark-theme {
        background-color: #2A2A28;
        color: #fff;
@@ -196,6 +205,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          font-size: 20px;
          font-weight: 600;
          margin-bottom: 15px;
+         color: #DA770B;
       }
 		img {
 			vertical-align: top;
@@ -203,29 +213,36 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       .wrapper-index {
       }
       .theme {
-         position: absolute;
-         top: 10px;
-         right: 2%;
-         width: 150px;
-         height: 25px;
+         display: grid;
+         grid-template-columns: 1fr auto;
+         align-items: center;
+         column-gap: 10px;
+         padding: 10px 10px 0px 0%;
+      }
+      .theme__title {
+         white-space: nowrap;
+         justify-self: end;
+      }
+      .theme__btn {
+         justify-self: end;
+         width: 40px;
+         height: 44px;
          cursor: pointer;
-         border-radius: 4px;
-         color: #fff;
-         background-color: #32b5a4;
-         transform: translateX(-3%);
+         background: url('@img/main/5464986.png') 0 0/contain no-repeat;
       }
       .hidden {
          display: none;
       }
 		.rootpage{
+         background: url('@img/main/light-bulb-2402087_640.webp') 0% 10% no-repeat;
          display: grid;
          row-gap: 15px;
          grid-template-areas: 
          "nav nav nav"
          "left content content"
          "left content content"
+         ".. contacts contacts"
          ;
-         padding: 45px 25px;
 		}
       @media (max-width: 991px) {
 			.rootpage{
@@ -233,23 +250,18 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          "nav nav nav"
          "left left left"
          "content content content"
+         "contacts contacts contacts"
          ;
-            padding: 30px 15px;
+         background: url('@img/main/light-bulb-2402087_640.webp') 50% 10% no-repeat;
 			}
 		}
-      @media (max-width: 450px) {
-         .rootpage {
-            padding: 25px 12px;
-         }
-      }
       .rootpage__left {
          position: relative;
-         overflow: hidden;
          grid-area: left;
          position: relative;
          border-radius: 9px;
-         padding-top: 5px;
-         background: url('@img/main/light-bulb-2402087_640.webp') 40% 50%/cover no-repeat;
+         margin: 5px 15px 0px 15px;
+
       }
       @media (max-width: 991px) {
          .rootpage__left {
@@ -267,19 +279,19 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
 			color: #AAA308;
-         font-size: 26px;
+         font-size: 24px;
          line-height: 1.2;
          margin-bottom: 25px;
 		}
       .rootpage__title small {
-         font-size: 36px;
+         font-size: 32px;
          color: #DA770B;
       }
 		@media (max-width: 991px) {
 			.rootpage__title {
             left: -8px;
-            top: -15px;
-				font-size: 24px;
+            top: -8px;
+				font-size: 22px;
 			}
 		}
 		.rootpage__title-2 {
@@ -335,7 +347,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
             transform: rotate(360deg);
          }
       }
-		.rootpage__list{
+		.rootpage__list {
          margin: 35px 0px 35px 40px;
 		}
 		.rootpage__list li:not(:last-child){
@@ -343,7 +355,6 @@ document.getElementById('themeToggle').addEventListener('click', function() {
 		}
       .rootpage__list li a {
          position: relative;
-         z-index: 2;
          text-decoration: underline;
          font-weight: 600;
          font-size: 22px;
@@ -353,9 +364,11 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       .rootpage__list li a:hover {
          color: red;
       }
+      /*
       .rootpage__list li a:visited {
          color: green;
       }
+      */
       @media (max-width: 991px) {
          .rootpage__list {
             margin: 25px 0px 15px 30px;
@@ -369,32 +382,28 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       .rootpage__nav {
          grid-area: nav;
          overflow-x: auto;
-
       }
          .rootpage__list-nav {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: space-between;
-         align-items: center;
-         column-gap: 12px;
-         row-gap: 14px;
-         padding: 12px;
-         background: url('@img/main') 50% 0 no-repeat;
-      }
-      @media (max-width: 496px) {
-         .rootpage__list-nav {
-         display: inline-grid;
-         grid-template-columns: repeat(5, auto);
-         column-gap: 2px;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(127px, 1fr));
          justify-items: center;
+         align-items: center;
+         column-gap: 7px;
+         row-gap: 12px;
+         padding: 15px;
+      }
+      @media (max-width: 460px) {
+         .rootpage__list-nav {
+            display: inline-grid;
+            grid-template-columns: repeat(3, 1fr);
 			}
 		}
          .rootpage__item {
          cursor: pointer;
-         color: #8D8D8B;
+         color: #AAA308;
          font-size: 20px;
          font-weight: 600;
-         border: 2px solid #8D8D8B;
+         border: 2px solid #AAA308;
          border-radius: 8px;
          padding: 3px;
          transition: all 0.3s ease-in-out;
@@ -411,17 +420,18 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       .rootpage__item--active:hover{
          cursor: default;
          box-shadow: none;
+         color: red;
       }
       .rootpage__content {
          grid-area: content;
-         border: 12px double #C8CEC0;
+         border: 9px double #AAA308;
          border-radius: 15px;
          padding: 12px;
+         margin: 0px 15px;
       }
 
       .rootpage__content-tab {
-         padding-top: 28px;
-         background: url('@img/main') 50% 0/cover no-repeat;
+         background: url('@img/main') 50% 0 no-repeat;
       }
 
       .rootpage__title-content {
@@ -449,6 +459,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          font-style: normal;
          font-size: 20px;
          font-weight: 600;
+         color: #DA770B;
       }
       .rootpage__title-text {
          color: #AAA308;
@@ -456,19 +467,21 @@ document.getElementById('themeToggle').addEventListener('click', function() {
       }
       .rootpage__item-js {
          font-size: 18px;
+         line-height: 1.4;
          font-weight: 600;
+         color: #74908F;
       }
       .rootpage__item-js::before {
          content: "";
          display: inline-block;
          width: 8px;
          height: 8px;
-         margin: 0px 5px 3px 0px;
+         margin: 0px 5px 2px 0px;
          border-radius: 50%;
          background-color: #DA770B;
       }
 		.rootpage__item-js:not(:last-child){
-         margin-bottom: 8px;
+         margin-bottom: 10px;
 		}
       .rootpage__text {
          font-size: 18px;
@@ -484,20 +497,40 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          margin-bottom: 15px;
       }
       .rootpage__content-contacts {
-         height: 444px;
-         background: url('@img/main/free-png.ru-786.png') 50% 0/cover no-repeat;
+         grid-area: contacts;
+         min-height: 450px;
+         display: inline-grid;
+         justify-items: center;
+         align-items: center;
+         background: url('@img/main/free-png.3.png') 50% 0 no-repeat;
       }
-
-		.rootpage__contacts {
+      .rootpage__content-none {
+         display: none;
+      }
+      .rootpage__contacts {
+      }
+		.rootpage__contacts h2 {
+         display: inline-block;
+         vertical-align: top;
+         transform: rotate(-15deg);
+         margin-top: -34px;
+         font-size: 20px;
+         color: #B58887;
 		}
 		.rootpage__contacts p {
          font-size: 18px;
          line-height: 1.5;
-         font-weight: 500;
+         font-weight: 700;
 			color: #DA770B;
          transform: rotate(-15deg);
-         margin-bottom: 15px;
+         margin-left: 22px;
+         margin-bottom: 10px;
 		}
+      .rootpage__contacts p a {
+         font-weight: 600;
+         text-decoration: underline;
+         color: #AAA308;
+      }
 
       /*
       .rootpage__close {
