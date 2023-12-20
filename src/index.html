@@ -234,7 +234,6 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          display: none;
       }
 		.rootpage{
-         background: url('@img/main/light-bulb-2402087_640.webp') 0% 10% no-repeat;
          display: grid;
          row-gap: 15px;
          grid-template-areas: 
@@ -252,7 +251,6 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          "content content content"
          "contacts contacts contacts"
          ;
-         background: url('@img/main/light-bulb-2402087_640.webp') 50% 10% no-repeat;
 			}
 		}
       .rootpage__left {
@@ -260,14 +258,13 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          grid-area: left;
          position: relative;
          border-radius: 9px;
-         margin: 5px 15px 0px 15px;
-
+         margin-left: 15px;
+         background: url('@img/main/light-bulb-2402087_640.webp') 40% 30% no-repeat;
       }
       @media (max-width: 991px) {
          .rootpage__left {
             padding-left: 3px;
             border-radius: 4px;
-
          }
       }
       .rootpage__title {
@@ -392,6 +389,11 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          row-gap: 12px;
          padding: 15px;
       }
+      @media (max-width: 991px) {
+         .rootpage__list-nav {
+            padding-bottom: 5px;
+			}
+		}
       @media (max-width: 460px) {
          .rootpage__list-nav {
             display: inline-grid;
@@ -427,9 +429,13 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          border: 9px double #AAA308;
          border-radius: 15px;
          padding: 12px;
-         margin: 0px 15px;
+         margin-right: 15px;
       }
-
+      @media (max-width: 991px) {
+         .rootpage__content {
+         margin-left: 15px;
+			}
+		}
       .rootpage__content-tab {
          background: url('@img/main') 50% 0 no-repeat;
       }
