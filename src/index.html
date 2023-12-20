@@ -120,8 +120,9 @@
 		</div>
    </div>
    <script>
-document.getElementById('themeToggle').addEventListener('click', function() {
+
    const titleTwo = document.querySelector(".rootpage__title-2")
+   document.getElementById('themeToggle').addEventListener('click', function() {
    const currentTheme = document.body.className;
        if (currentTheme === 'light-theme') {
            document.body.className = 'dark-theme';
@@ -131,6 +132,20 @@ document.getElementById('themeToggle').addEventListener('click', function() {
            titleTwo.classList.remove("rootpage__title-two")
        }
    })
+
+      const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+      function handleTabletChange(e) {
+        if (e.matches) {
+          document.body.className = 'dark-theme';
+          titleTwo.classList.toggle("rootpage__title-two")
+        }else {
+         document.body.className = 'light-theme';
+         titleTwo.classList.remove("rootpage__title-two")
+        }
+      }
+      mediaQuery.addListener(handleTabletChange);
+      handleTabletChange(mediaQuery);
 
       const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
@@ -309,7 +324,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
          width: 22px;
          height: 230px;
          background: linear-gradient(#00ff00, #ff00dd);
-         animation: animate 4s linear infinite;
+         animation: animate 5s linear infinite;
       }
       .rootpage__title-2::after {
          content: "";
