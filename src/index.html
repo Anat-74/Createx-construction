@@ -9,8 +9,7 @@
       <div class="theme">
          <h3 class="theme__title">свет / темн</h3>
       <button class="theme__btn" id="themeToggle"></button>
-   </div>
-      <div class="wrapper-index">
+      </div>
 		<div class="rootpage">
          <div class="rootpage__left">
 			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
@@ -64,6 +63,8 @@
                <li class="rootpage__item-js">Scroll to top (плавный скролл)</li>
                <li class="rootpage__item-js">слайдер "Swiper" (Navigation Thumbs Pagination) </li>
                <li class="rootpage__item-js">Работа с "form"</li>
+               <li class="rootpage__item-js">Светлая / темная тема</li>
+               <li class="rootpage__item-js">Работа с медиавыражениями</li>
             </ul>
             </div>
          <div data-tab-content id="tab-2" class="rootpage__content-tab hidden">
@@ -118,12 +119,11 @@
          </div>
       </div>
 		</div>
-   </div>
    <script>
 
    const titleTwo = document.querySelector(".rootpage__title-2")
    document.getElementById('themeToggle').addEventListener('click', function() {
-   const currentTheme = document.body.className;
+      const currentTheme = document.body.className;
        if (currentTheme === 'light-theme') {
            document.body.className = 'dark-theme';
            titleTwo.classList.toggle("rootpage__title-two")
@@ -133,12 +133,11 @@
        }
    })
 
-      const mediaQuery = window.matchMedia('(max-width: 768px)');
-
+      const mediaQuery = window.matchMedia('(max-width: 767px)');
       function handleTabletChange(e) {
         if (e.matches) {
           document.body.className = 'dark-theme';
-          titleTwo.classList.toggle("rootpage__title-two")
+          titleTwo.classList.add("rootpage__title-two")
         }else {
          document.body.className = 'light-theme';
          titleTwo.classList.remove("rootpage__title-two")
@@ -200,6 +199,7 @@
 			font-size: 100%;
 			line-height: 1;
 			font-size: 16px;
+         transition: background-color 0.4s ease-in;
 		}
       body.light-theme {
          background-color: #fff;
@@ -228,11 +228,25 @@
       .wrapper-index {
       }
       .theme {
+         position: relative;
          display: grid;
          grid-template-columns: 1fr auto;
          align-items: center;
          column-gap: 10px;
-         padding: 10px 10px 0px 0%;
+         padding: 10px 10px 10px 0%;
+         background: url('@img/main/free-png.ru-175.png') 50% 52%/cover no-repeat;
+         animation-name: header-anim;
+         animation-duration: 4s;
+         animation-timing-function: ease-out;
+      }
+
+      @keyframes header-anim {
+         0% {
+            background-position-y: -15%;
+         }
+         100% {
+            background-position-y: 52%;
+         }
       }
       .theme__title {
          white-space: nowrap;
@@ -243,7 +257,7 @@
          width: 40px;
          height: 44px;
          cursor: pointer;
-         background: url('@img/main/5464986.png') 0 0/contain no-repeat;
+         background: url('@img/main/240095.png') 0 0/contain no-repeat;
       }
       .hidden {
          display: none;
@@ -269,25 +283,68 @@
 			}
 		}
       .rootpage__left {
-         position: relative;
          grid-area: left;
          position: relative;
          border-radius: 9px;
          margin-left: 15px;
-         background: url('@img/main/light-bulb-2402087_640.webp') 40% 30% no-repeat;
+         animation-name: left-anim;
+         animation-duration: 0.2s;
+         animation-timing-function: ease-out;
+         background: url('@img/main/light-bulb-2402087_640.webp') 50% 30% no-repeat;
       }
       @media (max-width: 991px) {
          .rootpage__left {
             padding-left: 3px;
             border-radius: 4px;
          }
+         @keyframes left-anim {
+         0% {
+            background-size: 25%;
+         }
+         50% {
+            background-size: 45%;
+         }
+         100% {
+            background-size: 70%;
+         }
       }
+   }
+   @media (max-width: 767px) {
+         @keyframes left-anim {
+         0% {
+            background-size: 25%;
+         }
+         50% {
+            background-size: 45%;
+         }
+         100% {
+            background-size: 100%;
+         }
+      }
+   }
+   @media (max-width: 500px) {
+      .rootpage__left {
+            background-position: 50% 30%;
+            background-size: auto;
+         }
+         @keyframes left-anim {
+         0% {
+            background-size: 25%;
+         }
+         50% {
+            background-size: 85%;
+         }
+         100% {
+            background-size: 155%;
+         }
+      }
+   }
       .rootpage__title {
          position: absolute;
          white-space: nowrap;
          height: 100%;
          left: -10px;
-         top: -18px;
+         top: -88px;
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
 			color: #AAA308;
@@ -312,8 +369,6 @@
          z-index: 1;
          width: 228px;
          border-radius: 15px;
-			color: #8E8806;
-			font-size: 20px;
          padding: 10px 12px;
 		}
       .rootpage__title-2::before {
@@ -321,7 +376,7 @@
          position: absolute;
          top: -95px;
          left: 45%;
-         width: 22px;
+         width: 20px;
          height: 230px;
          background: linear-gradient(#00ff00, #ff00dd);
          animation: animate 5s linear infinite;
@@ -332,6 +387,7 @@
          inset: 3px;
          border-radius: 15px;
          background-color: #fff;
+         transition: background-color 0.4s ease-in;
       }
       .rootpage__title-two::after {
          content: "";
@@ -343,6 +399,8 @@
       .rootpage__title-2 span {
          position: relative;
          z-index: 2;
+         font-size: 20px;
+         color: #B58887;
          margin-bottom: 0px;
 		}
       
@@ -402,7 +460,7 @@
          align-items: center;
          column-gap: 7px;
          row-gap: 12px;
-         padding: 15px;
+         padding: 2px 15px 15px 15px;
       }
       @media (max-width: 991px) {
          .rootpage__list-nav {
@@ -444,11 +502,11 @@
          border: 9px double #AAA308;
          border-radius: 15px;
          padding: 12px;
-         margin-right: 15px;
+         margin: 0px 5px;
       }
       @media (max-width: 991px) {
          .rootpage__content {
-         margin-left: 15px;
+            margin: 0px 15px;
 			}
 		}
       .rootpage__content-tab {
