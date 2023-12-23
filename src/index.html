@@ -7,8 +7,11 @@
 	</head>
 	<body class="light-theme">
       <div class="theme">
-         <h3 class="theme__title">свет / темн</h3>
-      <button class="theme__btn" id="themeToggle"></button>
+      <h3 class="theme__title">с</h3>
+      <div class="theme__switch">
+      <input class="theme__check" id="themeToggle" type="checkbox" id="switcher">
+      <label class="theme__label" for="switcher"></label>
+   </div>
       </div>
 		<div class="rootpage">
          <div class="rootpage__left">
@@ -121,8 +124,24 @@
 		</div>
    <script>
 
+   function checkSound() {
+      const audio = new Audio();
+      audio.preload = 'auto';
+      audio.src = '@img/audio/2f2515f2bcdf5e7.mp3';
+      audio.play();
+   }
+
+   function navSound() {
+      const audio = new Audio();
+      audio.preload = 'auto';
+      audio.src = '@img/audio/5081788fdaa2864.mp3';
+      audio.play();
+   }
+
    const titleTwo = document.querySelector(".rootpage__title-2")
+   const theme = document.querySelector(".theme")
    document.getElementById('themeToggle').addEventListener('click', function() {
+      checkSound();
       const currentTheme = document.body.className;
        if (currentTheme === 'light-theme') {
            document.body.className = 'dark-theme';
@@ -134,7 +153,7 @@
    })
 
       const mediaQuery = window.matchMedia('(max-width: 767px)');
-      function handleTabletChange(e) {
+      function handleMobileChange(e) {
         if (e.matches) {
           document.body.className = 'dark-theme';
           titleTwo.classList.add("rootpage__title-two")
@@ -143,17 +162,18 @@
          titleTwo.classList.remove("rootpage__title-two")
         }
       }
-      mediaQuery.addListener(handleTabletChange);
-      handleTabletChange(mediaQuery);
+      mediaQuery.addListener(handleMobileChange);
+      handleMobileChange(mediaQuery);
 
       const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
       const image = document.querySelector(".rootpage__image")
-      const rootpageLeft = document.querySelector(".rootpage__left")
       const contacts= document.querySelector(".rootpage__content-contacts")
+      const rootpageLeft = document.querySelector(".rootpage__left")
 
      tabHeaders.forEach((item) => {
       item.addEventListener('click', function() {
+         navSound()
          contentTab.forEach((el) => {
          el.classList.add('hidden')
         })
@@ -174,6 +194,7 @@
         contentBox.classList.remove('hidden')
       })
      })
+
    </script>
 	</body>
 
@@ -199,7 +220,7 @@
 			font-size: 100%;
 			line-height: 1;
 			font-size: 16px;
-         transition: background-color 0.4s ease-in;
+         transition: background-color 0.3s ease-in;
 		}
       body.light-theme {
          background-color: #fff;
@@ -228,12 +249,11 @@
       .wrapper-index {
       }
       .theme {
-         position: relative;
          display: grid;
          grid-template-columns: 1fr auto;
          align-items: center;
          column-gap: 10px;
-         padding: 10px 10px 10px 0%;
+         padding: 5px 20px 10px 0%;
          background: url('@img/main/free-png.ru-175.png') 50% 52%/cover no-repeat;
          animation-name: header-anim;
          animation-duration: 4s;
@@ -252,13 +272,96 @@
          white-space: nowrap;
          justify-self: end;
       }
-      .theme__btn {
-         justify-self: end;
-         width: 40px;
-         height: 44px;
-         cursor: pointer;
-         background: url('@img/main/240095.png') 0 0/contain no-repeat;
+      .theme__switch {
+         position: relative;
+         width: 120px;
+         height: 30px;
+         border-radius: 25px;
       }
+      .theme__check {
+         appearance: none;
+         width: 120px;
+         height: 30px;
+         border-radius: 25px;
+         background-color: #1e1e1e;
+         transition: 0.25s;
+         outline: none;
+         cursor: pointer;
+      }
+      .theme__check::before,
+      .theme__check::after {
+         position: absolute;
+         z-index: 2;
+         top: 54%;
+         transform: translateY(-50%);
+         font-weight: bolder;
+         transition: color 0.2s;
+      }
+      .theme__check::before {
+         content: "ON";
+         left: 12px;
+      }
+      .theme__check::after {
+         content: "OFF";
+         right: 12px;
+      }
+      .theme__check:checked {
+         background-color: #DA770B;
+         color: #fff;
+      }
+      .theme__label {
+         position: absolute;
+         z-index: 1;
+         top: 6px;
+         bottom: 6px;
+         border-radius: 20px;
+      }
+      .theme__check:checked+label {
+         left: 8px;
+         right: 60px;
+         background-color: #1e1e1e;
+         transition: left 0.5s, right 0.4s;
+      }
+      .theme__check:not(:checked) {
+         background-color: #FFD129;
+         transition: background-color 0.4s;
+      }
+      .theme__check:not(:checked)::before {
+         color: #FFF;
+         transition: color 0.4s;
+      }
+      .theme__check:not(:checked)::after {
+         color: #1e1e1e;
+         transition: color 0.4s;
+      }
+      .theme__check:not(:checked) +label {
+         left: 60px;
+         right: 8px;
+         background-color: #fff;
+         transition: left 0.4s, right 0.4s, background-color 0.35s;
+      }
+      @media (max-width: 767px) {
+
+         .theme__check:checked {
+         background-color: #FFD129;
+      }
+         .theme__check:not(:checked) {
+         background-color: #DA770B;
+      }
+         .theme__check:not(:checked) +label {
+         background-color: #1e1e1e;
+      }
+      .theme__check:not(:checked)::after {
+         color: #fff;
+      }
+      .theme__check:checked+label {
+         background-color: #fff;
+      }
+      .theme__check::before {
+         color: #1e1e1e;
+      }
+      }
+
       .hidden {
          display: none;
       }
@@ -368,32 +471,32 @@
          position: relative;
          z-index: 1;
          width: 228px;
-         border-radius: 15px;
-         padding: 10px 12px;
+         border-radius: 10px;
+         padding: 5px 12px 10px 12px;
 		}
       .rootpage__title-2::before {
          content: "";
          position: absolute;
-         top: -95px;
+         top: -90px;
          left: 45%;
-         width: 20px;
+         width: 22px;
          height: 230px;
          background: linear-gradient(#00ff00, #ff00dd);
-         animation: animate 5s linear infinite;
+         animation: animate 7s linear infinite;
       }
       .rootpage__title-2::after {
          content: "";
          position: absolute;
          inset: 3px;
-         border-radius: 15px;
+         border-radius: 10px;
          background-color: #fff;
-         transition: background-color 0.4s ease-in;
+         transition: background-color 0.3s ease-in;
       }
       .rootpage__title-two::after {
          content: "";
          position: absolute;
          inset: 3px;
-         border-radius: 15px;
+         border-radius: 10px;
          background-color: #2A2A28;
       }
       .rootpage__title-2 span {
