@@ -16,32 +16,32 @@
 		<div class="rootpage">
          <nav class="rootpage__nav">
             <ul class="rootpage__list-nav">
-               <li data-tab="tab-1" class="rootpage__item rootpage__item--active">
-                  <a class="rootpage__link" href="#">Главная</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-1" class="rootpage__link  rootpage__link--active" href="#">Главная</a>
                </li>
-               <li data-tab="tab-2" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-2">Вступление</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-2" class="rootpage__link" href="#tab-2">Вступление</a>
                </li>
-               <li data-tab="tab-3" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-3">БЭМ</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-3" class="rootpage__link" href="#tab-3">БЭМ</a>
                </li>
-               <li data-tab="tab-4" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-4">Grid</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-4" class="rootpage__link" href="#tab-4">Grid</a>
                </li>
-               <li data-tab="tab-5" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-5">Flexbox</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-5" class="rootpage__link" href="#tab-5">Flexbox</a>
                </li>
-               <li data-tab="tab-6" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-6">SASS</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-6" class="rootpage__link" href="#tab-6">SASS</a>
                </li>
-               <li data-tab="tab-7" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-7">Доп</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-7" class="rootpage__link" href="#tab-7">Доп</a>
                </li>
-               <li data-tab="tab-8" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-8">Семантика</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-8" class="rootpage__link" href="#tab-8">Семантика</a>
                </li>
-               <li data-tab="tab-9" class="rootpage__item">
-                  <a class="rootpage__link" href="#tab-9">JS</a>
+               <li class="rootpage__item">
+                  <a data-tab="tab-9" class="rootpage__link" href="#tab-9">JS</a>
                </li>
             </ul>
          </nav>
@@ -131,12 +131,12 @@
          </div>
       </div>
       <div class="rootpage__content-contacts">
-         <div class="rootpage__contacts">
+         <address class="rootpage__contacts">
             <h2>Мои контакты:</h2>
-            <p>Почта: <a href="mailto:web7anat@gmail.com"><br> web7anat@gmail.com</a></p>
-            <p>Соц. сети: <a href="https://t.me/Anat7777"><br> Telegram</a></p>
-            <p>Skype: <a href="https://www.skype.com/ru/"><br> live:santexsistem</a></p>
-         </div>
+            <p>Почта: <a href="mailto:web7anat@gmail.com"> <br> web7anat@gmail.com</a></p>
+            <p>Соц. сети: <a href="https://t.me/Anat7777"> <br> Telegram</a></p>
+            <p>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></p>
+         </address>
       </div>
 		</div>
    <script>
@@ -195,7 +195,7 @@
          el.classList.add('hidden')
         })
         tabHeaders.forEach((el) => {
-         el.classList.remove("rootpage__item--active")
+         el.classList.remove("rootpage__link--active")
         })
 
         if(this.dataset.tab==='tab-1') {
@@ -206,7 +206,7 @@
          contacts.classList.add("rootpage__content-none")
         }
 
-        this.classList.toggle("rootpage__item--active")
+        this.classList.toggle("rootpage__link--active")
         const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
       })
@@ -554,6 +554,11 @@
       .rootpage__list li a:hover {
          color: red;
       }
+      .rootpage__list li a:focus {
+         outline: 2px solid red;
+         outline-offset: 2px;
+         border-radius: 4px;
+      }
       /*
       .rootpage__list li a:visited {
          color: green;
@@ -606,6 +611,10 @@
       .rootpage__link:hover {
          color: #DA770B;
          border: 2px solid #DA770B;
+      }
+      .rootpage__link:focus {
+         outline: 1px solid red;
+         outline-offset: 1px;
       }
       .rootpage__link--active {
          font-weight: 700;
@@ -730,7 +739,11 @@
          text-decoration: underline;
          color: #AAA308;
       }
-
+      .rootpage__contacts p a:focus {
+         outline: 2px solid red;
+         outline-offset: 2px;
+         border-radius: 4px;
+      }
       /*
       .rootpage__close {
          cursor: pointer;
