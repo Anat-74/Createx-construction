@@ -14,6 +14,37 @@
    </div>
       </div>
 		<div class="rootpage">
+         <nav class="rootpage__nav">
+            <ul class="rootpage__list-nav">
+               <li data-tab="tab-1" class="rootpage__item rootpage__item--active">
+                  <a class="rootpage__link" href="#">Главная</a>
+               </li>
+               <li data-tab="tab-2" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-2">Вступление</a>
+               </li>
+               <li data-tab="tab-3" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-3">БЭМ</a>
+               </li>
+               <li data-tab="tab-4" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-4">Grid</a>
+               </li>
+               <li data-tab="tab-5" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-5">Flexbox</a>
+               </li>
+               <li data-tab="tab-6" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-6">SASS</a>
+               </li>
+               <li data-tab="tab-7" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-7">Доп</a>
+               </li>
+               <li data-tab="tab-8" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-8">Семантика</a>
+               </li>
+               <li data-tab="tab-9" class="rootpage__item">
+                  <a class="rootpage__link" href="#tab-9">JS</a>
+               </li>
+            </ul>
+         </nav>
          <div class="rootpage__left">
 			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
 			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
@@ -29,20 +60,6 @@
             <li><a target="_blank" href="contacts.html">Contacts</a></li>
 			</ul>
       </div>
-      <nav class="rootpage__nav">
-         <ul class="rootpage__list-nav">
-            <li data-tab="tab-1" class="rootpage__item rootpage__item--active">Главная</li>
-            <li data-tab="tab-2" class="rootpage__item">Вступление</li>
-            <li data-tab="tab-3" class="rootpage__item">БЭМ</li>
-            <li data-tab="tab-4" class="rootpage__item">Grid</li>
-            <li data-tab="tab-5" class="rootpage__item">Flexbox</li>
-            <li data-tab="tab-6" class="rootpage__item">SASS</li>
-            <li data-tab="tab-7" class="rootpage__item">Доп</li>
-            <li data-tab="tab-8" class="rootpage__item">Семантика</li>
-            <li data-tab="tab-9" class="rootpage__item">JS</li>
-         </ul>
-      </nav>
-
          <div class="rootpage__content">
             <div data-tab-content id="tab-1" class="rootpage__content-tab">
             <h2 class="rootpage__title-content">Основные методы реализации:</h2>
@@ -576,8 +593,8 @@
             grid-template-columns: repeat(3, 1fr);
 			}
 		}
-         .rootpage__item {
-         cursor: pointer;
+         .rootpage__link{
+         display: inline-block;
          color: #AAA308;
          font-size: 20px;
          font-weight: 600;
@@ -586,16 +603,16 @@
          padding: 3px;
          transition: all 0.3s ease-in-out;
       }
-      .rootpage__item:hover {
+      .rootpage__link:hover {
          color: #DA770B;
          border: 2px solid #DA770B;
       }
-      .rootpage__item--active {
+      .rootpage__link--active {
          font-weight: 700;
          color: red;
          border: 2px solid red;
       }
-      .rootpage__item--active:hover{
+      .rootpage__link--active:hover{
          cursor: default;
          box-shadow: none;
          color: red;
