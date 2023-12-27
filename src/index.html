@@ -131,12 +131,12 @@
          </div>
       </div>
       <div class="rootpage__content-contacts">
-         <address class="rootpage__contacts">
+         <div class="rootpage__contacts">
             <h2>Мои контакты:</h2>
-            <p>Почта: <a href="mailto:web7anat@gmail.com"> <br> web7anat@gmail.com</a></p>
-            <p>Соц. сети: <a href="https://t.me/Anat7777"> <br> Telegram</a></p>
-            <p>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></p>
-         </address>
+            <address>Почта: <a href="mailto:web7anat@gmail.com"> <br> web7anat@gmail.com</a></address>
+            <address>Соц. сети: <a href="https://t.me/Anat7777"> <br> Telegram</a></address>
+            <address>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></address>
+         </div>
       </div>
 		</div>
    <script>
@@ -725,7 +725,8 @@
          font-size: 20px;
          color: #B58887;
 		}
-		.rootpage__contacts p {
+		.rootpage__contacts address {
+         font-style: normal;
          font-size: 18px;
          line-height: 1.5;
          font-weight: 700;
@@ -734,12 +735,12 @@
          margin-left: 22px;
          margin-bottom: 10px;
 		}
-      .rootpage__contacts p a {
+      .rootpage__contacts address a {
          font-weight: 600;
          text-decoration: underline;
          color: #AAA308;
       }
-      .rootpage__contacts p a:focus {
+      .rootpage__contacts address a:focus {
          outline: 2px solid red;
          outline-offset: 2px;
          border-radius: 4px;
