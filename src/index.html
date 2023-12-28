@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<htm>
 	<head>
 		<meta charset="UTF-8">
+      <meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Верстка «NEW_PROJECT_NAME»</title>
 	</head>
 	<body class="light-theme">
       <header class="header">
       <div class="theme">
-      <div class="theme__switch">
+         <div class="theme__contacts-body">
+         <address class="theme__contacts"> <a href="tel:+375296375291">+375(29) 637-52-91</a></address>
+      </div>
+         <div class="theme__switch">
       <input class="theme__check" id="themeToggle" type="checkbox" id="switcher">
       <label class="theme__label" for="switcher"></label>
    </div>
@@ -139,6 +143,7 @@
       <footer class="footer">
          <div class="rootpage__contacts">
             <h2>Мои контакты:</h2>
+            <address>Viber <a href="tel:+375296375291"> <br> +375(29) 637-52-91</a></address>
             <address>Почта: <a href="mailto:web7anat@gmail.com"> <br> web7anat@gmail.com</a></address>
             <address>Соц. сети: <a href="https://t.me/Anat7777"> <br> Telegram</a></address>
             <address>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></address>
@@ -271,9 +276,10 @@
 
       .theme {
          display: grid;
-         justify-items: end;
-         padding: 5px 20px 10px 0%;
-         background: url('@img/main/free-png.ru-175.png') 50% 52%/cover no-repeat;
+         grid-template-columns: 1fr auto;
+         column-gap: 16px;
+         padding: 5px 15px 10px 0px;
+         background: url('@img/index/free-png.ru-175.png') 50% 53%/cover no-repeat;
          animation-name: header-anim;
          animation-duration: 4s;
          animation-timing-function: ease-out;
@@ -284,10 +290,24 @@
             background-position-y: -15%;
          }
          100% {
-            background-position-y: 52%;
+            background-position-y: 53%;
          }
       }
-
+      .theme__contacts-body {
+         overflow-x: auto;
+      }
+      .theme__contacts{
+         padding-top: 5px;
+         padding-left: 36px;
+         white-space: nowrap;
+         font-style: normal;
+         background: url('@img/index/icons8-viber.svg') 10px 2px/contain no-repeat;
+      }
+      .theme__contacts a {
+         font-weight: 700;
+         font-size: 20px;
+         color: #BD73F7;
+      }
       .theme__switch {
          position: relative;
          width: 120px;
@@ -314,12 +334,16 @@
          transition: color 0.2s;
       }
       .theme__check::before {
-         content: "ON";
-         left: 12px;
+         content: "🌙";
+         left: 8px;
+         top: 14px;
+         font-size: 18px;
       }
       .theme__check::after {
-         content: "OFF";
-         right: 12px;
+         content: "🌞";
+         right: 8px;
+         top: 14px;
+         font-size: 18px;
       }
       .theme__check:checked {
          background-color: #DA770B;
@@ -328,8 +352,8 @@
       .theme__label {
          position: absolute;
          z-index: 1;
-         top: 6px;
-         bottom: 6px;
+         top: 4px;
+         bottom: 4px;
          border-radius: 20px;
       }
       .theme__check:checked+label {
@@ -339,7 +363,7 @@
          transition: left 0.5s, right 0.4s;
       }
       .theme__check:not(:checked) {
-         background-color: #FFD129;
+         background-color: #EFDD9A;
          transition: background-color 0.4s;
       }
       .theme__check:not(:checked)::before {
@@ -357,9 +381,20 @@
          transition: left 0.4s, right 0.4s, background-color 0.35s;
       }
       @media (max-width: 767px) {
-
+         .theme__check::before {
+         content: "🌞";
+         left: 8px;
+         top: 14px;
+         font-size: 18px;
+      }
+      .theme__check::after {
+         content: "🌙";
+         right: 8px;
+         top: 14px;
+         font-size: 18px;
+      }
          .theme__check:checked {
-         background-color: #FFD129;
+         background-color: #EFDD9A;
       }
          .theme__check:not(:checked) {
          background-color: #DA770B;
@@ -456,7 +491,7 @@
          animation-name: left-anim;
          animation-duration: 0.2s;
          animation-timing-function: ease-out;
-         background: url('@img/main/light-bulb-2402087_640.webp') 50% 30% no-repeat;
+         background: url('@img/index/light-bulb-2402087_640.webp') 50% 30% no-repeat;
       }
       @media (max-width: 991px) {
          .rootpage__left {
@@ -704,7 +739,7 @@
          display: grid;
          justify-items: center;
          align-items: center;
-         background: url('@img/main/free-png.3.png') 50% 0 no-repeat;
+         background: url('@img/index/free-png.3.png') 50% 0 no-repeat;
       }
       .rootpage__content-none {
          display: none;
@@ -754,4 +789,4 @@
       }
 */
 	</style>
-</html>
+</htm>
