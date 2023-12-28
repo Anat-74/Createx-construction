@@ -6,45 +6,47 @@
 		<title>Верстка «NEW_PROJECT_NAME»</title>
 	</head>
 	<body class="light-theme">
+      <header class="header">
       <div class="theme">
-      <h3 class="theme__title">с</h3>
       <div class="theme__switch">
       <input class="theme__check" id="themeToggle" type="checkbox" id="switcher">
       <label class="theme__label" for="switcher"></label>
    </div>
       </div>
-		<div class="rootpage">
-         <nav class="rootpage__nav">
-            <ul class="rootpage__list-nav">
-               <li class="rootpage__item">
-                  <a data-tab="tab-1" class="rootpage__link  rootpage__link--active" href="#">Главная</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-2" class="rootpage__link" href="#tab-2">Вступление</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-3" class="rootpage__link" href="#tab-3">БЭМ</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-4" class="rootpage__link" href="#tab-4">Grid</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-5" class="rootpage__link" href="#tab-5">Flexbox</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-6" class="rootpage__link" href="#tab-6">SASS</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-7" class="rootpage__link" href="#tab-7">Доп</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-8" class="rootpage__link" href="#tab-8">Семантика</a>
-               </li>
-               <li class="rootpage__item">
-                  <a data-tab="tab-9" class="rootpage__link" href="#tab-9">JS</a>
-               </li>
-            </ul>
-         </nav>
+      <nav class="rootpage__nav">
+         <ul class="rootpage__list-nav">
+            <li class="rootpage__item">
+               <a data-tab="tab-1" class="rootpage__link  rootpage__link--active" href="#">Главная</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-2" class="rootpage__link" href="#tab-2">Вступление</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-3" class="rootpage__link" href="#tab-3">БЭМ</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-4" class="rootpage__link" href="#tab-4">Grid</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-5" class="rootpage__link" href="#tab-5">Flexbox</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-6" class="rootpage__link" href="#tab-6">SASS</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-7" class="rootpage__link" href="#tab-7">Доп</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-8" class="rootpage__link" href="#tab-8">Семантика</a>
+            </li>
+            <li class="rootpage__item">
+               <a data-tab="tab-9" class="rootpage__link" href="#tab-9">JS</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main class="main">
+		<section class="rootpage__section">
          <div class="rootpage__left">
 			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
 			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
@@ -130,15 +132,16 @@
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </div>
       </div>
-      <div class="rootpage__content-contacts">
+		</section>
+   </main>
+      <footer class="footer">
          <div class="rootpage__contacts">
             <h2>Мои контакты:</h2>
             <address>Почта: <a href="mailto:web7anat@gmail.com"> <br> web7anat@gmail.com</a></address>
             <address>Соц. сети: <a href="https://t.me/Anat7777"> <br> Telegram</a></address>
             <address>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></address>
          </div>
-      </div>
-		</div>
+      </footer>
    <script>
 
    function checkSound() {
@@ -185,7 +188,7 @@
       const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
       const image = document.querySelector(".rootpage__image")
-      const contacts= document.querySelector(".rootpage__content-contacts")
+      const contacts= document.querySelector(".footer")
       const rootpageLeft = document.querySelector(".rootpage__left")
 
      tabHeaders.forEach((item) => {
@@ -263,13 +266,10 @@
 		img {
 			vertical-align: top;
 		}
-      .wrapper-index {
-      }
+
       .theme {
          display: grid;
-         grid-template-columns: 1fr auto;
-         align-items: center;
-         column-gap: 10px;
+         justify-items: end;
          padding: 5px 20px 10px 0%;
          background: url('@img/main/free-png.ru-175.png') 50% 52%/cover no-repeat;
          animation-name: header-anim;
@@ -285,10 +285,7 @@
             background-position-y: 52%;
          }
       }
-      .theme__title {
-         white-space: nowrap;
-         justify-self: end;
-      }
+
       .theme__switch {
          position: relative;
          width: 120px;
@@ -382,23 +379,70 @@
       .hidden {
          display: none;
       }
-		.rootpage{
+      .rootpage__nav {
+         overflow-x: auto;
+      }
+         .rootpage__list-nav {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(127px, 1fr));
+         justify-items: center;
+         align-items: center;
+         column-gap: 7px;
+         row-gap: 12px;
+         padding: 3px 15px 15px 15px;
+      }
+      @media (max-width: 991px) {
+         .rootpage__list-nav {
+            padding-bottom: 10px;
+			}
+		}
+      @media (max-width: 460px) {
+         .rootpage__list-nav {
+            display: inline-grid;
+            grid-template-columns: repeat(3, 1fr);
+			}
+		}
+         .rootpage__link{
+         display: inline-block;
+         color: #AAA308;
+         font-size: 20px;
+         font-weight: 600;
+         border: 2px solid #AAA308;
+         border-radius: 8px;
+         padding: 3px;
+         transition: all 0.3s ease-in-out;
+      }
+      .rootpage__link:hover {
+         color: #DA770B;
+         border: 2px solid #DA770B;
+      }
+      .rootpage__link:focus {
+         outline: 2px solid red;
+      }
+      .rootpage__link--active {
+         font-weight: 700;
+         color: red;
+         border: 2px solid red;
+      }
+      .rootpage__link--active:hover{
+         cursor: default;
+         box-shadow: none;
+         color: red;
+      }
+		.rootpage__section {
+         padding-bottom: 15px;
          display: grid;
          row-gap: 15px;
          grid-template-areas: 
-         "nav nav nav"
          "left content content"
          "left content content"
-         ".. contacts contacts"
          ;
 		}
       @media (max-width: 991px) {
-			.rootpage{
+			.rootpage__section {
             grid-template-areas: 
-         "nav nav nav"
          "left left left"
          "content content content"
-         "contacts contacts contacts"
          ;
 			}
 		}
@@ -574,57 +618,7 @@
             font-weight: 700;
 			}
 		}
-      .rootpage__nav {
-         grid-area: nav;
-         overflow-x: auto;
-      }
-         .rootpage__list-nav {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(127px, 1fr));
-         justify-items: center;
-         align-items: center;
-         column-gap: 7px;
-         row-gap: 12px;
-         padding: 3px 15px 15px 15px;
-      }
-      @media (max-width: 991px) {
-         .rootpage__list-nav {
-            padding-bottom: 5px;
-			}
-		}
-      @media (max-width: 460px) {
-         .rootpage__list-nav {
-            display: inline-grid;
-            grid-template-columns: repeat(3, 1fr);
-			}
-		}
-         .rootpage__link{
-         display: inline-block;
-         color: #AAA308;
-         font-size: 20px;
-         font-weight: 600;
-         border: 2px solid #AAA308;
-         border-radius: 8px;
-         padding: 3px;
-         transition: all 0.3s ease-in-out;
-      }
-      .rootpage__link:hover {
-         color: #DA770B;
-         border: 2px solid #DA770B;
-      }
-      .rootpage__link:focus {
-         outline: 2px solid red;
-      }
-      .rootpage__link--active {
-         font-weight: 700;
-         color: red;
-         border: 2px solid red;
-      }
-      .rootpage__link--active:hover{
-         cursor: default;
-         box-shadow: none;
-         color: red;
-      }
+
       .rootpage__content {
          grid-area: content;
          border: 9px double #AAA308;
@@ -703,10 +697,9 @@
       .rootpage__text:not(:last-child) {
          margin-bottom: 15px;
       }
-      .rootpage__content-contacts {
-         grid-area: contacts;
+      .footer {
          min-height: 450px;
-         display: inline-grid;
+         display: grid;
          justify-items: center;
          align-items: center;
          background: url('@img/main/free-png.3.png') 50% 0 no-repeat;
