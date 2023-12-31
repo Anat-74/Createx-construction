@@ -9,8 +9,9 @@
 	<body class="light-theme">
       <header class="header">
       <div class="theme">
-         <div class="theme__contacts-body">
-         <address class="theme__contacts"> <a href="tel:+375296375291">+375(29) 637-52-91</a></address>
+         <div class="contacts">
+            <address class="contacts__email"><a href="mailto:web7anat@gmail.com">web7anat@gmail.com</a></address>
+         <address class="contacts__telegram"> <a href="https://t.me/Anat7777">Telegram</a></address>
       </div>
          <div class="theme__switch">
       <input class="theme__check" id="themeToggle" type="checkbox" id="switcher">
@@ -41,7 +42,7 @@
                <a data-tab="tab-7" class="rootpage__link" href="#tab-7">Доп</a>
             </li>
             <li class="rootpage__item">
-               <a data-tab="tab-8" class="rootpage__link" href="#tab-8">Семантика</a>
+               <a data-tab="tab-8" class="rootpage__link" href="#tab-8">Доступность</a>
             </li>
             <li class="rootpage__item">
                <a data-tab="tab-9" class="rootpage__link" href="#tab-9">JS</a>
@@ -49,8 +50,7 @@
          </ul>
       </nav>
    </header>
-   <main class="main">
-		<section class="rootpage__section">
+		<main class="rootpage__main">
          <div class="rootpage__left">
 			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
 			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
@@ -79,7 +79,7 @@
             </ul>
                <h2 class="rootpage__title-content">Инструменты:</h2> 
               <span> Gulp+Webpack</span>
-              <h3 class="rootpage__title-text">В JS реализованы:</h3>
+              <h3 class="rootpage__title-text">В проекте «Createx construction» из JS реализованы:</h3>
             <ul class="rootpage__list-js">
                <li class="rootpage__item-js">Popup (модальные окна)</li>
                <li class="rootpage__item-js">Табы</li>
@@ -104,7 +104,7 @@
                В основе моего подхода к верстке за позиционирование контента отвечает Grid (не всегда конечно, бывает проще и короче использовать Flexbox). Но в сложных и обширных секциях страницы, таких например как <span>"footer"</span> несомненно и бесспорно руководить процессом построения и адаптива контента будет Grid. Одним из преимуществ такого подхода заключается в том, что уже нет необходимости постоянно создавать дополнительные обертки в HTML для позиционирования контента, как это например приходилось делать при верстке под Flexbox. И как результат HTML теги <span>div</span> сводятся к минимуму (подробнее во вкладке "Grid").
             </p>
             <h3 class="rootpage__title-text">Верстка под mobile и удобство пользования на мобильных устройствах </h3>
-            <p class="rootpage__text">&nbsp;Одним из&nbsp;самых моих любимых этапов в&nbsp;процессе верстки является трансформация блоков верстки от&nbsp;<span>desctop</span> к&nbsp;<span>mobile</span>. Честно, я&nbsp;&laquo;тащусь&raquo; когда блоки начинают трансформироваться к&nbsp;mobile-версии (еще раз привет от&nbsp;адаптивного Grid)). Ведь нужно постараться увидеть все &laquo;подводные камни&raquo; которые могут встретиться в&nbsp;процессе перестроения и&nbsp;изменения размеров блоков с&nbsp;контентом на&nbsp;пути к&nbsp;экранам с&nbsp;разрешениями ширины меньше предыдущего и&nbsp;сделать соответствующие выводы при оргаризации структуры CSS. <br>
+            <p class="rootpage__text">&nbsp;Одним из&nbsp;самых моих любимых этапов в&nbsp;процессе верстки является трансформация блоков верстки от&nbsp;<span>desctop</span> к&nbsp;<span>mobile</span>. Честно, я&nbsp;&laquo;тащусь&raquo; когда блоки начинают трансформироваться к&nbsp;mobile-версии. Ведь нужно постараться увидеть все &laquo;подводные камни&raquo; которые могут встретиться в&nbsp;процессе перестроения и&nbsp;изменения размеров блоков с&nbsp;контентом на&nbsp;пути к&nbsp;экранам с&nbsp;разрешениями ширины меньше предыдущего и&nbsp;сделать соответствующие выводы при оргаризации структуры CSS. <br>
                Например нужно предусмотреть изменения размеров отступа между блоками, размеры шрифта, изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). Если например в&nbsp;том&nbsp;же <span>&laquo;footer&raquo;</span> имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;<span>spoiler</span>, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
             </p>
             </li>
@@ -113,37 +113,58 @@
             <p class="rootpage__text">Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis. Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendi</p>
          </li>
          <li data-tab-content id="tab-4" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab3</h3>
+            <h3 class="rootpage__title-text">Tab4</h3>
             <p class="rootpage__text">Lorem gfdgfd ipsum dolor sit amet gfdfgdfgdfgdffg consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </li>
          <li data-tab-content id="tab-5" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab4</h3>
-            <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
-         </li>
-         <li data-tab-content id="tab-6" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab5</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </li>
-         <li data-tab-content id="tab-7" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-6" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab6</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </li>
-         <li data-tab-content id="tab-8" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-7" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab7</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </li>
+         <li data-tab-content id="tab-8" class="rootpage__content-tab hidden">
+            <h3 class="rootpage__title-text">Веб-доступность</h3>
+            <p class="rootpage__text">
+               Веб-доступность кроет в&nbsp;себе множество нюансов. Однако есть основные правила, которые помогут написать более доступный HTML-код. В&nbsp;них входит:</p>
+         <ul>
+            <li>правильное использование семантических тегов;</li>
+            <li>очевидное и&nbsp;доступное содержимое тегов&nbsp;&mdash; контент сайта;</li>
+            <li>использование подписей для элементов форм&nbsp;&mdash; тег <code>&lt;label&gt;</code>;</li>
+            <li>масштабируемость, которая настраивается с&nbsp; помощью <code>user-scalable</code> и&nbsp;<code>maximum-scale</code> в&nbsp;теге <code>&lt;meta&gt;</code>;</li>
+            <li>дополнительное использование ARIA, когда не&nbsp;помогают только нативные HTML-элементы.</li>
+         </ul>
+         <h4>Семантика и вспомогательные технологии.</h4>
+         <p class="rootpage__text">О&nbsp;веб-доступности часто думают как о&nbsp;дополнительной фиче, которая требует отдельных усилий. Однако семантическая вёрстка гарантирует доступность интерфейса в&nbsp;большинстве случаев.</p>
+            <p class="rootpage__text">Семантические HTML-теги помогают пользователям определить, как взаимодействовать с&nbsp;элементами и&nbsp;быстро ориентироваться по&nbsp;содержимому сайта. Например, скринридер понимает, что тег <code>&lt;button&gt;</code> кликабельный и&nbsp;сообщает, что его можно активировать при нажатии клавиш Enter и&nbsp;Space. Также на&nbsp;элемент <code>&lt;button&gt;</code> можно сделать фокус клавишей Tab. Доступность уже встроена в&nbsp;нативный тег. Если использовать для кнопки <code>&lt;div&gt;</code> или <code>&lt;span&gt;</code>, то&nbsp;нужно указать <code>&lt;tabindex="0"&gt;</code> &mdash; атрибут, который делает элемент фокусируемым. Однако этого недостаточно. Нужно ещё добавить тегу нужную роль, поддержать нажатие на&nbsp;пробел и&nbsp;Enter и&nbsp;проработать стили для состояния фокуса.</p>
+      <h4> Почему семантическая вёрстка лучше ARIA.</h4>
+      <p class="rootpage__text">Звучит странно, но&nbsp;одно из&nbsp;главных правил использования ARIA&nbsp;&mdash; стараться не&nbsp;использовать ARIA. <br>
+         Существует заблуждение, что использование ARIA-атрибутов является неотъемлемой частью доступного HTML. Однако ARIA&nbsp;&mdash; это всего лишь вспомогательный инструмент, который полезен в&nbsp;случаях, где не&nbsp;хватает функциональности нативных HTML-тегов. Например, в&nbsp;HTML нет тегов для вкладок, но&nbsp;есть ARIA-роли <code>&lt;tab&gt;</code>, <code>&lt;tablist&gt;</code> и <code>&lt;tabpanel&gt;</code>.</p>
+         <p class="rootpage__text">В&nbsp;доступности ещё есть понятие имени, которое выполняет две важные функции:</p>
+      <ul>
+         <li>Кратко описывает значение элемента (в&nbsp;1&ndash;3&nbsp;словах).</li>
+         <li>Служит отличительной чертой среди других элементов.</li>
+      </ul>
+      <p class="rootpage__text">У&nbsp;многих элементов, например, ссылок, кнопок, заголовков и&nbsp;так далее имя формируется из&nbsp;их&nbsp;текстового содержимого. Есть и&nbsp;другие способы добавить имя. Атрибут <code>&lt;label&gt;</code> задаёт имя элементам форм, а <code>&lt;legend&gt;</code> &mdash; их&nbsp;группе. Тег <code>&lt;caption&gt;</code>используют для таблиц. <code>&lt;figcaption&gt;</code> &mdash; для иллюстраций внутри тега <code>&lt;figure&gt;</code>. Также можно использовать ARIA-атрибуты <code>&lt;aria-labe&gt;</code>&nbsp;и <code>&lt;aria-labelledby&gt;</code>. Важно помнить, что ARIA перепишет имена тегов, которые получают его из&nbsp;их&nbsp;текстового содержимого. Это может повлиять на&nbsp;доступность и&nbsp;читаемость кода. Поэтому для кастомных элементов лучше использовать семантически нейтральные <code>&lt;div&gt;</code>и <code>&lt;span&gt;</code>, если это не&nbsp;исключительный случай.</p>
+      <p class="rootpage__text">Так что не&nbsp;нужно использовать ARIA там, где можно использовать HTML-теги и&nbsp;атрибуты.</p>
+      <p class="rootpage__text"><div class="rootpage__source">Источник:<a href="https://doka.guide/a11y/">Дока</a></div></p>
+   </li>
          <li data-tab-content id="tab-9" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab7</h3>
+            <h3 class="rootpage__title-text">Tab9</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </li>
       </ul>
       </div>
-		</section>
-   </main>
-      <footer class="footer">
+		</main>
+      <footer class="rootpage__footer">
          <div class="rootpage__contacts">
             <h2>Мои контакты:</h2>
-            <address>Viber <a href="tel:+375296375291"> <br> +375(29) 637-52-91</a></address>
+            <address>Viber (<span>Беларусь</span>)<a href="tel:+375296375291"> <br> +375(29) 637-52-91</a></address>
             <address>Почта: <a href="mailto:web7anat@gmail.com"> <br> web7anat@gmail.com</a></address>
             <address>Соц. сети: <a href="https://t.me/Anat7777"> <br> Telegram</a></address>
             <address>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></address>
@@ -161,7 +182,7 @@
    function navSound() {
       const audio = new Audio();
       audio.preload = 'auto';
-      audio.src = '@img/audio/5081788fdaa2864.mp3';
+      audio.src = '@img/audio/1568274549_10e1076dfd6c701.mp3';
       audio.play();
    }
 
@@ -195,7 +216,7 @@
       const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
       const image = document.querySelector(".rootpage__image")
-      const contacts= document.querySelector(".footer")
+      const contacts= document.querySelector(".rootpage__footer")
       const rootpageLeft = document.querySelector(".rootpage__left")
 
      tabHeaders.forEach((item) => {
@@ -224,7 +245,6 @@
 
    </script>
 	</body>
-
 	<style>
 		@charset "UTF-8";
 		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap");
@@ -279,7 +299,7 @@
          grid-template-columns: 1fr auto;
          column-gap: 16px;
          padding: 5px 15px 10px 0px;
-         background: url('@img/index/free-png.ru-175.png') 50% 53%/cover no-repeat;
+         background: url('@img/index/free-png.ru-175.png') 50% 54%/cover no-repeat;
          animation-name: header-anim;
          animation-duration: 4s;
          animation-timing-function: ease-out;
@@ -290,23 +310,36 @@
             background-position-y: -15%;
          }
          100% {
-            background-position-y: 53%;
+            background-position-y: 54%;
          }
       }
-      .theme__contacts-body {
+      .contacts {
          overflow-x: auto;
-      }
-      .theme__contacts{
+         display: flex;
+         column-gap: 16px;
          padding-top: 5px;
-         padding-left: 36px;
+      }
+      .contacts__email{
+         padding-left: 40px;
          white-space: nowrap;
          font-style: normal;
-         background: url('@img/index/icons8-viber.svg') 10px 2px/contain no-repeat;
+         background: url('@img/index/icons8-gmail.svg') 12px -3px/contain no-repeat;
       }
-      .theme__contacts a {
-         font-weight: 700;
-         font-size: 20px;
-         color: #BD73F7;
+      .contacts__email a {
+         font-weight: 600;
+         font-size: 18px;
+         color: #F36278;
+      }
+      .contacts__telegram{
+         padding-left: 28px;
+         white-space: nowrap;
+         font-style: normal;
+         background: url('@img/index/icons8-логотип-telegram-48.png') 0px -4px/contain no-repeat;
+      }
+      .contacts__telegram a {
+         font-weight: 600;
+         font-size: 18px;
+         color: #0DB8CE;
       }
       .theme__switch {
          position: relative;
@@ -458,15 +491,15 @@
       }
       .rootpage__link--active {
          font-weight: 700;
-         color: red;
-         border: 2px solid red;
+         color: #CE3B0D;
+         border: 2px solid #CE3B0D;
+         pointer-events: none;
       }
       .rootpage__link--active:hover{
-         cursor: default;
          box-shadow: none;
-         color: red;
+         color: #CE3B0D;
       }
-		.rootpage__section {
+		.rootpage__main {
          padding-bottom: 15px;
          display: grid;
          row-gap: 15px;
@@ -476,7 +509,7 @@
          ;
 		}
       @media (max-width: 991px) {
-			.rootpage__section {
+			.rootpage__main {
             grid-template-areas: 
          "left left left"
          "content content content"
@@ -545,7 +578,7 @@
          white-space: nowrap;
          height: 100%;
          left: -10px;
-         top: -88px;
+         top: -118px;
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
 			color: #AAA308;
@@ -640,11 +673,11 @@
          outline-offset: 2px;
          border-radius: 4px;
       }
-      /*
+      
       .rootpage__list li a:visited {
          color: green;
       }
-      */
+      
       @media (max-width: 991px) {
          .rootpage__list {
             margin: 25px 0px 15px 30px;
@@ -668,8 +701,30 @@
             margin: 0px 15px;
 			}
 		}
-      .rootpage__content-tab {
-         background: url('@img/main') 50% 0 no-repeat;
+      .rootpage__content-tab ul {
+         margin-bottom: 5px;
+      }
+      .rootpage__content-tab ul li {
+         font-size: 20px;
+         line-height: 1.4; 
+         color: #DA770B;
+         margin-left: 16px;
+         margin-bottom: 1px;
+      }
+      .rootpage__content-tab ul li::before {
+         content: "";
+         display: inline-block;
+         width: 8px;
+         height: 8px;
+         margin: 0px 5px 2px 0px;
+         border-radius: 50%;
+         background-color: #AAA308;
+      }
+      .rootpage__content-tab h4 {
+         font-size: 20px;
+         line-height: 1.3;
+         margin-bottom: 2px;
+         color: #AAA308;
       }
 
       .rootpage__title-content {
@@ -701,22 +756,15 @@
       }
       .rootpage__title-text {
          color: #AAA308;
-         margin-bottom: 10px;
+         margin-bottom: 2px;
+         font-size: 22px;
+         line-height: 1.3;
       }
       .rootpage__item-js {
          font-size: 18px;
          line-height: 1.4;
          font-weight: 600;
          color: #74908F;
-      }
-      .rootpage__item-js::before {
-         content: "";
-         display: inline-block;
-         width: 8px;
-         height: 8px;
-         margin: 0px 5px 2px 0px;
-         border-radius: 50%;
-         background-color: #DA770B;
       }
 		.rootpage__item-js:not(:last-child){
          margin-bottom: 10px;
@@ -731,10 +779,25 @@
          color: #DA770B;
          margin-bottom: 0;
       }
-      .rootpage__text:not(:last-child) {
-         margin-bottom: 15px;
+      .rootpage__text code {
+         font-size: 20px;
+         line-height: 1.3;
+         color: #AAA308;
       }
-      .footer {
+      .rootpage__source {
+         display: flex;
+         justify-content: end;
+         column-gap: 7px;
+      }
+      .rootpage__source a {
+         font-style: italic;
+         text-decoration: underline;
+         color: #32b5a4;
+      }
+      .rootpage__text:not(:last-child) {
+         margin-bottom: 8px;
+      }
+      .rootpage__footer {
          min-height: 450px;
          display: grid;
          justify-items: center;
@@ -777,19 +840,10 @@
          outline-offset: 2px;
          border-radius: 4px;
       }
-      /*
-      .rootpage__close {
-         cursor: pointer;
-         text-align: center;
-         border-radius: 4px;
-         color: #000;
-         position: absolute;
-         width: 80px;
-         left: 99%;
-         top: 0;
-         background-color: #ebe691;
-         transform: translate(-99%, 0);
+      .rootpage__contacts address span {
+         font-size: 18px;
+         color: green;
+         margin-bottom: 0px;
       }
-*/
 	</style>
 </htm>
