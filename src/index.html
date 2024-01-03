@@ -36,7 +36,7 @@
                <a data-tab="tab-5" class="rootpage__link" href="#tab-5">Flexbox</a>
             </li>
             <li class="rootpage__item">
-               <a data-tab="tab-6" class="rootpage__link" href="#tab-6">SASS</a>
+               <a data-tab="tab-6" class="rootpage__link" href="#tab-6">SCSS/SASS</a>
             </li>
             <li class="rootpage__item">
                <a data-tab="tab-7" class="rootpage__link" href="#tab-7">Доп</a>
@@ -73,7 +73,7 @@
                <li class="rootpage__item-content">БЭМ</li>
                <li class="rootpage__item-content">Grid Layout</li>
                <li class="rootpage__item-content">Flexbox</li>
-               <li class="rootpage__item-content">SASS</li>
+               <li class="rootpage__item-content">SCSS</li>
                <li class="rootpage__item-content">Svg-sprite</li>
                <li class="rootpage__item-content">JS</li>
             </ul>
@@ -86,43 +86,95 @@
                <li class="rootpage__item-js">меню "Бургер"</li>
                <li class="rootpage__item-js">Spoller (аккордеон)</li>
                <li class="rootpage__item-js">кастомный "Select"</li>
-               <li class="rootpage__item-js">Scroll to top (плавный скролл)</li>
+               <li class="rootpage__item-js">Scroll to top</li>
                <li class="rootpage__item-js">слайдер "Swiper" (Navigation Thumbs Pagination) </li>
                <li class="rootpage__item-js">Работа с "form"</li>
-               <li class="rootpage__item-js">Светлая / темная тема</li>
-               <li class="rootpage__item-js">Работа с медиавыражениями</li>
             </ul>
             </div>
             <ul class="rootpage__list-content-tab">
          <li data-tab-content id="tab-2" class="rootpage__content-tab hidden">
               <h2 class="rootpage__title-content">Мое видение в<small>ё</small>рстки</h2>
-              <p class="rootpage__text">&nbsp;Одним из&nbsp;ключевых действий в&nbsp;реализации качественной верстки является сперва-наперво очень тщательный <span>анализ макета</span> на&nbsp;предмет повторяющихся блоков, элементов будущей верстки.
-               Резервирование отдельных классов (которые будут в&nbsp;дальнейшем переиспользоваться), модификаторов, миксинов. Отделение контентного изображения от&nbsp;декоративного. И&nbsp;прочие ньюансы, которые должны быть учтены с&nbsp;должным вниманием. На&nbsp;самом деле это <span>!!</span>очень важный момент перед тем как приступать к&nbsp;реализации проекта, что в&nbsp;итоге в&nbsp;дальнейшем может сказаться как на&nbsp;качестве, так и&nbsp;на&nbsp;скорости работы. Зачем например плодить кучу повторяющегося кода, если его можно просто банально переиспользовать с&nbsp;минимальным редактированием (если это необходимо)? Что нам и&nbsp;предоставляет БЭМ-методология (подробнее во&nbsp;вкладке &laquo;БЭМ&raquo;). <br>
+              <p class="rootpage__text">&nbsp;На&nbsp;мой взгляд одним из&nbsp;ключевых действий в&nbsp;реализации качественной верстки является сперва-наперво очень тщательный анализ макета непосредственно перед началом выполнения проекта. Анализ на&nbsp;предмет повторяющихся блоков, элементов будущей верстки, резервирование отдельных классов (которые будут в&nbsp;дальнейшем переиспользоваться), модификаторов, миксинов, отделение контентного изображения от&nbsp;декоративного. И&nbsp;прочие ньюансы, которые должны быть учтены с&nbsp;должным вниманием. На&nbsp;самом деле это <span>!!</span> очень важный момент перед тем как приступать к&nbsp;реализации проекта, что в&nbsp;итоге в&nbsp;дальнейшем может сказаться как на&nbsp;качестве, так и&nbsp;на&nbsp;скорости работы. Зачем например плодить кучу повторяющегося кода, если его можно просто банально переиспользовать с&nbsp;минимальным редактированием (если это необходимо)? Что нам и&nbsp;предоставляет БЭМ-методология.
+               Не&nbsp;менее важным аспектом для реализации качественной верстки является умение самоорганизоваться и&nbsp;отрешится от&nbsp;всего что мешает сосредоточится на&nbsp;данном проекте. <br>
             </p>
             <h3 class="rootpage__title-text">Надежность и адаптивность</h3>
-            <p class="rootpage__text">&nbsp;На&nbsp;мой взгляд это то&nbsp;к&nbsp;чему в&nbsp;первую очередь должен стремится каждый &laquo;мастер верстки&raquo;. А&nbsp;именно, верстка должна быть максимально &laquo;резиновой&raquo; и&nbsp;поддаваться трансформации. К&nbsp;примеру нужно предусмотреть что&nbsp;бы в&nbsp;процессе возможного переполнения контента данный контент автоматически мог перемещаться на&nbsp;следующую строку (максимально стараться использовать единицы гибкости fr&nbsp;и&nbsp;auto). Или представим что через какой-то промежуток времени (скажем чрез пару лет) владелец верстки захочет в&nbsp;каких-то сложных секциях страницы кардинально поменять структуру и&nbsp;размеры блоков, а&nbsp;структуру HTML никак нельзя трогать, у&nbsp;него должна быть эта возможность реализации в&nbsp;CSS без каких-то особых трудностей. Вот здесь мы&nbsp;и&nbsp;подошли к&nbsp;обширным возможностям которые нам предоставляет адаптивный Grid Layout. <br> 
-               В основе моего подхода к верстке за позиционирование контента отвечает Grid (не всегда конечно, бывает проще и короче использовать Flexbox). Но в сложных и обширных секциях страницы, таких например как <span>"footer"</span> несомненно и бесспорно руководить процессом построения и адаптива контента будет Grid. Одним из преимуществ такого подхода заключается в том, что уже нет необходимости постоянно создавать дополнительные обертки в HTML для позиционирования контента, как это например приходилось делать при верстке под Flexbox. И как результат HTML теги <span>div</span> сводятся к минимуму (подробнее во вкладке "Grid").
+            <p class="rootpage__text">&nbsp;На&nbsp;мой взгляд это то&nbsp;к&nbsp;чему в&nbsp;первую очередь должен стремится каждый &laquo;мастер верстки&raquo;. А&nbsp;именно, верстка должна быть максимально &laquo;резиновой&raquo; и&nbsp;поддаваться трансформации. К&nbsp;примеру нужно предусмотреть что&nbsp;бы в&nbsp;процессе возможного переполнения контента данный контент автоматически мог перемещаться на&nbsp;следующую строку (максимально стараться использовать единицы гибкости fr&nbsp;и&nbsp;auto). Или представим что через какой-то промежуток времени (скажем чрез пару лет) владелец верстки захочет в&nbsp;каких-то сложных секциях страницы кардинально поменять структуру и&nbsp;размеры блоков, а&nbsp;структуру HTML никак нельзя трогать, у&nbsp;него должна быть эта возможность реализации в&nbsp;CSS без каких-то особых трудностей. Вот здесь мы&nbsp;и&nbsp;подошли к&nbsp;обширным возможностям которые нам предоставляет адаптивный Grid Layout.
+               В&nbsp;основе моего подхода к&nbsp;верстке за&nbsp;позиционирование контента отвечает CSS Grid (не&nbsp;всегда конечно, бывает проще и&nbsp;короче использовать Flexbox). Но&nbsp;в&nbsp;сложных и&nbsp;обширных секциях страницы несомненно и&nbsp;бесспорно руководить процессом построения и&nbsp;адаптива контента будет Grid. 
+               CSS Grid дает нам разработчикам возможность избавиться от&nbsp;большинства этих всех несемантических &laquo;div&raquo; контейнеров заменив их&nbsp;на&nbsp;чистый, семантический HTML и&nbsp;оставить разметку полностью на&nbsp;CSS, так как это всегда и&nbsp;должно было быть.
             </p>
             <h3 class="rootpage__title-text">Верстка под mobile и удобство пользования на мобильных устройствах </h3>
-            <p class="rootpage__text">&nbsp;Одним из&nbsp;самых моих любимых этапов в&nbsp;процессе верстки является трансформация блоков верстки от&nbsp;<span>desctop</span> к&nbsp;<span>mobile</span>. Честно, я&nbsp;&laquo;тащусь&raquo; когда блоки начинают трансформироваться к&nbsp;mobile-версии. Ведь нужно постараться увидеть все &laquo;подводные камни&raquo; которые могут встретиться в&nbsp;процессе перестроения и&nbsp;изменения размеров блоков с&nbsp;контентом на&nbsp;пути к&nbsp;экранам с&nbsp;разрешениями ширины меньше предыдущего и&nbsp;сделать соответствующие выводы при оргаризации структуры CSS. <br>
-               Например нужно предусмотреть изменения размеров отступа между блоками, размеры шрифта, изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). Если например в&nbsp;том&nbsp;же <span>&laquo;footer&raquo;</span> имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;<span>spoiler</span>, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
+            <p class="rootpage__text">&nbsp;Одним из&nbsp;самых моих любимых этапов в&nbsp;процессе верстки является трансформация блоков верстки от&nbsp;desctop к&nbsp;mobile. Честно, я&nbsp;&laquo;тащусь&raquo; когда блоки начинают трансформироваться к&nbsp;mobile-версии. Ведь нужно постараться увидеть все &laquo;подводные камни&raquo; которые могут встретиться в&nbsp;процессе перестроения и&nbsp;изменения размеров блоков с&nbsp;контентом на&nbsp;пути к&nbsp;экранам с&nbsp;разрешениями ширины меньше предыдущего и&nbsp;сделать соответствующие выводы при оргаризации структуры CSS.
+               Например нужно предусмотреть изменения размеров отступа между блоками, размеры шрифта, изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). Если например в&nbsp;том&nbsp;же &laquo;footer&raquo; имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;spoiler, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
             </p>
             </li>
+
          <li data-tab-content id="tab-3" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Mobile First</h3>
-            <p class="rootpage__text">Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis. Mobile First Lorem gdfhgfdgf ipsum dolor sit amet consectetur hjkljfdgdfgd adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendi</p>
-         </li>
+            <h3 class="rootpage__title-text"> Почему БЭМ?</h3>
+            <p class="rootpage__text">Я&nbsp;не&nbsp;буду здесь вдаваться в&nbsp;подробности что такое БЭМ (<small>Блок,</small> <small>Элемент,</small> <small>Модификатор</small> (и&nbsp;ещё <small>Микс</small>)), т.к. это можно без проблем найти на&nbsp;просторах интернета, лишь отмечу то&nbsp;с&nbsp;чем я&nbsp;согласен, а&nbsp;именно&nbsp;&mdash; почему лучше использовать БЭМ-нейминг по&nbsp;сравнению с&nbsp;другими приемами в&nbsp;верстке.</p>
+            <p class="rootpage__text">Методология БЭМ&nbsp;&mdash; это набор универсальных правил, которые можно применять независимо от&nbsp;используемых технологий, будь&nbsp;то CSS, Sass, HTML, JavaScript или React.</p>
+         <h4>БЭМ помогает решить следующие задачи:</h4>
+         <ul>
+            <li>повторно использовать верстку</li>
+            <li>безболезненно менять верстку местами в&nbsp;одном проекте</li>
+            <li>переносить готовую верстку из&nbsp;проекта в&nbsp;проект</li>
+            <li>создавать стабильный, предсказуемый и&nbsp;понятный код</li>
+            <li>сократить время на&nbsp;отладку проекта</li>
+         </ul>
+         <h4>Что в&nbsp;основном не&nbsp;нужно уже использовать (за&nbsp;редким исключением), когда есть БЭМ-методология?</h4>
+          <h5>&nbsp;Не&nbsp;используем идентификаторы (ID&nbsp;селекторы)</h5>
+                <p class="rootpage__text"> ID&nbsp;определяет уникальное имя HTML-элемента. Если имя уникально, второй раз в&nbsp;интерфейсе его использовать не&nbsp;получится. Это 	мешает повторно использовать код.</p>
+         <h5>&nbsp;Не&nbsp;используем селекторы тега</h5>
+         <p class="rootpage__text">HTML-разметка страниц нестабильна: новый дизайн сайта может поменять вложенность разделов, уровень заголовоков (например, с <code>&lt;h1&gt;</code> на <code>&lt;h3&gt;</code>) или превратить абзац <code>&lt;p&gt;</code> в&nbsp;тег <code>&lt;div&gt;</code>. Любые подобные изменения сломают стили, написанные на&nbsp;теги.</p>
+         <p class="rootpage__text">Даже если дизайн не&nbsp;меняется, набор тегов ограничен. Чтобы использовать существующую верстку в&nbsp;другом проекте, придется решать 	конфликты стилей, написанных на&nbsp;одни и&nbsp;те&nbsp;же теги.</p>
+         <h5>&nbsp;Не&nbsp;используем общий сброс стилей (reset)</h5>
+         <p class="rootpage__text">Общий сброс стилей&nbsp;&mdash; это глобальные CSS-правила, созданные для всей страницы. Они оказывают влияние на&nbsp;все узлы верстки, 	нарушают независимость компонентов и&nbsp;затрудняют их&nbsp;повторное использование.</p>
+         <h5>&nbsp;Не&nbsp;используем универсальный селектор (*)</h5>
+         <p class="rootpage__text">Универсальный селектор сообщает, что в&nbsp;проекте создан стиль, который влияет на&nbsp;все узлы в&nbsp;верстке. Это накладывает ограничения на&nbsp;повторное использование верстки в&nbsp;другом проекте:</p>
+         <ul>
+            <li>Необходимо дополнительно переносить в&nbsp;проект стили под &laquo;звездочкой&raquo;. Но&nbsp;в&nbsp;таком случае универсальный селектор может повлиять на&nbsp;стили в&nbsp;новом проекте.</li>
+            <li>Необходимо добавлять стили со&nbsp;&laquo;звездочкой&raquo; в&nbsp;переносимую верстку.</li>
+         </ul>
+         <h5>&nbsp;Не&nbsp;используем вложенные селекторы</h5>
+         <p class="rootpage__text">Вложенные селекторы увеличивают связность кода и&nbsp;затрудняют его повторное использование.</p>
+         <p class="rootpage__text">БЭМ не&nbsp;запрещает вложенные селекторы, но&nbsp;рекомендует не&nbsp;злоупотреблять ими.</p>
+         <h5>&nbsp;Не&nbsp;используем комбинированные селекторы</h5>
+         <p class="rootpage__text">Комбинированные селекторы имеют более высокую специфичность, чем одиночные, поэтому переопределять блоки становится сложнее.</p>
+         <h5>&nbsp;Не&nbsp;совмещаем тег и&nbsp;класс в&nbsp;селекторе</h5>
+         <p class="rootpage__text">Совмещение тега и&nbsp;класса повышает специфичность CSS-правил и&nbsp;затрудняет их&nbsp;переопределение.</p>
+         <h5>&nbsp;Не&nbsp;используем селекторы атрибутов</h5>
+         <p class="rootpage__text">Селекторы атрибутов по&nbsp;информативности уступают селекторам классов.</p>
+         <h4>И как итог:</h4>
+         <p class="rootpage__text"> <strong>Классы&nbsp;&mdash; единственный селектор, который позволяет изолировать стили каждого компонента в&nbsp;проекте, повысить читаемость кода и&nbsp;не&nbsp;ограничивать повторное использование верстки.</strong></p>
+         <p class="rootpage__text">В&nbsp;основе БЭМ&nbsp;&mdash; соглашение по&nbsp;именованию, которое делает имена CSS-классов максимально информативными для разработчиков и&nbsp;позволяет многократно использовать компоненты.</p>
+         <p class="rootpage__text"><div class="rootpage__source">Источник:<a href="https://medium.com/@innabelaya/%D0%B1%D1%8D%D0%BC-%D0%B4%D0%BB%D1%8F-%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B8%D1%85-%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%B4%D0%BD%D1%8B%D0%B5-%D0%B8-%D0%BD%D0%B5%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%B4%D0%BD%D1%8B%D0%B5-%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B8-1a21d67cf840">Medium</a></div></p>
+      </li>
+
          <li data-tab-content id="tab-4" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab4</h3>
+            <h3 class="rootpage__title-text">CSS Grid Layout&nbsp;&mdash; будущее уже здесь</h3>
             <p class="rootpage__text">Lorem gfdgfd ipsum dolor sit amet gfdfgdfgdfgdffg consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
+         
+         
          </li>
+
          <li data-tab-content id="tab-5" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab5</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
          </li>
          <li data-tab-content id="tab-6" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab6</h3>
-            <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
+            <h3 class="rootpage__title-text">SCSS/SASS</h3>
+            <p class="rootpage__text">Сейчас я даже не представляю как можно писать стили без препроцессора SCSS. Да только чего стоят одни <strong>миксины</strong>, не говоря о других возможностсях которые нам предоствавляет SCSS.</p>
+            <h4>Что такого есть в Sass/SCSS, чего нет в стандартном CSS?</h4>
+            <ul>
+               <li>Вложенные правила: вы можете вкладывать CSS свойства, в несколько наборов скобок {}. Это сделает ваш CSS чище и понятней.</li>
+               <li>Переменные: в стандартном CSS тоже есть переменные, но переменные Sass куда более мощный инструмент. Например, вы можете использовать переменные в циклах и генерировать значения свойств динамически. Также можно внедрять переменные в имена свойств, например так: property-name-N { … }.</li>
+               <li>Лучшая реализация операторов: вы можете суммировать, вычитать, делить и умножать CSS значения. Sass реализация более интуитивна, чем стандартный функционал CSS calc().</li>
+               <li>Функции: Sass позволяет многократно использовать CSS стили, как функции.</li>
+               <li>Тригонометрия: помимо базовых операций (+, -, *, /), SCSS позволяет писать собственные функции. Например, функции sin и cos можно написать, используя только синтаксис Sass/SCSS. Конечно, вам понадобятся знания тригонометрии. Такие функция могут понадобится для создания анимации.</li>
+               <li>Удобный рабочий процесс: вы можете писать CSS, используя конструкции, знакомые по другим языкам: for-циклы, while-циклы, if-else. Но имейте в виду, это только препроцессор, а не полноценный язык, Sass контролирует генерацию свойств и значений, а на выходе вы получаете стандартный CSS.</li>
+               <li>Миксины: позволяют один раз создать набор правил, чтобы потом использовать их многократно или смешивать с другими правилами. Например, миксины используют для создания отдельных тем макета.</li>
+            </ul>
+            <p class="rootpage__text">(На мой взгляд классно использовать миксины как вариант для всех кнопок сайта. Например, с помощью if-else одним кнопкам задать одни стили, а кнопкам с border-radius: 50%, задать другие стили. Там же размещать все что относится к кнопкам, например: media, hover, focus. И все это в одном месте, как же это удобно! По моему этот прием болеее предпочтителен чем использовать микс и модификаторы по БЭМ для повторяющихся стилей. И тем самым мы  немного разгружаем БЭМ)</p>
+            <p class="rootpage__text"><div class="rootpage__source">Источник:<a href="https://medium.com/nuances-of-programming/%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9-%D0%B3%D0%B0%D0%B9%D0%B4-%D0%BF%D0%BE-scss-sass-b09ae0c87afe">Medium</a></div></p>
          </li>
          <li data-tab-content id="tab-7" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab7</h3>
@@ -293,6 +345,11 @@
 		img {
 			vertical-align: top;
 		}
+      code {
+         font-size: 20px;
+         line-height: 1.3;
+         color: #AAA308;
+      }
 
       .theme {
          display: grid;
@@ -504,8 +561,7 @@
          display: grid;
          row-gap: 15px;
          grid-template-areas: 
-         "left content content"
-         "left content content"
+         "left left content"
          ;
 		}
       @media (max-width: 991px) {
@@ -521,15 +577,15 @@
          position: relative;
          border-radius: 9px;
          margin-left: 15px;
+      }
+      @media (max-width: 991px) {
+         .rootpage__left {
+         padding-left: 3px;
+         border-radius: 4px;
          animation-name: left-anim;
          animation-duration: 0.2s;
          animation-timing-function: ease-out;
          background: url('@img/index/light-bulb-2402087_640.webp') 50% 30% no-repeat;
-      }
-      @media (max-width: 991px) {
-         .rootpage__left {
-            padding-left: 3px;
-            border-radius: 4px;
          }
          @keyframes left-anim {
          0% {
@@ -578,7 +634,7 @@
          white-space: nowrap;
          height: 100%;
          left: -10px;
-         top: -118px;
+         top: -50px;
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
 			color: #AAA308;
@@ -705,10 +761,10 @@
          margin-bottom: 5px;
       }
       .rootpage__content-tab ul li {
-         font-size: 20px;
-         line-height: 1.4; 
+         font-size: 18px;
+         line-height: 1.5; 
+         font-weight: 600;
          color: #DA770B;
-         margin-left: 16px;
          margin-bottom: 1px;
       }
       .rootpage__content-tab ul li::before {
@@ -726,7 +782,12 @@
          margin-bottom: 2px;
          color: #AAA308;
       }
-
+      .rootpage__content-tab h5 {
+         font-size: 18px;
+         line-height: 1.3;
+         color: #DA770B;
+         margin-bottom: 2px;
+      }
       .rootpage__title-content {
          font-size: 24px;
          color: #AAA308;
@@ -769,6 +830,8 @@
 		.rootpage__item-js:not(:last-child){
          margin-bottom: 10px;
 		}
+      .rootpage__list-content-tab {
+      }
       .rootpage__text {
          font-size: 18px;
          line-height: 1.5;
@@ -779,18 +842,18 @@
          color: #DA770B;
          margin-bottom: 0;
       }
-      .rootpage__text code {
-         font-size: 20px;
-         line-height: 1.3;
-         color: #AAA308;
+      .rootpage__text small {
+         font-size: 18px;
+         color: #DA770B;
       }
       .rootpage__source {
          display: flex;
          justify-content: end;
          column-gap: 7px;
+         font-style: italic;
       }
       .rootpage__source a {
-         font-style: italic;
+         font-style: normal;
          text-decoration: underline;
          color: #32b5a4;
       }
