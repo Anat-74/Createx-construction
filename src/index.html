@@ -66,8 +66,9 @@
             <li><a target="_blank" href="contacts.html">Contacts</a></li>
 			</ul>
       </div>
+
          <div class="rootpage__content">
-            <div data-tab-content id="tab-1" class="rootpage__content-tab">
+            <div data-tab-content id="tab-1" class="rootpage__content-home">
             <h2 class="rootpage__title-content">Основные методы реализации:</h2>
             <ul class="rootpage__list-content">
                <li class="rootpage__item-content">БЭМ</li>
@@ -91,6 +92,7 @@
                <li class="rootpage__item-js">Работа с "form"</li>
             </ul>
             </div>
+
             <ul class="rootpage__list-content-tab">
          <li data-tab-content id="tab-2" class="rootpage__content-tab hidden">
               <h2 class="rootpage__title-content">Мое видение в<small>ё</small>рстки</h2>
@@ -107,8 +109,9 @@
                Например нужно предусмотреть изменения размеров отступа между блоками, размеры шрифта, изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). Если например в&nbsp;том&nbsp;же &laquo;footer&raquo; имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;spoiler, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
                </p>
                <div class="button-content">
-               <button class="button-content__prev" type="button"></button>
-               <button class="button-content__go-top" type="button">next</button>
+                <button class="button-content__hidden" type="button"></button>
+               <button class="button-content__go-top" type="button"></button>
+               <button class="button-content__next" type="button">next</button>
                </div>
             </li>
 
@@ -173,8 +176,9 @@
       <p class="rootpage__text"><div class="rootpage__source"><a href="https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b#c08d">Вёрстка на Grid в CSS</a></div></p>
       <p class="rootpage__text"><div class="rootpage__source"><a href="https://doka.guide/css/grid-guide/">Гайд по grid</a></div></p>
       <div class="button-content">
+         <button class="button-content__prev" type="button">prev</button>
          <button class="button-content__go-top" type="button"></button>
-         
+         <button class="button-content__next" type="button">next</button>
          </div>
    </li>
 
@@ -191,10 +195,11 @@
             <p class="rootpage__text"><div class="rootpage__source">Источники:<a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Основные понятия Flexbox</a></div></p>
             <p class="rootpage__text"><div class="rootpage__source"><a href="https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-flexbox-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-e26662cf87e0">Вёрстка на Flexbox в CSS</a></div></p>
             <p class="rootpage__text"><div class="rootpage__source"><a href="https://doka.guide/css/flexbox-guide/">Гайд по flexbox</a></div></p>
-            <div class="button-content">
-               <button class="button-content__go-top" type="button"></button>
-               
-               </div>
+               <div class="button-content">
+                  <button class="button-content__prev" type="button">prev</button>
+                  <button class="button-content__go-top" type="button"></button>
+                  <button class="button-content__next" type="button">next</button>
+                  </div>
          </li>
 
          <li data-tab-content id="tab-6" class="rootpage__content-tab hidden">
@@ -212,10 +217,11 @@
             </ul>
             <p class="rootpage__text">&nbsp;На&nbsp;мой взгляд классно использовать миксины, например как вариант для всех кнопок сайта. К примеру с&nbsp;помощью if-else одним кнопкам задать одни стили, а&nbsp;кнопкам с&nbsp;border-radius: 50% - задать другие стили. Там&nbsp;же размещать все что относится к&nbsp;кнопкам например: <code>@media</code>, <code>hover</code>, <code>focus</code> и прочее. И&nbsp;все это в&nbsp;одном месте, как&nbsp;же это удобно! По&nbsp;моему этот прием болеее предпочтителен чем использовать микс и&nbsp;модификаторы по&nbsp;БЭМ для повторяющихся стилей. И&nbsp;тем самым мы&nbsp;еще и&nbsp;разгружаем БЭМ.</p>
             <p class="rootpage__text"><div class="rootpage__source">Источник:<a href="https://medium.com/nuances-of-programming/%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9-%D0%B3%D0%B0%D0%B9%D0%B4-%D0%BF%D0%BE-scss-sass-b09ae0c87afe">Полный гайд по SCSS</a></div></p>
-            <div class="button-content">
-               <button class="button-content__go-top" type="button"></button>
-               
-               </div>
+               <div class="button-content">
+                  <button class="button-content__prev" type="button">prev</button>
+                  <button class="button-content__go-top" type="button"></button>
+                  <button class="button-content__next" type="button">next</button>
+                  </div>
          </li>
 
          <li data-tab-content id="tab-7" class="rootpage__content-tab hidden">
@@ -243,26 +249,29 @@
       <p class="rootpage__text">У&nbsp;многих элементов, например, ссылок, кнопок, заголовков и&nbsp;так далее имя формируется из&nbsp;их&nbsp;текстового содержимого. Есть и&nbsp;другие способы добавить имя. Атрибут <code>&lt;label&gt;</code> задаёт имя элементам форм, а <code>&lt;legend&gt;</code> &mdash; их&nbsp;группе. Тег <code>&lt;caption&gt;</code>используют для таблиц. <code>&lt;figcaption&gt;</code> &mdash; для иллюстраций внутри тега <code>&lt;figure&gt;</code>. Также можно использовать ARIA-атрибуты <code>&lt;aria-labe&gt;</code>&nbsp;и <code>&lt;aria-labelledby&gt;</code>. Важно помнить, что ARIA перепишет имена тегов, которые получают его из&nbsp;их&nbsp;текстового содержимого. Это может повлиять на&nbsp;доступность и&nbsp;читаемость кода. Поэтому для кастомных элементов лучше использовать семантически нейтральные <code>&lt;div&gt;</code>и <code>&lt;span&gt;</code>, если это не&nbsp;исключительный случай.</p>
       <p class="rootpage__text">Так что не&nbsp;нужно использовать ARIA там, где можно использовать HTML-теги и&nbsp;атрибуты.</p>
       <p class="rootpage__text"><div class="rootpage__source">Источник:<a href="https://doka.guide/a11y/">Дока</a></div></p>
-      <div class="button-content">
-         <button class="button-content__go-top" type="button"></button>
-         
-         </div>
+         <div class="button-content">
+            <button class="button-content__prev" type="button">prev</button>
+            <button class="button-content__go-top" type="button"></button>
+            <button class="button-content__next" type="button">next</button>
+            </div>
    </li>
 
    <li data-tab-content id="tab-8" class="rootpage__content-tab hidden">
       <h3 class="rootpage__title-text">Tab8</h3>
       <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
-      <div class="button-content">
-         <button class="button-content__go-top" type="button"></button>
-         
-         </div>
+         <div class="button-content">
+            <button class="button-content__prev" type="button">prev</button>
+            <button class="button-content__go-top" type="button"></button>
+            <button class="button-content__next" type="button">next</button>
+            </div>
    </li>
          <li data-tab-content id="tab-9" class="rootpage__content-tab hidden">
             <h3 class="rootpage__title-text">Tab9</h3>
             <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
             <div class="button-content">
+               <button class="button-content__prev" type="button">prev</button>
                <button class="button-content__go-top" type="button"></button>
-               
+               <button class="button-content__next" type="button">next</button>
                </div>
          </li>
       </ul>
@@ -350,11 +359,22 @@
       })
      })
 
-     window.addEventListener("click", function(e){
-      if(e.target.classList.contains("button-content__prev")) {
-         
-      }
+     const tabContent= document.querySelector(".rootpage__content-tab")
+     const nextBtn= document.querySelectorAll(".button-content__next")
 
+     const nextContent = tabContent.nextElementSibling
+
+     const prevContent = tabContent.previousElementSibling
+
+     nextBtn.forEach((el) => {
+         el.addEventListener("click", function() {
+         console.log("hi")
+         console.log(nextContent)
+
+         })
+      })
+
+     window.addEventListener("click", function(e){
       if(e.target.classList.contains("button-content__go-top")) {
          window.scrollTo({
             top: 35,
@@ -432,16 +452,17 @@
          padding-bottom: 5px;
       }
       .button-content__prev {
-
+         cursor: pointer;
       }
       .button-content__next {
+         cursor: pointer;
       }
       .button-content__go-top {
          display: none;
       }
       @media (max-width: 767px) {
       .button-content__go-top {
-         display: flex;
+         display: block;
          cursor: pointer;
       }
       .button-content__go-top::before {
@@ -449,7 +470,9 @@
          font-size: 22px;
       }
    }
-
+   .button-content__hidden {
+      visibility: hidden;
+   }
       .theme {
          display: grid;
          grid-template-columns: 1fr auto;
