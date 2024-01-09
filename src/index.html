@@ -20,38 +20,38 @@
       </div>
       <nav class="rootpage__nav">
          <ul class="rootpage__list-nav">
-            <li class="rootpage__item">
-               <a data-tab="tab-1" class="rootpage__link  rootpage__link--active" href="#">Главная</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#" data-tab="tab-1" class="rootpage__link  rootpage__link--active" role="tab" aria-label="Главная">Главная</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-2" class="rootpage__link" href="#tab-2">Общее</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-2" data-tab="tab-2" class="rootpage__link" role="tab" aria-label="Общее">Общее</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-3" class="rootpage__link" href="#tab-3">БЭМ</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-3" data-tab="tab-3" class="rootpage__link" role="tab" aria-label="Бэм">БЭМ</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-4" class="rootpage__link" href="#tab-4">Grid</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-4" data-tab="tab-4" class="rootpage__link" role="tab" aria-label="Grid">Grid</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-5" class="rootpage__link" href="#tab-5">Flexbox</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-5" data-tab="tab-5" class="rootpage__link" role="tab" aria-label="Flexbox">Flexbox</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-6" class="rootpage__link" href="#tab-6">SCSS</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-6" data-tab="tab-6" class="rootpage__link" role="tab" aria-label="Препроцессор SASS">SCSS</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-7" class="rootpage__link" href="#tab-7">Доступность</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-7" data-tab="tab-7" class="rootpage__link" role="tab" aria-label="Доступность">Доступность</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-8" class="rootpage__link" href="#tab-8">JS</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-8" data-tab="tab-8" class="rootpage__link" role="tab" aria-label="JavaScript">JS</a>
             </li>
-            <li class="rootpage__item">
-               <a data-tab="tab-9" class="rootpage__link" href="#tab-9">О себе</a>
+            <li class="rootpage__item" role="tablist">
+               <a href="#tab-9" data-tab="tab-9" class="rootpage__link" role="tab" aria-label="О себе">О себе</a>
             </li>
          </ul>
       </nav>
    </header>
 		<main class="rootpage__main">
-         <div class="rootpage__left">
+         <div class="rootpage__left" aria-label="Верстка createx construction">
 			<h1 class="rootpage__title">Верстка «Create<small>x</small> construction»</h1>
 			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
 			<ul class="rootpage__list">
@@ -65,10 +65,11 @@
             <li><a target="_blank" href="news.html">News</a></li>
             <li><a target="_blank" href="contacts.html">Contacts</a></li>
 			</ul>
+         <div class="rootpage__left-bottom">Pixel - perfect</div>
       </div>
 
          <div class="rootpage__content">
-            <div data-tab-content id="tab-1" class="rootpage__content-home">
+            <div data-tab-content id="tab-1" class="rootpage__content-home" role="tabpanel">
             <h2 class="rootpage__title-content">Основные методы реализации:</h2>
             <ul class="rootpage__list-content">
                <li class="rootpage__item-content">БЭМ</li>
@@ -79,7 +80,12 @@
                <li class="rootpage__item-content">JS</li>
             </ul>
                <h2 class="rootpage__title-content">Инструменты:</h2> 
-              <span> Gulp+Webpack</span>
+              <ul class="rootpage__list-content">
+               <li class="rootpage__item-content">Gulp+Webpack</li>
+               <li class="rootpage__item-content">VS Code</li>
+               <li class="rootpage__item-content">Figma</li>
+               <li class="rootpage__item-content">GitHub</li>
+              </ul>
               <h3 class="rootpage__title-text">В проекте «Createx construction» из JS реализованы:</h3>
             <ul class="rootpage__list-js">
                <li class="rootpage__item-js">Popup (модальные окна)</li>
@@ -94,12 +100,12 @@
             </div>
 
             <ul class="rootpage__list-content-tab">
-         <li data-tab-content id="tab-2" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-2" class="rootpage__content-tab hidden" role="tabpanel">
               <h2 class="rootpage__title-content">Мое видение в<small>ё</small>рстки</h2>
               <p class="rootpage__text">&nbsp;На&nbsp;мой взгляд одним из&nbsp;ключевых действий в&nbsp;реализации качественной верстки является сперва-наперво очень тщательный анализ макета непосредственно перед началом выполнения проекта. Анализ на&nbsp;предмет повторяющихся блоков, элементов будущей верстки, резервирование отдельных классов (которые будут в&nbsp;дальнейшем переиспользоваться), модификаторов, миксинов, отделение контентного изображения от&nbsp;декоративного. И&nbsp;прочие ньюансы, которые должны быть учтены с&nbsp;должным вниманием. На&nbsp;самом деле это <span>!!</span> очень важный момент перед тем как приступать к&nbsp;реализации проекта, что в&nbsp;итоге в&nbsp;дальнейшем может сказаться как на&nbsp;качестве, так и&nbsp;на&nbsp;скорости работы. Зачем например плодить кучу повторяющегося кода, если его можно просто банально переиспользовать с&nbsp;минимальным редактированием (если это необходимо)? Что нам и&nbsp;предоставляет БЭМ-методология.
                Не&nbsp;менее важным аспектом для реализации качественной верстки является умение самоорганизоваться и&nbsp;отрешится от&nbsp;всего что мешает сосредоточится на&nbsp;данном проекте. <br>
             </p>
-            <h3 class="rootpage__title-text">Надежность и адаптивность</h3>
+            <h3 class="rootpage__title-text">Надежность и отзывчивость (responsive)</h3>
             <p class="rootpage__text">&nbsp;Надежность - это то&nbsp;к&nbsp;чему в&nbsp;первую очередь должен стремится каждый &laquo;мастер верстки&raquo;. А&nbsp;именно, верстка должна быть максимально &laquo;резиновой&raquo; и&nbsp;поддаваться трансформации. К&nbsp;примеру нужно предусмотреть что&nbsp;бы в&nbsp;процессе возможного переполнения контента данный контент автоматически мог перемещаться на&nbsp;следующую строку (максимально стараться использовать единицы гибкости fr&nbsp;и&nbsp;auto). Или представим что через какой-то промежуток времени (скажем чрез пару лет) владелец верстки захочет в&nbsp;каких-то сложных секциях страницы кардинально поменять структуру и&nbsp;размеры блоков, а&nbsp;структуру HTML никак нельзя трогать, у&nbsp;него должна быть эта возможность реализации в&nbsp;CSS без каких-то особых трудностей. Вот здесь мы&nbsp;и&nbsp;подошли к&nbsp;обширным возможностям которые нам предоставляет адаптивный Grid Layout (подробнее во вкладке - <small>Grid</small>).
                В&nbsp;основе моего подхода к&nbsp;верстке за&nbsp;позиционирование контента отвечает CSS Grid (не&nbsp;всегда конечно, бывает проще и&nbsp;короче использовать Flexbox). Но&nbsp;в&nbsp;сложных и&nbsp;обширных секциях страницы несомненно и&nbsp;бесспорно руководить процессом построения и&nbsp;адаптива контента будет Grid. 
                CSS Grid дает нам разработчикам возможность избавиться от&nbsp;большинства этих всех несемантических &laquo;div&raquo; контейнеров заменив их&nbsp;на&nbsp;чистый, семантический HTML и&nbsp;оставить разметку полностью на&nbsp;CSS, так как это всегда и&nbsp;должно было быть.
@@ -111,11 +117,11 @@
                <div class="button-content">
                 <button class="button-content__hidden" type="button"></button>
                <button class="button-content__go-top" type="button"></button>
-               <button class="button-content__next" type="button">next</button>
+               <a data-next="btn-1" class="button-content__next" href="#tab-3">next</a>
                </div>
             </li>
 
-         <li data-tab-content id="tab-3" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-3" class="rootpage__content-tab hidden" role="tabpanel">
             <h3 class="rootpage__title-text"> Почему БЭМ?</h3>
             <p class="rootpage__text">Я&nbsp;не&nbsp;буду здесь вдаваться в&nbsp;подробности что такое БЭМ (<small>Блок,</small> <small>Элемент,</small> <small>Модификатор</small> (и&nbsp;ещё <small>Микс</small>)), т.к. это можно без проблем найти на&nbsp;просторах интернета, лишь отмечу то&nbsp;с&nbsp;чем я&nbsp;согласен, а&nbsp;именно&nbsp;&mdash; почему лучше использовать БЭМ-нейминг по&nbsp;сравнению с&nbsp;другими приемами в&nbsp;верстке.</p>
             <p class="rootpage__text">Методология БЭМ&nbsp;&mdash; это набор универсальных правил, которые можно применять независимо от&nbsp;используемых технологий, будь&nbsp;то CSS, Sass, HTML, JavaScript или React.</p>
@@ -157,11 +163,11 @@
          <div class="button-content">
             <button class="button-content__prev" type="button">prev</button>
             <button class="button-content__go-top" type="button"></button>
-            <button class="button-content__next" type="button">next</button>
+            <a data-next="btn-2" class="button-content__next" href="#">next</a>
             </div>
       </li>
 
-         <li data-tab-content id="tab-4" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-4" class="rootpage__content-tab hidden" role="tabpanel">
             <h3 class="rootpage__title-text">CSS Grid Layout&nbsp;&mdash; будущее уже здесь</h3>
             <p class="rootpage__text">Изначально я&nbsp;учился верстать на&nbsp;CSS Flex Layout(Flexbox) (да-да, я&nbsp;уже не&nbsp;застал не&nbsp;флоаты, не&nbsp;тем-более табличную верстку и&nbsp;чем не&nbsp;сказанно этому и&nbsp;рад)), но&nbsp;когда я&nbsp;начал знакомится с&nbsp;теми возможностями которые нам предоствляет CSS Grid Layout, то&nbsp;я&nbsp;сразу&nbsp;же начал менять свой подход к&nbsp;верстке и&nbsp;за&nbsp;основу позиционирования взял непосредственно CSS Grid. Ведь даже этих не&nbsp;семантических <code>&lt;div&gt;</code> можно делать напорядок меньше (чем грешит подход под Flexbox), притом-то нисколько не&nbsp;отражаясь на&nbsp;надежности самой верстки. Даже наоборот,подчас эти дополнительные &laquo;обертки&raquo; уже мешают достучаться до&nbsp;контента, т.к. внутри этой &laquo;обертки&raquo; придется заново создавать новое свойство <code>display</code> и&nbsp;уже там позиционировать контент в&nbsp;отрыве от&nbsp;родительского блока.</p>
             <p class="rootpage__text">Но&nbsp;сразу&nbsp;же нужно уточнить, что в&nbsp;некоторых ситуациях это быват наооборот учень удобным и&nbsp;здравым решением, где проще будет в&nbsp;этом отдельном блоке спозиционировать контент флексом. Но&nbsp;все&nbsp;же там где можно это сделать флексом, в&nbsp;основном это можно сделать и&nbsp;гридом. Но&nbsp;в&nbsp;подовляющем случае, то&nbsp;что можно сделать двумерным гридом, одномерный флекс на&nbsp;это не&nbsp;способен.</p>
@@ -178,11 +184,11 @@
       <div class="button-content">
          <button class="button-content__prev" type="button">prev</button>
          <button class="button-content__go-top" type="button"></button>
-         <button class="button-content__next" type="button">next</button>
+         <a data-next="btn-3" class="button-content__next" href="#tab-5">next</a>
          </div>
    </li>
 
-         <li data-tab-content id="tab-5" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-5" class="rootpage__content-tab hidden" role="tabpanel">
             <h3 class="rootpage__title-text">Flexbox&nbsp;&mdash; идеален для небольших задач</h3>
             <P class="rootpage__text">CSS модуль раскладки flexbox или просто flex, был разработан как модель одномерного-направленного макета и&nbsp;как один из&nbsp;методов распределения пространства между элементами в&nbsp;интерфейсе, с&nbsp;мощными возможностями выравнивания.</P>
             <P class="rootpage__text">При работе с&nbsp;flexbox нужно мыслить с&nbsp;точки зрения двух осей&nbsp;&mdash; главной оси и&nbsp;побочной оси. Главная ось определяется свойством <code>flex-direction</code>, а&nbsp;побочная ось проходит перпендикулярно&nbsp;ей. Все, что мы&nbsp;делаем с&nbsp;flexbox, относится к&nbsp;этим осям, поэтому стоит с&nbsp;самого начала понять, как они работают.</P>
@@ -190,7 +196,7 @@
             <P class="rootpage__text">Шаблоны подходящие для flex-разметки, это&nbsp;те, в&nbsp;которых нет нужды в&nbsp;pixel-perfect размерах для каждого элемента. Нам просто надо хорошо отобразить каждый рядом друг с&nbsp;другом.</P>
             <P class="rootpage__text">Flexbox очень хорош с&nbsp;работой над маленькими, одномерными компонентами. Такими как наборы полей форм, иконки или любой другой информации, которую легко добавить и&nbsp;сделать гибкой, без нужды в&nbsp;тщательном выстраивании размеров для каждого.</P>
             <P class="rootpage__text">Можно так-же выбрать Flexbox в&nbsp;ситуациях, где нужно держать контент в&nbsp;&laquo;подвале&raquo; контейнера, вместо того, чтобы он&nbsp;скакал туда-сюда по&nbsp;компоненту. И&nbsp;в&nbsp;этом нам поможет адаптивное свойство-шорткат: <code>flex:1 1 auto</code>, с&nbsp;помощью которого можно указать значение трёх свойств одновременно: <code>flex-grow</code>, <code>flex-shrink</code> и <code>flex-basis</code>. Это великолепное свойство flexbox и&nbsp;&laquo;палочка-выручалочка&raquo; в&nbsp;определенных ситуациях, например когда нужно &laquo;прибить&raquo; контент к&nbsp;краю или растянуть блок.</P>
-            <P class="rootpage__text">Хотелось&nbsp;бы еще обратить внимание на&nbsp;одно свойство, а&nbsp;именно <code>flex-wrap</code>. Установив значение <code>wrap</code> - флекс-элементы будут иметь возможность перенестись в&nbsp;новый ряд, если не&nbsp;влезают в&nbsp;одну линию в&nbsp;рамках родителя. И&nbsp;в&nbsp;отличии от&nbsp;свойства CSS Grid&nbsp;&mdash; <code>auto-fill</code> и <code>auto-fit</code>, по&nbsp;мере сужения экрана контент будет выстраиваться по&nbsp;центру, тогда как используя <code>auto-fill</code> и <code>auto-fit</code>, контент начинается от&nbsp;левого края. Зная эти особенности адаптивных свойств, мы&nbsp;можем выбирать наиболее оптимальный вариант в&nbsp;реализации текущей задачи.</P>
+            <P class="rootpage__text">Хотелось&nbsp;бы еще обратить внимание на&nbsp;одно свойство, а&nbsp;именно <code>flex-wrap</code>. Установив значение <code>wrap</code> - флекс-элементы будут иметь возможность перенестись в&nbsp;новый ряд, если не&nbsp;влезают в&nbsp;одну линию в&nbsp;рамках родителя. И&nbsp;в&nbsp;отличии от&nbsp;свойства CSS Grid&nbsp;&mdash; <code>auto-fill</code> и <code>auto-fit</code>, по&nbsp;мере сужения экрана контент будет выстраиваться по&nbsp;центру, тогда как используя <code>auto-fill</code> и <code>auto-fit</code>, контент начинается от&nbsp;левого края. Зная эти особенности отзывчивых свойств, мы&nbsp;можем выбирать наиболее оптимальный вариант в&nbsp;реализации текущей задачи.</P>
             <P class="rootpage__text">Используя Flexbox в&nbsp;одних ситуациях, а&nbsp;CSS Grid в&nbsp;других&nbsp;&mdash; они тем самым великолепно друг друга дополняют и&nbsp;как результат, процесс реализации проекта становится более гибким и&nbsp;приятным.</P>
             <p class="rootpage__text"><div class="rootpage__source">Источники:<a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Основные понятия Flexbox</a></div></p>
             <p class="rootpage__text"><div class="rootpage__source"><a href="https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-flexbox-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-e26662cf87e0">Вёрстка на Flexbox в CSS</a></div></p>
@@ -198,11 +204,11 @@
                <div class="button-content">
                   <button class="button-content__prev" type="button">prev</button>
                   <button class="button-content__go-top" type="button"></button>
-                  <button class="button-content__next" type="button">next</button>
+                  <a data-next="btn-4" class="button-content__next" href="#tab-6">next</a>
                   </div>
          </li>
 
-         <li data-tab-content id="tab-6" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-6" class="rootpage__content-tab hidden" role="tabpanel">
             <h3 class="rootpage__title-text">SCSS/SASS</h3>
             <p class="rootpage__text">Сейчас я даже не представляю как можно писать стили без препроцессора SCSS. Да только чего стоят одни <strong>миксины</strong>, не говоря о других возможностсях которые нам предоствавляет SCSS.</p>
             <h4>Что такого есть в Sass/SCSS, чего нет в стандартном CSS?</h4>
@@ -220,11 +226,11 @@
                <div class="button-content">
                   <button class="button-content__prev" type="button">prev</button>
                   <button class="button-content__go-top" type="button"></button>
-                  <button class="button-content__next" type="button">next</button>
+                  <a data-next="btn-5" class="button-content__next" href="#tab-7">next</a>
                   </div>
          </li>
 
-         <li data-tab-content id="tab-7" class="rootpage__content-tab hidden">
+         <li data-tab-content id="tab-7" class="rootpage__content-tab hidden" role="tabpanel">
             <h3 class="rootpage__title-text">Веб-доступность</h3>
             <p class="rootpage__text">
                Веб-доступность кроет в&nbsp;себе множество нюансов. Однако есть основные правила, которые помогут написать более доступный HTML-код. В&nbsp;них входит:</p>
@@ -252,26 +258,35 @@
          <div class="button-content">
             <button class="button-content__prev" type="button">prev</button>
             <button class="button-content__go-top" type="button"></button>
-            <button class="button-content__next" type="button">next</button>
+            <a data-next="btn-6" class="button-content__next" href="#tab-8">next</a>
             </div>
    </li>
 
-   <li data-tab-content id="tab-8" class="rootpage__content-tab hidden">
-      <h3 class="rootpage__title-text">Tab8</h3>
-      <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
+   <li data-tab-content id="tab-8" class="rootpage__content-tab hidden" role="tabpanel">
+      <h3 class="rootpage__title-text">JS</h3>
+      <p class="rootpage__text">Те&nbsp;кто хоть немного сталкивался с&nbsp;веб-разработкой знают, что JavaScript (JS)&nbsp;&mdash; это язык программирования, который в&nbsp;первую очередь применяют в&nbsp;вебе. С&nbsp;его помощью сайты делают интерактивными: добавляют всплывающие окна, анимацию, манипуляция с&nbsp;кнопками, формы для отправки информации и&nbsp;прочее. <br>
+         Благодаря JS&nbsp;сайт уже не&nbsp;просто статичная страница, а&nbsp;динамичная программа, реагирующая на&nbsp;действие пользователей.</p>
+      <p class="rootpage__text">Так как я&nbsp;на&nbsp;данное время позиционирую себя как &laquo;верстальщик&raquo;, то&nbsp;в&nbsp;моем багаже имеется все что необходимо для манипуляуии с&nbsp;<a href="https://doka.guide/js/dom/">DOM(Document Object Model)</a> через <a href="https://doka.guide/js/element/">Element</a> и&nbsp;<a href="https://doka.guide/js/events/">Событийной модели.</a></p>
+      <p class="rootpage__text">Веб-разработка, да&nbsp;и&nbsp;вообще любая IT-сфера подразумевает постоянное совершенствование и&nbsp;овладение новыми знаниями и&nbsp;инструментами, ведь эта сфера никогда не&nbsp;стоит на&nbsp;месте. Что-то постоянно устаревает, становится уже не&nbsp;актуальным и&nbsp;это &laquo;что-то&raquo; вытесняется чем-то более совершенным и&nbsp;продвинутым. Это и&nbsp;есть прогресс. И&nbsp;естественно настоящий веб-разработчик должен постоянно позновать что-то новое, обогощая себя более совершенными инструментами и&nbsp;методами для реализации той или иной задачи, что будет способствовать его дальнейшему росту и&nbsp;профессионализму. Естественно и&nbsp;я&nbsp;не&nbsp;собираюсь останавливаться на&nbsp;том уровне на&nbsp;котором сейчас нахожусь, а&nbsp;значит еще больше углубляться в&nbsp;JavaScript, в&nbsp;планах изучения хотя&nbsp;бы одного фреймворка (React.js или Vue.js), а&nbsp;так&nbsp;же всего того что будет способствовать профессиональному росту в&nbsp;выбранной мной сфере.</p>
+      <p class="rootpage__text">Но&nbsp;на&nbsp;данное время мне все&nbsp;же больше интересно расти в&nbsp;сфере касаемо непосредственно &laquo;верстки&raquo; и&nbsp;соотвественно акцент делается на&nbsp;те&nbsp;инструменты и&nbsp;методы которые напрямую связаны с&nbsp;реализацией отзывчивой (responsive), надежной, доступной и&nbsp;динамичной версткой. Для меня верстка в&nbsp;большей степени ассоциируется с&nbsp;&laquo;творчеством&raquo;, чем с&nbsp;&laquo;логикой&raquo; и&nbsp;я&nbsp;получаю определенную порцию удавольстваия когда приходит время к&nbsp;позиционированию и&nbsp;трансформации контента. И&nbsp;в&nbsp;самое ближайшее время будет реализована анимация на&nbsp;&laquo;GreenSock (GSAP)&raquo;. <br> &nbsp;Что это за&nbsp;сайт без настоящей анимации?)</p>
          <div class="button-content">
             <button class="button-content__prev" type="button">prev</button>
             <button class="button-content__go-top" type="button"></button>
-            <button class="button-content__next" type="button">next</button>
+            <a data-next="btn-7" class="button-content__next" href="#tab-9">next</a>
             </div>
    </li>
-         <li data-tab-content id="tab-9" class="rootpage__content-tab hidden">
-            <h3 class="rootpage__title-text">Tab9</h3>
-            <p class="rootpage__text">Lorem  fgfgf ipsum dolor sit amet hfghfghfghfghf consectetur adipisicing elit. Harum facere voluptatibus, ex beatae placeat, quasi quis itaque eaque, iste sint adipisci reiciendis.</p>
-            <div class="button-content">
+         <li data-tab-content id="tab-9" class="rootpage__content-tab hidden" role="tabpanel">
+            <h3 class="rootpage__title-text">О себе</h3>
+            <p class="rootpage__text">&nbsp;Меня зовут Анатолий, мне 35&nbsp;лет. Родом из&nbsp;Минска, где в&nbsp;данное время и&nbsp;живу. <br>
+               Мой опыт в&nbsp;разработке сайтов в&nbsp;районе одного года, в&nbsp;течении которого я&nbsp;позновал (и&nbsp;познаю) тонкости верстки, оттачивал определенные современные техники, подмечал те&nbsp;или иные варианты реализации текущих задач и&nbsp;тем самым формировал свое видение, методы и&nbsp;понимание какой должен быть подход на&nbsp;пути к&nbsp;реализации качественного и&nbsp;современного продукта востребованного на&nbsp;рынке услуг по&nbsp;разработке сайтов. А&nbsp;о&nbsp;моем сегодняшнем подходе(что не&nbsp;означает, что и&nbsp;завтра данный подход будет идентичным, так как конечно есть что совершенствовать) пусть говорят непосредственно мои готовые работы. Как говорится&nbsp;&mdash; &laquo;верь делам, а&nbsp;не&nbsp;словам&raquo;.</p>
+           <p class="rootpage__text">Вот уже более десяти лет я&nbsp;являюсь&nbsp;ИП (c&nbsp;2013г.) и&nbsp;прекрасно заню что такое партнерские отношения и&nbsp;ответственность за&nbsp;взятые на&nbsp;себя обязательства перед заказчиком и&nbsp;реализация их&nbsp;в&nbsp;те&nbsp;сроки которые были согласованы перед заключением соглашения(договора) между сторонами сделки. До&nbsp;этого я&nbsp;занимался в&nbsp;сфере строительства(инженерная сантехника), но&nbsp;в&nbsp;данной области больше расти некуда в&nbsp;профессиональном плане, так как она ограничена определенными рамками в&nbsp;техническом плане. Да&nbsp;и&nbsp;уже эта сфера не&nbsp;интересна стала давно, а&nbsp;там где пропадает интерес - совершенствование и&nbsp;саморазвитие останавливается.</p>
+           <p class="rootpage__text">Чего не&nbsp;скажешь про сферу&nbsp;IT, где постоянно есть куда расти и&nbsp;самосовершенствоваться. Сегодня&nbsp;то, что казалось чем-то передовым и&nbsp;востребованным, через определенный отрезок времени будет безнадежно устаревшим и&nbsp;не&nbsp;соответствовать современным требованиям и&nbsp;реалиям. Так как на&nbsp;горизонте уже моячит что-то более инновационное, которое напорядок более эффективнее и&nbsp;продуктивнее по&nbsp;сравнению с&nbsp;тем что было до&nbsp;этого. Это и&nbsp;подстегивает постоянно развиваться и&nbsp;познавать более совершенные технологии и&nbsp;совершенствовать подходы и&nbsp;методы в&nbsp;реализации той или иной задачи. Как известно в&nbsp;динамичном мире если ты&nbsp;не&nbsp;движешься и&nbsp;не&nbsp;постигаешь что-то новое, тогда ты&nbsp;безнадежно отстаешь находясь на&nbsp;том месте, где был и&nbsp;вчера.</p>
+           <h5>Ранние работы:</h5>
+           <a class="rootpage__examples" href="https://anat-74.github.io/Home/"><span>Лендинг&nbsp;&mdash;</span> &laquo;Loft House&raquo;</a>
+           <a class="rootpage__examples" href="https://anat-74.github.io/zlatmax/"><span>Интернет-магазин&nbsp;&mdash;</span> &laquo;Zlatmax&raquo;</a>
+               <div class="button-content">
                <button class="button-content__prev" type="button">prev</button>
                <button class="button-content__go-top" type="button"></button>
-               <button class="button-content__next" type="button">next</button>
                </div>
          </li>
       </ul>
@@ -366,15 +381,21 @@
 
      const prevContent = tabContent.previousElementSibling
 
+/*
      nextBtn.forEach((el) => {
          el.addEventListener("click", function() {
-         console.log("hi")
-         console.log(nextContent)
-
+            console.log(nextContent)
          })
       })
+*/
 
      window.addEventListener("click", function(e){
+
+      if(e.target.dataset.next==='btn-2') {
+
+         console.log(contentTab)
+      }
+
       if(e.target.classList.contains("button-content__go-top")) {
          window.scrollTo({
             top: 35,
@@ -941,9 +962,17 @@
          font-weight: 600;
          color: #DA770B;
       }
+      .rootpage__item-content::before {
+         content: "";
+         display: inline-block;
+         width: 8px;
+         height: 8px;
+         margin: 0px 5px 2px 0px;
+         border-radius: 50%;
+         background-color: #AAA308;
+      }
       .rootpage__title-text {
          color: #AAA308;
-         padding-top: 6px;
          margin-bottom: 2px;
          font-size: 22px;
          line-height: 1.3;
@@ -990,6 +1019,17 @@
       }
       .rootpage__text:not(:last-child) {
          margin-bottom: 8px;
+      }
+      .rootpage__examples {
+         display: block;
+         margin-top: 5px;
+         margin-bottom: 8px;
+         font-size: 16px;
+         color: #32b5a4;
+      }
+      .rootpage__examples span {
+         font-size: 16px;
+         color: #AAA308;
       }
       .rootpage__footer {
          min-height: 450px;
