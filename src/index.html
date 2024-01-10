@@ -19,32 +19,32 @@
    </div>
       </div>
       <nav class="rootpage__nav">
-         <ul class="rootpage__list-nav">
-            <li class="rootpage__item" role="tablist">
+         <ul class="rootpage__list-nav" role="tablist">
+            <li class="rootpage__item">
                <a href="#" data-tab="tab-1" class="rootpage__link  rootpage__link--active" role="tab" aria-label="Главная">Главная</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-2" data-tab="tab-2" class="rootpage__link" role="tab" aria-label="Общее">Общее</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-3" data-tab="tab-3" class="rootpage__link" role="tab" aria-label="Бэм">БЭМ</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-4" data-tab="tab-4" class="rootpage__link" role="tab" aria-label="Grid">Grid</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-5" data-tab="tab-5" class="rootpage__link" role="tab" aria-label="Flexbox">Flexbox</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-6" data-tab="tab-6" class="rootpage__link" role="tab" aria-label="Препроцессор SASS">SCSS</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-7" data-tab="tab-7" class="rootpage__link" role="tab" aria-label="Доступность">Доступность</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-8" data-tab="tab-8" class="rootpage__link" role="tab" aria-label="JavaScript">JS</a>
             </li>
-            <li class="rootpage__item" role="tablist">
+            <li class="rootpage__item">
                <a href="#tab-9" data-tab="tab-9" class="rootpage__link" role="tab" aria-label="О себе">О себе</a>
             </li>
          </ul>
@@ -99,25 +99,26 @@
             </ul>
             </div>
 
-            <ul class="rootpage__list-content-tab">
-         <li data-tab-content id="tab-2" class="rootpage__content-tab hidden" role="tabpanel">
-              <h2 class="rootpage__title-content">Мое видение в<small>ё</small>рстки</h2>
+            <ul class="rootpage__list-content-tab" role="tabpanel">
+         <li data-tab-content id="tab-2" class="rootpage__content-tab hidden">
+              <h2 class="rootpage__title-content">&nbsp;<span>Мое видение в<small>ё</small>рстки</span></h2>
+              <h3 class="rootpage__title-text">Анализ  и подготовка</h3>
               <p class="rootpage__text">&nbsp;На&nbsp;мой взгляд одним из&nbsp;ключевых действий в&nbsp;реализации качественной верстки является сперва-наперво очень тщательный анализ макета непосредственно перед началом выполнения проекта. Анализ на&nbsp;предмет повторяющихся блоков, элементов будущей верстки, резервирование отдельных классов (которые будут в&nbsp;дальнейшем переиспользоваться), модификаторов, миксинов, отделение контентного изображения от&nbsp;декоративного. И&nbsp;прочие ньюансы, которые должны быть учтены с&nbsp;должным вниманием. На&nbsp;самом деле это <span>!!</span> очень важный момент перед тем как приступать к&nbsp;реализации проекта, что в&nbsp;итоге в&nbsp;дальнейшем может сказаться как на&nbsp;качестве, так и&nbsp;на&nbsp;скорости работы. Зачем например плодить кучу повторяющегося кода, если его можно просто банально переиспользовать с&nbsp;минимальным редактированием (если это необходимо)? Что нам и&nbsp;предоставляет БЭМ-методология.
                Не&nbsp;менее важным аспектом для реализации качественной верстки является умение самоорганизоваться и&nbsp;отрешится от&nbsp;всего что мешает сосредоточится на&nbsp;данном проекте. <br>
             </p>
             <h3 class="rootpage__title-text">Надежность и отзывчивость (responsive)</h3>
-            <p class="rootpage__text">&nbsp;Надежность - это то&nbsp;к&nbsp;чему в&nbsp;первую очередь должен стремится каждый &laquo;мастер верстки&raquo;. А&nbsp;именно, верстка должна быть максимально &laquo;резиновой&raquo; и&nbsp;поддаваться трансформации. К&nbsp;примеру нужно предусмотреть что&nbsp;бы в&nbsp;процессе возможного переполнения контента данный контент автоматически мог перемещаться на&nbsp;следующую строку (максимально стараться использовать единицы гибкости fr&nbsp;и&nbsp;auto). Или представим что через какой-то промежуток времени (скажем чрез пару лет) владелец верстки захочет в&nbsp;каких-то сложных секциях страницы кардинально поменять структуру и&nbsp;размеры блоков, а&nbsp;структуру HTML никак нельзя трогать, у&nbsp;него должна быть эта возможность реализации в&nbsp;CSS без каких-то особых трудностей. Вот здесь мы&nbsp;и&nbsp;подошли к&nbsp;обширным возможностям которые нам предоставляет адаптивный Grid Layout (подробнее во вкладке - <small>Grid</small>).
-               В&nbsp;основе моего подхода к&nbsp;верстке за&nbsp;позиционирование контента отвечает CSS Grid (не&nbsp;всегда конечно, бывает проще и&nbsp;короче использовать Flexbox). Но&nbsp;в&nbsp;сложных и&nbsp;обширных секциях страницы несомненно и&nbsp;бесспорно руководить процессом построения и&nbsp;адаптива контента будет Grid. 
-               CSS Grid дает нам разработчикам возможность избавиться от&nbsp;большинства этих всех несемантических &laquo;div&raquo; контейнеров заменив их&nbsp;на&nbsp;чистый, семантический HTML и&nbsp;оставить разметку полностью на&nbsp;CSS, так как это всегда и&nbsp;должно было быть.
-            </p>
+            <p class="rootpage__text">&nbsp;Надежность&nbsp;&mdash; это то&nbsp;к&nbsp;чему по-моему мнению в&nbsp;первую очередь должен стремится каждый &laquo;мастер верстки&raquo;. А&nbsp;именно, верстка должна быть максимально &laquo;отзывчивой&raquo; и&nbsp;что-бы при добавлении нового контента с&nbsp;ней ничего не&nbsp;могло случится. К&nbsp;примеру, нужно предусмотреть что&nbsp;бы в&nbsp;процессе возможного переполнения контента, данный контент автоматически мог перемещаться на&nbsp;следующую строку (максимально стараться использовать единицы гибкости <code>fr</code> и <code>auto</code>), а&nbsp;так-же использовать отзывчивые свойства (<code>auto-fill</code> и <code>auto-fit</code> в&nbsp;CSS Grid, <code>flex-wrap: wrap</code> в&nbsp;Flexbox) Так-же при необходимости верстку можно безболезненно трансформировать. Т.е. представим что через какой-то промежуток времени (скажем чрез пару лет) владелец верстки захочет в&nbsp;каких-то сложных секциях страницы кардинально поменять структуру и&nbsp;размеры блоков, а&nbsp;структуру HTML никак нельзя трогать, у&nbsp;него должна быть эта возможность реализации в&nbsp;CSS без каких-то особых трудностей. Вот здесь мы&nbsp;и&nbsp;подошли к&nbsp;обширным возможностям которые нам предоставляет CSS Grid Layout (подробнее во&nbsp;вкладке&nbsp;&mdash; <strong>Grid</strong>).
+               В&nbsp;основе моего подхода к&nbsp;верстке за&nbsp;позиционирование контента отвечает CSS Grid (не&nbsp;всегда конечно, бывает проще и&nbsp;короче использовать Flexbox). Но&nbsp;в&nbsp;сложных и&nbsp;обширных секциях страницы несомненно и&nbsp;бесспорно руководить процессом построения и&nbsp;позиционирования контента будет&nbsp;&mdash; CSS Grid. 
+               И&nbsp;еще, Grid дает нам разработчикам возможность избавиться от&nbsp;большинства этих всех несемантических &laquo;<small>div</small>&raquo; контейнеров, которые только засоряют HTML-код.</p>
             <h3 class="rootpage__title-text">Верстка под mobile и удобство пользования на мобильных устройствах </h3>
             <p class="rootpage__text">&nbsp;Одним из&nbsp;самых моих любимых этапов в&nbsp;процессе верстки является трансформация блоков верстки от&nbsp;desctop к&nbsp;mobile. Честно, я&nbsp;&laquo;тащусь&raquo; когда блоки начинают трансформироваться к&nbsp;mobile-версии. Ведь нужно постараться увидеть все &laquo;подводные камни&raquo; которые могут встретиться в&nbsp;процессе перестроения и&nbsp;изменения размеров блоков с&nbsp;контентом на&nbsp;пути к&nbsp;экранам с&nbsp;разрешениями ширины меньше предыдущего и&nbsp;сделать соответствующие выводы при оргаризации структуры CSS.
-               Например нужно предусмотреть изменения размеров отступа между блоками, размеры шрифта, изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). Если например в&nbsp;том&nbsp;же &laquo;footer&raquo; имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;spoiler, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
+               Например нужно предусмотреть изменения размеров отступа между блоками, изменение величины шрифта (и&nbsp;кстати здесь не&nbsp;обязательно постоянно использовать <code>@media</code>-запросы, SCSS нами предоставляют инструменты, например есть такой <small>&laquo;миксин&raquo;</small> благодаря которому можно сразу задавть свойствам: <code>width, height, marign, padding, font-size, gap</code> начальные и&nbsp;конечные размеры. И&nbsp;по&nbsp;мере изменения ширины экрана&nbsp;&mdash; эти размеры будут отзывчиво изменятся. Похоже на&nbsp;CSS функцию <code>clamp()</code>, но&nbsp;куда более эффективнее в&nbsp;применении), изменения цвета шрифта (когда например при сужении экрана цвет шрифта и&nbsp;фона начинают сливаться, что конечно не&nbsp;есть хорошо). <br> Если например в&nbsp;том&nbsp;же &laquo;footer&raquo; имеется слишком много контента, тогда имеет смысл поместить его в&nbsp;<small>spoiler</small>, что не&nbsp;сомненно скажется на&nbsp;удобстве пользования сайта, ведь скролить уже надо будет на&nbsp;порядок меньше. <br> Конечно это лишь одни из&nbsp;многих ситуаций которые встречаются на&nbsp;этапе адаптива верстки.
                </p>
+               <p class="rootpage__text">&nbsp;</p>
                <div class="button-content">
                 <button class="button-content__hidden" type="button"></button>
                <button class="button-content__go-top" type="button"></button>
-               <a data-next="btn-1" class="button-content__next" href="#tab-3">next</a>
+               <button type="button" data-next="btn-1" class="button-content__next">next</button>
                </div>
             </li>
 
@@ -163,7 +164,7 @@
          <div class="button-content">
             <button class="button-content__prev" type="button">prev</button>
             <button class="button-content__go-top" type="button"></button>
-            <a data-next="btn-2" class="button-content__next" href="#">next</a>
+            <button type="button" data-next="btn-2" class="button-content__next">next</button>
             </div>
       </li>
 
@@ -184,7 +185,7 @@
       <div class="button-content">
          <button class="button-content__prev" type="button">prev</button>
          <button class="button-content__go-top" type="button"></button>
-         <a data-next="btn-3" class="button-content__next" href="#tab-5">next</a>
+         <button type="button" data-next="btn-3" class="button-content__next">next</button>
          </div>
    </li>
 
@@ -204,7 +205,7 @@
                <div class="button-content">
                   <button class="button-content__prev" type="button">prev</button>
                   <button class="button-content__go-top" type="button"></button>
-                  <a data-next="btn-4" class="button-content__next" href="#tab-6">next</a>
+                  <button type="button" data-next="btn-4" class="button-content__next">next</button>
                   </div>
          </li>
 
@@ -226,7 +227,7 @@
                <div class="button-content">
                   <button class="button-content__prev" type="button">prev</button>
                   <button class="button-content__go-top" type="button"></button>
-                  <a data-next="btn-5" class="button-content__next" href="#tab-7">next</a>
+                  <button type="button" data-next="btn-5" class="button-content__next">next</button>
                   </div>
          </li>
 
@@ -258,7 +259,7 @@
          <div class="button-content">
             <button class="button-content__prev" type="button">prev</button>
             <button class="button-content__go-top" type="button"></button>
-            <a data-next="btn-6" class="button-content__next" href="#tab-8">next</a>
+            <button type="button" data-next="btn-6" class="button-content__next">next</button>
             </div>
    </li>
 
@@ -266,27 +267,52 @@
       <h3 class="rootpage__title-text">JS</h3>
       <p class="rootpage__text">Те&nbsp;кто хоть немного сталкивался с&nbsp;веб-разработкой знают, что JavaScript (JS)&nbsp;&mdash; это язык программирования, который в&nbsp;первую очередь применяют в&nbsp;вебе. С&nbsp;его помощью сайты делают интерактивными: добавляют всплывающие окна, анимацию, манипуляция с&nbsp;кнопками, формы для отправки информации и&nbsp;прочее. <br>
          Благодаря JS&nbsp;сайт уже не&nbsp;просто статичная страница, а&nbsp;динамичная программа, реагирующая на&nbsp;действие пользователей.</p>
-      <p class="rootpage__text">Так как я&nbsp;на&nbsp;данное время позиционирую себя как &laquo;верстальщик&raquo;, то&nbsp;в&nbsp;моем багаже имеется все что необходимо для манипуляуии с&nbsp;<a href="https://doka.guide/js/dom/">DOM(Document Object Model)</a> через <a href="https://doka.guide/js/element/">Element</a> и&nbsp;<a href="https://doka.guide/js/events/">Событийной модели.</a></p>
+      <p class="rootpage__text">Так как я&nbsp;на&nbsp;данное время позиционирую себя как &laquo;верстальщик&raquo;, то&nbsp;в&nbsp;моем багаже имеется все что необходимо для манипуляуии с&nbsp;<a href="https://doka.guide/js/dom/">DOM(Document Object Model)</a> через <a href="https://doka.guide/js/element/">Element</a> и&nbsp;<a href="https://doka.guide/js/events/">Событийной модели.</a> <br> <span>Соответственно реализация таких функуионалов как:</span> <br>
+      <ul>
+         <li><span>Табы</span></li>
+         <li><span>Спойлеры</span></li>
+         <li><span>Попапы</span></li>
+         <li><span>Меню "Бургер"</span></li>
+         <li><span>Работа с формами</span></li>
+         <li><span>Работа с прокруткой страниц</span></li>
+         <li><span>Слайдер</span></li>
+         <li><span>Светлая/темная тема</span></li>
+      </ul>
+      </p>
+      <p class="rootpage__text"></p>
       <p class="rootpage__text">Веб-разработка, да&nbsp;и&nbsp;вообще любая IT-сфера подразумевает постоянное совершенствование и&nbsp;овладение новыми знаниями и&nbsp;инструментами, ведь эта сфера никогда не&nbsp;стоит на&nbsp;месте. Что-то постоянно устаревает, становится уже не&nbsp;актуальным и&nbsp;это &laquo;что-то&raquo; вытесняется чем-то более совершенным и&nbsp;продвинутым. Это и&nbsp;есть прогресс. И&nbsp;естественно настоящий веб-разработчик должен постоянно позновать что-то новое, обогощая себя более совершенными инструментами и&nbsp;методами для реализации той или иной задачи, что будет способствовать его дальнейшему росту и&nbsp;профессионализму. Естественно и&nbsp;я&nbsp;не&nbsp;собираюсь останавливаться на&nbsp;том уровне на&nbsp;котором сейчас нахожусь, а&nbsp;значит еще больше углубляться в&nbsp;JavaScript, в&nbsp;планах изучения хотя&nbsp;бы одного фреймворка (React.js или Vue.js), а&nbsp;так&nbsp;же всего того что будет способствовать профессиональному росту в&nbsp;выбранной мной сфере.</p>
       <p class="rootpage__text">Но&nbsp;на&nbsp;данное время мне все&nbsp;же больше интересно расти в&nbsp;сфере касаемо непосредственно &laquo;верстки&raquo; и&nbsp;соотвественно акцент делается на&nbsp;те&nbsp;инструменты и&nbsp;методы которые напрямую связаны с&nbsp;реализацией отзывчивой (responsive), надежной, доступной и&nbsp;динамичной версткой. Для меня верстка в&nbsp;большей степени ассоциируется с&nbsp;&laquo;творчеством&raquo;, чем с&nbsp;&laquo;логикой&raquo; и&nbsp;я&nbsp;получаю определенную порцию удавольстваия когда приходит время к&nbsp;позиционированию и&nbsp;трансформации контента. И&nbsp;в&nbsp;самое ближайшее время будет реализована анимация на&nbsp;&laquo;GreenSock (GSAP)&raquo;. <br> &nbsp;Что это за&nbsp;сайт без настоящей анимации?)</p>
          <div class="button-content">
             <button class="button-content__prev" type="button">prev</button>
             <button class="button-content__go-top" type="button"></button>
-            <a data-next="btn-7" class="button-content__next" href="#tab-9">next</a>
+            <button type="button" data-next="btn-7" class="button-content__next">next</button>
             </div>
    </li>
          <li data-tab-content id="tab-9" class="rootpage__content-tab hidden" role="tabpanel">
             <h3 class="rootpage__title-text">О себе</h3>
             <p class="rootpage__text">&nbsp;Меня зовут Анатолий, мне 35&nbsp;лет. Родом из&nbsp;Минска, где в&nbsp;данное время и&nbsp;живу. <br>
-               Мой опыт в&nbsp;разработке сайтов в&nbsp;районе одного года, в&nbsp;течении которого я&nbsp;позновал (и&nbsp;познаю) тонкости верстки, оттачивал определенные современные техники, подмечал те&nbsp;или иные варианты реализации текущих задач и&nbsp;тем самым формировал свое видение, методы и&nbsp;понимание какой должен быть подход на&nbsp;пути к&nbsp;реализации качественного и&nbsp;современного продукта востребованного на&nbsp;рынке услуг по&nbsp;разработке сайтов. А&nbsp;о&nbsp;моем сегодняшнем подходе(что не&nbsp;означает, что и&nbsp;завтра данный подход будет идентичным, так как конечно есть что совершенствовать) пусть говорят непосредственно мои готовые работы. Как говорится&nbsp;&mdash; &laquo;верь делам, а&nbsp;не&nbsp;словам&raquo;.</p>
+               Мой опыт в&nbsp;разработке сайтов в&nbsp;районе одного года, в&nbsp;течении которого я&nbsp;познавал (и&nbsp;познаю) тонкости верстки, оттачивал определенные современные техники, подмечал те&nbsp;или иные варианты реализации текущих задач и&nbsp;тем самым формировал свое видение, методы и&nbsp;понимание какой должен быть подход на&nbsp;пути к&nbsp;реализации качественного и&nbsp;современного продукта востребованного на&nbsp;рынке услуг по&nbsp;разработке сайтов. А&nbsp;о&nbsp;моем сегодняшнем подходе(что не&nbsp;означает, что и&nbsp;завтра данный подход будет идентичным, так как конечно есть что совершенствовать) пусть говорят непосредственно мои готовые работы. Как говорится&nbsp;&mdash; &laquo;верь делам, а&nbsp;не&nbsp;словам&raquo;.</p>
            <p class="rootpage__text">Вот уже более десяти лет я&nbsp;являюсь&nbsp;ИП (c&nbsp;2013г.) и&nbsp;прекрасно заню что такое партнерские отношения и&nbsp;ответственность за&nbsp;взятые на&nbsp;себя обязательства перед заказчиком и&nbsp;реализация их&nbsp;в&nbsp;те&nbsp;сроки которые были согласованы перед заключением соглашения(договора) между сторонами сделки. До&nbsp;этого я&nbsp;занимался в&nbsp;сфере строительства(инженерная сантехника), но&nbsp;в&nbsp;данной области больше расти некуда в&nbsp;профессиональном плане, так как она ограничена определенными рамками в&nbsp;техническом плане. Да&nbsp;и&nbsp;уже эта сфера не&nbsp;интересна стала давно, а&nbsp;там где пропадает интерес - совершенствование и&nbsp;саморазвитие останавливается.</p>
            <p class="rootpage__text">Чего не&nbsp;скажешь про сферу&nbsp;IT, где постоянно есть куда расти и&nbsp;самосовершенствоваться. Сегодня&nbsp;то, что казалось чем-то передовым и&nbsp;востребованным, через определенный отрезок времени будет безнадежно устаревшим и&nbsp;не&nbsp;соответствовать современным требованиям и&nbsp;реалиям. Так как на&nbsp;горизонте уже моячит что-то более инновационное, которое напорядок более эффективнее и&nbsp;продуктивнее по&nbsp;сравнению с&nbsp;тем что было до&nbsp;этого. Это и&nbsp;подстегивает постоянно развиваться и&nbsp;познавать более совершенные технологии и&nbsp;совершенствовать подходы и&nbsp;методы в&nbsp;реализации той или иной задачи. Как известно в&nbsp;динамичном мире если ты&nbsp;не&nbsp;движешься и&nbsp;не&nbsp;постигаешь что-то новое, тогда ты&nbsp;безнадежно отстаешь находясь на&nbsp;том месте, где был и&nbsp;вчера.</p>
-           <h5>Ранние работы:</h5>
+           <h4 class="rootpage__title-content">Мои услуги:</h4>
+           <p class="rootpage__text">Верстка отзывчивых (responsive) сайтов с чистым кроссбраузерным валидным кодом (HTML5, CSS3, JS).</p>
+           <p class="rootpage__text">Творческий и детальный подход к мобильной версии сайта, т.е. заказчику не обязательно заказывать дополнительный макет. Нужен только макет для ПК.</p>
+            <p class="rootpage__text"><strong> В приоритете - долгосрочное взаимовыгодное сотрудничество.</strong></p>
+
+            <h5>Ранние работы:</h5>
            <a class="rootpage__examples" href="https://anat-74.github.io/Home/"><span>Лендинг&nbsp;&mdash;</span> &laquo;Loft House&raquo;</a>
            <a class="rootpage__examples" href="https://anat-74.github.io/zlatmax/"><span>Интернет-магазин&nbsp;&mdash;</span> &laquo;Zlatmax&raquo;</a>
-               <div class="button-content">
+         <div class="rootpage__source">
+         <h4>Мои контакты:</h4>
+         <address class="rootpage__source-contacts">Viber (<span>Беларусь</span>)<a href="tel:+375296375291"> +375(29) 637-52-91</a></address>
+         <address class="rootpage__source-contacts">Почта: <a href="mailto:web7anat@gmail.com"> web7anat@gmail.com</a></address>
+         <address class="rootpage__source-contacts">Соц. сети: <a href="https://t.me/Anat7777"> Telegram</a></address>
+         <address class="rootpage__source-contacts">Skype: <a href="https://www.skype.com/ru/"> live:santexsistem</a></address>
+      </div>
+         <div class="button-content">
                <button class="button-content__prev" type="button">prev</button>
                <button class="button-content__go-top" type="button"></button>
+               <button type="button" data-next="btn-7" class="button-content__hidden"></button>
                </div>
          </li>
       </ul>
@@ -384,17 +410,34 @@
 /*
      nextBtn.forEach((el) => {
          el.addEventListener("click", function() {
-            console.log(nextContent)
+
          })
       })
 */
 
+
      window.addEventListener("click", function(e){
+      /*
+      if(e.target.dataset.next==='btn-1'|| e.target.dataset.next==='btn-3' || e.target.dataset.next==='btn-5') {
+         
+         //contentTab[1].classList.add("hidden")
+         //contentTab[2].classList.remove("hidden")
+         //tabHeaders[1].classList.remove("rootpage__link--active")
+         //tabHeaders[2].classList.add("rootpage__link--active")
 
-      if(e.target.dataset.next==='btn-2') {
-
-         console.log(contentTab)
+         //let arrayContent = Array.from(contentTab)
+         for(let i = 0; i < contentTab.length; i++) {
+            if(i % 2 !==0) {
+            contentTab[i].classList.add("hidden")
+            tabHeaders[2].classList.add("rootpage__link--active")
+         } else if (contentTab[2]) {
+            console.log(contentTab[2])
+            contentTab[2].classList.remove("hidden")
+            tabHeaders[1].classList.remove("rootpage__link--active")
+         }
       }
+   }
+   */
 
       if(e.target.classList.contains("button-content__go-top")) {
          window.scrollTo({
@@ -404,8 +447,6 @@
          })
       }
    })
-
-
    </script>
 	</body>
 	<style>
@@ -779,7 +820,7 @@
          white-space: nowrap;
          height: 100%;
          left: -10px;
-         top: -30px;
+         top: -26px;
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
 			color: #AAA308;
@@ -889,7 +930,16 @@
             font-weight: 700;
 			}
 		}
-
+      .rootpage__left-bottom {
+         position: absolute;
+         left: 104px;
+         top: 94px;
+         font-size: 16px;
+         line-height: 1.3;
+         font-style: italic;
+         color: #32b5a4;
+         transform: rotate(40deg);
+      }
       .rootpage__content {
          grid-area: content;
          border: 9px double #AAA308;
@@ -940,9 +990,14 @@
          color: #AAA308;
          margin-bottom: 10px;
       }
+      .rootpage__title-content span {
+         font-size: 26px;
+         font-weight: 700;
+         color: #DA770B;
+      }
       .rootpage__title-content small {
-         font-size: 28px;
-         color: #32b5a4;
+         font-size: 26px;
+         color: #AAA308
       }
       @media (max-width: 776px) {
          .rootpage__title-content {
@@ -1017,18 +1072,33 @@
          text-decoration: underline;
          color: #32b5a4;
       }
+      .rootpage__source h4 {
+         margin-top: 4px;
+      }
+      .rootpage__source-contacts {
+         display: inline-block;
+         font-style: normal;
+         font-weight: 700;
+         color: #AAA308;
+         font-size: 18px;
+         margin-bottom: 8px;
+      }
+      .rootpage__source-contacts span {
+         font-size: 18px;
+      }
       .rootpage__text:not(:last-child) {
          margin-bottom: 8px;
       }
       .rootpage__examples {
          display: block;
-         margin-top: 5px;
+         margin-top: 6px;
          margin-bottom: 8px;
-         font-size: 16px;
+         font-size: 18px;
          color: #32b5a4;
       }
       .rootpage__examples span {
-         font-size: 16px;
+         font-weight: 500;
+         font-size: 18px;
          color: #AAA308;
       }
       .rootpage__footer {
