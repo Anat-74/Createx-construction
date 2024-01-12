@@ -778,27 +778,17 @@
       .hidden {
          display: none;
       }
-      .rootpage__nav {
-         overflow-x: auto;
-      }
          .rootpage__list-nav {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(137px, 1fr));
-         justify-items: center;
-         align-items: center;
-         column-gap: 7px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         column-gap: 8px;
          row-gap: 12px;
          padding: 3px 15px 15px 15px;
       }
       @media (max-width: 991px) {
          .rootpage__list-nav {
             padding-bottom: 10px;
-			}
-		}
-      @media (max-width: 460px) {
-         .rootpage__list-nav {
-            display: inline-grid;
-            grid-template-columns: repeat(3, 1fr);
 			}
 		}
          .rootpage__link{
@@ -911,14 +901,14 @@
          top: -26px;
          transform: rotate(-180deg);
          writing-mode: vertical-rl;
-			color: #AAA308;
+			color: #DA770B;
          font-size: 1.375rem;
          line-height: 1.2;
          margin-bottom: 25px;
 		}
       .rootpage__title small {
          font-size: 1.875rem;
-         color: #DA770B;
+         color: #AAA308;
       }
 		@media (max-width: 991px) {
 			.rootpage__title {
@@ -982,7 +972,7 @@
          }
       }
 		.rootpage__list {
-         margin: 35px 0px 35px 40px;
+         margin: 26px 0px 26px 40px;
 		}
 		.rootpage__list li:not(:last-child){
 			margin: 0px 0px 20px 0px;
@@ -1020,8 +1010,8 @@
 		}
       .rootpage__left-bottom {
          position: absolute;
-         left: 114px;
-         top: 108px;
+         left: 110px;
+         top: 98px;
          font-size: 0.75rem;
          line-height: 1.3;
          font-style: italic;
@@ -1030,8 +1020,8 @@
       }
       @media (max-width: 776px) {
          .rootpage__left-bottom {
-         left: 110px;
-         top: 100px;
+         left: 100px;
+         top: 90px;
 			}
 		}
       .rootpage__content {
@@ -1177,22 +1167,22 @@
          font-style: normal;
          font-weight: 700;
          color: #AAA308;
-         font-size: 18px;
+         font-size: 1rem;
          margin-bottom: 8px;
       }
       .rootpage__source-contacts span {
-         font-size: 18px;
+         font-size: 1rem;
       }
       .rootpage__examples {
          display: block;
          margin-top: 6px;
          margin-bottom: 8px;
-         font-size: 18px;
+         font-size: 1rem;
          color: #32b5a4;
       }
       .rootpage__examples span {
          font-weight: 500;
-         font-size: 18px;
+         font-size: 1rem;
          color: #AAA308;
       }
       .rootpage__footer {
@@ -1220,7 +1210,7 @@
 		}
 		.rootpage__contacts address {
          font-style: normal;
-         font-size: 18px;
+         font-size: 1.25rem;
          line-height: 1.5;
          font-weight: 700;
 			color: #DA770B;
@@ -1239,7 +1229,7 @@
          border-radius: 4px;
       }
       .rootpage__contacts address span {
-         font-size: 18px;
+         font-size: 1rem;
          color: green;
          margin-bottom: 0px;
       }
