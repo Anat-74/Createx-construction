@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<htm>
+<html>
 	<head>
 		<meta charset="UTF-8">
       <meta name="format-detection" content="telephone=no">
@@ -634,9 +634,15 @@
          grid-template-columns: 1fr auto;
          column-gap: 16px;
          padding: 5px 15px 10px 0px;
-         background: url('@img/index/free-png.ru-175.png') 50% 54%/cover no-repeat;
+         background-image: image-set(
+         url('@img/index/theme-avif@1x.avif'),
+         url('@img/index/theme@1x.png')
+         ); 
+         background-size: cover;
+         background-position: 50% 54%;
+         background-repeat: no-repeat;
          animation-name: header-anim;
-         animation-duration: 4s;
+         animation-duration: 7s;
          animation-timing-function: ease-out;
       }
 
@@ -669,7 +675,7 @@
          padding-left: 28px;
          white-space: nowrap;
          font-style: normal;
-         background: url('@img/index/icons8-логотип-telegram-48.png') 0px -4px/contain no-repeat;
+         background: url('@img/index/telegram.@1x.webp') 0px -4px/contain no-repeat;
       }
       .contacts__telegram a {
          font-weight: 600;
@@ -855,7 +861,13 @@
          animation-name: left-anim;
          animation-duration: 0.2s;
          animation-timing-function: ease-out;
-         background: url('@img/index/light-bulb-2402087_640.webp') 50% 30% no-repeat;
+         background-image: image-set(
+         url('@img/index/light-bulb-2402087_640@1x.avif') type('image/avif'),
+         url('@img/index/light-bulb-2402087_640@1x.webp')
+         ); 
+         background-size: cover;
+         background-position: 30% 50%;
+         background-repeat: no-repeat;
          }
          @keyframes left-anim {
          0% {
@@ -884,8 +896,7 @@
    }
    @media (max-width: 500px) {
       .rootpage__left {
-            background-position: 50% 30%;
-            background-size: auto;
+            background-position: 50% 1%;
          }
          @keyframes left-anim {
          0% {
@@ -895,7 +906,7 @@
             background-size: 85%;
          }
          100% {
-            background-size: 155%;
+            background-size: 115%;
          }
       }
    }
@@ -1211,7 +1222,13 @@
          display: grid;
          justify-items: center;
          align-items: center;
-         background: url('@img/index/free-png.3.png') 50% 0 no-repeat;
+         background-image: image-set(
+         url('@img/index/free@1x.avif'),
+         url('@img/index/free-png@1x.png') 
+         ); 
+         background-position:  50% 0;
+         background-repeat: no-repeat;
+
       }
       .rootpage__content-none {
          display: none;
@@ -1255,4 +1272,4 @@
          margin-bottom: 0px;
       }
 	</style>
-</htm>
+</html>
