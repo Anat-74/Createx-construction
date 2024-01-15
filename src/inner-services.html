@@ -8,7 +8,13 @@
    <div class="wrapper">
       @@include('html/_header-2.htm',{})
       <main class="page">
-         <section class="page__hero-inner-services hero-inner-services hero" style="background-image: url('@img/main/inner-services/bg-image.png')">
+         <section class="page__hero-inner-services hero-inner-services hero" 
+         style="background-image: image-set(
+            url('@img/main/inner-services/bg-image@2x.avif') 2x,
+            url('@img/main/inner-services/bg-image@1x.avif') 1x,
+            url('@img/main/inner-services/bg-image@2x.png') 2x,
+            url('@img/main/inner-services/bg-image@1x.png') 1x
+            );">
             <div class="hero-inner-services__container">
                <ul class="hero-inner-services__list bredcrumbs">
                   <li class="bredcrumbs__item">
@@ -29,7 +35,8 @@
          <section class="page__offer offer">
             <div class="offer__container">
                <div class="offer__image">
-               <img src="@img/main/offer/image.jpg" alt="Cover">
+               <img src="@img/main/offer/image@1x.webp"
+               srcset="@img/main/offer/image@2x.webp 2x" alt="Interior design of apartments">
             </div>
                <div class="offer__items">
                   <h2 class="offer__title">We offer</h2>
@@ -119,7 +126,7 @@
                         <div class="projects__slide swiper-slide">
                            <a href="#" class="portfolio-slide">
                               <div class="portfolio-slide__image-ibg">
-                           <img src="@img/main/related/image-1.jpg" alt="Cover">
+                           <img src="@img/main/related/image-1.webp" alt="Cover">
                         </div>
                            <div class="portfolio-slide__content">
                               <h3 class="portfolio-slide__title subtitle">Kids Bedroom With Decorations</h3>
@@ -131,7 +138,7 @@
                         <div class="projects__slide swiper-slide">
                            <a href="#" class="portfolio-slide">
                               <div class="portfolio-slide__image-ibg">
-                           <img src="@img/main/related/image-2.jpg" alt="Cover">
+                           <img src="@img/main/related/image-2.webp" alt="Cover">
                         </div>
                            <div class="portfolio-slide__content">
                               <h3 class="portfolio-slide__title subtitle">Modern Double Bedroom</h3>
@@ -143,7 +150,7 @@
                         <div class="projects__slide swiper-slide">
                            <a href="#" class="portfolio-slide">
                               <div class="portfolio-slide__image-ibg">
-                           <img src="@img/main/related/image-3.jpg" alt="Cover">
+                           <img src="@img/main/related/image-3.webp" alt="Cover">
                         </div>
                            <div class="portfolio-slide__content">
                               <h3 class="portfolio-slide__title subtitle">Scandinavian Style Interior</h3>
@@ -155,7 +162,7 @@
                         <div class="projects__slide swiper-slide">
                            <a href="#" class="portfolio-slide">
                               <div class="portfolio-slide__image-ibg">
-                           <img src="@img/main/related/image-1.jpg" alt="Cover">
+                           <img src="@img/main/related/image-1.webp" alt="Cover">
                         </div>
                            <div class="portfolio-slide__content">
                               <h3 class="portfolio-slide__title subtitle">Kids Bedroom With Decorations</h3>
@@ -167,7 +174,7 @@
                         <div class="projects__slide swiper-slide">
                            <a href="#" class="portfolio-slide">
                               <div class="portfolio-slide__image-ibg">
-                           <img src="@img/main/related/image-2.jpg" alt="Cover">
+                           <img src="@img/main/related/image-2.webp" alt="Cover">
                         </div>
                            <div class="portfolio-slide__content">
                               <h3 class="portfolio-slide__title subtitle">Modern Double Bedroom</h3>
@@ -179,7 +186,7 @@
                         <div class="projects__slide swiper-slide">
                            <a href="#" class="portfolio-slide">
                               <div class="portfolio-slide__image-ibg">
-                           <img src="@img/main/related/image-3.jpg" alt="Cover">
+                           <img src="@img/main/related/image-3.webp" alt="Cover">
                         </div>
                            <div class="portfolio-slide__content">
                               <h3 class="portfolio-slide__title subtitle">Scandinavian Style Interior</h3>
@@ -348,32 +355,32 @@
                   <ul class="logo-partners__list">
                      <li class="logo-partners__item">
                      <a href="#" class="logo-partners__link">
-                     <img class="logo-partners__image" src="@img/main/partners/logo/InDepth Consulting Logo 1.png" alt="cover">
+                     <img class="logo-partners__image" src="@img/main/partners/logo/InDepth Consulting Logo 1.webp" alt="cover">
                         </a>
                      </li>
                      <li class="logo-partners__item">
                         <a href="#" class="logo-partners__link">
-                        <img class="logo-partners__image" src="@img/main/partners/logo/Higher Fit Logo 2.png" alt="cover">
+                        <img class="logo-partners__image" src="@img/main/partners/logo/Higher Fit Logo 2.webp" alt="cover">
                            </a>
                         </li>
                         <li class="logo-partners__item">
                            <a href="#" class="logo-partners__link">
-                           <img class="logo-partners__image" src="@img/main/partners/logo/Sentinal Consulting Logo 3.png" alt="cover">
+                           <img class="logo-partners__image" src="@img/main/partners/logo/Sentinal Consulting Logo 3.webp" alt="cover">
                               </a>
                            </li>
                            <li class="logo-partners__item">
                               <a href="#" class="logo-partners__link">
-                              <img class="logo-partners__image" src="@img/main/partners/logo/Happy Home Logo 4.png" alt="cover">
+                              <img class="logo-partners__image" src="@img/main/partners/logo/Happy Home Logo 4.webp" alt="cover">
                                  </a>
                               </li>
                               <li class="logo-partners__item">
                                  <a href="#" class="logo-partners__link">
-                                 <img class="logo-partners__image" src="@img/main/partners/logo/For Sale Logo 5.png" alt="cover">
+                                 <img class="logo-partners__image" src="@img/main/partners/logo/For Sale Logo 5.webp" alt="cover">
                                     </a>
                                  </li>
                                  <li class="logo-partners__item">
                                     <a href="#" class="logo-partners__link">
-                                    <img class="logo-partners__image" src="@img/main/partners/logo/Sunset Realty Logo 6.png" alt="cover">
+                                    <img class="logo-partners__image" src="@img/main/partners/logo/Sunset Realty Logo 6.webp" alt="cover">
                                        </a>
                                     </li>
                   </ul>
@@ -381,7 +388,13 @@
             </div>
          </section>
 
-         <section class="page__bg-form bg-form" style="background-image: url('@img/main/bg-form/bg-image.jpg')">
+         <section class="page__bg-form bg-form" 
+         style="background-image: image-set(
+            url('@img/main/bg-form/image@2x.avif') 2x,
+            url('@img/main/bg-form/bg-image@1x.avif') 1x,
+            url('@img/main/bg-form/image@2x.jpg') 2x,
+            url('@img/main/bg-form/bg-image@1x.jpg') 1x
+            );">
             <div class="bg-form__container">
                <h2 class="visually-hidden">Form</h2>
                <form action="#" class="form">
