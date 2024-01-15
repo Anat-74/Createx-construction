@@ -10,7 +10,12 @@
       @@include('html/_header-2.htm',{})
       <main class="page">
          <section class="page__hero-inner-about-us hero"
-            style="background-image: url('@img/main/inner-about-us/bg-image.png')">
+         style="background-image: image-set(
+            url('@img/main/inner-about-us/bg-image@2x.avif') 2x,
+            url('@img/main/inner-about-us/bg-image@1x.avif') 1x,
+            url('@img/main/inner-about-us/bg-image@2x.png') 2x,
+            url('@img/main/inner-about-us/bg-image@1x.png') 1x
+            );">
             <div class="hero-about-us__container">
                <ul class="hero-about-us__list bredcrumbs">
                   <li class="bredcrumbs__item">
@@ -126,7 +131,13 @@
                </ul>
             </div>
          </section>
-         <section class="page__bg-form bg-form" style="background-image: url('@img/main/bg-form/bg-image.jpg')">
+         <section class="page__bg-form bg-form" 
+         style="background-image: image-set(
+            url('@img/main/bg-form/image@2x.avif') 2x,
+            url('@img/main/bg-form/bg-image@1x.avif') 1x,
+            url('@img/main/bg-form/image@2x.jpg') 2x,
+            url('@img/main/bg-form/bg-image@1x.jpg') 1x
+            );">
             <div class="bg-form__container">
                <h2 class="visually-hidden">Form</h2>
                <form action="#" class="form">
