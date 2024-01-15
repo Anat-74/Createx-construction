@@ -30,8 +30,8 @@
       top: rem(46);
       right: rem(-7);
       width: 100%;
-      height: auto;
-      background: $whiteColor url('@img/main/inner-work/bg-image.png') top right no-repeat;
+      height: 100%;
+      background: url('@img/main/inner-work/bg-image.webp') top right no-repeat;
    }
 
    &__title {
@@ -107,7 +107,7 @@
 
 .hero-slider {
 
-   &__slide-ibg {
+   &__slide {
       border: rem(1) solid transparent;
       border-radius: rem(4);
       opacity: 0.6;
@@ -122,9 +122,9 @@
         object-fit: cover;
             }
 
-      &.swiper-slide-thumb-active {
-         opacity: 1;
-         }
+            &.swiper-slide-thumb-active {
+               opacity: 1;
+            }
          }
       }
    }
