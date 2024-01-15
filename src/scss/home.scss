@@ -16,7 +16,7 @@
    &__services {
       @include adaptiveValue("padding-top", 212, 50);
       @include adaptiveValue("padding-bottom", 80, 10);
-      background: url('@img/main/body-services/services-bg.jpg') 50%/cover no-repeat;
+      background: url('@img/main/body-services/services-bg.webp') 50%/cover no-repeat;
       background-color: $mainColor; 
    }
 
@@ -516,7 +516,7 @@
         top: 0;
         bottom: 0;
         border-radius: inherit;
-        background: url('@img/main/body-services/services-image.jpg') 50%/cover no-repeat;
+        background: url('@img/main/body-services/services-image.webp') 50%/cover no-repeat;
         opacity: 0;
         transition: opacity 0.4s ease-in-out;
       }
@@ -530,7 +530,7 @@
          top: 0;
          bottom: 0;
          border-radius: inherit;
-         background: url('@img/main/body-services/services-image.jpg') 50%/cover no-repeat;
+         background: url('@img/main/body-services/services-image.webp') 50%/cover no-repeat;
          background: rgba($darkColor, 0.6);
          opacity: 0;
          transition: opacity 0.4s ease-in-out;
@@ -871,7 +871,7 @@
       left: rem(-8);
       width: rem(570);
       height: rem(1066);
-      background: url('@img/main/facts/bg-image.png') 50%/cover no-repeat;
+      background: url('@img/main/facts/bg-image.webp') 50%/cover no-repeat;
    }
 
    &__container {
