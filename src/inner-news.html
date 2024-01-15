@@ -45,7 +45,8 @@
             <div class="post__container">
                <h2 class="visually-hidden">Post</h2>
                <article class="post__article-post article-post">
-               <img src="@img/main/post/post-image.jpg" class="article-post__image" alt="cover">
+               <img src="@img/main/post/post-image@1x.webp" class="article-post__image" 
+               srcset="@img/main/post/post-image@2x.webp 2x" alt="Специалист монтирует солнечные панели">
                <div class="article-post__content-post content-post">
                <h3>Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac&nbsp;euismod.</h3>
                <p>At&nbsp;facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in&nbsp;et&nbsp;sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in&nbsp;massa. Feugiat leo nam nisl lacinia amet, odio. Mi&nbsp;varius viverra risus vel.</p>
@@ -131,7 +132,13 @@
             </div>
          </section>
 
-         <section class="page__bg-form bg-form" style="background-image: url('@img/main/bg-form/bg-image.jpg')">
+         <section class="page__bg-form bg-form" 
+         style="background-image: image-set(
+            url('@img/main/bg-form/image@2x.avif') 2x,
+            url('@img/main/bg-form/bg-image@1x.avif') 1x,
+            url('@img/main/bg-form/image@2x.jpg') 2x,
+            url('@img/main/bg-form/bg-image@1x.jpg') 1x
+            );">
             <div class="bg-form__container">
                <h2 class="visually-hidden">Form</h2>
                <form action="#" class="form">

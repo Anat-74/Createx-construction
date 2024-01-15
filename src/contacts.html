@@ -8,7 +8,14 @@
    <div class="wrapper">
       @@include('html/_header-2.htm',{})
       <main class="page">
-         <section class="page__hero-contacts hero" style="background-image: linear-gradient(90deg, #f4f5f6 0%, rgba(244, 245, 246, 0.00) 41.15%), url('@img/main/contacts/bg-image.png')">
+         <section class="page__hero-contacts hero" 
+         style="background-image: linear-gradient(90deg, #f4f5f6 0%, rgba(244, 245, 246, 0.00) 41.15%), 
+               image-set(
+               url('@img/main/contacts/bg-image@2x.avif') 2x,
+               url('@img/main/contacts/bg-image@1x.avif') 1x,
+               url('@img/main/contacts/bg-image@2x.png') 2x,
+               url('@img/main/contacts/bg-image@1x.png') 1x
+               );">
          <div class="hero-news__container">
             <ul class="hero-news__list bredcrumbs">
                <li class="bredcrumbs__item">
@@ -29,7 +36,8 @@
             <p class="contacts-us__descr main-text main-text--center">Please complete the form. Detailed information will help&nbsp;us to&nbsp;make a&nbsp;tuned offer.</p>
             <div class="contacts-us__body">
             <div class="contacts-us__image">
-               <img src="@img/main/contacts-us/image.jpg" alt="cover" aria-hidden="true">
+               <img src="@img/main/contacts-us/contacts-us-image@1x.webp" 
+               srcset="@img/main/contacts-us/contacts-us-image@2x.webp 2x" alt="Девушка за рабочим столом" aria-hidden="true">
             </div>
             <form action="#" class="contacts-us__form form-contacts-us">
                <label class="form-contacts-us__labels">
