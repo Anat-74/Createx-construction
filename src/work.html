@@ -8,7 +8,13 @@
    <div class="wrapper">
       @@include('html/_header-2.htm',{})
       <main class="page">
-         <section class="page__hero-work hero-work hero" style="background-image: url('@img/main/work/bg-image.png')">
+         <section class="page__hero-work hero-work hero" 
+         style="background-image: image-set(
+            url('@img/main/work/bg-image@2x.avif') 2x,
+            url('@img/main/work/bg-image@1x.avif') 1x,
+            url('@img/main/work/bg-image@2x.png') 2x,
+            url('@img/main/work/bg-image@1x.png') 1x
+            );">
             <div class="hero-work__container">
                <ul class="hero-work__list bredcrumbs">
                   <li class="bredcrumbs__item">
@@ -61,7 +67,7 @@
                   <div id="tab-1" class="portfolio__list-columns columns-image">
                      <div id="tab-2" class="columns-image__items">
                         <div class="columns-image__image-ibg" >
-                     <img src="@img/main/portfolio/Cubes Building.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Cubes Building.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Cubes Building</h3>
@@ -71,7 +77,7 @@
                   </div>
                      <div id="tab-4" class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Modern Cottage.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Modern Cottage.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Modern Cottage</h3>
@@ -81,7 +87,7 @@
                   </div>
                      <div class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Luxury Beach House.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Luxury Beach House.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Luxury Beach House</h3>
@@ -91,7 +97,7 @@
                   </div>
                      <div class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Modern Double Bedroom.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Modern Double Bedroom.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Modern Double Bedroom</h3>
@@ -101,7 +107,7 @@
                   </div>
                      <div id="tab-5" class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Kids Bedroom With Decorations.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Kids Bedroom With Decorations.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Kids Bedroom With Decorations</h3>
@@ -111,7 +117,7 @@
                   </div>
                      <div class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/The Pencil Building.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/The Pencil Building.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">The Pencil Building</h3>
@@ -121,7 +127,7 @@
                   </div>
                      <div class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Red Finger Building.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Red Finger Building.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Red Finger Building</h3>
@@ -131,7 +137,7 @@
                   </div>
                      <div id="tab-3" class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Scandinavian Style Interior.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Scandinavian Style Interior.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Scandinavian Style Interior</h3>
@@ -141,7 +147,7 @@
                   </div>
                      <div class="columns-image__items">
                         <div class="columns-image__image-ibg">
-                     <img src="@img/main/portfolio/Brown and Gray Painted House.jpg" alt="Cover">
+                     <img src="@img/main/portfolio/Brown and Gray Painted House.webp" alt="Cover">
                   </div>
                      <div class="columns-image__content">
                         <h3 class="columns-image__title subtitle">Brown and Gray Painted House</h3>
@@ -164,13 +170,13 @@
                   <div class="clients__slider swiper">
                      <div class="clients__wrapper swiper-wrapper">
                         <div class="clients__slide swiper-slide">
-                           <img class="clients__human-image" src="@img/main/partners/profile-image.png" alt="cover">
+                           <img class="clients__human-image" src="@img/main/partners/profile-image.webp" alt="cover">
                            <p class="clients__text">Ipsum aute sunt aliquip aute et&nbsp;occaecat. Anim minim do&nbsp;cillum eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident exercitation ullamco.</p>
                            <span class="clients__name">Shawn Edwards</span>
                            <span class="clients__descr">Position, Company name</span>
                         </div>
                         <div class="clients__slide swiper-slide">
-                           <img class="clients__human-image" src="@img/main/partners/profile-image.png" alt="cover">
+                           <img class="clients__human-image" src="@img/main/partners/profile-image.webp" alt="cover">
                            <p class="clients__text">Ipsum aute sunt aliquip aute et&nbsp;occaecat. Anim minim do&nbsp;cillum eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident exercitation ullamco.</p>
                            <span class="clients__name">Shawn Edwards</span>
                            <span class="clients__descr">Position, Company name</span>
@@ -183,7 +189,7 @@
                   </div>
                   </div>
                   <div class="clients__image">
-                     <img class="clients__img" src="@img/main/partners/clients-image.jpg" alt="cover">
+                     <img class="clients__img" src="@img/main/partners/clients-image.webp" alt="cover">
                   </div>
                   </div>
             </div>
@@ -196,32 +202,32 @@
                   <ul class="logo-partners__list">
                      <li class="logo-partners__item">
                      <a href="#" class="logo-partners__link">
-                     <img class="logo-partners__image" src="@img/main/partners/logo/InDepth Consulting Logo 1.png" alt="cover">
+                     <img class="logo-partners__image" src="@img/main/partners/logo/InDepth Consulting Logo 1.webp" alt="cover">
                         </a>
                      </li>
                      <li class="logo-partners__item">
                         <a href="#" class="logo-partners__link">
-                        <img class="logo-partners__image" src="@img/main/partners/logo/Higher Fit Logo 2.png" alt="cover">
+                        <img class="logo-partners__image" src="@img/main/partners/logo/Higher Fit Logo 2.webp" alt="cover">
                            </a>
                         </li>
                         <li class="logo-partners__item">
                            <a href="#" class="logo-partners__link">
-                           <img class="logo-partners__image" src="@img/main/partners/logo/Sentinal Consulting Logo 3.png" alt="cover">
+                           <img class="logo-partners__image" src="@img/main/partners/logo/Sentinal Consulting Logo 3.webp" alt="cover">
                               </a>
                            </li>
                            <li class="logo-partners__item">
                               <a href="#" class="logo-partners__link">
-                              <img class="logo-partners__image" src="@img/main/partners/logo/Happy Home Logo 4.png" alt="cover">
+                              <img class="logo-partners__image" src="@img/main/partners/logo/Happy Home Logo 4.webp" alt="cover">
                                  </a>
                               </li>
                               <li class="logo-partners__item">
                                  <a href="#" class="logo-partners__link">
-                                 <img class="logo-partners__image" src="@img/main/partners/logo/For Sale Logo 5.png" alt="cover">
+                                 <img class="logo-partners__image" src="@img/main/partners/logo/For Sale Logo 5.webp" alt="cover">
                                     </a>
                                  </li>
                                  <li class="logo-partners__item">
                                     <a href="#" class="logo-partners__link">
-                                    <img class="logo-partners__image" src="@img/main/partners/logo/Sunset Realty Logo 6.png" alt="cover">
+                                    <img class="logo-partners__image" src="@img/main/partners/logo/Sunset Realty Logo 6.webp" alt="cover">
                                        </a>
                                     </li>
                   </ul>
@@ -229,7 +235,13 @@
             </div>
          </section>
 
-         <section class="page__bg-form bg-form" style="background-image: url('@img/main/bg-form/bg-image.jpg')">
+         <section class="page__bg-form bg-form" 
+         style="background-image: image-set(
+            url('@img/main/bg-form/image@2x.avif') 2x,
+            url('@img/main/bg-form/bg-image@1x.avif') 1x,
+            url('@img/main/bg-form/image@2x.jpg') 2x,
+            url('@img/main/bg-form/bg-image@1x.jpg') 1x
+            );">
             <div class="bg-form__container">
                <h2 class="visually-hidden">Form</h2>
                <form action="#" class="form">
