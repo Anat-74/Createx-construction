@@ -56,7 +56,7 @@ function initSliders() {
 
 			slidesPerView: 3,
 			spaceBetween: 30,
-			speed: 800,
+			speed: 400,
 			loop: true,
 
 //=============toach
