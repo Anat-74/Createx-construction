@@ -7,6 +7,7 @@
 		<title>Верстка «NEW_PROJECT_NAME»</title>
 	</head>
 	<body class="light-theme">
+      <div class="rootpage__wrapper">
       <header class="header">
       <div class="theme">
          <div class="contacts">
@@ -53,7 +54,9 @@
 		<main class="rootpage__main">
          <div class="rootpage__left" aria-label="Верстка createx construction">
 			<h1 class="rootpage__title"><span>Верстка</span> «Create<small>x</small> construction»</h1>
+         <div class="rootpage__body-title-2">
 			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
+      </div>
 			<ul class="rootpage__list">
 				<li><a target="_blank" href="home.html">Home</a></li>
             <li><a target="_blank" href="services.html">Services</a></li>
@@ -332,6 +335,7 @@
             <address>Skype: <a href="https://www.skype.com/ru/"> <br> live:santexsistem</a></address>
          </div>
       </footer>
+   </div>
    <script>
 
    const titleTwo = document.querySelector(".rootpage__title-2")
@@ -560,6 +564,7 @@
          background-color: #fff;
          color: #000000;
    }
+
       body.dark-theme {
        background-color: #2A2A28;
        color: #fff;
@@ -634,6 +639,8 @@
       visibility: hidden;
    }
       .theme {
+         position: relative;
+         z-index: 99;
          display: grid;
          grid-template-columns: 1fr auto;
          column-gap: 16px;
@@ -795,6 +802,8 @@
          display: none;
       }
          .rootpage__list-nav {
+         position: relative;
+         z-index: 99;
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
@@ -810,7 +819,7 @@
          .rootpage__link{
          display: inline-block;
          white-space: nowrap;
-         color: #AAA308;
+         color: #DA770B;
          font-size: 1.125rem;
          font-weight: 600;
          border: 2px solid #AAA308;
@@ -824,7 +833,7 @@
          }
       }
       .rootpage__link:hover {
-         color: #DA770B;
+         color: #AAA308;
          border: 2px solid #DA770B;
       }
       .rootpage__link:focus {
@@ -841,6 +850,8 @@
          color: #CE3B0D;
       }
 		.rootpage__main {
+         position: relative;
+         z-index: 99;
          padding-bottom: 15px;
          display: grid;
          row-gap: 15px;
@@ -849,6 +860,7 @@
          "left left content"
          ;
 		}
+
       @media (max-width: 991px) {
 			.rootpage__main {
             grid-template-areas: 
@@ -857,12 +869,34 @@
          ;
 			}
 		}
+      @media (min-width: 991px) {
+         .rootpage__wrapper {
+         position: relative;
+         background-image: url('@img/index/HTML_Image_Tag.avif');
+         background-size: 60%;
+         background-position: 40% 40%;
+      }
+      .rootpage__wrapper:before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url('@img/index/splash@1x.webp');
+         background-size: 2100px;
+         background-position: 90% 50%;
+         mix-blend-mode: screen;
+      }
+      }
+
       .rootpage__left {
          grid-area: left;
          position: relative;
          border-radius: 9px;
          margin-left: 15px;
       }
+
       @media (max-width: 991px) {
          .rootpage__left {
          padding-left: 3px;
@@ -967,14 +1001,16 @@
             text-shadow: 3px -3px #FFD829;
          }
       }
+      .rootpage__body-title-2 {
+         display: grid;
+      }
 		.rootpage__title-2 {
          overflow: hidden;
          position: relative;
          z-index: 1;
          width: 200px;
-         border-radius: 10px;
+         border-radius: 8px;
          padding: 3px 8px 5px 10px;
-         background-color: #AAA308;
 		}
       .rootpage__title-2::before {
          content: "";
@@ -990,7 +1026,7 @@
          content: "";
          position: absolute;
          inset: 2px;
-         border-radius: 10px;
+         border-radius: 8px;
          background-color: #fff;
          transition: background-color 0.3s ease-in;
       }
@@ -1006,7 +1042,7 @@
          content: "";
          position: absolute;
          inset: 2px;
-         border-radius: 10px;
+         border-radius: 8px;
          background-color: #2A2A28;
       }
       @media (max-width: 991px) {
@@ -1023,7 +1059,6 @@
             justify-self: center;
 				font-size: 1rem;
             padding: 5px 8px 5px 10px;
-            background-color: #000000;
 			}
 		}
       @keyframes animate{
@@ -1127,6 +1162,7 @@
       @media (max-width: 991px) {
          .rootpage__content {
             margin: 0px 15px;
+            box-shadow: 0px 1px 84px -14px rgba(255,216,41, 0.47);
 			}
 		}
       .rootpage__content-tab ul {
@@ -1309,6 +1345,8 @@
          color: #AAA308;
       }
       .rootpage__footer {
+         position: relative;
+         z-index: 99;
          min-height: 450px;
          display: grid;
          justify-items: center;
@@ -1319,19 +1357,31 @@
          ); 
          background-position:  50% 0;
          background-repeat: no-repeat;
-
       }
       .rootpage__content-none {
          display: none;
       }
+      @media (min-width: 991px) {
+         .rootpage__footer {
+            justify-items: end;
+            background-position:  100% 0;
+         }
+      }
+      @media (min-width: 991px) {
+         .rootpage__contacts {
+         position: relative;
+         margin-top: -82px;
+         margin-right: 140px;
+      }
+      }
       .rootpage__contacts {
          position: relative;
-         margin-top: -50px;
+         margin-top: -62px;
       }
 		.rootpage__contacts h2 {
          position: absolute;
          left: -46px;
-         top: 142px;
+         top: 127px;
          transform: rotate(-93deg);
          font-weight: 600;
          font-size: 1.25rem;
