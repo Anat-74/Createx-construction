@@ -350,10 +350,16 @@
            linkTwo.forEach((el) => {
          el.classList.toggle('rootpage__link-two')
         })
+        linkTwo.forEach((el) => {
+         el.style.background = "#2A2A28"
+        })
        } else {
            document.body.className = 'light-theme';
            linkTwo.forEach((el) => {
          el.classList.remove('rootpage__link-two')
+        })
+        linkTwo.forEach((el) => {
+         el.style.background = "#EEEDEC"
         })
        }
    })
@@ -365,10 +371,16 @@
           linkTwo.forEach((el) => {
          el.classList.add('rootpage__link-two')
         })
+        linkTwo.forEach((el) => {
+         el.style.background = "#2A2A28"
+        })
         }else {
          document.body.className = 'light-theme';
          linkTwo.forEach((el) => {
          el.classList.remove('rootpage__link-two')
+        })
+        linkTwo.forEach((el) => {
+         el.style.background = "#EEEDEC"
         })
         }
       }
@@ -813,11 +825,7 @@
          background-color: #EEEDEC;
          transition: all 0.3s ease-in-out;
       }
-      @media (max-width: 991px) {
-         .rootpage__link {
-            background-color: #000000;
-			}
-		}
+
       .rootpage__link span {
          position: relative;
          z-index: 2;
@@ -831,12 +839,14 @@
       }
       @media (max-width: 991px) {
          .rootpage__link span {
-            font-size: 1rem;
-         }
-         .rootpage__link::before {
-            width: 14px;
+            font-size: 1.125rem;
          }
 		}
+      @media (max-width: 767px) {
+         .rootpage__link span {
+            font-size: 1rem;
+         }
+      }
       .rootpage__link::before {
          content: "";
          position: absolute;
@@ -849,7 +859,7 @@
       }
       @media (max-width: 991px) {
          .rootpage__link::before {
-            width: 14px;
+            width: 18px;
          }
 		}
       @keyframes animate-nav{
@@ -908,8 +918,16 @@
       }
       .rootpage__link--active span{
          font-weight: 700;
-         color: #66BBF4;
+         color: red;
+         border: 3px solid #03a9f4;
+         border-radius: 8px;
       }
+      @media (max-width: 991px) {
+         .rootpage__link--active span{
+         color: #E7A2AC;
+         border: 3px solid transparent;
+      }
+		}
 		.rootpage__main {
          position: relative;
          z-index: 99;
@@ -1071,36 +1089,49 @@
          font-size: 2rem;
          margin-bottom: 0px;
 		}
-      /* ================================================================================================================ */
-      .rootpage__title-2:nth-child(1) {
+
+      @media (min-width: 991px) {
+         .rootpage__body-title-2 {
+         position: relative;
+      }
+		.rootpage__title-2 {
+         position: absolute;
+         font-size: 2rem;
+         margin-bottom: 0px;
+		}
+         .rootpage__title-2:nth-child(1) {
          color: transparent;
          -webkit-text-stroke: 1px #333;
          filter: blur(1px);
       }
+
       .rootpage__title-2:nth-child(3) {
-         z-index: 6;
+         z-index: 3;
          color: #fff2;
          filter: drop-shadow(0 15px 15px #fff);
          text-shadow: -15px 15px 15px rgba(0,0,0,0.2), 15px -15px 15px rgba(255,255,2550.2);
       }
       .rootpage__title-2:nth-child(2) {
          z-index: 3;
-         color: #03a9f2;
-         animation: animate-title-2 2.2s ease-in-out infinite;
+         color: #03a9f4;
+         animation: animate-title-2 4s ease-in-out infinite;
       }
       @keyframes animate-title-2 {
          0%,100% {
-            clip-path: polygon(0% 71%, 1% 68%, 3% 66%, 4% 63%, 6% 61%, 8% 58%, 11% 53%, 12% 51%, 17% 50%, 21% 49%, 23% 50%, 27% 52%, 30% 56%, 31% 58%, 34% 62%, 35% 64%, 38% 68%, 40% 70%, 41% 71%, 45% 73%, 47% 74%, 51% 75%, 54% 75%, 57% 72%, 61% 72%, 65% 71%, 67% 70%, 70% 69%, 73% 66%, 76% 65%, 81% 62%, 82% 61%, 85% 59%, 90% 56%, 95% 57%, 96% 53%, 97% 49%, 97% 48%, 100% 98%, 1% 99%);
+            clip-path: polygon(0% 41%, 3% 39%, 7% 35%, 11% 31%, 15% 30%, 21% 29%, 27% 33%, 31% 35%, 35% 38%, 39% 40%, 43% 43%, 47% 46%, 52% 48%, 56% 48%, 60% 50%, 63% 53%, 70% 54%, 74% 52%, 80% 49%, 85% 46%, 90% 44%, 95% 42%, 99% 40%, 100% 99%, 0% 99%);
          }
         50% {
-         clip-path: polygon(0% 48%, 4% 51%, 7% 53%, 9% 55%, 12% 58%, 16% 60%, 20% 63%, 25% 65%, 27% 66%, 31% 66%, 35% 66%, 39% 68%, 42% 69%, 46% 67%, 50% 65%, 53% 63%, 56% 62%, 60% 61%, 63% 59%, 67% 58%, 73% 56%, 78% 56%, 81% 61%, 86% 62%, 90% 64%, 92% 66%, 96% 69%, 100% 72%, 100% 99%, 0% 99%);
+         clip-path: polygon(0% 63%, 4% 66%, 10% 68%, 14% 68%, 20% 67%, 26% 65%, 33% 62%, 37% 58%, 42% 56%, 46% 53%, 50% 51%, 54% 50%, 60% 49%, 64% 49%, 70% 50%, 75% 50%, 80% 52%, 85% 55%, 89% 56%, 92% 57%, 95% 60%, 97% 63%, 99% 67%, 100% 99%, 0% 98%);
         }
       }
-
+      }
+  
       @media (max-width: 991px) {
          .rootpage__title-2 {
-         font-size: 1.175rem;
          justify-self: center;
+         font-size: 1.175rem;
+         color: #DA770B;
+         text-shadow: 1px 1px #FFD829;
 		}
       }
 		.rootpage__list{
@@ -1186,8 +1217,9 @@
 		}
       .rootpage__content {
          grid-area: content;
-         border: 9px double #AAA308;
-         border-radius: 15px;
+         text-align: center;
+         /* border: 9px double #AAA308; ==================================================================================
+         border-radius: 15px; */
          padding: 12px;
          margin: 0px 5px;
       }
@@ -1198,11 +1230,14 @@
             box-shadow: 0px 1px 84px -14px rgba(255,216,41, 0.47);
 			}
 		}
+      .rootpage__list-content-tab {
+
+      }
       .rootpage__content-tab ul {
          margin-bottom: 5px;
       }
       .rootpage__content-tab ul li {
-         font-size: 1rem;
+         font-size: 1.155rem;
          line-height: 1.5; 
          font-weight: 600;
          margin-top: 6px;
@@ -1218,14 +1253,14 @@
          background-color: #AAA308;
       }
       .rootpage__content-tab h4 {
-         font-size: 1.050rem;
+         font-size: 1.125rem;
          line-height: 1.3;
          margin-top: 8px;
          margin-bottom: 2px;
          color: #AAA308;
       }
       .rootpage__content-tab h5 {
-         font-size: 1rem;
+         font-size: 1.115rem;
          line-height: 1.3;
          color: #DA770B;
          margin-top: 8px;
@@ -1240,25 +1275,25 @@
          color: #AAA308;
          margin-bottom: 10px;
       }
-      @media (max-width: 776px) {
-         .rootpage__title-content {
-         font-size: 1.125rem;
-      }
-      }
+      @media (max-width: 767px) {
+         .rootpage__title-content{
+         font-size: 1.25rem;
+      } 
+   }
       .rootpage__title-content span {
-         font-size: 1.125rem;
+         font-size: 1.375rem;
          font-weight: 700;
          color: #DA770B;
       }
       .rootpage__title-content small {
-         font-size: 1.125rem;
-         color: #AAA308
+         font-size: 1.475rem;
+         color: #03a9f4;
       }
-      @media (max-width: 776px) {
-         .rootpage__title-content {
-            font-size: 1.115rem;
-			}
-		}
+      @media (max-width: 767px) {
+         .rootpage__title-content span{
+         font-size: 1.25rem;
+      }
+      }
       .rootpage__list-content {
          display: flex;
          flex-wrap: wrap;
@@ -1272,7 +1307,7 @@
          font-weight: 600;
          color: #DA770B;
       }
-      @media (max-width: 776px) {
+      @media (max-width: 767px) {
          .rootpage__item-content {
          font-size: 1.055rem;
       }
@@ -1293,9 +1328,9 @@
          font-size: 1.25rem;
          line-height: 1.3;
       }
-      @media (max-width: 776px) {
+      @media (max-width: 767px) {
          .rootpage__title-text {
-         font-size: 1.055rem;
+         font-size: 1.155rem;
       }
       }
       .rootpage__item-js {
@@ -1313,7 +1348,7 @@
          border-radius: 50%;
          background-color: #AAA308;
       }
-      @media (max-width: 776px) {
+      @media (max-width: 767px) {
          .rootpage__item-js {
          font-size: 1rem;
       }
@@ -1323,10 +1358,15 @@
 		}
 
       .rootpage__text {
-         font-size: 1rem;
+         font-size: 1.125rem;
          line-height: 1.5;
          font-weight: 500;
       }
+      @media (max-width: 767px) {
+         .rootpage__text {
+         font-size: 1rem;
+      }
+   }
       .rootpage__text a {
          text-decoration: underline;
          color: #32b5a4;
@@ -1337,9 +1377,14 @@
          margin-bottom: 0;
       }
       .rootpage__text small {
-         font-size: 1rem;
+         font-size: 1.125rem;
          color: #DA770B;
       }
+      @media (max-width: 767px) {
+         .rootpage__text small {
+         font-size: 1rem;
+      }
+   }
       .rootpage__text:not(:last-child) {
          margin-bottom: 4px;
       }
