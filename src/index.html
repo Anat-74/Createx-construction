@@ -55,7 +55,9 @@
          <div class="rootpage__left" aria-label="Верстка createx construction">
 			<h1 class="rootpage__title"><span>Верстка</span> «Create<small>x</small> construction»</h1>
          <div class="rootpage__body-title-2">
-			<h2 class="rootpage__title-2"><span>Готовые страницы:</span></h2>
+			<h2 class="rootpage__title-2">Готовые страницы:</h2>
+         <h2 class="rootpage__title-2">Готовые страницы:</h2>
+         <h2 class="rootpage__title-2">Готовые страницы:</h2>
       </div>
 			<ul class="rootpage__list">
 				<li><a target="_blank" href="home.html">Home</a></li>
@@ -338,17 +340,21 @@
    </div>
    <script>
 
-   const titleTwo = document.querySelector(".rootpage__title-2")
+   const linkTwo = document.querySelectorAll(".rootpage__link")
    const theme = document.querySelector(".theme")
    document.getElementById('themeToggle').addEventListener('click', function() {
       checkSound();
       const currentTheme = document.body.className;
        if (currentTheme === 'light-theme') {
            document.body.className = 'dark-theme';
-           titleTwo.classList.toggle("rootpage__title-two")
+           linkTwo.forEach((el) => {
+         el.classList.toggle('rootpage__link-two')
+        })
        } else {
            document.body.className = 'light-theme';
-           titleTwo.classList.remove("rootpage__title-two")
+           linkTwo.forEach((el) => {
+         el.classList.remove('rootpage__link-two')
+        })
        }
    })
 
@@ -356,10 +362,14 @@
       function handleMobileChange(e) {
         if (e.matches) {
           document.body.className = 'dark-theme';
-          titleTwo.classList.add("rootpage__title-two")
+          linkTwo.forEach((el) => {
+         el.classList.add('rootpage__link-two')
+        })
         }else {
          document.body.className = 'light-theme';
-         titleTwo.classList.remove("rootpage__title-two")
+         linkTwo.forEach((el) => {
+         el.classList.remove('rootpage__link-two')
+        })
         }
       }
       mediaQuery.addListener(handleMobileChange);
@@ -800,35 +810,48 @@
          overflow: hidden;
          border-radius: 8px;
          padding: 3px;
-         background-color: #FFD829;
+         background-color: #EEEDEC;
          transition: all 0.3s ease-in-out;
       }
+      @media (max-width: 991px) {
+         .rootpage__link {
+            background-color: #000000;
+			}
+		}
       .rootpage__link span {
          position: relative;
          z-index: 2;
          opacity: 1;
          white-space: nowrap;
          color: #FFD829;
-         font-size: 1.125rem;
+         font-size: 1.375rem;
          font-weight: 600;
          margin: 0;
          padding:3px 7px 4px 7px;
       }
       @media (max-width: 991px) {
-         .rootpage__link {
+         .rootpage__link span {
             font-size: 1rem;
          }
-      }
+         .rootpage__link::before {
+            width: 14px;
+         }
+		}
       .rootpage__link::before {
          content: "";
          position: absolute;
-         width: 18px;
-         height: 180px;
+         width: 22px;
+         height: 200px;
          left: 38%;
          background: linear-gradient(#00ff00, #ff00dd);
          transition: 0.6s;
          animation: animate-nav 5s linear infinite;
       }
+      @media (max-width: 991px) {
+         .rootpage__link::before {
+            width: 14px;
+         }
+		}
       @keyframes animate-nav{
          0%{
             transform: rotate(0deg);
@@ -854,17 +877,26 @@
          content: "";
          position: absolute;
          display: inline-flex;
-         background: #ffff;
+         background-color: #ffff;
          inset: 3px;
          border-radius: 8px;
          transition: 0.6s;
+      }
+      .rootpage__link-two::after {
+         content: "";
+         position: absolute;
+         display: inline-flex;
+         inset: 3px;
+         border-radius: 8px;
+         transition: 0.6s;
+         background-color: #2A2A28;
       }
       .rootpage__link:hover::after {
          background: transparent;
       }
 
       .rootpage__link:focus {
-         outline: 2px solid red;
+         outline: 2px solid #00ff00;
       }
       .rootpage__link--active{
          pointer-events: none;
@@ -872,13 +904,12 @@
       }
       .rootpage__link--active::before{
          pointer-events: none;
-         background: linear-gradient(#0DB8CE, red);
+         background: none;
       }
       .rootpage__link--active span{
          font-weight: 700;
-         color: red;
+         color: #66BBF4;
       }
-
 		.rootpage__main {
          position: relative;
          z-index: 99;
@@ -1032,83 +1063,45 @@
          }
       }
       .rootpage__body-title-2 {
+         position: relative;
          display: grid;
       }
 		.rootpage__title-2 {
-         overflow: hidden;
-         position: relative;
-         z-index: 1;
-         width: 240px;
-         border-radius: 8px;
-         padding: 8px 2px 12px 10px;
-		}
-      .rootpage__title-2::before {
-         content: "";
          position: absolute;
-         top: -90px;
-         left: 45%;
-         width: 20px;
-         height: 264px;
-         background: linear-gradient(#00ff00, #ff00dd);
-         animation: animate 7s linear infinite;
-      }
-      .rootpage__title-2::after {
-         content: "";
-         position: absolute;
-         inset: 2px;
-         border-radius: 8px;
-         background-color: #fff;
-         transition: background-color 0.3s ease-in;
-      }
-      .rootpage__title-2 span {
-         position: relative;
-         z-index: 2;
-         font-size: 1.275rem;
-         color: #DA770B;
-         text-shadow: 1px 1px #FFD829;
+         font-size: 2rem;
          margin-bottom: 0px;
 		}
-      .rootpage__title-two::after {
-         content: "";
-         position: absolute;
-         inset: 2px;
-         border-radius: 8px;
-         background-color: #2A2A28;
+      /* ================================================================================================================ */
+      .rootpage__title-2:nth-child(1) {
+         color: transparent;
+         -webkit-text-stroke: 1px #333;
+         filter: blur(1px);
       }
-      @media (max-width: 991px) {
-			 .rootpage__title-2 {
-            justify-self: center;
-            max-width: 200px;
-            padding: 2px 2px 8px 8px;
-            background-color: #FFD829;
-			}
-         .rootpage__title-2 span {
-				font-size: 1.125rem;
+      .rootpage__title-2:nth-child(3) {
+         z-index: 6;
+         color: #fff2;
+         filter: drop-shadow(0 15px 15px #fff);
+         text-shadow: -15px 15px 15px rgba(0,0,0,0.2), 15px -15px 15px rgba(255,255,2550.2);
+      }
+      .rootpage__title-2:nth-child(2) {
+         z-index: 3;
+         color: #03a9f2;
+         animation: animate-title-2 2.2s ease-in-out infinite;
+      }
+      @keyframes animate-title-2 {
+         0%,100% {
+            clip-path: polygon(0% 71%, 1% 68%, 3% 66%, 4% 63%, 6% 61%, 8% 58%, 11% 53%, 12% 51%, 17% 50%, 21% 49%, 23% 50%, 27% 52%, 30% 56%, 31% 58%, 34% 62%, 35% 64%, 38% 68%, 40% 70%, 41% 71%, 45% 73%, 47% 74%, 51% 75%, 54% 75%, 57% 72%, 61% 72%, 65% 71%, 67% 70%, 70% 69%, 73% 66%, 76% 65%, 81% 62%, 82% 61%, 85% 59%, 90% 56%, 95% 57%, 96% 53%, 97% 49%, 97% 48%, 100% 98%, 1% 99%);
          }
-         .rootpage__title-2::before {
-         top: -90px;
-         left: 45%;
-         width: 22px;
-         height: 226px;
+        50% {
+         clip-path: polygon(0% 48%, 4% 51%, 7% 53%, 9% 55%, 12% 58%, 16% 60%, 20% 63%, 25% 65%, 27% 66%, 31% 66%, 35% 66%, 39% 68%, 42% 69%, 46% 67%, 50% 65%, 53% 63%, 56% 62%, 60% 61%, 63% 59%, 67% 58%, 73% 56%, 78% 56%, 81% 61%, 86% 62%, 90% 64%, 92% 66%, 96% 69%, 100% 72%, 100% 99%, 0% 99%);
+        }
       }
-		}
 
-		@media (max-width: 767px) {
-			 .rootpage__title-2 {
-            max-width: 190px;
-            padding: 2px 5px 8px 8px;
-			}
-         .rootpage__title-2 span {
-				font-size: 1.055rem;
-         }
+      @media (max-width: 991px) {
+         .rootpage__title-2 {
+         font-size: 1.175rem;
+         justify-self: center;
 		}
-      @keyframes animate{
-         0%{
-            transform: rotate(0deg);
-         }
-         100%{
-            transform: rotate(360deg);
-         }
       }
 		.rootpage__list{
          padding-top: 32px;
