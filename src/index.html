@@ -800,6 +800,7 @@
          overflow: hidden;
          border-radius: 8px;
          padding: 3px;
+         background-color: #FFD829;
          transition: all 0.3s ease-in-out;
       }
       .rootpage__link span {
@@ -811,6 +812,7 @@
          font-size: 1.125rem;
          font-weight: 600;
          margin: 0;
+         padding:3px 7px 4px 7px;
       }
       @media (max-width: 991px) {
          .rootpage__link {
@@ -820,25 +822,33 @@
       .rootpage__link::before {
          content: "";
          position: absolute;
-         width: 12px;
-         height: 150px;
+         width: 18px;
+         height: 180px;
          left: 38%;
          background: linear-gradient(#00ff00, #ff00dd);
          transition: 0.6s;
-         animation: animate 5s linear infinite;
+         animation: animate-nav 5s linear infinite;
+      }
+      @keyframes animate-nav{
+         0%{
+            transform: rotate(0deg);
+         }
+         100%{
+            transform: rotate(360deg);
+         }
       }
       .rootpage__link:hover {
          box-shadow: 0px 0px 10px #00ff00,
          0px 0px 30px #00ff00,
-         0px 0px 60px #ff00dd,
-         0px 0px 100px #74908F;
+         0px 0px 60px greenyellow,
+         0px 0px 80px #fff;
       }
       .rootpage__link:hover::before {
-         background: #ff00dd;
-         width: 200px;
-         height: 100px;
-         left: -25%;
-         top: -100%;
+         background: greenyellow;
+         width: 260px;
+         height: 260px;
+         left: -50%;
+         top: -100px;
       }
       .rootpage__link::after {
          content: "";
@@ -858,11 +868,15 @@
       }
       .rootpage__link--active{
          pointer-events: none;
+         background-color: transparent;
+      }
+      .rootpage__link--active::before{
+         pointer-events: none;
+         background: linear-gradient(#0DB8CE, red);
       }
       .rootpage__link--active span{
          font-weight: 700;
          color: red;
-         pointer-events: none;
       }
 
 		.rootpage__main {
