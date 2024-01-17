@@ -22,31 +22,31 @@
       <nav class="rootpage__nav">
          <ul class="rootpage__list-nav" role="tablist">
             <li class="rootpage__item">
-               <a href="#" data-tab="tab-1" class="rootpage__link  rootpage__link--active" role="tab" aria-label="Главная">Главная</a>
+               <a href="#" data-tab="tab-1" class="rootpage__link  rootpage__link--active" role="tab" aria-label="Главная"><span>Главная</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-2" data-tab="tab-2" class="rootpage__link" role="tab" aria-label="Общее">Общее</a>
+               <a href="#tab-2" data-tab="tab-2" class="rootpage__link" role="tab" aria-label="Общее"><span>Общее</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-3" data-tab="tab-3" class="rootpage__link" role="tab" aria-label="Бэм">БЭМ</a>
+               <a href="#tab-3" data-tab="tab-3" class="rootpage__link" role="tab" aria-label="Бэм"><span>БЭМ</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-4" data-tab="tab-4" class="rootpage__link" role="tab" aria-label="Grid">Grid</a>
+               <a href="#tab-4" data-tab="tab-4" class="rootpage__link" role="tab" aria-label="Grid"><span>Grid</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-5" data-tab="tab-5" class="rootpage__link" role="tab" aria-label="Flexbox">Flexbox</a>
+               <a href="#tab-5" data-tab="tab-5" class="rootpage__link" role="tab" aria-label="Flexbox"><span>Flexbox</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-6" data-tab="tab-6" class="rootpage__link" role="tab" aria-label="Препроцессор SASS">SCSS</a>
+               <a href="#tab-6" data-tab="tab-6" class="rootpage__link" role="tab" aria-label="Препроцессор SASS"><span>SCSS</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-7" data-tab="tab-7" class="rootpage__link" role="tab" aria-label="Доступность">Доступность</a>
+               <a href="#tab-7" data-tab="tab-7" class="rootpage__link" role="tab" aria-label="Доступность"><span>Доступность</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-8" data-tab="tab-8" class="rootpage__link" role="tab" aria-label="JavaScript">JS</a>
+               <a href="#tab-8" data-tab="tab-8" class="rootpage__link" role="tab" aria-label="JavaScript"><span>JS</span></a>
             </li>
             <li class="rootpage__item">
-               <a href="#tab-9" data-tab="tab-9" class="rootpage__link" role="tab" aria-label="О себе">О себе</a>
+               <a href="#tab-9" data-tab="tab-9" class="rootpage__link" role="tab" aria-label="О себе"><span>О себе</span></a>
             </li>
          </ul>
       </nav>
@@ -792,39 +792,79 @@
             padding-bottom: 15px;
 			}
 		}
-         .rootpage__link{
-         display: inline-block;
-         white-space: nowrap;
-         color: #DA770B;
-         font-size: 1.125rem;
-         font-weight: 600;
-         border: 2px solid #AAA308;
+         .rootpage__link {
+         position: relative;
+         display: inline-flex;
+         align-items: center;
+         justify-items: center;
+         overflow: hidden;
          border-radius: 8px;
          padding: 3px;
          transition: all 0.3s ease-in-out;
+      }
+      .rootpage__link span {
+         position: relative;
+         z-index: 2;
+         opacity: 1;
+         white-space: nowrap;
+         color: #FFD829;
+         font-size: 1.125rem;
+         font-weight: 600;
+         margin: 0;
       }
       @media (max-width: 991px) {
          .rootpage__link {
             font-size: 1rem;
          }
       }
-      .rootpage__link:hover {
-         color: #AAA308;
-         border: 2px solid #DA770B;
+      .rootpage__link::before {
+         content: "";
+         position: absolute;
+         width: 12px;
+         height: 150px;
+         left: 38%;
+         background: linear-gradient(#00ff00, #ff00dd);
+         transition: 0.6s;
+         animation: animate 5s linear infinite;
       }
+      .rootpage__link:hover {
+         box-shadow: 0px 0px 10px #00ff00,
+         0px 0px 30px #00ff00,
+         0px 0px 60px #ff00dd,
+         0px 0px 100px #74908F;
+      }
+      .rootpage__link:hover::before {
+         background: #ff00dd;
+         width: 200px;
+         height: 100px;
+         left: -25%;
+         top: -100%;
+      }
+      .rootpage__link::after {
+         content: "";
+         position: absolute;
+         display: inline-flex;
+         background: #ffff;
+         inset: 3px;
+         border-radius: 8px;
+         transition: 0.6s;
+      }
+      .rootpage__link:hover::after {
+         background: transparent;
+      }
+
       .rootpage__link:focus {
          outline: 2px solid red;
       }
-      .rootpage__link--active {
-         font-weight: 700;
-         color: #CE3B0D;
-         border: 2px solid #CE3B0D;
+      .rootpage__link--active{
          pointer-events: none;
       }
-      .rootpage__link--active:hover{
-         box-shadow: none;
-         color: #CE3B0D;
+      .rootpage__link--active span{
+         font-weight: 700;
+         color: red;
+         pointer-events: none;
       }
+
 		.rootpage__main {
          position: relative;
          z-index: 99;
