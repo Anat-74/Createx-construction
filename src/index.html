@@ -1242,9 +1242,6 @@
 		}
       .rootpage__content {
          grid-area: content;
-         position: relative;
-         /* border: 9px double #AAA308; =================================================================================================
-         border-radius: 15px; */
          padding: 12px;
          margin: 0px 5px;
       }
@@ -1293,8 +1290,6 @@
          filter: url(#wave);
       }
 
-
-
       .rootpage__content-tab ul {
          margin-bottom: 5px;
       }
@@ -1333,8 +1328,21 @@
          display: inline;
       }
       .rootpage__content-home {
-         text-align: center;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+      -webkit-box-reflect: below 15px linear-gradient(transparent, transparent, rgba(0,0,0,.2));
       }
+      .rootpage__content-home::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: -4px;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #AAA308;
+      filter: url(#wave);
+ }
       .rootpage__title-content {
          font-size: 1.375rem;
          color: #AAA308;
