@@ -394,7 +394,16 @@
       const contacts= document.querySelector(".rootpage__footer")
       const wrapper = document.querySelector(".rootpage__wrapper")
 
-
+      const minWidth = window.matchMedia('(min-width: 991px)');
+      function handleChange(e) {
+         if(e.matches) {
+            wrapper.style.backgroundImage = "url('@img/index/HTML_Image_Tag.webp')"
+         }else {
+            wrapper.style.background = 'none'
+         }
+      }
+      minWidth.addListener(handleChange);
+      handleChange(minWidth);
 
      tabHeaders.forEach((item) => {
       item.addEventListener('click', function() {
@@ -414,13 +423,11 @@
          contacts.classList.add("rootpage__content-none")
          wrapper.style.background = 'none'
         }
-
         this.classList.toggle("rootpage__link--active")
         const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
       })
      })
-
 
      document.addEventListener("click", function(e){
       if(e.target.dataset.next) {
