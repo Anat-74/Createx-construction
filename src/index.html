@@ -365,7 +365,7 @@
    })
 
       const mediaQuery = window.matchMedia('(max-width: 991px)');
-      function handleMobileChange(e) {
+      function handleTabletChange(e) {
         if (e.matches) {
           document.body.className = 'dark-theme';
           linkTwo.forEach((el) => {
@@ -384,8 +384,8 @@
         })
         }
       }
-      mediaQuery.addListener(handleMobileChange);
-      handleMobileChange(mediaQuery);
+      mediaQuery.addListener(handleTabletChange);
+      handleTabletChange(mediaQuery);
 
       const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
@@ -393,6 +393,8 @@
       const rootpageLeft = document.querySelector(".rootpage__left")
       const contacts= document.querySelector(".rootpage__footer")
       const wrapper = document.querySelector(".rootpage__wrapper")
+
+
 
      tabHeaders.forEach((item) => {
       item.addEventListener('click', function() {
