@@ -392,6 +392,7 @@
       const image = document.querySelector(".rootpage__image")
       const rootpageLeft = document.querySelector(".rootpage__left")
       const contacts= document.querySelector(".rootpage__footer")
+      const wrapper = document.querySelector(".rootpage__wrapper")
 
      tabHeaders.forEach((item) => {
       item.addEventListener('click', function() {
@@ -405,9 +406,11 @@
         if(this.dataset.tab==='tab-1') {
          rootpageLeft.classList.remove("hidden")
          contacts.classList.remove("rootpage__content-none")
+         wrapper.style.backgroundImage = "url('@img/index/HTML_Image_Tag.webp')"
         } else {
          rootpageLeft.classList.add("hidden")
          contacts.classList.add("rootpage__content-none")
+         wrapper.style.background = 'none'
         }
 
         this.classList.toggle("rootpage__link--active")
@@ -623,7 +626,26 @@
          margin-top: 6px;
          margin-bottom: 3px;
       }
-
+      @media (min-width: 991px) {
+         .rootpage__wrapper {
+         position: relative;
+         background-image: url('@img/index/HTML_Image_Tag.webp');
+         background-size: 60%;
+         background-position: 32%;
+      }
+      .rootpage__wrapper:before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url('@img/index/splash@1x.webp');
+         background-size: 2200px;
+         background-position: 100% 50%;
+         mix-blend-mode: screen;
+      }
+      }
       .button-content {
          display: flex;
          justify-content: space-between;
@@ -831,11 +853,15 @@
          z-index: 2;
          opacity: 1;
          white-space: nowrap;
-         color: #FFD829;
+         color: orange;
          font-size: 1.375rem;
          font-weight: 600;
          margin: 0;
          padding:3px 7px 4px 7px;
+      }
+      
+      .rootpage__link span:hover {
+         color: yellow;
       }
       @media (max-width: 991px) {
          .rootpage__link span {
@@ -871,13 +897,13 @@
          }
       }
       .rootpage__link:hover {
-         box-shadow: 0px 0px 10px #00ff00,
-         0px 0px 30px #00ff00,
-         0px 0px 60px greenyellow,
+         box-shadow: 0px 0px 10px #8AF59E,
+         0px 0px 30px #8AF59E,
+         0px 0px 60px #8AF59E,
          0px 0px 80px #fff;
       }
       .rootpage__link:hover::before {
-         background: greenyellow;
+         background: #8AF59E;
          width: 260px;
          height: 260px;
          left: -50%;
@@ -924,8 +950,9 @@
       }
       @media (max-width: 991px) {
          .rootpage__link--active span{
-         color: #E7A2AC;
+         color: #ff00dd;
          border: 3px solid transparent;
+         background-color: #00ff00;
       }
 		}
 		.rootpage__main {
@@ -948,26 +975,6 @@
          ;
 			}
 		}
-      @media (min-width: 991px) {
-         .rootpage__wrapper {
-         position: relative;
-         background-image: url('@img/index/HTML_Image_Tag.webp');
-         background-size: 60%;
-         background-position: 32%;
-      }
-      .rootpage__wrapper:before {
-         content: "";
-         position: absolute;
-         left: 0;
-         top: 0;
-         width: 100%;
-         height: 100%;
-         background-image: url('@img/index/splash@1x.webp');
-         background-size: 2200px;
-         background-position: 100% 50%;
-         mix-blend-mode: screen;
-      }
-      }
 
       .rootpage__left {
          grid-area: left;
@@ -1218,7 +1225,7 @@
       .rootpage__content {
          grid-area: content;
          text-align: center;
-         /* border: 9px double #AAA308; ==================================================================================
+         /* border: 9px double #AAA308; =================================================================================================
          border-radius: 15px; */
          padding: 12px;
          margin: 0px 5px;
@@ -1227,7 +1234,6 @@
       @media (max-width: 991px) {
          .rootpage__content {
             margin: 0px 15px;
-            box-shadow: 0px 1px 84px -14px rgba(255,216,41, 0.47);
 			}
 		}
       .rootpage__list-content-tab {
