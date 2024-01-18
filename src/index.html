@@ -363,7 +363,7 @@
         })
        }
    })
-
+   const wrapper = document.querySelector(".rootpage__wrapper")
       const mediaQuery = window.matchMedia('(max-width: 991px)');
       function handleTabletChange(e) {
         if (e.matches) {
@@ -374,6 +374,7 @@
         linkTwo.forEach((el) => {
          el.style.background = "#2A2A28"
         })
+        wrapper.style.backgroundImage = 'none'
         }else {
          document.body.className = 'light-theme';
          linkTwo.forEach((el) => {
@@ -392,14 +393,11 @@
       const image = document.querySelector(".rootpage__image")
       const rootpageLeft = document.querySelector(".rootpage__left")
       const contacts= document.querySelector(".rootpage__footer")
-      const wrapper = document.querySelector(".rootpage__wrapper")
 
       const minWidth = window.matchMedia('(min-width: 991px)');
       function handleChange(e) {
          if(e.matches) {
             wrapper.style.backgroundImage = "url('@img/index/HTML_Image_Tag.webp')"
-         }else {
-            wrapper.style.background = 'none'
          }
       }
       minWidth.addListener(handleChange);
@@ -417,11 +415,12 @@
         if(this.dataset.tab==='tab-1') {
          rootpageLeft.classList.remove("hidden")
          contacts.classList.remove("rootpage__content-none")
-         wrapper.style.backgroundImage = "url('@img/index/HTML_Image_Tag.webp')"
+         minWidth.addListener(handleChange);
+         handleChange(minWidth);
         } else {
          rootpageLeft.classList.add("hidden")
          contacts.classList.add("rootpage__content-none")
-         wrapper.style.background = 'none'
+         wrapper.style.backgroundImage = 'none'
         }
         this.classList.toggle("rootpage__link--active")
         const contentBox = document.querySelector('#' + this.dataset.tab)
