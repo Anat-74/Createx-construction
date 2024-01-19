@@ -53,25 +53,25 @@
    </header>
 		<main class="rootpage__main">
          <div class="rootpage__left" aria-label="Верстка createx construction">
-			<h1 class="rootpage__title"><span>Верстка</span> «Create<small>x</small> construction»</h1>
+            <h1 class="rootpage__title"><span>Create</span><small>x</small> construction</h1>
          <div class="rootpage__body-title-2">
-			<h2 class="rootpage__title-2">Готовые страницы:</h2>
-         <h2 class="rootpage__title-2">Готовые страницы:</h2>
-         <h2 class="rootpage__title-2">Готовые страницы:</h2>
+			<h2 class="rootpage__title-2">Вёрстка:</h2>
+         <h2 class="rootpage__title-2">Вёрстка:</h2>
+         <h2 class="rootpage__title-2">Вёрстка:</h2>
       </div>
 			<ul class="rootpage__list">
-				<li><a target="_blank" href="home.html">Home</a></li>
-            <li><a target="_blank" href="services.html">Services</a></li>
-            <li><a target="_blank" href="inner-services.html">Inner Services</a></li>
-            <li><a target="_blank" href="work.html">Work</a></li>
-            <li><a target="_blank" href="inner-work.html">Inner Work</a></li>
-            <li><a target="_blank" href="about-us.html">About Us</a></li>
-            <li><a target="_blank" href="inner-about-us.html">Inner About Us</a></li>
-            <li><a target="_blank" href="news.html">News</a></li>
-            <li><a target="_blank" href="inner-news.html">Inner News</a></li>
-            <li><a target="_blank" href="contacts.html">Contacts</a></li>
+				<li style="--i:10;"><a target="_blank" href="home.html">Home</a></li>
+            <li style="--i:9;"><a target="_blank" href="services.html">Services</a></li>
+            <li style="--i:8;"><a target="_blank" href="inner-services.html">Inner Services</a></li>
+            <li style="--i:7;"><a target="_blank" href="work.html">Work</a></li>
+            <li style="--i:6;"><a target="_blank" href="inner-work.html">Inner Work</a></li>
+            <li style="--i:5;"><a target="_blank" href="about-us.html">About Us</a></li>
+            <li style="--i:4;"><a target="_blank" href="inner-about-us.html">Inner About Us</a></li>
+            <li style="--i:3;"><a target="_blank" href="news.html">News</a></li>
+            <li style="--i:2;"><a target="_blank" href="inner-news.html">Inner News</a></li>
+            <li style="--i:1;"><a target="_blank" href="contacts.html">Contacts</a></li>
 			</ul>
-         <div class="rootpage__left-bottom">Pixel - perfect</div>
+         <div class="rootpage__left-bottom"><span>P</span><span>i</span><span>x</span><span>e</span><span>l</span><small>| </small><span>p</span><span>e</span><span>e</span><span>r</span><span>f</span><span>e</span><span>c</span><span>t</span></div>
       </div>
 
          <div class="rootpage__content">
@@ -401,6 +401,7 @@
       const image = document.querySelector(".rootpage__image")
       const rootpageLeft = document.querySelector(".rootpage__left")
       const contacts= document.querySelector(".rootpage__footer")
+      const listContentTab = document.querySelector(".rootpage__list-content-tab")
 
       const minWidth = window.matchMedia('(min-width: 991px)');
       function handleChange(e) {
@@ -419,11 +420,13 @@
         })
 
         if(this.dataset.tab==='tab-1') {
+         listContentTab.classList.add("hidden")
          rootpageLeft.classList.remove("hidden")
          contacts.classList.remove("rootpage__content-none")
          minWidth.addListener(handleChange);
          handleChange(minWidth);
         } else {
+         listContentTab.classList.remove("hidden")
          rootpageLeft.classList.add("hidden")
          contacts.classList.add("rootpage__content-none")
          wrapper.style.backgroundImage = 'none'
@@ -860,12 +863,16 @@
          align-items: center;
          justify-items: center;
          overflow: hidden;
-         border-radius: 8px;
+         border-radius: 4px;
          padding: 3px;
-         background-color: #EEEDEC;
+         background-color: #EEEDEC !important;
          transition: all 0.3s ease-in-out;
       }
-
+      @media (max-width: 991px) {
+         .rootpage__link {
+            background-color: #000000 !important;
+			}
+		}
       .rootpage__link span {
          position: relative;
          z-index: 2;
@@ -877,7 +884,7 @@
          margin: 0;
          padding:3px 7px 4px 7px;
       }
-      
+
       .rootpage__link span:hover {
          color: yellow;
       }
@@ -894,7 +901,7 @@
       .rootpage__link::before {
          content: "";
          position: absolute;
-         width: 22px;
+         width: 28px;
          height: 200px;
          left: 38%;
          background: linear-gradient(#00ff00, #ff00dd);
@@ -932,16 +939,16 @@
          position: absolute;
          display: inline-flex;
          background-color: #ffff;
-         inset: 3px;
-         border-radius: 8px;
+         inset: 2px;
+         border-radius: 4px;
          transition: 0.6s;
       }
       .rootpage__link-two::after {
          content: "";
          position: absolute;
          display: inline-flex;
-         inset: 3px;
-         border-radius: 8px;
+         inset: 2px;
+         border-radius: 4px;
          transition: 0.6s;
          background-color: #2A2A28;
       }
@@ -963,14 +970,14 @@
       .rootpage__link--active span{
          font-weight: 700;
          color: red;
-         border: 3px solid #03a9f4;
-         border-radius: 8px;
+         border: 2px solid #03a9f4;
+         border-radius: 4px;
       }
       @media (max-width: 991px) {
          .rootpage__link--active span{
          color: #ff00dd;
-         border: 3px solid transparent;
-         background-color: #00ff00;
+         border: 2px solid transparent;
+         background-color: greenyellow;
       }
 		}
 		.rootpage__main {
@@ -996,7 +1003,6 @@
 
       .rootpage__left {
          grid-area: left;
-         position: relative;
          border-radius: 9px;
          margin-left: 15px;
       }
@@ -1054,54 +1060,67 @@
          }
       }
    }
-      .rootpage__title {
+   .rootpage__title {
          position: absolute;
          white-space: nowrap;
-         height: 100%;
-         left: -10px;
-         top: 34px;
-         transform: rotate(-180deg);
-         writing-mode: vertical-rl;
-         font-size: 1.875rem;
+		}
+   @media (min-width: 991px) {
+      .rootpage__title {
+         left:2px;
+         top: 100%;
+         transform: rotate(-15deg);
+         font-size: 1.575rem;
          line-height: 1.2;
-         color: #FFD829;
-         text-shadow: 3px -3px #74908F;
+         color: #03a9f4;
+         text-shadow: 2px 2px #03a9f4;
+         text-transform: uppercase;
+         padding-top: 7px;
 		}
       .rootpage__title span {
-         font-size: 1.4rem;
-         display: inline-block;
-         margin: 0px;
-         color: #FFD829;
-         text-shadow: 3px -3px #74908F;
+         font-size: 1.575rem;
+         color: #80DF26;
       }
       .rootpage__title small {
-         font-size: 1.875rem;
-         color: #DA770B;
+         font-size: 1.975rem;
+         color: #FFD829;
       }
+   }
+
 		@media (max-width: 991px) {
 			.rootpage__title {
-            left: 16px;
-            top: -30px;
-				font-size: 1.575rem;
-            color: #FFD829;
-            text-shadow: 3px -3px #74908F;
+            left: -133px;
+            top: 172px;
+				font-size: 1.975rem;
+            color: #2A2A28;
+            text-shadow: 3px -3px #FFD829;
+            transform: rotate(-90deg);
 			}
          .rootpage__title span {
-            display: none;
-         }
+         font-size: 1.975rem;
+         color: #2A2A28;
+         text-shadow: 3px -3px #FFD829;
+      }
          .rootpage__title small {
-            font-size: 2.15rem;
-            text-shadow: 2px -3px #DA770B;
+            font-size: 2.55rem;
+            color: #DA770B;
+            text-shadow: 2px -3px #FFD829;
          }
 		}
       @media (max-width: 776px) {
 			.rootpage__title {
-            left: 12px;
-            top: -5px;
+            left: -105px;
+            top: 174px;
+            font-size: 1.675rem;
             color: #2A2A28;
             text-shadow: 3px -3px #FFD829;
 			}
+         .rootpage__title span {
+         font-size: 1.675rem;
+         color: #2A2A28;
+         text-shadow: 3px -3px #FFD829;
+      }
          .rootpage__title small {
+            font-size: 2rem;
             text-shadow: 3px -3px #FFD829;
          }
       }
@@ -1111,17 +1130,20 @@
       }
 		.rootpage__title-2 {
          position: absolute;
-         font-size: 2rem;
+         font-size: 2.4rem;
          margin-bottom: 0px;
 		}
 
       @media (min-width: 991px) {
          .rootpage__body-title-2 {
-         position: relative;
+            position: relative;
       }
 		.rootpage__title-2 {
          position: absolute;
-         font-size: 2rem;
+         transform: skewY(-15deg);
+         left: 0px;
+         top: 40px;
+         font-size: 2.8rem;
          margin-bottom: 0px;
 		}
          .rootpage__title-2:nth-child(1) {
@@ -1134,7 +1156,6 @@
          z-index: 3;
          color: #fff2;
          filter: drop-shadow(0 15px 15px #fff);
-         text-shadow: -15px 15px 15px rgba(0,0,0,0.2), 15px -15px 15px rgba(255,255,2550.2);
       }
       .rootpage__title-2:nth-child(2) {
          z-index: 3;
@@ -1159,12 +1180,61 @@
          text-shadow: 1px 1px #FFD829;
 		}
       }
-
-		.rootpage__list{
+      @media (min-width: 991px) {
+         .rootpage__list{
+         position: relative;
+         transform: skewY(-15deg);
          padding-left: 30px;
-         padding-top: 72px;
-         margin-left: 40px;
+         padding-top: -5px;
+         margin-left: 5px;
 		}
+      .rootpage__list li {
+         position: relative;
+         z-index: var(--i);
+         width: 240px;
+         background-color:#65B6DC;
+         padding: 12px;
+         transition: 0.5s;
+   }
+   .rootpage__list li:hover {
+      background-color: #CED6D9;
+      transform: translateX(50px);
+   }
+   .rootpage__list li::before {
+         content: "";
+         position: absolute;
+         left: -40px;
+         top: 0;
+         width: 40px;
+         height: 100%;
+         background-color: #65B6DC;
+         transform-origin: right;
+         transform: skewY(45deg);
+         transition: 0.5s;
+   }
+   .rootpage__list li:hover::before{
+      background-color: #CED6D9;
+   }
+   .rootpage__list li::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: -40px;
+         width: 100%;
+         height: 40px;
+         background-color: #65B6DC;
+         transform-origin: bottom;
+         transform: skewX(45deg);
+         transition: 0.5s;
+   }
+   .rootpage__list li:hover::after{
+      background-color: #CED6D9;
+   }
+   .rootpage__list li:last-child::after {
+      box-shadow: -120px 120px 20px rgba(24, 133, 185,0.5);
+   }
+      }
+
       @media (max-width: 991px) {
          .rootpage__list {
          display: grid;
@@ -1173,9 +1243,6 @@
 		   }
       }
 
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 20px 0px;
-		}
       @media (max-width: 991px) {
          .rootpage__list li:not(:last-child){
 			margin: 0px 0px 16px 0px;
@@ -1186,6 +1253,7 @@
 			margin: 0px 0px 12px 0px;
 		}
       }
+
       @media (max-width: 991px) {
          .rootpage__list li {
          justify-self: center;
@@ -1195,16 +1263,16 @@
 			}
 		}
       .rootpage__list li a {
-         position: relative;
-         padding: 2px;
-         text-decoration: underline;
-         font-weight: 700;
-         font-size: 1.5rem;
-         color: orange;
+         padding: 5px;
+         font-weight: 600;
+         font-size: 1.115rem;
+         color: #fff;
+         text-transform: uppercase;
+         letter-spacing: 0.05rem;
          transition: color 0.2s ease-in;
 		}
       .rootpage__list li a:hover {
-         color: #AAA308;
+         color: #F36278;
       }
       .rootpage__list li a:focus {
          outline: 2px solid red;
@@ -1216,7 +1284,7 @@
          color: #EFDD9A;
       }
       .rootpage__list li a:visited:hover {
-         color: #AAA308;
+         color: #F36278;
       }
       
       @media (max-width: 991px) {
@@ -1230,12 +1298,28 @@
 		}
       .rootpage__left-bottom {
          position: absolute;
-         left: 122px;
-         top: 117px;
-         font-size: 0.875rem;
-         font-style: italic;
-         color: #32b5a4;
-         transform: rotate(40deg);
+         left: 25px;
+         top: 28%;
+         white-space: nowrap;
+         text-transform: uppercase;
+         text-orientation: upright;
+         writing-mode: vertical-rl;
+      }
+      .rootpage__left-bottom small {
+         color: #FFD829;
+         font-size: 0.7rem;
+      }
+      .rootpage__left-bottom span {
+         font-size: 0.8rem;
+         font-weight: 600;
+         letter-spacing: 0.01rem;
+      }
+      .rootpage__left-bottom span:nth-child(odd) {
+         color: orange;
+
+      }
+      .rootpage__left-bottom span:nth-child(even) {
+         color: #00ff00;
       }
       @media (max-width: 991px) {
          .rootpage__left-bottom {
@@ -1254,11 +1338,13 @@
 			}
 		}
       .rootpage__list-content-tab {
-
+         border: 8px double #AAA308;
+         border-radius: 8px;
+         padding: 20px 80px;
       }
       @media (max-width: 991px) {
          .rootpage__list-content-tab {
-            width: 100%;
+            padding: 12px;
 			}
 		}
 
@@ -1315,15 +1401,20 @@
       border: 4px solid orange;
       filter: url(#wave);
  }
+ @media (max-width: 991px) {
+   .rootpage__content-home::before {
+      border: 4px solid #FFD829
+			}
+		}
       .rootpage__title-content {
          font-size: 1.375rem;
-         color: #03a9f4;
+         color: orange;
          margin-bottom: 10px;
       }
       @media (max-width: 991px) {
          .rootpage__title-content{
          font-size: 1.25rem;
-         color: #AAA308;
+         color: #FFD829;
       } 
    }
       .rootpage__title-content span {
@@ -1352,7 +1443,7 @@
          font-style: normal;
          font-size: 1.25rem;
          font-weight: 600;
-         color: #80DF26;
+         color: #E6CD84;
       }
       @media (max-width: 991px) {
          .rootpage__item-content {
@@ -1367,11 +1458,11 @@
          height: 8px;
          margin: 0px 5px 2px 0px;
          border-radius: 50%;
-         background-color: #AAA308;
+         background-color: orange;
       }
 
       .rootpage__title-text {
-         color: #099EDC;
+         color: orange;
          margin-bottom: 2px;
          font-size: 1.25rem;
          line-height: 1.3;
@@ -1379,14 +1470,14 @@
       @media (max-width: 991px) {
          .rootpage__title-text {
          font-size: 1.155rem;
-         color: #AAA308;
+         color: #FFD829;
       }
       }
       .rootpage__item-js {
          font-size: 1.165rem;
          line-height: 1.4;
          font-weight: 600;
-         color: #80DF26;
+         color: #E6CD84;
       }
       .rootpage__item-js::before {
          content: "";
@@ -1395,9 +1486,15 @@
          height: 8px;
          margin: 0px 5px 2px 0px;
          border-radius: 50%;
-         background-color: #AAA308;
+         background-color: orange;
       }
       @media (max-width: 991px) {
+         .rootpage__item-js {
+         font-size: 1.055rem;
+         color: #DA770B;
+      }
+      }
+      @media (max-width: 767px) {
          .rootpage__item-js {
          font-size: 1rem;
          color: #DA770B;
