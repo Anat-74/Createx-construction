@@ -1008,6 +1008,7 @@
 		}
 
       .rootpage__left {
+         position: relative;
          grid-area: left;
          position: relative;
          border-radius: 9px;
@@ -1074,7 +1075,7 @@
    @media (min-width: 991px) {
       .rootpage__title {
          left:-7px;
-         top: 92%;
+         top: 98%;
          font-size: 1.575rem;
          line-height: 1.2;
          color: #03a9f4;
@@ -1146,9 +1147,9 @@
       }
 		.rootpage__title-2 {
          position: absolute;
-         left: 20px;
+         left: 50px;
          top: 5px;
-         font-size: 2.8rem;
+         font-size: 3rem;
          margin-bottom: 0px;
 		}
          .rootpage__title-2:nth-child(1) {
@@ -1187,14 +1188,20 @@
       }
       @media (min-width: 991px) {
          .rootpage__list{
-         padding-left: 45px;
-         padding-top: 90px;
+         display: inline-grid;
+         padding-left: 25px;
+         padding-top: 75px;
          margin-left: 5px;
 		}
+
       .rootpage__list li {
+         justify-self: center;
+         position: relative;
          z-index: var(--i);
-         padding: 12px;
    }
+   .rootpage__list li:not(:last-child){
+			margin: 0px 0px 16px 0px;
+		}
       }
 
       @media (max-width: 991px) {
@@ -1225,10 +1232,11 @@
 			}
 		}
       .rootpage__list li a {
-         padding: 5px;
          font-weight: 600;
-         font-size: 1.115rem;
+         line-height: 1.4;
+         font-size: 1.4rem;
          color: #65B6DC;
+         text-decoration: underline;
          text-transform: uppercase;
          letter-spacing: 0.05rem;
          transition: color 0.3s ease-in;
