@@ -1187,55 +1187,13 @@
       }
       @media (min-width: 991px) {
          .rootpage__list{
-         position: relative;
          padding-left: 45px;
-         padding-top: 100px;
+         padding-top: 90px;
          margin-left: 5px;
 		}
       .rootpage__list li {
-         position: relative;
          z-index: var(--i);
-         width: 230px;
-         background-color:#65B6DC;
          padding: 12px;
-         transition: 0.7s;
-   }
-   .rootpage__list li:hover {
-      background-color: #57E137;
-      transform: translateX(50px);
-   }
-   .rootpage__list li::before {
-         content: "";
-         position: absolute;
-         left: -40px;
-         top: 0;
-         width: 40px;
-         height: 100%;
-         background-color: #65B6DC;
-         transform-origin: right;
-         transform: skewY(45deg);
-         transition: 0.7s;
-   }
-   .rootpage__list li:hover::before{
-      background-color: #57E137;
-   }
-   .rootpage__list li::after {
-         content: "";
-         position: absolute;
-         left: 0;
-         top: -40px;
-         width: 100%;
-         height: 40px;
-         background-color: #65B6DC;
-         transform-origin: bottom;
-         transform: skewX(45deg);
-         transition: 0.7s;
-   }
-   .rootpage__list li:hover::after{
-      background-color: #57E137;
-   }
-   .rootpage__list li:last-child::after {
-      box-shadow: -120px 120px 20px rgba(24, 133, 185,0.5);
    }
       }
 
@@ -1270,7 +1228,7 @@
          padding: 5px;
          font-weight: 600;
          font-size: 1.115rem;
-         color: #fff;
+         color: #65B6DC;
          text-transform: uppercase;
          letter-spacing: 0.05rem;
          transition: color 0.3s ease-in;
@@ -1302,8 +1260,8 @@
 		}
       .rootpage__left-bottom {
          position: absolute;
-         left: -8px;
-         top: 67px;
+         left: 2px;
+         top: 100px;
          white-space: nowrap;
          text-transform: uppercase;
          text-orientation: upright;
@@ -1314,7 +1272,7 @@
          font-size: 0.7rem;
       }
       .rootpage__left-bottom span {
-         font-size: 0.8rem;
+         font-size: 0.7rem;
          font-weight: 600;
          letter-spacing: 0.01rem;
       }

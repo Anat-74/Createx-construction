@@ -172,3 +172,60 @@ body {
 @import "news";
 @import "inner-news.scss";
 @import "contacts.scss";
+
+
+ /* 
+       @media (min-width: 991px) {
+         .rootpage__list{
+         position: relative;
+         padding-left: 45px;
+         padding-top: 100px;
+         margin-left: 5px;
+		}
+      .rootpage__list li {
+         position: relative;
+         z-index: var(--i);
+         width: 230px;
+         background-color:#65B6DC;
+         padding: 12px;
+         transition: 0.7s;
+   }
+   .rootpage__list li:hover {
+      background-color: #57E137;
+      transform: translateX(50px);
+   }
+   .rootpage__list li::before {
+         content: "";
+         position: absolute;
+         left: -40px;
+         top: 0;
+         width: 40px;
+         height: 100%;
+         background-color: #65B6DC;
+         transform-origin: right;
+         transform: skewY(45deg);
+         transition: 0.7s;
+   }
+   .rootpage__list li:hover::before{
+      background-color: #57E137;
+   }
+   .rootpage__list li::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: -40px;
+         width: 100%;
+         height: 40px;
+         background-color: #65B6DC;
+         transform-origin: bottom;
+         transform: skewX(45deg);
+         transition: 0.7s;
+   }
+   .rootpage__list li:hover::after{
+      background-color: #57E137;
+   }
+   .rootpage__list li:last-child::after {
+      box-shadow: -120px 120px 20px rgba(24, 133, 185,0.5);
+   }
+      }
+ */
