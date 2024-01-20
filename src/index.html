@@ -75,7 +75,7 @@
       </div>
 
          <div class="rootpage__content">
-            <div data-tab-content id="tab-1" class="rootpage__content-home" role="tabpanel">
+            <div data-home data-tab-content id="tab-1" class="rootpage__content-home" role="tabpanel">
             <h2 class="rootpage__title-content">Основные методы реализации:</h2>
             <ul class="rootpage__list-content">
                <li class="rootpage__item-content">БЭМ</li>
@@ -391,6 +391,7 @@
         linkTwo.forEach((el) => {
          el.style.background = "#EEEDEC"
         })
+        wrapper.style.backgroundImage = "url('@img/index/HTML_Image_Tag.webp')"
         }
       }
       mediaQuery.addListener(handleTabletChange);
@@ -1339,10 +1340,12 @@
          border: 8px double #AAA308;
          border-radius: 8px;
          padding: 20px 80px;
+         background-color: #fff;
       }
       @media (max-width: 991px) {
          .rootpage__list-content-tab {
             padding: 12px;
+            background-color: transparent;
 			}
 		}
 
