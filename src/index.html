@@ -435,7 +435,7 @@
         this.classList.toggle("rootpage__link--active")
          const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
-        listContentTab.style = 'border: 8px double #AAA308'
+        listContentTab.style.backgroundColor = '#fff'
       })
      })
 
@@ -564,7 +564,6 @@
          })
       }
    })
-// document.location.reload()
    function checkSound() {
       const audio = new Audio();
       audio.preload = 'auto';
@@ -1338,15 +1337,13 @@
 			}
 		}
       .rootpage__list-content-tab {
-         border: 0px solid transparent;
          border-radius: 8px;
          padding: 20px 80px;
-         background-color: #fff;
       }
       @media (max-width: 991px) {
          .rootpage__list-content-tab {
             padding: 12px;
-            background-color: transparent;
+            background-color: transparent !important;
 			}
 		}
 
