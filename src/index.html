@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
       <meta name="format-detection" content="telephone=no">
@@ -53,25 +53,25 @@
    </header>
 		<main class="rootpage__main">
          <div class="rootpage__left" aria-label="Верстка createx construction">
-            <h1 class="rootpage__title"><span>Create</span><small>x</small> construction</h1>
+            <h1 class="rootpage__title">
+               <span>C</span><span>r</span><span>e</span><span>a</span><span>t</span><span>e </span><small>x</small><span>c</span><span>o</span><span>n</span><span>s</span><span>t</span><span>r</span><span>u</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span></h1>
          <div class="rootpage__body-title-2">
 			<h2 class="rootpage__title-2">Вёрстка:</h2>
          <h2 class="rootpage__title-2">Вёрстка:</h2>
          <h2 class="rootpage__title-2">Вёрстка:</h2>
       </div>
 			<ul class="rootpage__list">
-				<li style="--i:10;"><a target="_blank" href="home.html">Home</a></li>
-            <li style="--i:9;"><a target="_blank" href="services.html">Services</a></li>
-            <li style="--i:8;"><a target="_blank" href="inner-services.html">Inner Services</a></li>
-            <li style="--i:7;"><a target="_blank" href="work.html">Work</a></li>
-            <li style="--i:6;"><a target="_blank" href="inner-work.html">Inner Work</a></li>
-            <li style="--i:5;"><a target="_blank" href="about-us.html">About Us</a></li>
-            <li style="--i:4;"><a target="_blank" href="inner-about-us.html">Inner About Us</a></li>
-            <li style="--i:3;"><a target="_blank" href="news.html">News</a></li>
-            <li style="--i:2;"><a target="_blank" href="inner-news.html">Inner News</a></li>
-            <li style="--i:1;"><a target="_blank" href="contacts.html">Contacts</a></li>
+				<li style="--i:10;"><a data-link target="_blank" href="home.html">Home</a></li>
+            <li style="--i:9;"><a data-link target="_blank" href="services.html">Services</a></li>
+            <li style="--i:8;"><a data-link target="_blank" href="inner-services.html">Inner Services</a></li>
+            <li style="--i:7;"><a data-link target="_blank" href="work.html">Work</a></li>
+            <li style="--i:6;"><a data-link target="_blank" href="inner-work.html">Inner Work</a></li>
+            <li style="--i:5;"><a data-link target="_blank" href="about-us.html">About Us</a></li>
+            <li style="--i:4;"><a data-link target="_blank" href="inner-about-us.html">Inner About Us</a></li>
+            <li style="--i:3;"><a data-link target="_blank" href="news.html">News</a></li>
+            <li style="--i:2;"><a data-link target="_blank" href="inner-news.html">Inner News</a></li>
+            <li style="--i:1;"><a data-link target="_blank" href="contacts.html">Contacts</a></li>
 			</ul>
-         <div class="rootpage__left-bottom"><span>P</span><span>i</span><span>x</span><span>e</span><span>l</span><small>| </small><span>p</span><span>e</span><span>e</span><span>r</span><span>f</span><span>e</span><span>c</span><span>t</span></div>
       </div>
 
          <div class="rootpage__content">
@@ -92,7 +92,7 @@
                <li class="rootpage__item-content">Figma</li>
                <li class="rootpage__item-content">Git</li>
               </ul>
-              <h3 class="rootpage__title-text">В проекте «Createx construction» из JS реализованы:</h3>
+              <h3 class="rootpage__title-text2">В проекте «Createx construction» из JS реализованы:</h3>
             <ul class="rootpage__list-js">
                <li class="rootpage__item-js">Popup (модальные окна)</li>
                <li class="rootpage__item-js">Табы</li>
@@ -348,6 +348,8 @@
    </div>
    <script>
 
+   const tabHeaders = document.querySelectorAll('[data-tab]')
+   const dataLink = document.querySelectorAll('[data-link]')
    const linkTwo = document.querySelectorAll(".rootpage__link")
    const theme = document.querySelector(".theme")
    document.getElementById('themeToggle').addEventListener('click', function() {
@@ -358,7 +360,10 @@
            linkTwo.forEach((el) => {
          el.classList.toggle('rootpage__link-two')
         })
-        linkTwo.forEach((el) => {
+        tabHeaders.forEach((el) => {
+         el.style.background = "#161315"
+        })
+        dataLink.forEach((el) => {
          el.style.background = "#2A2A28"
         })
        } else {
@@ -366,8 +371,11 @@
            linkTwo.forEach((el) => {
          el.classList.remove('rootpage__link-two')
         })
-        linkTwo.forEach((el) => {
+        tabHeaders.forEach((el) => {
          el.style.background = "#EEEDEC"
+        })
+        dataLink.forEach((el) => {
+         el.style.background = "#ffff"
         })
        }
    })
@@ -379,8 +387,11 @@
           linkTwo.forEach((el) => {
          el.classList.add('rootpage__link-two')
         })
-        linkTwo.forEach((el) => {
+        dataLink.forEach((el) => {
          el.style.background = "#2A2A28"
+        })
+        linkTwo.forEach((el) => {
+         el.style.background = "#161315"
         })
         wrapper.style.backgroundImage = 'none'
         }else {
@@ -391,13 +402,15 @@
         linkTwo.forEach((el) => {
          el.style.background = "#EEEDEC"
         })
+        dataLink.forEach((el) => {
+         el.style.background = "transparent"
+        })
         wrapper.style.backgroundImage = "url('@img/index/HTML_Image_Tag.webp')"
         }
       }
       mediaQuery.addListener(handleTabletChange);
       handleTabletChange(mediaQuery);
 
-      const tabHeaders = document.querySelectorAll('[data-tab]')
       const contentTab = document.querySelectorAll('[data-tab-content]')
       const image = document.querySelector(".rootpage__image")
       const rootpageLeft = document.querySelector(".rootpage__left")
@@ -436,6 +449,7 @@
          const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
         listContentTab.style.backgroundColor = '#fff'
+        listContentTab.style.border = '8px double #AAA308'
       })
      })
 
@@ -581,6 +595,8 @@
 	</body>
 	<style>
 		@charset "UTF-8";
+      @import url("https://fonts.googleapis.com/css?family=Lato:900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
 		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap");
 		* ,*::before, *::after {
 			padding: 0px;
@@ -658,7 +674,7 @@
          position: relative;
          background-image: url('@img/index/HTML_Image_Tag.webp');
          background-size: 60%;
-         background-position: 22%;
+         background-position: 25%;
       }
       .rootpage__wrapper:before {
          content: "";
@@ -871,20 +887,16 @@
          overflow: hidden;
          border-radius: 4px;
          padding: 3px;
-         background-color: #EEEDEC !important;
+         background-color: #EEEDEC;
          transition: all 0.3s ease-in-out;
       }
-      @media (max-width: 991px) {
-         .rootpage__link {
-            background-color: #000000 !important;
-			}
-		}
+
       .rootpage__link span {
          position: relative;
          z-index: 2;
          opacity: 1;
          white-space: nowrap;
-         color: orange;
+         color: #98DF20;
          font-size: 1.375rem;
          font-weight: 600;
          margin: 0;
@@ -897,6 +909,7 @@
       @media (max-width: 991px) {
          .rootpage__link span {
             font-size: 1.125rem;
+            font-family: Rubik Burned;
          }
 		}
       @media (max-width: 767px) {
@@ -1022,13 +1035,6 @@
          animation-name: left-anim;
          animation-duration: 0.2s;
          animation-timing-function: ease-out;
-         /* background-image: image-set(
-         url('@img/index/light-bulb-2402087_640@1x.avif'),
-         url('@img/index/light-bulb-2402087_640@1x.webp')
-         ); 
-         background-size: cover;
-         background-position: 50% 20%;
-         background-repeat: no-repeat; */
          }
          @keyframes left-anim {
          0% {
@@ -1074,61 +1080,78 @@
 		}
    @media (min-width: 991px) {
       .rootpage__title {
-         left:-7px;
-         top: 98%;
-         font-size: 1.575rem;
-         line-height: 1.2;
-         color: #03a9f4;
-         text-shadow: 2px 2px #03a9f4;
-         text-transform: uppercase;
-         padding-top: 7px;
-		}
-      .rootpage__title span {
-         font-size: 1.575rem;
-         color: #80DF26;
+            left: 2px;
+            top: 60px;
+            text-transform: uppercase;
+            text-orientation: upright;
+            writing-mode: vertical-rl;
+			}
+         .rootpage__title span {
+         font-size: 1.355rem;
+         font-weight: 700;
+         font-family: Rubik Burned;
+         margin: 0;
       }
-      .rootpage__title small {
-         font-size: 1.975rem;
-         color: #FFD829;
+      .rootpage__title span:nth-child(odd) {
+         color: #36B5E7;
+         text-shadow: -3px 2px #EBEBE5;
       }
+      .rootpage__title span:nth-child(even) {
+         color: #71DE63;
+         text-shadow: -3px 2px #EBEBE5;
+      }
+         .rootpage__title small {
+            display: inline-block;
+            font-size: 1.8rem;
+            font-family: Rubik Burned;
+            color: orange;
+            text-shadow: -3px 2px #29E71D;
+            margin-top: -2px;
+            margin-bottom: 8px;
+         }
    }
 
 		@media (max-width: 991px) {
 			.rootpage__title {
-            left: -133px;
-            top: 172px;
-				font-size: 1.975rem;
-            color: #2A2A28;
-            text-shadow: 3px -3px #FFD829;
-            transform: rotate(-90deg);
+            left: -13px;
+            top: 36px;
+            text-transform: uppercase;
+            text-orientation: upright;
+            writing-mode: vertical-rl;
 			}
          .rootpage__title span {
-         font-size: 1.975rem;
+         font-size: 1.375rem;
+         font-family: Rubik Burned;
+         margin: 0;
+      }
+      .rootpage__title span:nth-child(odd) {
          color: #2A2A28;
-         text-shadow: 3px -3px #FFD829;
+         text-shadow: -3px 2px orange;
+      }
+      .rootpage__title span:nth-child(even) {
+         color: #2A2A28;
+         text-shadow: -3px 2px #29E71D;
       }
          .rootpage__title small {
-            font-size: 2.55rem;
-            color: #DA770B;
-            text-shadow: 2px -3px #FFD829;
+            display: inline-block;
+            font-size: 1.8rem;
+            font-family: Rubik Burned;
+            color: #2A2A28;
+            text-shadow: -2px 2px #d400d4;
+            margin-top: 0px;
+            margin-bottom: 8px;
          }
 		}
-      @media (max-width: 776px) {
+      @media (max-width: 767px) {
 			.rootpage__title {
-            left: -105px;
-            top: 174px;
-            font-size: 1.675rem;
-            color: #2A2A28;
-            text-shadow: 3px -3px #FFD829;
+            left: 5px;
+            top: 34px;
 			}
          .rootpage__title span {
-         font-size: 1.675rem;
-         color: #2A2A28;
-         text-shadow: 3px -3px #FFD829;
+            font-size: 1.122rem;
       }
          .rootpage__title small {
-            font-size: 2rem;
-            text-shadow: 3px -3px #FFD829;
+            font-size: 1.4rem;
          }
       }
       .rootpage__body-title-2 {
@@ -1147,7 +1170,7 @@
       }
 		.rootpage__title-2 {
          position: absolute;
-         left: 50px;
+         left: 52px;
          top: 5px;
          font-size: 3rem;
          margin-bottom: 0px;
@@ -1170,10 +1193,10 @@
       }
       @keyframes animate-title-2 {
          0%,100% {
-            clip-path: polygon(0% 41%, 3% 39%, 7% 35%, 11% 31%, 15% 30%, 21% 29%, 27% 33%, 31% 35%, 35% 38%, 39% 40%, 43% 43%, 47% 46%, 52% 48%, 56% 48%, 60% 50%, 63% 53%, 70% 54%, 74% 52%, 80% 49%, 85% 46%, 90% 44%, 95% 42%, 99% 40%, 100% 99%, 0% 99%);
+            clip-path: polygon(0% 56%, 3% 53%, 7% 48%, 11% 42%, 16% 37%, 23% 36%, 29% 35%, 34% 37%, 40% 40%, 45% 44%, 49% 48%, 53% 52%, 57% 57%, 60% 61%, 64% 67%, 69% 71%, 74% 71%, 78% 68%, 80% 62%, 83% 59%, 85% 54%, 90% 51%, 93% 47%, 97% 43%, 99% 38%, 100% 98%, 0% 98%);
          }
         50% {
-         clip-path: polygon(0% 63%, 4% 66%, 10% 68%, 14% 68%, 20% 67%, 26% 65%, 33% 62%, 37% 58%, 42% 56%, 46% 53%, 50% 51%, 54% 50%, 60% 49%, 64% 49%, 70% 50%, 75% 50%, 80% 52%, 85% 55%, 89% 56%, 92% 57%, 95% 60%, 97% 63%, 99% 67%, 100% 99%, 0% 98%);
+         clip-path: polygon(0% 63%, 3% 59%, 8% 59%, 11% 62%, 18% 66%, 23% 68%, 30% 66%, 35% 64%, 38% 60%, 42% 58%, 45% 55%, 49% 53%, 53% 49%, 60% 46%, 64% 44%, 68% 42%, 73% 40%, 78% 39%, 81% 37%, 85% 36%, 89% 33%, 91% 29%, 94% 27%, 97% 25%, 100% 21%, 100% 100%, 0% 99%);
         }
       }
       }
@@ -1181,15 +1204,16 @@
       @media (max-width: 991px) {
          .rootpage__title-2 {
          justify-self: center;
-         font-size: 1.175rem;
-         color: #DA770B;
-         text-shadow: 1px 1px #FFD829;
+         font-size: 1.275rem;
+         font-family: Rubik Burned;
+         color: #2A2A28;
+         text-shadow: 1px 1px #29E71D;
 		}
       }
       @media (min-width: 991px) {
          .rootpage__list{
          display: inline-grid;
-         padding-left: 25px;
+         padding-left: 45px;
          padding-top: 75px;
          margin-left: 5px;
 		}
@@ -1200,18 +1224,19 @@
    }
 
    .rootpage__list li:not(:last-child){
-			margin: 0px 0px 20px 0px;
+			margin: 0px 0px 15px 0px;
 		}
       .rootpage__list li a {
          font-weight: 600;
          line-height: 1.4;
-         font-size: 1.375rem;
-         color: #80DF26;
+         font-family: Rubik Burned;
+         font-size: 1.475rem;
+         color: #03a9f4;
          text-decoration: underline;
          text-transform: uppercase;
          letter-spacing: 0.05rem;
          transition: color 0.3s ease-in;
-		}
+		   }
       }
 
       @media (max-width: 991px) {
@@ -1244,43 +1269,43 @@
    }
    .rootpage__list li:nth-child(1):before,
    .rootpage__list li:nth-child(1):after {
-      background: linear-gradient(45deg,#00ccff, #0e1538, #0e1538, #d400d4);
+      background: linear-gradient(45deg,#00ccff, #2A2A28, #2A2A28, #d400d4);
    }
    .rootpage__list li:nth-child(2):before,
    .rootpage__list li:nth-child(2):after {
-      background: linear-gradient(45deg,#DFCD20, #0e1538, #0e1538, #DF8B20);
+      background: linear-gradient(45deg,#EA81CD, #2A2A28, #2A2A28, #DF8B20);
    }
    .rootpage__list li:nth-child(3):before,
    .rootpage__list li:nth-child(3):after {
-      background: linear-gradient(45deg,#98DF20, #0e1538, #0e1538, #36B5E7);
+      background: linear-gradient(45deg,#98DF20, #2A2A28, #2A2A28, #36B5E7);
    }
    .rootpage__list li:nth-child(4):before,
    .rootpage__list li:nth-child(4):after {
-      background: linear-gradient(45deg,#F6F8AF, #0e1538, #0e1538, #67F977);
+      background: linear-gradient(45deg,#F6F8AF, #2A2A28, #2A2A28, #67F977);
    }
    .rootpage__list li:nth-child(5):before,
    .rootpage__list li:nth-child(5):after {
-      background: linear-gradient(45deg,#E69EA5, #0e1538, #0e1538, #DBC71F);
+      background: linear-gradient(45deg,#E69EA5, #2A2A28, #2A2A28, #DBC71F);
    }
    .rootpage__list li:nth-child(6):before,
    .rootpage__list li:nth-child(6):after {
-      background: linear-gradient(45deg,#03a9f4, #0e1538, #0e1538, #CB1A4C);
+      background: linear-gradient(45deg,#03a9f4, #2A2A28, #2A2A28, #CB1A4C);
    }
    .rootpage__list li:nth-child(7):before,
    .rootpage__list li:nth-child(7):after {
-      background: linear-gradient(45deg,#DE37EB, #0e1538, #0e1538, #29E71D);
+      background: linear-gradient(45deg,#DE37EB, #2A2A28, #2A2A28, #29E71D);
    }
    .rootpage__list li:nth-child(8):before,
    .rootpage__list li:nth-child(8):after {
-      background: linear-gradient(45deg,#ECE018, #0e1538, #0e1538, #1D5DE7);
+      background: linear-gradient(45deg,#ECE018, #2A2A28, #2A2A28, #1D5DE7);
    }
    .rootpage__list li:nth-child(9):before,
    .rootpage__list li:nth-child(9):after {
-      background: linear-gradient(45deg,#D5205A, #0e1538, #0e1538, #EB792D);
+      background: linear-gradient(45deg,#D5205A, #2A2A28, #2A2A28, #EB792D);
    }
    .rootpage__list li:nth-child(10):before,
    .rootpage__list li:nth-child(10):after {
-      background: linear-gradient(45deg,#71DE63, #0e1538, #0e1538, #EBEBE5);
+      background: linear-gradient(45deg,#71DE63, #2A2A28, #2A2A28, #EBEBE5);
    }
    .rootpage__list li::after {
       filter: blur(10px);
@@ -1296,17 +1321,22 @@
       left: 0;
       top: 0;
       font-weight: 600;
+      font-family: Rubik Burned;
       line-height: 1.4;
       font-size: 1rem;
-      color: #80DF26;
+      color: #5DA11B;
       text-transform: uppercase;
       letter-spacing: 0.05rem;
-      border: 2px solid #2A2A28;
       transition: color 0.3s ease-in;
       background-color: #2A2A28;
 		}
 		}
 
+      @media (max-width: 767px) {
+         .rootpage__list {
+            padding-top: 40px;
+         }
+      }
       @media (max-width: 767px) {
          .rootpage__list li {
          width: 200px;
@@ -1316,8 +1346,7 @@
 			margin: 0px 0px 12px 0px;
 		}
       .rootpage__list li a {
-         font-size: 0.675rem;
-         font-size: 1rem;
+         font-size: 0.875rem;
          letter-spacing: 0.02rem;
          }
       }
@@ -1336,37 +1365,7 @@
       .rootpage__list li a:visited:hover {
          color: #F36278;
       }
-      
-      .rootpage__left-bottom {
-         position: absolute;
-         left: 2px;
-         top: 100px;
-         white-space: nowrap;
-         text-transform: uppercase;
-         text-orientation: upright;
-         writing-mode: vertical-rl;
-      }
-      .rootpage__left-bottom small {
-         color: #FFD829;
-         font-size: 0.7rem;
-      }
-      .rootpage__left-bottom span {
-         font-size: 0.7rem;
-         font-weight: 600;
-         letter-spacing: 0.01rem;
-      }
-      .rootpage__left-bottom span:nth-child(odd) {
-         color: orange;
 
-      }
-      .rootpage__left-bottom span:nth-child(even) {
-         color: #00ff00;
-      }
-      @media (max-width: 991px) {
-         .rootpage__left-bottom {
-         display: none;
-			}
-		}
       .rootpage__content {
          grid-area: content;
          padding: 12px;
@@ -1385,11 +1384,9 @@
       @media (max-width: 991px) {
          .rootpage__list-content-tab {
             padding: 12px;
-            border: 8px double #AAA308;
             background-color: transparent !important;
 			}
 		}
-
       .rootpage__content-tab ul {
          margin-bottom: 5px;
       }
@@ -1445,7 +1442,7 @@
  }
  @media (max-width: 991px) {
    .rootpage__content-home::before {
-      border: 4px solid #FFD829
+      border: 4px solid orange;
 			}
 		}
       .rootpage__title-content {
@@ -1456,7 +1453,7 @@
       @media (max-width: 991px) {
          .rootpage__title-content{
          font-size: 1.25rem;
-         color: #FFD829;
+         font-family: Rubik Burned;
       } 
    }
       .rootpage__title-content span {
@@ -1490,7 +1487,8 @@
       @media (max-width: 991px) {
          .rootpage__item-content {
          font-size: 1.055rem;
-         color: #DA770B;
+         color: #DBC71F;
+         font-family: Rubik Burned;
       }
       }
       .rootpage__item-content::before {
@@ -1509,12 +1507,23 @@
          font-size: 1.25rem;
          line-height: 1.3;
       }
+      .rootpage__title-text2 {
+         color: orange;
+         margin-bottom: 2px;
+         font-size: 1.25rem;
+         line-height: 1.3;
+      }
       @media (max-width: 991px) {
          .rootpage__title-text {
+         font-size: 1.125rem;
+      }
+      .rootpage__title-text2 {
          font-size: 1.155rem;
-         color: #FFD829;
+         font-family: Rubik Burned;
+         color: orange;
       }
       }
+      
       .rootpage__item-js {
          font-size: 1.165rem;
          line-height: 1.4;
@@ -1533,13 +1542,14 @@
       @media (max-width: 991px) {
          .rootpage__item-js {
          font-size: 1.055rem;
-         color: #DA770B;
+         font-family: Rubik Burned;
+         color: #FFD829;
       }
       }
       @media (max-width: 767px) {
          .rootpage__item-js {
          font-size: 1rem;
-         color: #DA770B;
+         color: #FFD829;
       }
       }
 		.rootpage__item-js:not(:last-child){
@@ -1652,14 +1662,14 @@
          background-repeat: no-repeat;
       }
       }
-      .rootpage__content-none {
-         display: none;
-      }
       @media (min-width: 991px) {
          .rootpage__footer {
             justify-items: end;
             background-position:  100% 0;
          }
+      }
+      .rootpage__content-none {
+         display: none;
       }
       @media (min-width: 991px) {
          .rootpage__contacts {
@@ -1672,9 +1682,9 @@
          .rootpage__contacts {
          position: relative;
          margin-top: -62px;
+         font-family: Rubik Burned;
       }
       }
-
 		.rootpage__contacts h2 {
          position: absolute;
          left: -46px;
@@ -1687,6 +1697,11 @@
       @media (min-width: 991px) {
          .rootpage__contacts h2 {
             display: none;
+      }
+      }
+      @media (max-width: 767px) {
+         .rootpage__contacts h2 {
+         font-size: 1.125rem;
       }
       }
 		.rootpage__contacts address {
