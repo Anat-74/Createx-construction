@@ -343,7 +343,7 @@
       <svg> 
          <filter id="wave">
             <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-               <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite">
+               <!-- <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite"> -->
             </feTurbulence>
             <feDisplacementMap in="SourceGraphic" scale="30"/>
          </filter>
@@ -389,7 +389,7 @@
          el.style.background = "#EEEDEC"
         })
         dataLink.forEach((el) => {
-         el.style.background = "#EEEDEC"
+         el.style.background = "#E2E0DF"
         })
        }
    })
@@ -463,7 +463,7 @@
          const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
         listContentTab.style.backgroundColor = '#fff'
-        listContentTab.style.border = '4px double #AAA308'
+        listContentTab.style.border = '8px double #AAA308'
       })
      })
 
@@ -664,7 +664,7 @@
       }
       @media (max-width: 991px) {
          code {
-            font-size: 1.05;
+            font-size: 1rem;
          }
       }
       q {
@@ -1246,7 +1246,7 @@
       justify-self: center;
       position: relative;
       z-index: var(--i);
-      width: 250px;
+      width: 350px;
       height: 42px;
    }
    .rootpage__list li:not(:last-child){
@@ -1333,7 +1333,7 @@
       }
       @media (max-width: 767px) {
          .rootpage__list li {
-         width: 200px;
+         width: 220px;
          height: 32px;
          }
          .rootpage__list li:not(:last-child){
@@ -1378,8 +1378,14 @@
       }
       @media (max-width: 991px) {
          .rootpage__list-content-tab {
-            padding: 0px 5px;
+            padding: 0px 12px;
             background-color: transparent !important;
+			}
+		}
+      @media (max-width: 767px) {
+         .rootpage__list-content-tab {
+            padding: 0px 5px;
+            border: 4px double #AAA308 !important;
 			}
 		}
       .rootpage__content-tab ul {
@@ -1396,7 +1402,7 @@
          .rootpage__content-tab ul li {
          font-size: 1rem;
          line-height: 1.3; 
-         font-weight: 500;
+         font-weight: 400;
          margin-top: 10px;
       }
 		}
@@ -1416,6 +1422,13 @@
          margin-bottom: 2px;
          color: #AAA308;
       }
+      @media (max-width: 767px) {
+         .rootpage__content-tab h4 {
+         font-size: 1.055rem;
+         line-height: 1.3; 
+         font-weight: 500;
+      }
+		}
       .rootpage__content-tab h5 {
          font-size: 1.115rem;
          line-height: 1.3;
@@ -1423,6 +1436,13 @@
          margin-top: 8px;
          margin-bottom: 2px;
       }
+      @media (max-width: 767px) {
+         .rootpage__content-tab h5 {
+         font-size: 1.010rem;
+         line-height: 1.3; 
+         font-weight: 500;
+      }
+		}
       .rootpage__content-tab span {
          margin-bottom: 0;
          display: inline;
@@ -1436,7 +1456,7 @@
       .rootpage__content-home {
       text-align: center;
       position: relative;
-      padding: 20px;
+      padding: 30px 20px 20px 20px;
       -webkit-box-reflect: below 15px linear-gradient(transparent, transparent, rgba(0,0,0,.2));
       }
       .rootpage__content-home::before {
@@ -1527,6 +1547,11 @@
          .rootpage__title-text {
          font-size: 1.125rem;
       }
+      @media (max-width: 767px) {
+         .rootpage__title-text {
+         font-size: 1.125rem;
+         font-weight: 500;
+      }
       .rootpage__title-text2 {
          font-size: 1.155rem;
          font-family: Rubik Burned;
@@ -1594,6 +1619,7 @@
       @media (max-width: 767px) {
          .rootpage__text span {
          font-size: 1.055rem;
+         font-weight: 500;
       }
          .rootpage__text small {
          font-size: 1rem;
