@@ -463,7 +463,7 @@
          const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
         listContentTab.style.backgroundColor = '#fff'
-        listContentTab.style.border = '8px double #AAA308'
+        listContentTab.style.border = '5px double #AAA308'
       })
      })
 
@@ -676,6 +676,13 @@
          padding: 0px 4px;
          margin-top: 6px;
          margin-bottom: 3px;
+      }
+      @media (max-width: 767px) {
+         q {
+            font-size: 1.025rem;
+            line-height: 1.2;
+            border: 1px solid #AAA308;
+         }
       }
       svg {
          width: 0;
@@ -1384,7 +1391,6 @@
       @media (max-width: 767px) {
          .rootpage__list-content-tab {
             padding: 0px 5px;
-            border: 4px double #AAA308 !important;
 			}
 		}
       .rootpage__content-tab ul {
@@ -1405,6 +1411,13 @@
          margin-top: 10px;
       }
 		}
+      @media (max-width: 767px) {
+         .rootpage__content-tab ul li {
+         font-size: 1rem;
+         line-height: 1.2; 
+         margin-top: 3px;
+      }
+		}
       .rootpage__content-tab ul li::before {
          content: "";
          display: inline-block;
@@ -1423,8 +1436,8 @@
       }
       @media (max-width: 767px) {
          .rootpage__content-tab h4 {
-         font-size: 1.055rem;
-         line-height: 1.3; 
+         font-size: 1.025rem;
+         line-height: 1.2; 
          font-weight: 500;
       }
 		}
@@ -1549,7 +1562,7 @@
    }
       @media (max-width: 767px) {
          .rootpage__title-text {
-         font-size: 1.125rem;
+         font-size: 1.115rem;
          font-weight: 500;
       }
       .rootpage__title-text2 {
@@ -1598,9 +1611,12 @@
       }
       @media (max-width: 767px) {
          .rootpage__text {
-         font-size: 1rem;
-         line-height: 1.4;
+         font-size: 0.938rem;
+         line-height: 1.2;
          font-weight: 400;
+      }
+      .rootpage__text span {
+         font-weight: 500;
       }
    }
       .rootpage__text a {
@@ -1618,6 +1634,7 @@
       }
       @media (max-width: 767px) {
          .rootpage__text span {
+         display: inline-block;
          font-size: 1.055rem;
          font-weight: 500;
       }
