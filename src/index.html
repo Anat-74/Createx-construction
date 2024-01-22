@@ -463,7 +463,7 @@
          const contentBox = document.querySelector('#' + this.dataset.tab)
         contentBox.classList.remove('hidden')
         listContentTab.style.backgroundColor = '#fff'
-        listContentTab.style.border = '8px double #AAA308'
+        listContentTab.style.border = '4px double #AAA308'
       })
      })
 
@@ -631,7 +631,6 @@
 			font-size: 100%;
 			line-height: 1;
          font-size: 1rem;
-         transition: background-color 0.3s ease-in;
 		}
       body.light-theme {
          background-color: #fff;
@@ -918,7 +917,7 @@
       }
 
       .rootpage__link span:hover {
-         color: yellow;
+         color: #DFCD20;
       }
       @media (max-width: 991px) {
          .rootpage__link span {
@@ -941,20 +940,8 @@
          transition: 0.6s;
          animation: animate-nav 5s linear infinite;
       }
-      @media (max-width: 991px) {
-         .rootpage__link::before {
-            width: 18px;
-         }
-		}
-      @keyframes animate-nav{
-         0%{
-            transform: rotate(0deg);
-         }
-         100%{
-            transform: rotate(360deg);
-         }
-      }
-      .rootpage__link:hover {
+      @media (min-width: 991px) {
+         .rootpage__link:hover {
          box-shadow: 0px 0px 10px #8AF59E,
          0px 0px 30px #8AF59E,
          0px 0px 60px #8AF59E,
@@ -967,6 +954,38 @@
          left: -50%;
          top: -100px;
       }
+         .rootpage__link:hover::after {
+            background: #8AF59E;
+         }
+		}
+      @media (max-width: 991px) {
+         .rootpage__link:hover {
+         box-shadow: 0px 0px 10px #28A626,
+         0px 0px 30px #28A626,
+         0px 0px 60px #28A626,
+         0px 0px 80px #28A626;
+      }
+      .rootpage__link:hover::before {
+         background: #28A626;
+         width: 260px;
+         height: 260px;
+         left: -50%;
+         top: -100px;
+      }
+         .rootpage__link::before {
+            width: 18px;
+         }
+		}
+
+      @keyframes animate-nav{
+         0%{
+            transform: rotate(0deg);
+         }
+         100%{
+            transform: rotate(360deg);
+         }
+      }
+ 
       .rootpage__link::after {
          content: "";
          position: absolute;
@@ -1046,48 +1065,9 @@
          .rootpage__left {
          padding-left: 3px;
          border-radius: 4px;
-         animation-name: left-anim;
-         animation-duration: 0.2s;
-         animation-timing-function: ease-out;
-         }
-         @keyframes left-anim {
-         0% {
-            background-size: 25%;
-         }
-         50% {
-            background-size: 45%;
-         }
-         100% {
-            background-size: 70%;
-         }
       }
    }
-   @media (max-width: 767px) {
-         @keyframes left-anim {
-         0% {
-            background-size: 25%;
-         }
-         50% {
-            background-size: 45%;
-         }
-         100% {
-            background-size: 100%;
-         }
-      }
-   }
-   @media (max-width: 500px) {
-         @keyframes left-anim {
-         0% {
-            background-size: 25%;
-         }
-         50% {
-            background-size: 85%;
-         }
-         100% {
-            background-size: 115%;
-         }
-      }
-   }
+
    .rootpage__title {
          position: absolute;
          white-space: nowrap;
@@ -1128,7 +1108,7 @@
 		@media (max-width: 991px) {
 			.rootpage__title {
             left: -13px;
-            top: 36px;
+            top: 46px;
             text-transform: uppercase;
             text-orientation: upright;
             writing-mode: vertical-rl;
@@ -1159,7 +1139,7 @@
       @media (max-width: 767px) {
 			.rootpage__title {
             left: 5px;
-            top: 34px;
+            top: 44px;
 			}
          .rootpage__title span {
             font-size: 1.122rem;
@@ -1267,7 +1247,7 @@
       position: relative;
       z-index: var(--i);
       width: 250px;
-      height: 40px;
+      height: 42px;
    }
    .rootpage__list li:not(:last-child){
 			margin: 0px 0px 12px 0px;
@@ -1354,7 +1334,7 @@
       @media (max-width: 767px) {
          .rootpage__list li {
          width: 200px;
-         height: 30px;
+         height: 32px;
          }
          .rootpage__list li:not(:last-child){
 			margin: 0px 0px 12px 0px;
@@ -1388,16 +1368,17 @@
 
       @media (max-width: 991px) {
          .rootpage__content {
+            padding: 25px 5px 12px 5px;
             margin: 0px 15px;
 			}
 		}
       .rootpage__list-content-tab {
-         border-radius: 8px;
+         border-radius: 4px;
          padding: 20px 100px;
       }
       @media (max-width: 991px) {
          .rootpage__list-content-tab {
-            padding: 12px;
+            padding: 0px 5px;
             background-color: transparent !important;
 			}
 		}
@@ -1411,6 +1392,14 @@
          margin-top: 6px;
          margin-bottom: 1px;
       }
+      @media (max-width: 991px) {
+         .rootpage__content-tab ul li {
+         font-size: 1rem;
+         line-height: 1.3; 
+         font-weight: 500;
+         margin-top: 10px;
+      }
+		}
       .rootpage__content-tab ul li::before {
          content: "";
          display: inline-block;
@@ -1438,6 +1427,12 @@
          margin-bottom: 0;
          display: inline;
       }
+      @media (max-width: 767px) {
+         .rootpage__content-tab span {
+         font-size: 1rem;
+         font-weight: 500;
+      }
+		}
       .rootpage__content-home {
       text-align: center;
       position: relative;
@@ -1517,9 +1512,10 @@
 
       .rootpage__title-text {
          color: orange;
-         margin-bottom: 2px;
+         margin-bottom: 3px;
          font-size: 1.25rem;
          line-height: 1.3;
+         margin-top: 14px;
       }
       .rootpage__title-text2 {
          color: orange;
@@ -1572,12 +1568,14 @@
 
       .rootpage__text {
          font-size: 1.125rem;
-         line-height: 1.5;
+         line-height: 1.4;
          font-weight: 500;
       }
       @media (max-width: 767px) {
          .rootpage__text {
          font-size: 1rem;
+         line-height: 1.4;
+         font-weight: 400;
       }
    }
       .rootpage__text a {
@@ -1594,6 +1592,9 @@
          color: #DA770B;
       }
       @media (max-width: 767px) {
+         .rootpage__text span {
+         font-size: 1.055rem;
+      }
          .rootpage__text small {
          font-size: 1rem;
       }
