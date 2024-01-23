@@ -130,7 +130,6 @@
                    <ul>
                      <li>повышение скорости загрузки страницы сайта за&nbsp;счет уменьшение объема файла;</li>
                      <li>повышение лояльности со&nbsp;стороны пользователей сайта;</li>
-                     <li>повышение скорости загрузки страницы сайта за&nbsp;счет уменьшение объема файла, повышение лояльности со&nbsp;стороны пользователей сайта</li>
                      <li>Улучшение Page Experience;</li>
                      <li>Уменьшение нагрузки на&nbsp;сервер;</li>
                   </ul>
@@ -377,8 +376,8 @@
         tabHeaders.forEach((el) => {
          el.style.background = "#161315"
         })
-        dataLink.forEach((el) => {
-         el.style.background = "#2A2A28"
+            dataLink.forEach((el) => {
+         el.style.cssText = 'color: #EFDD9A; background: #2A2A28'
         })
        } else {
            document.body.className = 'light-theme';
@@ -388,8 +387,8 @@
         tabHeaders.forEach((el) => {
          el.style.background = "#EEEDEC"
         })
-        dataLink.forEach((el) => {
-         el.style.background = "#E2E0DF"
+      dataLink.forEach((el) => {
+         el.style.cssText = 'color: #0D9B96; background: #E2E0DF'
         })
        }
    })
@@ -1324,7 +1323,7 @@
       font-family: Rubik Burned;
       line-height: 1.4;
       font-size: 1rem;
-      color: #5DA11B;
+      color: #EFDD9A;
       text-transform: uppercase;
       letter-spacing: 0.05rem;
       transition: color 0.3s ease-in;
