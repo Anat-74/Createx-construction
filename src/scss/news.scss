@@ -4,7 +4,7 @@
       @include adaptiveValue("padding-bottom",240 , 20);
       background-repeat: no-repeat;
       background-position: right rem(-9) top;
-      background-size: auto auto, cover;
+      background-size: auto;
       background-color: $bg-inputColor;
    }
 
