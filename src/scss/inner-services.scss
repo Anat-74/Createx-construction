@@ -363,37 +363,23 @@
          }
       }
    }
-// @include adaptiveValue("width", 143, 80);
-//@include adaptiveValue("height", 36, 44);
+
    &__btn {
       @include button(rem(143), rem(36), rem(12), 300%, transparent, $primaryColor);
-      margin-top: rem(16);
-      margin-bottom: rem(14);
-         // width: rem(143);
-         // height: rem(36);
-         // font-size: rem(12);
-         // line-height: math.div(20 , 12);
-
-         // background-color: transparent;
-         // color: $primaryColor;
-         // text-transform: uppercase;
-         // font-weight: 700;
-         // letter-spacing: rem(0.5);
-         // border-radius: rem(4);
-         // border-width: rem(1);
-         // border-style: solid;
-         // border-color: $primaryColor;
-         // transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-
+         margin-top: rem(16);
+         margin-bottom: rem(14);
 
       @media (max-width:$mobile){
          width: rem(88);
          height: rem(44);
+         line-height: math.div(20 , 12);
       }
 
        @media (max-width:em(490)){
            width: rem(80) !important;
            height: rem(44) !important;
+           font-size: rem(12) !important;
+           line-height: math.div(18 , 12) !important;
           }
    }
 }
