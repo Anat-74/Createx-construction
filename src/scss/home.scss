@@ -1236,7 +1236,7 @@
          @include adaptiveValue("margin-bottom", 19, 12);
       }
       &--t-area {
-         height: rem(66);
+         height: rem(66) !important;
          padding-top: rem(10);
       }
    }
