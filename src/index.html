@@ -940,17 +940,18 @@
             font-size: 1rem;
          }
       }
-      .rootpage__link::before {
+
+      @media (min-width: 991px) {
+         .rootpage__link::before {
          content: "";
          position: absolute;
-         width: 28px;
+         width: 22px;
          height: 200px;
          left: 38%;
          background: linear-gradient(#00ff00, #ff00dd);
          transition: 0.6s;
          animation: animate-nav 5s linear infinite;
       }
-      @media (min-width: 991px) {
          .rootpage__link:hover {
          box-shadow: 0px 0px 10px #8AF59E,
          0px 0px 30px #8AF59E,
@@ -1037,11 +1038,23 @@
       }
       @media (max-width: 991px) {
          .rootpage__link--active span{
-            color: #D48D82;
-         border: 2px solid #D48D82;
-         background-color: transparent;
+         color: #D48D82;
+         border: none;
       }
 		}
+      @media (max-width: 991px) {
+         .rootpage__link--active::before {
+         content: "";
+         position: absolute;
+         width: 24px;
+         height: 200px;
+         left: 38%;
+         background: linear-gradient(#00ff00, #ff00dd);
+         transition: 0.6s;
+         animation: animate-nav 5s linear infinite;
+      }
+		}
+
 		.rootpage__main {
          position: relative;
          z-index: 99;
@@ -1210,7 +1223,7 @@
          justify-self: center;
          font-size: 1.275rem;
          font-family: Rubik Burned;
-         color:  #D48D82;
+         color: #6E6B63;
 		}
       }
       @media (min-width: 991px) {
